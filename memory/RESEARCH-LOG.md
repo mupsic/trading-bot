@@ -347,3 +347,90 @@ HOLD — While Regime is ON and catalysts are strong, both top candidates carry 
   "candidates": []
 }
 ```
+
+I'll gather all the required data points systematically.Now let me search for sector ETF performance and pre-market movers.Now let me search for specific swing trade candidates with catalysts that fit our criteria.Now I have all the data needed. Let me compile the research log.
+
+Key data points gathered:
+- **SPY**: Current $748.17 (from Finnhub). MA200: Multiple sources show ~$671-706 range. TipRanks (May 13) shows SMA200 at $671.11; Investing.com shows $706.38; Financhill shows $673.98. I'll use the most recent/reliable: Investing.com at ~$706.
+- **VIX**: Yahoo Finance shows 17.90 (today); CBOE prev close 17.26
+- **CSCO**: Surged ~14-17% on massive earnings beat, trading ~$115-117, AI order book raised to $9B
+- **AMAT**: Beat earnings (EPS $2.86 vs $2.68 est), Q3 guidance $8.95B revenue, but pre-market down ~$14 from $440.56
+- **Sector**: XLK (Technology) clearly strongest, +60% 1Y return, SOX up 64% since March
+- **NVIDIA earnings May 20**: event risk for tech
+
+## 2026-05-15 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100000.00
+- Operating cap: $3,000
+- Cash: $100000.00
+- Positions value: $0.00
+- Capital available: $3000.00
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $748.17 (MA200: ~$706) — ABOVE
+- VIX: 17.90 — LOW
+- Regime: **ON**
+- Reason: SPY 200-day moving average is 706.38, SPY at $748.17 is well above; VIX at 17.90 is below 25 threshold.
+
+### Market Context
+- Top catalysts today:
+  - The S&P 500 rose 0.77% to finish at a record 7,501.24 on Thursday — new all-time highs on S&P 500 and Nasdaq
+  - Cisco CEO Chuck Robbins told CNBC that skyrocketing demand for AI is powering the industry toward a "networking supercycle." Shares jumped 14% after Cisco blew past its AI infrastructure and hyperscaler guidance, lifting its forecast from $5 billion to $9 billion.
+  - Applied Materials delivered record Q2 revenue of $7.91 billion, driven by strong demand for AI and semiconductor equipment, with optimistic Q3 revenue guidance of $8.95 billion.
+  - Top U.S. executives, including Elon Musk, Tim Cook, and Jensen Huang, joined Donald Trump and President Xi Jinping at a high-stakes 2026 welcoming banquet in Beijing.
+  - U.S. wholesale prices skyrocketed in April far above consensus estimates — monthly PPI rose 1.4% and core surged 1%. Analysts had expected 0.4% and 0.3%.
+- Sector leaders:
+  - XLK (Technology): Strongest — XLK had a total return of 60.47% in the past year; PHLX Semiconductor Index (SOX) has risen 64% since the end of March
+  - XLF (Financials): +0.59% Thursday
+  - XLI (Industrials): +0.51% Thursday
+  - XLE (Energy): Oil at ~$102/bbl, elevated on Strait of Hormuz tensions
+  - XLV (Healthcare): -0.05% Thursday
+- Economic events:
+  - Friday (May 15): Capacity Utilization, Empire State Manufacturing, Industrial Production
+  - Jerome Powell's term as Fed Chair ends Friday May 15; Kevin Warsh transition
+  - The 10-year Treasury yield traded at 4.48%, touching its highest levels of the year
+  - 30-year Treasury yield tops 5.1% (per Finnhub headlines)
+
+### Trade Candidates (Regime ON)
+
+1. **CSCO** — Massive Q3 earnings beat + AI order book raised to $9B; Cisco reported EPS of $1.06 vs expectations of $1.00, a 6% beat; Cisco raised its fiscal 2026 AI infrastructure order outlook from $5 billion to $9 billion; Morgan Stanley raised price target to $120 from $91; Rosenblatt raised price target to $150 from $100. Entry ~$117.00 (post-gap consolidation), stop $108.81 (-7%), target $133.38 (+14%), shares=5, cost=$585.00, R:R 1:2. Next earnings not until 8/12/2026.
+
+2. **MU (Micron Technology)** — Micron Technology (MU) surged more than 15% last week on a wave of high-bandwidth memory orders for AI; beneficiary of same AI/HBM supercycle driving AMAT/CSCO. Strong sector momentum in semis. Entry requires price check — based on prior research MU was ~$788 but may have moved significantly. At that price, $600 cap allows 0 full shares → **SKIP** (price too high for position sizing).
+
+**Replacement candidate:**
+
+2. **HPE (Hewlett Packard Enterprise)** — Notable gainers among liquid option names include Hewlett Packard Enterprise (HPE) $34.11 +2.04; direct AI networking/infrastructure beneficiary of same supercycle as CSCO; sector momentum strong. Entry ~$34.00, stop $31.62 (-7%), target $38.76 (+14%), shares=17, cost=$578.00, R:R 1:2. Next earnings ~June 2026 (>7 days away).
+
+### Risk Factors Today
+- The May 15 Polymarket contract implied a 99% probability that the benchmark index would open lower on Friday — expect pullback at open
+- "The hot PPI data is sending yields sharply higher" — inflation concerns could weigh on tech
+- Nvidia reports on May 20th — a "sell on the news" reaction could occur — binary event risk for tech sector next week
+- Some investors have grown cautious about the increasingly narrow nature of the rally. Strategists have warned that the market's advance is becoming increasingly dependent on a handful of technology stocks.
+- RSI (14) at 76.14 — overbought territory
+- 30-year Treasury yield above 5.1%, highest in nearly a year — bond competition for equities
+- CSCO already gapped up 14%+ — chasing a gap carries risk of mean reversion
+- AMAT stock has dropped $14.12 in pre-market trading — suggests post-earnings profit-taking in semis possible
+
+### Decision
+**HOLD** — While regime is ON and CSCO has a legitimate catalyst, the risk-reward for entering today is unfavorable:
+1. CSCO gapped up ~15% yesterday; entering after a gap this large means buying extended, with limited upside to a reasonable target and high risk of pullback
+2. Polymarket pricing 99% chance of lower open — likely selling pressure at open
+3. Hot PPI data + yields at 2026 highs creates macro headwind
+4. NVDA earnings May 20 is a binary event that could reverse the entire tech rally
+5. RSI overbought at 76 on SPY — pullback likely before sustainable entry
+6. Better to wait for a consolidation day or pullback in CSCO/tech names to enter at lower-risk levels
+
+**Recommendation:** Monitor CSCO for a pullback to the $110-112 support zone (prior gap fill level) next week for a better entry. Also watch for NVDA earnings reaction May 20 as a sector-wide catalyst.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-15",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
