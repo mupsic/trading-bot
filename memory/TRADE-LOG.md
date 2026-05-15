@@ -158,3 +158,17 @@ Every end of day:
 ---
 
 *This log is CRITICAL for auditing your bot and understanding what works.*
+
+### 2026-05-15 — EOD Snapshot
+- **Alpaca equity (reported)**: $100000
+- **Operating equity (capped)**: $3000
+- **Cash**: $100000
+- **Positions value**: $0 (0.0% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Phase P&L**: $0 (0.0%)
+- **Peak equity**: $3000
+- **Drawdown from peak**: 0.0%
+- **Trades today**: 0
+0
+- **Trades this week**: 0 / 3
+- **Daytrade count**: 0 / 3
