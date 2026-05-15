@@ -1,0 +1,49 @@
+name: Weekly Review
+
+# Análisis semanal con Anthropic API + WebSearch.
+# Schedule: viernes 20:30 UTC = viernes 4:30 PM EDT.
+
+on:
+  schedule:
+    - cron: '30 20 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  weekly-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: |
+          pip install anthropic requests
+          sudo apt-get install -y jq
+
+      - run: chmod +x scripts/*.sh
+
+      - name: Run weekly review AI routine
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ALPACA_BASE_URL: https://paper-api.alpaca.markets
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPERATING_CAPITAL: "3000"
+        run: python scripts/run-weekly-review-ai.py
+
+      - name: Commit memory updates
+        run: |
+          git config user.email "bot@tradingbot.local"
+          git config user.name "Trading Bot"
+          git add memory/
+          git diff --staged --quiet || git commit -m "weekly review $(date +%Y-%m-%d)"
+          git pull --rebase origin main || git rebase --abort
+          git push

@@ -1,0 +1,51 @@
+name: Market-Open Execution
+
+# Ejecuta los candidatos identificados por pre-market.
+# Schedule: 13:30 UTC weekdays = 9:30 AM EDT (apertura NY)
+# ⚠️ EDT-aligned. En EST ajustar a 14:30 UTC.
+
+on:
+  schedule:
+    - cron: '30 13 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  market-open:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python (for JSON math)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Run market-open execution
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ALPACA_BASE_URL: https://paper-api.alpaca.markets
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OPERATING_CAPITAL: "3000"
+        run: bash scripts/market-open.sh
+
+      - name: Commit memory updates
+        run: |
+          git config user.email "bot@tradingbot.local"
+          git config user.name "Trading Bot"
+          git add memory/
+          git diff --staged --quiet || git commit -m "market-open execution $(date +%Y-%m-%d)"
+          git pull --rebase origin main || git rebase --abort
+          git push

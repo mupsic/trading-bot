@@ -1,0 +1,45 @@
+name: Midday Monitor
+
+# Hard stops -7%, tighten trailing en winners, drawdown circuit breaker.
+# Schedule: 16:00 UTC weekdays = 12:00 PM EDT.
+
+on:
+  schedule:
+    - cron: '0 16 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  midday:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: sudo apt-get install -y jq
+
+      - run: chmod +x scripts/*.sh
+
+      - name: Run midday monitor
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ALPACA_BASE_URL: https://paper-api.alpaca.markets
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OPERATING_CAPITAL: "3000"
+        run: bash scripts/midday.sh
+
+      - name: Commit memory updates
+        run: |
+          git config user.email "bot@tradingbot.local"
+          git config user.name "Trading Bot"
+          git add memory/
+          git diff --staged --quiet || git commit -m "midday scan $(date +%Y-%m-%d)"
+          git pull --rebase origin main || git rebase --abort
+          git push

@@ -81,6 +81,46 @@
 
 *Add your trades here as you execute them. This log is auto-populated by ClickUp.*
 
+### 2026-05-14 — Market Open Execution (NO TRADES)
+- **Time**: 13:38 UTC (9:38 AM ET)
+- **Status**: ⏸ Halted at STEP 1 — Today's research entry missing
+- **Reason**: RESEARCH-LOG.md has no entry for 2026-05-14. Per routine STEP 1, missing/empty research → STOP, no trades.
+- **Bot State**: PAUSED=no (not a manual pause)
+- **Pre-flight checks performed**:
+  - Date confirmed: 2026-05-14 (Thursday)
+  - Alpaca paper account: ACTIVE ✓ ($100k buying power, daytrade_count=0, no blocks) — credentials now working (yesterday's 403 issue appears resolved)
+  - Operating capital cap: $3,000
+  - Open positions: 0
+  - Capital used: $0 / $3,000
+- **Planned candidates evaluated**: NONE — no research entry to draw from
+- **Action taken**:
+  - Telegram alert sent: "Market Open 2026-05-14: No trades today. Reason: missing pre-market research entry."
+  - No orders placed
+  - No stops needed (no positions opened)
+- **Notes**:
+  - Pre-market routine (7 AM) appears to have skipped or failed to write today's RESEARCH-LOG entry.
+  - Yesterday's research recommended MCHP (6 sh @ $97) and MU (0.76 sh @ $788) but planned trades were blocked by Alpaca 403. Alpaca is now working — however, yesterday's candidates are stale (prices likely moved; catalysts may not re-validate).
+  - **Recommended follow-up**: investigate why pre-market routine did not produce a 2026-05-14 research entry; re-run pre-market manually or wait for tomorrow.
+
+---
+
+### 2026-05-13 — Market Open Execution (FAILED)
+- **Time**: 9:30 AM ET
+- **Status**: ❌ API Authentication Error (403)
+- **Issue**: Alpaca API rejected credentials in .env file
+  - ALPACA_API_KEY appears to be invalid or expired
+  - ALPACA_API_SECRET authentication failed
+- **Planned Candidates**: 
+  - MCHP (6 shares @ $97) — BLOCKED
+  - MU (0.76 shares @ $788) — BLOCKED
+- **Action Taken**: 
+  - Telegram alert sent
+  - No orders executed (API unavailable)
+  - Requires manual credential renewal in .env
+- **Notes**: Routine executed autonomously but halted at credential verification. User must renew Alpaca API keys.
+
+---
+
 ### 2026-05-11 (First Trade)
 - **Status:** Awaiting first trade...
 - **Account:** Paper Trading (Alpaca)

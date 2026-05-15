@@ -29,8 +29,15 @@ IMPORTANT — CAPITAL CAP ENFORCEMENT:
 STEP 1 — Read memory:
 - memory/PROJECT-CONTEXT.md
 - memory/TRADING-STRATEGY.md
+- memory/BOT-STATE.md (CRITICAL — pause check)
 - TODAY's entry in memory/RESEARCH-LOG.md (if missing or empty → STOP, send Telegram alert, exit)
 - tail -100 memory/TRADE-LOG.md (for weekly trade count)
+
+STEP 1.5 — Pause flag check (CRITICAL):
+If memory/BOT-STATE.md contains "PAUSED: yes":
+  → STOP. Do NOT open any new positions.
+  → Send Telegram: "⏸ Market-open SKIPPED: bot is paused via /pause command. Existing positions remain under normal management. Resume with /resume."
+  → Skip to STEP 9 (no commit needed).
 
 If RESEARCH-LOG decision is "HOLD" or Regime was OFF → STOP. No trades today. Skip to STEP 9 (no commit needed).
 

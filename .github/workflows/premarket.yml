@@ -1,0 +1,54 @@
+name: Pre-Market Research
+
+# Pre-market analysis con Anthropic API + WebSearch nativo
+# Schedule: 11:00 UTC weekdays = 7:00 AM EDT (1h30 antes de apertura NY)
+# ⚠️ EDT-aligned. En EST (Nov-Mar) ajustar a 12:00 UTC.
+
+on:
+  schedule:
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch:  # permite ejecutar manualmente desde la UI
+
+permissions:
+  contents: write
+
+jobs:
+  premarket:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic requests
+          sudo apt-get install -y jq
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Run pre-market AI routine
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ALPACA_BASE_URL: https://paper-api.alpaca.markets
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPERATING_CAPITAL: "3000"
+        run: python scripts/run-premarket-ai.py
+
+      - name: Commit memory updates
+        run: |
+          git config user.email "bot@tradingbot.local"
+          git config user.name "Trading Bot"
+          git add memory/
+          git diff --staged --quiet || git commit -m "pre-market research $(date +%Y-%m-%d)"
+          git pull --rebase origin main || git rebase --abort
+          git push

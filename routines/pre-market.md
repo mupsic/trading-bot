@@ -38,8 +38,12 @@ IMPORTANT — CAPITAL CAP:
 STEP 1 — Read memory for context:
 - memory/PROJECT-CONTEXT.md (mission, capital cap, safety rules)
 - memory/TRADING-STRATEGY.md (operational rules)
+- memory/BOT-STATE.md (pause flag — affects whether to even generate candidates)
 - tail -100 of memory/TRADE-LOG.md (open positions, recent trades, weekly count)
 - tail -50 of memory/RESEARCH-LOG.md (yesterday's research, ongoing thesis)
+
+If memory/BOT-STATE.md contains "PAUSED: yes":
+  → You may still do research (regime check, market context) for awareness, but the final decision MUST be HOLD regardless of candidates found. Log the pause state at the top of today's RESEARCH-LOG entry.
 
 STEP 2 — Pull live account state from Alpaca:
   bash scripts/alpaca.sh account
@@ -120,7 +124,7 @@ STEP 6 — Write today's entry to memory/RESEARCH-LOG.md (append, dated):
 - Economic calendar: CPI, FOMC, jobs, etc.
 - Sector momentum (top 3): ...
 
-### Trade Candidates (only if Regime ON)
+### Trade Candidates (human-readable, only if Regime ON)
 1. TICKER — catalyst, entry $X, stop $X (-7%), target $X (+14%), shares=N, R:R 1:2
 2. ...
 
@@ -129,6 +133,39 @@ STEP 6 — Write today's entry to memory/RESEARCH-LOG.md (append, dated):
 
 ### Decision
 TRADE [list candidates] / HOLD (default if Regime OFF or no edge)
+
+### CANDIDATES (machine-readable) — REQUIRED FOR market-open.sh
+ALWAYS include this block, even if Regime OFF (in that case, candidates is an empty array []).
+This block is what scripts/market-open.sh parses to execute trades. Strict format:
+
+```json
+{
+  "date": "YYYY-MM-DD",
+  "regime": "ON" | "OFF",
+  "decision": "TRADE" | "HOLD",
+  "candidates": [
+    {
+      "symbol": "AAPL",
+      "entry_price": 150.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 4,
+      "position_cost": 600.00,
+      "target_price": 171.00,
+      "catalyst": "Q3 earnings beat with raised guidance",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
+
+Rules:
+- shares × entry_price MUST be <= 600 (20% of $3000 cap)
+- stop_pct is always 7 (hard stop level for the bash buy-gate to compute)
+- trailing_stop_pct is always 10 (the actual GTC trailing order)
+- Use exact decimals (no trailing zeros stripped — keep 150.00 not 150)
+- If Regime OFF or no valid candidates → "candidates": []
 
 STEP 7 — Send Telegram notification ONLY if urgent:
 Conditions for sending:
