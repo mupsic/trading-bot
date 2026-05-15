@@ -266,3 +266,84 @@ Every morning at 7:00 AM:
 ---
 
 *This log helps you understand WHY you're trading, not just WHAT you're trading.*
+
+I'll gather all the required data points systematically.Now let me search for specific trade candidates and confirm sector momentum with more precision.Now I have all the data needed. Let me compile the research log.
+
+**Key data points gathered:**
+- SPY current: $748.17; SPY 200-day MA: ~$706.38 (Investing.com) or ~$671-674 (TipRanks/Financhill from May 13) → Using most recent from Investing.com: **$706.38**
+- VIX: **~18.01** (Yahoo Finance history page) / **17.26** (Yahoo Finance futures page after close) → Current reading ~**17.90-18.01**
+- SPY > MA200 ✓ AND VIX < 25 ✓ → **REGIME = ON**
+- CSCO: surged ~15% on earnings beat, now ~$117; next earnings Aug 11 → eligible
+- AMAT: reported earnings May 14 (yesterday) → just reported, need to assess post-earnings reaction; next earnings ~Aug → eligible but just reported
+- AVGO: ~$438, earnings June 3 → within 7 days? No, ~19 days away → eligible but price too high for $600 cap (1 share = $438)
+- NVDA reports May 20 → within 7 days, EXCLUDE
+- XLK leading sector this week with tech/AI rally
+
+## 2026-05-15 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100000.00
+- Operating cap: $3,000
+- Cash: $100000.00
+- Positions value: $0.00
+- Capital available: $3000.00
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $748.17 (MA200: $706.38) — ABOVE
+- VIX: 18.01 — LOW
+- Regime: ON
+- Reason: SPY 200-day moving average is 706.38; SPY at $748.17 is well above MA200, and VIX at 18.01 is below 25 threshold.
+
+### Market Context
+- Top catalysts today:
+  - The US stock market surged toward new records, as strength in AI-related companies and optimism surrounding the US-China summit in Beijing helped offset global economic pressures. The S&P 500 climbed 0.8% to cross 7,500 for the first time.
+  - Shares of Cisco surged 13% after the software giant posted third-quarter results and guidance that beat Wall Street's expectations.
+  - Nvidia also jumped 4.4%, extending its monthly gain to 15% after the US approved shipments of H200 chips to 10 Chinese companies.
+  - May 15: April industrial production and capacity utilization.
+  - Annual CPI gains topped estimates, sending odds of a rate hike much higher and wiping out most chances of a 2026 rate cut.
+- Sector leaders:
+  - XLK (Technology): Leading sector — XLK had a total return of 60.47% in the past year. The top performing sectors in May 2026 included Communication Services, Technology, Healthcare.
+  - XLE (Energy): Elevated due to Iran war/oil at ~$100+
+  - XLF (Financials): +0.59% on 5/14
+  - XLV (Healthcare): -0.05% on 5/14
+- Economic events:
+  - April Industrial Production & Capacity Utilization (today)
+  - Empire State Manufacturing (today)
+  - Trump-Xi Beijing Summit Day 2
+  - Hot PPI (yesterday: +1.4% headline) and CPI still reverberating
+
+### Trade Candidates (Regime ON)
+
+1. **CSCO** — Earnings beat catalyst (Q3 FY26: EPS $1.06 vs $1.04 est, Rev $15.84B vs $15.56B est); Shares jumped 14% and headed for their best day in more than two decades after Cisco blew past its AI infrastructure and hyperscaler guidance orders. For fiscal Q4, Cisco guided $1.16-$1.18 in adjusted EPS on $16.7B-$16.9B revenue. Next earnings Aug 11 (safe). Entry ~$117, stop $108.81 (-7%), target $133.38 (+14%), shares=5, cost=$585. R:R 1:2.
+
+2. **AVGO** — Broadcom jumped 4.3% after multiple firms significantly raised price targets, with Wells Fargo increasing to $545 from $430. AI-related semiconductor revenue potentially running 30-40% higher than anticipated. Broadcom also recently disclosed a partnership with Meta to produce a new 2-nanometer AI chip. Earnings June 3 (19 days out, safe). Entry ~$438, stop $407.34 (-7%), target $499.32 (+14%), shares=1, cost=$438. R:R 1:2.
+
+### Risk Factors Today
+- SPY RSI (14) is 76.14 — overbought territory, pullback risk elevated
+- 10-year Treasury yield traded at 4.48%, touching its highest levels of the year — rising yields pressure growth stocks
+- Hot PPI/CPI data eliminating rate cut hopes; rate hike odds rising above 30%
+- Iran war/Strait of Hormuz geopolitical risk persists despite positive signals
+- Nvidia reports on May 20th — major event risk for entire tech/AI complex next week
+- CSCO gapped up ~15% from $101.87; chasing a post-earnings gap carries fade risk
+- AVGO at $438/share limits position to 1 share only = concentrated risk on single share
+
+### Decision
+HOLD — While Regime is ON and catalysts are strong, both top candidates carry elevated risk:
+1. **CSCO** has already gapped +15% and is trading at 52-week highs ($119.36 intraday high yesterday); entering now is chasing a massive gap with high fade probability on day 2. Wait for pullback/consolidation toward $110-112 range.
+2. **AVGO** at ~$438 allows only 1 share within $600 cap — insufficient diversification and unable to scale properly.
+3. RSI at 76+ on SPY signals overbought broad market; NVDA earnings May 20 creates binary event risk for entire tech sector within 5 trading days.
+4. Treasury yields at 2026 highs + hot inflation data = macro headwind for growth/tech.
+
+**Recommendation**: Wait for post-NVDA-earnings clarity (May 20-21) or a 2-3% pullback to enter with better risk/reward. Monitor CSCO for pullback to $108-112 range as swing entry.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-15",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
