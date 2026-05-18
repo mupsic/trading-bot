@@ -172,3 +172,17 @@ Every end of day:
 0
 - **Trades this week**: 0 / 3
 - **Daytrade count**: 0 / 3
+
+### 2026-05-18 — EOD Snapshot
+- **Alpaca equity (reported)**: $100000
+- **Operating equity (capped)**: $3000
+- **Cash**: $100000
+- **Positions value**: $0 (0.0% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Phase P&L**: $0 (0.0%)
+- **Peak equity**: $3000
+- **Drawdown from peak**: 0.0%
+- **Trades today**: 0
+0
+- **Trades this week**: 0 / 3
+- **Daytrade count**: 0 / 3
