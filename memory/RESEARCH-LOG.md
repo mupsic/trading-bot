@@ -434,3 +434,102 @@ Key data points gathered:
   "candidates": []
 }
 ```
+
+I'll gather the required data points systematically.Now let me search for sector ETF performance and pre-market movers:Now let me search for specific candidate stocks with catalysts:Now I have all the data I need. Let me compile the research log.
+
+Key data gathered:
+- **SPY**: $740.03 (live), MA200: ~$672.78-675.59 (multiple sources, using TipRanks at $672.78 and Financhill at $675.59) → SPY ABOVE MA200
+- **VIX**: Last close 18.43, current ~18.33-18.99 → BELOW 25
+- **Regime**: ON (SPY > MA200 AND VIX < 25)
+- Key catalysts: NVDA earnings Wed, Iran war/oil tensions, rising Treasury yields, FOMC minutes Wed, Bill Ackman MSFT stake, RAMP M&A (+27%), BRC +12%, RKLB earnings beat momentum
+- Pre-market movers: RAMP +27% (M&A), BRC +12%, RKLB +4.1%, MSFT +3.1%, HCWB +203%
+- Sector: XLK (Tech) leading with 51.42% 1Y return and 22.58% trailing returns; XLE benefiting from oil; XLF supported by rising yields
+- RKLB at ~$129.86 premarket — too expensive for $600 cap (only 4 shares at $600/$130 = 4.6 shares)
+- MSFT around high price — too expensive for a meaningful position
+- BRC (Brady Corp) at ~$85-90 range, gained 12% — need to check
+- Need affordable stocks with catalysts under $600 position size
+
+RKLB: ~$130 → 4 shares × $130 = $520 ≤ $600 ✓ — but RSI overbought at these levels, up 472% in a year. NVDA earnings Wed is a risk factor for the whole tech/aerospace complex. No RKLB earnings in next 7 days (reported May 7) ✓.
+
+MSFT: ~$475+ → only 1 share for $475 ≤ $600 ✓ — catalyst is Ackman stake. No earnings in next 7 days ✓. But $475 for 1 share is thin.
+
+BRC (Brady Corp): ~$85-90, gained 12% premarket today — let me consider this. Market cap ~$4.5B. But need to know exact catalyst.
+
+Given the constraints and risks (rising yields, oil tensions, Schwab "moderately bearish" outlook, overbought RSI on SPY at 78.69), I should be cautious.
+
+## 2026-05-18 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100000.00
+- Operating cap: $3,000
+- Cash: $100000.00
+- Positions value: $0.00
+- Capital available: $3000.00
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $740.03 (MA200: $672.78) — ABOVE
+- VIX: 18.43 — LOW
+- Regime: ON
+- Reason: SPY's 200-day simple moving average is 672.78; SPY at $740.03 is +10% above MA200. VIX at 18.99, up +3.04% pre-market but well below 25 threshold.
+
+### Market Context
+- Top catalysts today:
+  - Stocks were rising and oil prices were easing as investors monitored developments in the U.S.-Iran conflict and geared up for earnings from Nvidia (NVDA) later this week.
+  - Nvidia and Target (TGT) are both scheduled to post quarterly results on Wednesday. Walmart (WMT) is slated to report earnings on Thursday.
+  - U.S. Treasury yields are breaching several key levels across the curve today (2-year > 4.0%, 10-year > 4.50%, 30-year > 5.0%).
+  - LiveRamp Holdings (RAMP) surged 27% in early trading on news that advertising firm Publicis Groupe will acquire the company in an all-cash deal valued at $2.5 billion.
+  - Shares of Microsoft Corporation gained 3.1% following hedge fund manager Bill Ackman's disclosure of a new stake via Pershing Square Capital Management.
+  - Chances of a Fed rate hike sometime this year climbed to 45%, according to the CME FedWatch Tool.
+- Sector leaders:
+  - XLK (Technology): XLK had a total return of 51.42% in the past year; earnings for XLK members expected up 43% this year — STRONGEST
+  - XLE (Energy): Benefiting from Iran war oil spike, IEO (Oil & Gas ETF) up +2.63%, XLE up +2.36% on Friday
+  - XLF (Financials): Close at $51.10, only -0.37% Friday; supported by rising yields/NIM expansion
+  - XLV (Healthcare): $145.10, -1.04% Friday
+  - XLY (Consumer Disc): $116.53, -1.80% Friday — lagging
+  - XLP (Consumer Staples): $84.64, -0.40% Friday — defensive
+- Economic events:
+  - NY Empire State Manufacturing Index for May jumped to 19.6, in contrast to the Zacks Consensus Estimate of 7.
+  - Key events this week: Pending Home Sales (Tue), Fed FOMC meeting minutes (Wed), NVDA + WMT earnings.
+  - Kevin Warsh prepares to take over the Federal Reserve when Chairman Jerome Powell's term ends.
+
+### Trade Candidates (Regime ON)
+
+**NOTE: Despite Regime ON, significant caution warranted.**
+
+The confluence of rising bond yields, potential for higher oil prices, and the effective ending of Q1 earnings season may provide enough catalyst for some healthy consolidation. Schwab's forecast is "Moderately Bearish" for this week. SPY RSI (14) is 78.69 — deeply overbought. 84.3% of S&P 500 companies exceeded earnings expectations with average upside surprise of 18.6%, so the positive earnings cycle is largely priced in.
+
+Given these headwinds, only 1 high-conviction candidate identified:
+
+1. **MSFT** — Bill Ackman/Pershing Square new stake catalyst + software sector breakout (IGV above 100d SMA), entry ~$475, stop $441.75 (-7%), target $541.50 (+14%), shares=1, cost=$475, R:R 1:2
+   - Shares of Microsoft Corporation (MSFT) rose 3.1% after hedge fund manager Bill Ackman disclosed a new stake in the company through Pershing Square Capital Management.
+   - Two bullish catalysts: Figma "beat and raise" quarter + Ackman's new MSFT stake citing "highly compelling valuation".
+   - Market cap: ~$3T ✓ | No earnings within 7 days ✓ | Tech sector leading ✓
+   - **CONCERN**: Only 1 share at $475 — thin position, limited upside in dollar terms (~$66 target gain). Rising yields are headwind for tech multiples.
+
+**REJECTED candidates:**
+- RKLB ($129.86): RKLB has returned 472% over the past year and 68% year to date. Massively extended; only 4 shares fit budget. No clear near-term catalyst beyond post-earnings momentum. Risk of pullback if NVDA disappoints Wed.
+- RAMP ($RAMP): M&A target at fixed acquisition price — no swing upside remaining in an acquisition deal.
+- BRC ($85-90): Moved +12% already today; chasing gap-up without established setup.
+
+### Risk Factors Today
+- The 10-year Treasury note yield spiked nine basis points to 4.55%, the highest in a year, indicating rising concerns about war-related inflation leading to possible rate hikes.
+- IEA head warned commercial oil inventories are depleting rapidly with only a few weeks' worth left due to the Iran war and the closure of the Strait of Hormuz.
+- NVDA earnings Wednesday could swing entire tech sector ±5%
+- The SOX now trades 32% above its 50-day moving average — historically extreme premium
+- SPY RSI 78.69 = deeply overbought; 30-year yield at multi-year highs
+- Fed rate hike probability at 45% — a sharp reversal from near-zero a month ago
+
+### Decision
+HOLD — Regime is ON but risk/reward is unfavorable for new entries today. SPY is deeply overbought (RSI 78.69), Treasury yields at year-highs, oil supply crisis escalating, and NVDA earnings Wednesday introduces massive binary event risk. Schwab outlook is "Moderately Bearish" for this week. MSFT is a viable candidate but 1-share position at $475 offers limited dollar upside ($66 at target) relative to the macro headwinds. Better to wait for a pullback or post-NVDA clarity mid-week before deploying capital.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-18",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
