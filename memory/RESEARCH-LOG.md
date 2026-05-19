@@ -533,3 +533,96 @@ HOLD — Regime is ON but risk/reward is unfavorable for new entries today. SPY 
   "candidates": []
 }
 ```
+
+Now I have all the data I need. Let me compile the research log.
+
+Key findings:
+- **SPY**: Current price ~$734.46 (from Finnhub). SPY 200-day SMA is $672.78. Also Investing.com shows SPY MA200 at $712.56 and Financhill shows 675.59. Using the TipRanks figure (672.78) as it's a clear SMA200 from May 16. SPY at 734.46 is ABOVE MA200. ✅
+- **VIX**: VIX closed at 17.82. Pre-market VIX is at 18.99, up +3.04%. Yahoo shows VIX at 18.85. Under 25. ✅
+- **REGIME = ON** (SPY > MA200 AND VIX < 25)
+
+Market context:
+- Stock futures are lower and oil prices are falling amid inflation fears and the previous session's tech sell-off.
+- Trump called off a scheduled attack on Iran because "serious negotiations" are underway.
+- Nvidia earnings coming out Wednesday May 20th after the bell.
+- Home Depot beat Wall Street's expectations on the top and bottom lines and reaffirmed its full-year guidance.
+- Treasury yields are spiking across the curve (10-year > 4.50%).
+
+Sector data from Yahoo (May 18): XLF +1.25%, XLP +1.49%, XLV +0.43%, XLY -0.18%. XLK appears to be selling off today. Defensive/financials leading.
+
+MPC: Price ~$259.53. Too expensive for $600 max (can only buy 2 shares = $519). Marathon Petroleum beat Q1 profit estimates, benefiting from stronger refining margins. Multiple analyst upgrades with Goldman raising PT to $291. Ex-dividend date May 20, 2026. However, at $259+ per share, 2 shares = ~$519, which fits.
+
+But caution flags are significant: market is pulling back, overbought RSI, rising bond yields, tech sell-off, NVDA earnings risk Wed. The Schwab analyst gave a "Moderately Bearish" forecast for this week. This is a tricky environment.
+
+Let me assess candidates carefully. Given the environment (pullback, rising yields, war uncertainty), I should be cautious. XLF and XLP showing relative strength. MPC has strong Q1 beat + buyback expansion + going ex-div tomorrow, but the stock is near 52-week highs and insider selling. 
+
+Given the high uncertainty (NVDA earnings Wed, Iran tensions, bond yields spiking, overbought conditions), the prudent call is HOLD despite regime being ON.
+
+## 2026-05-19 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100000.00
+- Operating cap: $3,000
+- Cash: $100000.00
+- Positions value: $0.00
+- Capital available: $3000.00
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $734.46 (MA200: $672.78) — ABOVE
+- VIX: 18.85 — LOW
+- Regime: ON
+- Reason: SPY well above 200-day MA (+9.2%); VIX under 25 threshold at ~18.85, confirming low-vol bull regime
+
+### Market Context
+- Top catalysts today:
+  - **US-Iran ceasefire talks**: Trump called off scheduled attack on Iran; "serious negotiations" underway — creating geopolitical whipsaw risk
+  - **NVDA earnings Wednesday (May 20 AMC)**: Analysts expect $1.78 EPS (+120% YoY) on $79.2B revenue; this will set tone for AI/tech complex
+  - **Home Depot Q1 beat**: Revenue $41.77B (vs $41.63B est), adj EPS $3.43 (vs $3.41 est); full-year guidance reaffirmed — retail reading
+  - **Treasury yields spiking**: 10-year >4.50%, 30-year >5.0%; global bond selloff (Japan JGB highest since 1997) — rate-hike fears under new Fed Chair Warsh
+  - **Tech sell-off continuation**: S&P futures -0.49%, Nasdaq -0.78% pre-market; AMAT sold off despite earnings beat Friday; Cerebras (CBRS) -4% after 68% IPO debut
+- Sector leaders (last session, May 18):
+  - XLP (Consumer Staples): +1.49%
+  - XLF (Financials): +1.25%
+  - XLV (Healthcare): +0.43%
+  - XLY (Consumer Disc): -0.18%
+  - XLK (Technology): selling off today (SOX pulled back from ATH)
+  - XLE (Energy): mixed — oil falling on Iran ceasefire hopes
+- Economic events:
+  - 36 economic events scheduled for Tuesday May 19
+  - NVDA earnings Wed May 20 (mega catalyst for entire market)
+  - Lowe's (LOW) earnings Wed May 20
+  - Global bond yield repricing ongoing
+  - New Fed Chair Kevin Warsh settling in; rate hike now priced as possibility
+
+### Trade Candidates (Regime ON — but environment hostile)
+
+**EVALUATED BUT REJECTED:**
+
+1. **MPC** — Q1 earnings beat ($1.65 adj EPS vs $0.75 est), $5B buyback authorization, multiple analyst upgrades (Goldman PT $291). Price ~$259.53, 2 shares = $519. **REJECTED**: Near 52-week high ($261.61), insider selling on May 15, ex-dividend tomorrow May 20 (likely to gap down after ex-div), and oil prices falling on Iran peace hopes create headwind for refinery margins.
+
+2. **XLF components (JPM, BAC)** — Financials showing relative strength on rising yields. **REJECTED**: Bond yield spike is creating financial stress risk, not just NIM expansion. Uncertainty too high with Warsh's first moves as Fed Chair unknown.
+
+3. **HD** — Q1 beat, guidance reaffirmed. **REJECTED**: Same-store sales flat, beat came on lowered estimates. At ~$350+ per share, only 1 share possible. Consumer spending under pressure from gas prices. Not compelling R:R.
+
+### Risk Factors Today
+- **NVDA earnings Wednesday**: Entire market hangs on this print; any "sell the news" reaction could drag indices -2%+
+- **Bond yield breakout**: Global synchronized duration repricing; 30-yr >5% is a major warning
+- **Iran uncertainty**: Ceasefire on "a knife edge" per Reuters; any escalation reversal would spike oil and VIX
+- **Overbought technicals**: RSI 78.69 on SPY (sell signal); MACD also showing sell signal; Schwab outlook "Moderately Bearish" for this week
+- **Post-earnings air pocket**: After NVDA, there are few remaining bullish catalysts to sustain AI rally
+- **Rate hike repricing**: Market now pricing possible Fed hike under Warsh — a major shift from prior rate-cut expectations
+
+### Decision
+HOLD — Regime is ON but the risk/reward environment is deeply unfavorable this week. Multiple converging headwinds (NVDA binary event in 24 hours, global bond rout, overbought technicals, geopolitical knife-edge) make it imprudent to deploy fresh capital. The bot has 3 trades/week available; better to wait for post-NVDA clarity (Thursday/Friday) when the market's direction will be more legible. No edge identified today that justifies a position entry with hard -7% stop risk into this volatility cluster.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-19",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
