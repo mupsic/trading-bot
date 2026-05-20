@@ -626,3 +626,91 @@ HOLD — Regime is ON but the risk/reward environment is deeply unfavorable this
   "candidates": []
 }
 ```
+
+I'll gather the required market data systematically.Now let me search for sector ETF performance and pre-market movers:Now let me search for specific stock candidates with catalysts:Now I have all the data I need. Let me compile the research log.
+
+## 2026-05-20 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100002.38
+- Operating cap: $3,000
+- Cash: $99701.30
+- Positions value: $301.08
+- Capital available: $2698.92
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $735.59 (MA200: ~$717) — ABOVE
+- VIX: 17.96 — LOW
+- Regime: **ON**
+- Reason: SPY 200-day moving average is 717.18, current SPY at $735.59 is well above. VIX at 17.96 is below 25 threshold. Both conditions pass.
+
+### Market Context
+- Top catalysts today:
+  - Nvidia (NVDA) first-quarter earnings report after the close — the AI chipmaking giant is widely viewed as a barometer for the artificial intelligence market
+  - FOMC minutes release today; also expected earnings from Analog Devices (ADI), TJX Companies (TJX), Lowe's (LOW), Williams-Sonoma (WSM) and Intuit (INTU)
+  - U.S. 20-Year and 30-Year Treasury are now at levels not seen since 2007 — rising yields headwind
+  - Iran's Revolutionary Guard threatened to expand the Middle East conflict; Trump told lawmakers Washington would end the conflict "very quickly"
+  - BofA reinstated coverage on ServiceNow (NOW) May 18 with a buy rating, arguing AI is the strongest tailwind NOW has ever seen
+- Sector leaders (today's session from Yahoo data):
+  - XLV (Healthcare): +1.10%, XLP (Consumer Staples): +0.22%, XLK (Technology): -session dependent
+  - XLE (Energy): +1.17% — top sector gainer driven by Iran war/oil prices
+  - XLF (Financials): -1.24%, XLY (Consumer Disc): -1.11%
+  - **This week's strongest: XLE (Energy) and XLV (Healthcare)** — defensive/energy rotation amid rising yields and geopolitical risk
+- Economic events:
+  - FOMC Minutes (2:00 PM ET) — final Powell-era minutes
+  - Several hawkish Fed voices have underscored persistent inflation pressures, with analysts expecting rates to stay on indefinite hold
+  - 10-year Treasury yield closing around 4.66% and the 2-year yield near 4.11%
+
+### Trade Candidates (Regime ON)
+
+**IMPORTANT FILTERS APPLIED:**
+- LOW reports earnings TODAY → **EXCLUDED** (event risk)
+- NVDA reports earnings TODAY → **EXCLUDED**
+- TJX, INTU, WSM report TODAY → **EXCLUDED**
+- NOW (ServiceNow) — already reported Q1 on April 22, next earnings ~July → ELIGIBLE but price ~$101 means 5 shares = $505 ✓
+- Software sector showing recovery: Software names went the other direction from chips, led by nearly 5% pre-market gains for ServiceNow (NOW)
+
+1. **NOW** — BofA Buy reinstated (PT $130) + Experian AI partnership + software sector rotation away from semis, entry $101.00, stop $93.93 (-7%), target $115.14 (+14%), shares=5, cost=$505, R:R 1:2
+   - BofA forecasts 18% to 22% revenue growth for NOW from 2026 through 2028. Key Q1 2026: Subscription revenues of $3.671 billion, up 22% year over year
+   - Bernstein raised price target to $236 from $226, maintained Outperform rating
+   - No earnings within 7 days ✓ | Market cap >$1B ✓ | Software sector showing positive momentum ✓
+
+2. **AAPL** — ALREADY HELD (1 share @ $298.70, current $301.08, +0.8%). No action needed. Trailing stop should be active.
+
+**Note on caution:** The S&P 500 fell for its third straight day and the potential for a "sell on the news" reaction around NVDA earnings is a possibility. FOMC minutes + rising yields create an uncertain afternoon. Recommend limiting to ONE new position today and waiting to see NVDA reaction before deploying more capital.
+
+### Risk Factors Today
+- **NVDA earnings after close** — could swing entire market sentiment; avoid entering any semi/AI-hardware names pre-report
+- **FOMC minutes at 2 PM ET** — hawkish surprise risk given CME FedWatch now estimating higher odds for a hike
+- **Rising Treasury yields** — 10-year yield at 4.66%, 20Y and 30Y at levels not seen in nearly two decades
+- **Iran geopolitical escalation** — oil at ~$108-111/bbl adding inflation pressure
+- **RSI overbought on SPY** — SPY RSI (14) is 78.69, creating a Sell signal — market technically stretched
+- **3-day consecutive decline** in S&P 500 — potential for further consolidation
+
+### Decision
+**TRADE [NOW]** — One new position only. Conservative sizing given elevated macro risk. Enter NOW in first hour if price holds above $99. Place 10% trailing stop immediately after fill. Hold AAPL position with existing stop.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-20",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "NOW",
+      "entry_price": 101.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 5,
+      "position_cost": 505.00,
+      "target_price": 115.14,
+      "catalyst": "BofA reinstated Buy rating (PT $130) on May 18; Bernstein PT raised to $236; Experian multi-year AI partnership announced May 15; software sector rotation gaining momentum as capital rotates from semis to enterprise software ahead of NVDA earnings",
+      "sector": "Technology (Enterprise Software)",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
