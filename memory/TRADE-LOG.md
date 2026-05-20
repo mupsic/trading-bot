@@ -200,3 +200,16 @@ Every end of day:
 0
 - **Trades this week**: 0 / 3
 - **Daytrade count**: 0 / 3
+
+### 2026-05-20 — Trade Entry: NOW
+- **Ticker**: NOW
+- **Side**: BUY
+- **Shares**: 5
+- **Entry price**: $101.0 (intended)
+- **Position cost**: $505.0
+- **Stop**: trailing 10% GTC (order_id: c826ec59-7e43-41ef-93e4-05d9cd0d49aa)
+- **Target**: $115.14
+- **Catalyst**: BofA reinstated Buy rating (PT $130) on May 18; Bernstein PT raised to $236; Experian multi-year AI partnership announced May 15; software sector rotation gaining momentum as capital rotates from semis to enterprise software ahead of NVDA earnings
+- **Sector**: Technology (Enterprise Software)
+- **Buy order_id**: e73054c3-c829-4148-b87d-27e209dae62b
+- **Capital used after**: $804.85 / $3000
