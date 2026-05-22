@@ -234,3 +234,93 @@ Given the market was still open and trending down ~1%, and the prior Friday clos
 
 ### Overall Grade: F
 Reasoning: The bot's first operational week resulted in zero trades executed across all five trading days, entirely due to infrastructure failures — not market conditions or strategy decisions. An API authentication error blocked trades on Tuesday (5/13), and a missing research log entry halted the bot on Thursday (5/14). Monday (5/11) was the initial setup day, and Friday (5/15) had no candidates queued. While capital was preserved and no rules were violated in the traditional sense, the fundamental purpose of a trading bot is to trade, and a week with zero deployment against a market that rallied to all-time highs before pulling back represents a complete operational failure. The grade reflects execution capability, not strategy quality, which remains entirely untested.
+
+Now I have the S&P 500 weekly performance data. According to Advisor Perspectives, the S&P 500 rose 0.9% for the week ending May 22, posting its eighth consecutive weekly gain. Let me also get the S&P 500 closing values for Friday May 15 and Friday May 22 to confirm.Now I have enough data to compile the weekly review. Let me piece together the S&P 500 weekly performance:
+
+- The S&P 500 rose ~0.9% for the week ending May 22, per Advisor Perspectives, posting its eighth consecutive weekly gain.
+- Friday May 22 close: ~7,473-7,488 (market was still open during some searches; Yahoo showed 7,473.47 at close on May 22)
+- The prior Friday (May 15) close would have been around 7,407 based on the ~0.9% weekly gain.
+
+Now let me compute the bot's metrics:
+
+**Trades this week:**
+- 1 trade entered: NOW (BUY 5 shares @ $101.71 on May 20)
+- 0 trades closed
+- 2 open positions at week end: AAPL (carried from prior), NOW (new)
+
+**Closed trades:** 0
+**Open trades:** 2 (AAPL, NOW)
+**Win rate:** N/A (no closed trades)
+**Profit factor:** N/A
+
+**Open position performance:**
+- AAPL: Entry $298.70, Current $308.66, Unrealized +$9.96 (+3.3%)
+- NOW: Entry $101.71, Current $101.87, Unrealized +$0.81 (+0.2%)
+
+**Week P&L:** $0.00 (0.00%) — operating equity stayed at $3,000 (capped)
+**S&P 500:** +0.9%
+**Bot vs S&P:** -0.90%
+
+## Week ending 2026-05-22
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $3,000.00 |
+| Ending portfolio (Fri) | $3,000.00 |
+| Week return | $0.00 (+0.00%) |
+| S&P 500 week | +0.9% |
+| Bot vs S&P | -0.90% |
+| Trades total | 1 (W:0 / L:0 / open:2) |
+| Win rate | N/A (no closed trades) |
+| Best trade | NOW +0.2% (unrealized) |
+| Worst trade | NOW +0.2% (unrealized) |
+| Profit factor | N/A (no closed trades) |
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| — | — | — | — | — | — | No closed trades this week |
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $308.66 | +$9.96 (+3.3%) | 10% trailing | Technology (Consumer Electronics) |
+| NOW | $101.71 | $101.87 | +$0.81 (+0.2%) | 10% trailing GTC | Technology (Enterprise Software) |
+
+### What Worked (3-5 bullets)
+- AAPL position continued its grind higher, gaining ~1.2% on Friday alone and now up +3.3% from entry — approaching the first profit-taking threshold (+15%) on a relative basis but still far away in absolute terms
+- NOW entry was well-timed around analyst upgrades (BofA Buy reinstatement, Bernstein PT raise) and the enterprise software rotation thesis — position is green from entry despite a rough Wednesday (-1.4% day)
+- Disciplined capital deployment: only 1 trade made out of 3 allowed, keeping 73% of operating capital in cash — appropriate for a new strategy still proving itself
+- Both positions are in the green with trailing stops set, meaning downside is managed even if the market reverses
+- Market tailwind helped: S&P 500 posted its eighth consecutive weekly gain (+0.9%), with equal-weight S&P and small/midcaps outperforming
+
+### What Didn't Work (3-5 bullets)
+- Operating equity shows $0.00 week P&L due to the capped equity model — unrealized gains (~$10.77 combined) are not reflected in the official return, making performance tracking misleading at this stage
+- Only 1 trade executed in 5 trading days — while conservative is appropriate, the bot underutilized its 3-trade-per-week allowance and could have captured more of the broad market rally
+- NOW position is barely positive (+0.2%) despite strong sector tailwinds and catalyst-driven entry — the stock underperformed the broader market this week
+- No diversification across sectors — both positions are Technology, creating concentrated sector risk
+- Bot returned 0.00% vs S&P 500's +0.9%, underperforming the benchmark by 90bps in a week where the market rallied broadly
+
+### Sector Performance
+- **Technology (Consumer Electronics):** AAPL +3.3% unrealized — strong performer, benefiting from broader tech momentum and AI narrative (Apple is the #3 S&P 500 constituent by market cap)
+- **Technology (Enterprise Software):** NOW +0.2% unrealized — lagged despite positive analyst catalysts; software rotation thesis has not fully materialized yet
+- **Missed sectors:** Equal-weight S&P 500 gained +1.5% WTD and small/midcaps outperformed; quantum computing stocks surged (Rigetti +30%, D-Wave +22%) on $2B government investment; energy remained volatile due to Iran war / Strait of Hormuz concerns
+
+### Key Lessons
+- The capped operating equity model ($3,000) makes weekly P&L reporting uninformative when all gains are unrealized — need to track unrealized P&L separately to understand true performance
+- First real trade (NOW) was entered with solid catalyst documentation and proper stop-loss mechanics — this is the right process even if the result is modest so far
+- Being underinvested (27% deployed) in an eighth consecutive up-week for the S&P 500 is a drag on relative performance — cash is a position, and right now it's a losing one vs the benchmark
+- Both positions are tech — strategy should actively seek diversification in coming weeks, especially given geopolitical risks (Iran war, oil prices at 4-year highs, consumer sentiment at 44.8)
+- Infrastructure issues from Week 1 appear resolved — the bot successfully placed a trade with trailing stop this week, which is meaningful operational progress
+
+### Adjustments for Next Week
+- No changes — insufficient data. This is only Week 2 of operation and Week 1 of actual trading. Per policy: a rule must FAIL for 2+ consecutive weeks before relaxing, and must PROVE OUT for 2+ consecutive weeks before tightening. No rules have been tested long enough to warrant adjustment.
+- **Operational observations (not rule changes):**
+  - Track unrealized P&L alongside capped operating equity for a more accurate performance picture
+  - Consider using more of the 3-trade-per-week allowance if quality setups present — 1/3 used is conservative
+  - Seek sector diversification in next entries to reduce concentrated tech exposure
+  - Monitor Memorial Day weekend holiday schedule (Monday May 25 market closed) — shorter trading week ahead
+
+### Overall Grade: C
+Reasoning: Week 2 represents a significant operational improvement over Week 1's F grade — the bot successfully executed its first trade (NOW) with proper catalyst documentation, trailing stop placement, and position sizing within strategy rules. Both open positions are in the green, with AAPL up +3.3% and NOW up +0.2%, for combined unrealized gains of ~$10.77. However, the bot underperformed the S&P 500 by 90bps in a strong market week, was substantially underinvested (27% deployed vs 100% capacity), made only 1 of 3 allowed trades, and holds concentrated sector exposure in Technology. The grade reflects that the bot is now functional and following its rules — a necessary first step — but has not yet demonstrated the ability to generate meaningful returns or fully capitalize on favorable market conditions. A C acknowledges real progress from Week 1 while recognizing significant room for improvement in trade frequency, diversification, and capital deployment.
