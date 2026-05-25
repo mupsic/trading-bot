@@ -714,3 +714,85 @@ I'll gather the required market data systematically.Now let me search for sector
   ]
 }
 ```
+
+I'll gather the required market data systematically.Now let me search for sector ETF performance and pre-market movers.Now I have enough data. Let me compile the key findings:
+
+**CRITICAL FINDING: Today is Memorial Day (May 25, 2026) — US markets are CLOSED.**
+
+Let me now compile the research log with all data gathered.
+
+Key data points:
+- **SPY**: $745.66 (from Finnhub). The SPY 200-day moving average is 722.35 (Investing.com), though SPY's 200-day simple moving average is 672.78 (TipRanks, from May 16). The more current Investing.com figure of ~722 is likely more recent. I'll use a synthesis: multiple sources show MA200 between 672-722. The Investing.com data appears most current.
+- **VIX**: VIX: 16.70 (Yahoo Finance, as of May 22 close)
+- **Market is CLOSED**: The NYSE and Nasdaq will be closed on Memorial Day, May 25, 2026, in observance of the federal holiday honoring fallen service members.
+
+## 2026-05-25 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,012.22
+- Operating cap: $3,000
+- Cash: $99,192.75
+- Positions value: $819.47
+- Capital available: $2,180.53
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $745.66 (MA200: ~$722.35) — ABOVE
+- VIX: 16.70 — LOW
+- Regime: **ON**
+- Reason: SPY well above MA200 (+3.2%), VIX comfortably below 25. Bullish regime confirmed.
+
+### Market Context
+- **⚠️ US MARKETS CLOSED TODAY — MEMORIAL DAY HOLIDAY ⚠️**
+- Top catalysts this week:
+  - US-Iran peace talks progressing; Kevin Warsh expected to take oath as new Federal Reserve chairman
+  - US computer makers surged after strong results from China's Lenovo Group. Dell Technologies hit a record high and HP Inc. climbed over 15%
+  - S&P Global U.S. Manufacturing PMI increased to 55.3 in May from 54.5 in April, the highest reading since May of 2022
+  - The S&P 500 gained 0.4%, extending its winning streak to eight consecutive weeks
+  - Thursday brings Q1 GDP second estimate and April PCE prices
+- Sector leaders (last session):
+  - XLV (Healthcare): +1.17%
+  - XLI (Industrials): +0.73%
+  - XLK (Technology): ~+0.4%
+  - XLF (Financials): +0.41%
+  - XLY (Consumer Disc): +0.40%
+  - XLP (Staples): +0.17%
+- Economic events this week:
+  - Mon 5/25: Markets closed (Memorial Day)
+  - Tue 5/26: May consumer confidence; earnings from AutoZone (AZO) and Zscaler (ZS)
+  - Wed 5/27: April new home sales; earnings from MRVL, CRM, SNPS, SNOW, DKS
+  - Thu 5/28: Q1 GDP second estimate, April PCE prices; earnings from DELL, DLTR, MDB, BBY, COST, ADSK, GAP
+
+### Trade Candidates (Regime ON, but market CLOSED today)
+**No trades possible today — Memorial Day holiday. Markets reopen Tuesday 5/26.**
+
+Potential candidates to research for Tuesday 5/26 open:
+1. **DELL** — Dell Technologies hit a record high last week on PC/AI momentum; however earnings Wed 5/27 — **EXCLUDED** (earnings within 7 days)
+2. **HPQ** — HPQ shares jumped 15.3% driven by optimism over its Personal Systems business. Growth in AI PCs and the Windows 11 refresh cycle powered demand; however earnings Wed 5/27 — **EXCLUDED**
+3. **CRM** — Earnings Wed 5/27 — **EXCLUDED**
+4. **MRVL** — Earnings Wed 5/27 — **EXCLUDED**
+
+⚠️ Heavy earnings week ahead (CRM, MRVL, SNOW, DELL, COST, BBY, ADSK) eliminates most high-quality candidates due to the "no earnings within 7 days" rule.
+
+### Risk Factors Today
+- NYSE and Nasdaq closed on Memorial Day, May 25, 2026 — no trading possible
+- University of Michigan Consumer Sentiment fell to 44.8 in May, its lowest reading on record. Respondents cited the cost of living and inflation as concerns
+- Earlier this week, the 30-year bond yield hit a nearly 19-year high thanks to heavy inflation fueled by the Middle East conflict
+- Fed minutes reveal that further rate hikes remain a possibility if inflation stays above the 2% target
+- Earnings catalysts get much thinner ahead. Focus shifts toward the mid-June Fed meeting, when economic and rate projections could offer hawkish views
+- Thursday PCE data could move markets significantly
+- Most swing trade candidates have earnings this week (event risk)
+
+### Decision
+**HOLD** — US markets are closed today (Memorial Day). No trades can be executed. Regime is ON and capital is available ($2,180.53), but the dense earnings calendar this week (CRM, MRVL, DELL, COST, BBY, ADSK, SNOW) eliminates most quality candidates under the "no earnings within 7 days" rule. Will re-evaluate Tuesday pre-market for opportunities in names NOT reporting this week.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-25",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
