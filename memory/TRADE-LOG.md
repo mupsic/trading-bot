@@ -296,3 +296,24 @@ Every end of day:
 |--------|--------|-------|---------|-----------------|---------|
 | AAPL | 1 | 298.7$ | 308.82$ | 10.12$ (3.4%) | 0% |
 | NOW | 5 | 101.71$ | 102.13$ | 2.1$ (0.4%) | 0% |
+
+### 2026-05-26 — EOD Snapshot
+- **Alpaca equity (reported)**: $100000.75
+- **Operating equity (capped)**: $3000
+- **Cash**: $99192.75
+- **Positions value**: $808 (26.9% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Phase P&L**: $0 (0.0%)
+- **Peak equity**: $3000
+- **Drawdown from peak**: 0.0%
+- **Trades today**: 0
+0
+- **Trades this week**: 0 / 3
+- **Daytrade count**: 0 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 308.5$ | 9.8$ (3.3%) | -0.1% |
+| NOW | 5 | 101.71$ | 99.9$ | -9.05$ (-1.8%) | -2.2% |
