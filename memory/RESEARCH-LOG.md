@@ -796,3 +796,93 @@ Potential candidates to research for Tuesday 5/26 open:
   "candidates": []
 }
 ```
+
+I'll gather the required market data systematically.Now I have sufficient data to compile the research log. Let me synthesize:
+
+**Key Data Points:**
+- SPY current: $751.05 (from Finnhub live data)
+- SPY 200-day MA: ~$722.35 (Investing.com) or ~$672-675 (TipRanks/Financhill from mid-May). The most recent from Investing.com gives $722.35.
+- VIX: ~16.61-16.75 (Yahoo Finance live data shows 16.61 pre-market, 16.75 intraday)
+- QQQ: $727.80, up +1.43%
+- Pre-market: MU +8.3%, GNRC fresh from Jefferies upgrade
+- Sector: XLK +1.00%, XLV +1.17%, XLF +0.41%, XLY +0.40%, XLP +0.17%
+- Key events: Consumer confidence today, MRVL/CRM/SNOW earnings Wed, GDP/PCE Thu
+
+MU at ~$795 is way too expensive for $600 position cap (would get 0 shares). GNRC at ~$270 allows 2 shares max = $540. Let me check for better candidates within budget.
+
+## 2026-05-26 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100003.46
+- Operating cap: $3,000
+- Cash: $99192.75
+- Positions value: $810.72
+- Capital available: $2189.28
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $751.05 (MA200: ~$722.35) — ABOVE
+- VIX: 16.61 — LOW
+- Regime: **ON**
+- Reason: The SPY 200-day moving average is 722.35 and SPY trades at $751.05, well above MA200; VIX is at 16.75, well below the 25 threshold.
+
+### Market Context
+- Top catalysts today:
+  - Investor sentiment improved after President Donald Trump said talks with Iran to end the war were "proceeding nicely," boosting hopes that a diplomatic resolution may be within reach.
+  - Oil prices fell sharply following Trump's comments, with West Texas Intermediate crude futures dropping more than 5% in early trading. Lower oil prices could help ease inflation concerns.
+  - Micron Technology (MU) climbs +8.3% on $3.1B volume following a bullish Bernstein supply-chain report. Markets are focused on the "AI supply crunch" narrative as MU and Marvell Technology (MRVL) lead the Nasdaq higher.
+  - President Donald Trump led a ceremony swearing in Kevin Warsh as chair of the Federal Reserve.
+  - The S&P 500 is coming off its eighth consecutive weekly gain, its longest winning streak since late 2023.
+- Sector leaders (day change from Yahoo):
+  - XLV (Healthcare): +1.17%
+  - XLK (Technology): +1.00%
+  - XLI (Industrials): +0.73%
+  - XLF (Financials): +0.41%
+  - XLY (Consumer Disc): +0.40%
+  - XLP (Staples): +0.17%
+- Economic events:
+  - May 26: May consumer confidence and expected earnings from AutoZone (AZO) and Zscaler (ZS).
+  - May 27: April new home sales and expected earnings from Dick's Sporting Goods (DKS), Marvell Technology (MRVL), Salesforce (CRM), Synopsys (SNPS), and Snowflake (SNOW).
+  - May 28: First quarter GDP second estimate, April Personal Consumption Expenditures (PCE) prices, and expected earnings from Dell (DELL), Dollar Tree (DLTR), MongoDB (MDB), Best Buy (BBY), Costco (COST), AutoDesk (ADSK), and Gap (GAP).
+
+### Trade Candidates (Regime ON)
+
+1. **GNRC** — On May 22, 2026, Jefferies upgraded Generac Holdings Inc GNRC from Hold to Buy, raising its price target from $239 to $302. This upgrade resulted in a more than 3% increase in Generac's stock price. The upgrade thesis centered on expectations that Generac could secure meaningful hyperscaler supply agreements over the next few years. In its first-quarter 2026 update, Generac reported net sales growth and raised full-year 2026 guidance to mid-to-high teens percent growth. Entry ~$270, stop $251.10 (-7%), target $307.80 (+14%), shares=2 ($540), R:R 1:2. No earnings within 7 days. Industrials sector +0.73% today.
+
+2. **CRWD** — CrowdStrike Holdings Inc. (CRWD + $18.17 to $666.40) hit a notable 52-week high last week. Strong cybersecurity momentum with AI-driven endpoint security demand. Sector leader in XLK. However, at ~$666/share, only 0 shares fit within $600 cap. **DISQUALIFIED — price exceeds $600 single-share limit.**
+
+3. **DDOG** — Datadog Inc. (DDOG + $2.22 to $220.26) hit a 52-week high. Strong observability/AI ops momentum in enterprise software. Entry ~$220, stop $204.60 (-7%), target $250.80 (+14%), shares=2 ($440), R:R 1:2. No earnings within 7 days. Technology sector +1.00% today. **However**, DDOG reports earnings in early June window — need to verify. Schwab calendar does not list DDOG this week. Candidate passes.
+
+### Risk Factors Today
+- Focus shifts toward the mid-June Fed meeting, when economic and rate projections could offer hawkish views. Between the lack of earnings, focus on geopolitical tensions, and worries about rate hikes, there are challenges ahead.
+- PCE data Thursday (May 28) could spike volatility if inflation runs hot
+- SPY RSI (14) is 78.69, overbought territory — potential short-term pullback risk
+- Middle East situation remains fluid; oil reversal could rattle markets
+- Portfolio only 27% deployed — significantly under target 75-85% range, leaving room to add
+
+### Decision
+TRADE [GNRC] — Strong specific catalyst (Jefferies upgrade to Buy, $302 PT, data center hyperscaler contracts), sector momentum positive, fits within position sizing rules. DDOG considered but deferred pending earnings date confirmation next session.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-26",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "GNRC",
+      "entry_price": 270.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 2,
+      "position_cost": 540.00,
+      "target_price": 307.80,
+      "catalyst": "Jefferies upgraded to Buy from Hold on May 22 with PT raised to $302; data center hyperscaler backup power contracts expected; Q1 beat with raised FY2026 guidance to mid-to-high teens growth",
+      "sector": "Industrials",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
