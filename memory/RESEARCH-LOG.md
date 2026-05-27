@@ -886,3 +886,108 @@ TRADE [GNRC] — Strong specific catalyst (Jefferies upgrade to Buy, $302 PT, da
   ]
 }
 ```
+
+Now let me compile all the data and produce the research log.
+
+## 2026-05-27 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100023.30
+- Operating cap: $3,000
+- Cash: $99192.75
+- Positions value: $830.55
+- Capital available: $2169.45
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $750.55 (MA200: ~$722) — ABOVE
+- VIX: ~17.01 — LOW
+- Regime: **ON**
+- Reason: The SPY 200-day moving average is 722.35, suggesting that the ETF is Buy. SPY current price $750.55 is well above MA200. VIX previous close was 17.01, well under 25 threshold. Both conditions met.
+
+### Market Context
+- Top catalysts today:
+  - **US-Iran deal progress**: Stock indexes settled mostly higher on Tuesday, with the S&P 500 and Nasdaq 100 posting new all-time highs. Stocks found support as a drop in crude oil prices and bond yields fueled a rally in technology stocks after officials signaled the US was nearing a deal with Iran to reopen the Strait of Hormuz and restore oil flows.
+  - **Semiconductor surge**: Shares of Micron Technology jumped 19% and topped $1 trillion in market capitalization amid bullishness among analysts on the Street. UBS in particular sees more than 100% upside ahead for the stock. Chip stocks rose on Tuesday, with the VanEck Semiconductor ETF (SMH) gaining more than 3% to touch a new 52-week high. On Semiconductor added nearly 9%, as did Western Digital. Advanced Micro Devices gained 6%.
+  - **Earnings week**: Wednesday: Abercrombie & Fitch, Agilent Technologies, DICK's Sporting Goods, HP Inc., Marvell Technology, PDD Holdings, Salesforce, Snowflake, Synopsys.
+  - **PCE data Friday**: The week's biggest number is April's Personal Consumption Expenditures (PCE) reading, which is due Friday.
+  - **Oil price decline**: Technology, industrials and materials leading the gains, while energy, consumer staples and healthcare stocks recorded the sharpest declines.
+- Sector leaders:
+  - **XLK (Technology)**: Strongest — XLK +1.60% on Tuesday, driven by semis/AI
+  - **XLF (Financials)**: XLF +0.41%
+  - **XLY (Cons. Discretionary)**: XLY +0.40%
+  - **XLV (Healthcare)**: XLV -0.71%
+  - **XLE (Energy)**: XLE -0.34% — lagging on oil price drop
+- Economic events:
+  - PCE data Friday May 29
+  - Consumer confidence (released Tue)
+  - Heavy earnings week (CRM, MRVL, DELL, COST, SNPS)
+
+### Pre-market Movers
+- Verra Mobility (VRRM) plunged -49.5% on 624k shares after Avis Budget Group terminated its partnership effective September 2026.
+- Zscaler (ZS) is gapping down -22.9% on 277k shares after slashing its free cash flow margin guidance due to higher AI-related capital expenditures.
+- Soligenix (SNGX) skyrocketed 107.6% on 52M shares after claiming its ThermoVax platform can rapidly develop a vaccine for the Bundibugyo Ebola virus. This move comes with a massive 193x volume ratio.
+- Pre-market indexes: S&P 500 +0.31%, Nasdaq 100 +0.69%, Dow +0.33%, Russell 2000 +0.74%.
+
+### Trade Candidates (Regime ON)
+
+**1. AMD (Advanced Micro Devices) — $467-470 range**
+- **Catalyst**: The catalyst is the launch of MI450 products and Helios rack-scale solutions. AMD recently tagged a fresh 52-week and historical high at $481.41. Next earnings date Aug 4, 2026 — safe window. Semis are in full momentum with SMH at new 52-week highs.
+- Entry: ~$470, Stop: $437 (-7%), Target: $536 (+14%), shares=1, cost=$470
+- R:R = 1:2
+- **ISSUE**: At ~$470/share, 1 share = $470 (within $600 limit) ✅
+
+**2. OKLO (Oklo Inc.) — $66-72 range**
+- **Catalyst**: Oklo's shares surged over 10% after being selected for advanced negotiations under the U.S. Department of Energy's Surplus Plutonium Utilization Program. The program provides Oklo with a potential pathway to access surplus plutonium fuel. Short interest stands at 28.6 million shares representing 19.6% of the float — high short squeeze potential.
+- **RISK**: Oklo faces execution risks, including regulatory approval delays and commercialization challenges. Pre-revenue, speculative, high volatility, ~60% off ATH. **DISQUALIFIED** — too speculative/volatile for swing trading rules, and damaged longer-term trend.
+
+**3. ON (ON Semiconductor) — ~$60-65 range**
+- **Catalyst**: On Semiconductor added nearly 9% on Tuesday. Riding semiconductor momentum wave, benefiting from EV/industrial recovery + AI power management demand. Earnings already reported (April). Next earnings ~Aug. Market cap ~$27B ✅
+- Entry: ~$64, Stop: $59.50 (-7%), Target: $73 (+14%), shares=9, cost=$576
+- R:R = 1:2
+
+### Risk Factors Today
+- **PCE Friday**: Hot inflation print could reverse market gains and tighten rate cut expectations
+- **US-Iran deal uncertainty**: Investors remained cautiously hopeful that the US and Iran could still secure an agreement despite renewed tensions. Deal collapse = oil spike, risk-off
+- **Extended valuations**: S&P 500 and Nasdaq at all-time highs; RSI overbought on multiple timeframes
+- **Zscaler contagion risk**: Traders are monitoring if the weakness in high-multiple software names like ZS spreads to broader tech indices.
+- **Heavy earnings this week**: CRM, MRVL, DELL, COST — misses could create sector volatility
+
+### Decision
+**TRADE** [AMD, ON] — Technology sector is the clear leader, semiconductor momentum is surging with SMH at new highs. Both candidates have specific catalysts, no near-term earnings, and fit within sizing rules. Prefer AMD for quality/momentum and ON for broader semi exposure at lower price point allowing better position sizing.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-27",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "AMD",
+      "entry_price": 470.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 1,
+      "position_cost": 470.00,
+      "target_price": 535.80,
+      "catalyst": "MI450 AI GPU launch upcoming in H2 2026, semiconductor sector at new 52-week highs, SMH +3% on Tuesday, AMD at all-time high $481 with strong breakout momentum",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "ON",
+      "entry_price": 64.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 9,
+      "position_cost": 576.00,
+      "target_price": 72.96,
+      "catalyst": "Semiconductor sector breakout — ON surged 9% on Tuesday with SMH at 52-week high, EV/industrial power management demand recovery, AI power infrastructure tailwind",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
