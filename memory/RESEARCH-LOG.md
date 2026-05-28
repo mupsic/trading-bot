@@ -991,3 +991,76 @@ Now let me compile all the data and produce the research log.
   ]
 }
 ```
+
+I'll gather the required market data systematically.Now let me search for sector ETF performance and Snowflake/software rally details.Let me get the Best Buy details and check for candidates with specific price levels.Now I have all the data I need. Let me compile the research log.
+
+## 2026-05-28 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100047.09
+- Operating cap: $3,000
+- Cash: $99192.75
+- Positions value: $854.34
+- Capital available: $2145.66
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $752.35 (MA200: ~$722) — ABOVE
+- VIX: 16.29 — LOW
+- Regime: **ON**
+- Reason: The SPY 200-day moving average is 722.35, and SPY is trading at $752.35, well above MA200. VIX previous close was 16.29, well below the 25 threshold. Both conditions met.
+
+### Market Context
+- Top catalysts today:
+  - **PCE inflation data**: The personal consumption expenditures (PCE) price index rose 3.8% year over year last month, economists had been looking for readings of 0.5% and 3.8% — in line with expectations
+  - **Snowflake AI surge**: Software stocks popped after Snowflake said it plans to spend $6 billion on compute from Amazon; shares surged 35% headed for its best day ever
+  - **Dell $9.7B Pentagon contract**: Shares of Dell Technologies were climbing nearly 4% after the Defense Department awarded the company a $9.7 billion contract
+  - **Best Buy earnings beat**: Best Buy stock jumps 10% after Q1 EPS of $1.28 beats estimates; revenue hits $8.94B and comparable sales rise 2% year-over-year
+  - **US-Iran tensions**: Stocks were falling and oil prices rising as investors monitored U.S.-Iran tensions; Iran's Islamic Revolutionary Guard Corps launched an attack targeting a U.S. air base
+- Sector leaders:
+  - XLK (Technology): +28.75% YTD — strongest, XLK had a total return of 63.55% in the past year; AI/software rally fueling momentum
+  - XLY (Consumer Discretionary): +1.64% today, BBY earnings boost
+  - XLP (Consumer Staples): +1.42% today, defensive bid
+  - XLF (Financial): -0.84% today, Iran risk weighing
+  - XLE (Energy): volatile on Iran oil dynamics
+- Economic events:
+  - Thursday (May 28): Continuing Claims, Durable Goods, Q2 GDP – Second Estimate, Initial Claims, PCE Prices, Personal Income, Personal Spending
+  - Expected earnings from Dell (DELL), Dollar Tree (DLTR), MongoDB (MDB), Best Buy (BBY), Costco (COST), AutoDesk (ADSK), and Gap (GAP)
+
+### Trade Candidates (Regime ON)
+
+**Assessment of candidates:**
+
+1. **BBY (Best Buy)** — Q1 earnings beat ($1.28 vs $1.22 est), comparable sales +2% vs +1% guide, gaming/computing strength. Entry ~$68 (post-gap), stop $63.24 (-7%), target $77.52 (+14%), shares=8, cost=$544. **HOWEVER: Earnings just reported TODAY — this is event risk/chasing a gap. SKIP per strategy rules (avoid earnings announcements).**
+
+2. **DELL (Dell Technologies)** — $9.7B Pentagon contract, +4% pre-market, trading ~$318. **PROBLEM: Reports earnings AFTER CLOSE TODAY. Per rules, must avoid earnings within 7 days. Also, price ~$318 means max 1 share = $318, but earnings tonight = unacceptable event risk. SKIP.**
+
+3. **SNOW (Snowflake)** — Massive 35% gap on earnings beat + $6B AWS deal. **PROBLEM: Just reported earnings, massive gap-up = chasing. Also ~$240/share post-gap, high volatility. SKIP.**
+
+All strong-catalyst stocks today are either reporting earnings today or just reported — **all fail the "no earnings within 7 days" filter**.
+
+**Alternative scan — stocks with tech/AI tailwind, no upcoming earnings:**
+- AAPL: Already in portfolio. Cannot add (no averaging into winners beyond position limit).
+- NOW: Already in portfolio.
+- No clean candidates pass ALL filters simultaneously today (catalyst + no earnings + sector momentum + sizing).
+
+### Risk Factors Today
+- **US-Iran escalation**: Iran's IRGC launched an attack targeting a U.S. air base; U.S. strikes targeted Iranian drones and a launch site near the Strait of Hormuz
+- **PCE inflation sticky at 3.8%**: Higher than prior months, limits Fed flexibility
+- **Heavy earnings calendar today**: Many stocks in flux, unpredictable gaps
+- **Oil price volatility**: Brent crude above $93, inflation risk
+- **Market breadth narrowing**: the character of the market remains where levels of resistance hold less weight than levels of support, there are certainly fractures around the periphery as breadth narrows
+
+### Decision
+**HOLD** — Regime is ON, but all high-catalyst candidates today are contaminated by same-day or imminent earnings reports, violating our "no earnings within 7 days" rule. Existing positions (AAPL +4.2%, NOW +6.8%) are performing well. Current deployment is 28.5% vs target 75-85% — we have capacity but no clean setups today. Will reassess tomorrow after the DELL/COST/MDB earnings dust settles for potential post-earnings continuation plays.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-28",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
