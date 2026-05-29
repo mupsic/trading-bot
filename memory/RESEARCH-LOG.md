@@ -1064,3 +1064,101 @@ All strong-catalyst stocks today are either reporting earnings today or just rep
   "candidates": []
 }
 ```
+
+I'll gather the required market data systematically.Now let me get sector ETF performance and pre-market movers data.Let me get more specific data on NetApp and SoFi which are surging pre-market, plus confirm NOW's current status.Now I have all the data I need. Let me compile the research log.
+
+**Key data points gathered:**
+- SPY current: $757.86 (from Finnhub). SPY 200-day MA: ~$722 (Investing.com shows $722.35, TipRanks from May 16 shows $672.78 — the Investing.com figure is more recent). Actually, the most recent sources vary: Investing.com says $722.35 (MA200), TipRanks May 16 says $672.78, Financhill says $675.59. The Investing.com figure appears to be the MA20, not MA200. Let me use the TipRanks and Financhill data which are consistent (~$672-675 for the 200-day SMA).
+- VIX: ~15.74-16.33 range. CNBC shows prev close 16.29, Yahoo shows 15.74 at close, Yahoo Finance calendar shows VIX at 15.85 pre-market.
+- SPY > MA200 ✓, VIX < 25 ✓ → REGIME = ON
+- Key catalysts: U.S.-Iran tentative deal, PCE data, record S&P/Nasdaq, NetApp earnings beat, SoFi stablecoin launch
+- Sector data from Yahoo: XLV +1.40%, XLY +0.42%, XLK (tech strong with 28.26% trailing return), XLF -0.29%, XLP -0.18%
+- Pre-market movers: NTAP +18.3%, SOFI +7.7%
+- NOW position: +17.3% unrealized, nearing profit target 1
+
+Now for candidates:
+- NTAP: Just reported earnings (already happened) — stock surging 18% pre-market. This is a post-earnings breakout, not pre-earnings risk. ~$130 pre-market (was ~$110 before). At ~$130, shares=4 would be $520. Good candidate.
+- SOFI: At ~$18.72 today. SoFiUSD stablecoin catalyst + earnings momentum. At ~$18, shares=33 would be $594. But SOFI is volatile, down 45% YTD, P/E at 38.6. Higher risk.
+
+Let me check if these fit within capital constraints: current positions value $909.77, available within cap $2,090.23. Max per position $600.
+
+## 2026-05-29 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100102.52
+- Operating cap: $3,000
+- Cash: $99192.75
+- Positions value: $909.77
+- Capital available: $2090.23
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $757.86 (MA200: ~$675) — ABOVE
+- VIX: 15.85 — LOW
+- Regime: ON
+- Reason: SPY 200-day moving average is around $722 (various sources range $672-$722; SPY at $757.86 is well above all estimates). VIX at 15.74, down 3.38%, well below 25 threshold. Bullish regime confirmed.
+
+### Market Context
+- Top catalysts today:
+  - Stock futures inched higher on reports that the U.S. and Iran had reached a tentative agreement to reopen the Strait of Hormuz and begin nuclear talks.
+  - The critical PCE price index for April was slightly below expectations at 0.4% for headline and 0.2% for core — digesting yesterday's data
+  - Nasdaq, S&P 500 set new records despite elevated PCE; market at all-time highs
+  - NetApp stock surged +18.3% in pre-open trading after the company delivered record-breaking Q4 fiscal 2026 results
+  - SoFi Technologies is launching SoFiUSD, a stablecoin issued directly by its U.S. national bank unit, driving +7.7% pre-market move
+- Sector leaders:
+  - XLV (Healthcare): +1.40%
+  - XLK (Technology): leading YTD with 28.26% trailing return, QQQ +0.72% today
+  - XLY (Consumer Discretionary): +0.42%
+  - XLF (Financials): -0.29%
+  - XLP (Consumer Staples): -0.18%
+- Economic events:
+  - Friday (May 29): Advanced International Trade in Goods, Advanced Retail Inventories, Advanced Wholesale Inventories, Chicago Purchasing Managers' Index (PMI)
+  - May 29: No major data or earnings expected (per Schwab)
+
+### Trade Candidates (Regime ON)
+1. **NTAP** — Q4 FY2026 earnings beat ($2.43 EPS vs $2.27 est, $1.95B rev vs $1.87B est), entry ~$130, stop $120.90 (-7%), target $148.20 (+14%), shares=4, cost=$520, R:R 1:2
+   - NTAP reported Q4 earnings surpassing analyst expectations with an EPS of $2.43 against a forecast of $2.27. Revenue reached $1.95 billion, exceeding projections of $1.87 billion.
+   - NetApp delivered record quarterly and annual financial results underpinned by substantial growth in cloud, all flash, and Keystone segments, propelled mainly by broad-based enterprise AI adoption.
+   - FY27 Revenue Guidance: $7.325 billion to $7.575 billion, implying 8% growth at midpoint.
+   - Sector: Technology (XLK leading); market cap ~$25B; earnings already reported (no upcoming event risk)
+
+2. **SOFI** — SoFiUSD stablecoin launch (first U.S. national bank stablecoin) + Q1 earnings beat, entry ~$18.50, stop $17.21 (-7%), target $21.09 (+14%), shares=32, cost=$592, R:R 1:2
+   - In Q1 2026, SoFi Technologies reported total revenue of $1.100368B, edging past the $1.05B consensus
+   - SoFi Technologies is making headlines with its recent launch of the SoFiUSD stablecoin, marking it as the first U.S. national bank to issue a bank-backed digital currency.
+   - At the current price, SoFi stock trades at 35 times trailing 12-month earnings — fairly cheap for growth
+   - ⚠️ CONCERN: SoFi Stock Is Down 45% This Year — catching a falling knife risk. SoFi's current P/E ratio stands at 38.6, which is significantly higher than the 5-year median P/E of 28.69. Mixed analyst sentiment. **SKIP — volatility too high, downtrend intact.**
+
+### Risk Factors Today
+- VP Vance said U.S. and Iran are "not there yet" on an agreement. Iranian state media dismissed reports of an agreement as "incorrect." Deal could collapse → oil spike, risk-off
+- Core PCE rose 3.3%, up from 3.2% in March, while headline PCE rose 3.8% — inflation still elevated
+- There's still a lot of froth in the market and many stocks have come a long way very quickly
+- The selloff in long-term government bonds is a reminder that traditional portfolio hedges are proving less reliable today
+- Friday before potential weekend geopolitical escalation (Iran situation fluid)
+- NTAP gapping up 18% — risk of buying into gap exhaustion
+
+### Decision
+TRADE [NTAP] — Strong earnings beat with record results and AI-driven growth. Post-earnings gap-up with fundamental support. Wait for first 15-min candle to confirm entry doesn't fade. If gap holds above $128, enter with 4 shares. Conservative sizing due to gap-up risk.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-05-29",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "NTAP",
+      "entry_price": 130.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 4,
+      "position_cost": 520.00,
+      "target_price": 148.20,
+      "catalyst": "Q4 FY2026 earnings beat: EPS $2.43 vs $2.27 est, revenue $1.95B vs $1.87B est. Record annual results. FY27 guidance implies 8% revenue growth. AI-driven enterprise demand acceleration.",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
