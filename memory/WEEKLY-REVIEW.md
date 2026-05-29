@@ -324,3 +324,94 @@ Now let me compute the bot's metrics:
 
 ### Overall Grade: C
 Reasoning: Week 2 represents a significant operational improvement over Week 1's F grade — the bot successfully executed its first trade (NOW) with proper catalyst documentation, trailing stop placement, and position sizing within strategy rules. Both open positions are in the green, with AAPL up +3.3% and NOW up +0.2%, for combined unrealized gains of ~$10.77. However, the bot underperformed the S&P 500 by 90bps in a strong market week, was substantially underinvested (27% deployed vs 100% capacity), made only 1 of 3 allowed trades, and holds concentrated sector exposure in Technology. The grade reflects that the bot is now functional and following its rules — a necessary first step — but has not yet demonstrated the ability to generate meaningful returns or fully capitalize on favorable market conditions. A C acknowledges real progress from Week 1 while recognizing significant room for improvement in trade frequency, diversification, and capital deployment.
+
+Now let me piece together the S&P 500 weekly performance. Key data points:
+
+- The S&P 500 closed at 7,580.06 on Friday May 29 per Yahoo Finance (^SPX). The market was closed Monday May 25 (Memorial Day). The previous Friday (May 22) close: from the Schwab article, the S&P was described as "on track to be up about 1% on the week" as of the shortened pre-Memorial Day week. The FRED data shows May 27 close was 7,520.36. The prior week's review mentioned the S&P 500 had a seven-week win streak as of May 15.
+
+Let me estimate the prior Friday (May 23) close. On Tuesday May 26, the S&P gained 0.61% to close at 7,519.12 (from CNBC data). But Monday was closed. So the Friday May 23 close would be roughly 7,519.12 / 1.0061 ≈ 7,473.5. But actually, the Schwab article was written on Friday May 23 (referencing the "three-day weekend") and said the S&P 500 was "up about 1% on the week." 
+
+Using the S&P 500 close of ~7,580 on May 29 vs an estimated ~7,474 on May 23: (7580 - 7474) / 7474 ≈ +1.42%. The Schwab weekly outlook said "the S&P 500 index is on track to be up about 1% on the week" — but that was referencing the *prior* week ending May 23. For *this* week (May 25-29, with Monday closed), I need from Friday May 23 to Friday May 29.
+
+The S&P 500 closed at 7,580.06 on May 29. Using the Tuesday May 26 close of 7,519.12 as proxy (first day of trading week since Monday was holiday), and the prior Friday close estimated at ~7,474:
+
+Weekly return: (7,580.06 - 7,474) / 7,474 ≈ +1.4%
+
+Let me be more precise. From CNBC: on May 26 (Tuesday), S&P gained 0.61% to 7,519.12. So May 23 close = 7,519.12 / 1.0061 = 7,473.44. Then May 29 close = 7,580.06. Weekly: (7,580.06 - 7,473.44) / 7,473.44 = +1.43%.
+
+Now let me compute the bot's metrics:
+
+**Operating equity**: Capped at $3,000 both Monday and Friday. Week P&L = $0.00 (0.00%) — but this is misleading because it's capped. The unrealized gains went from ~$12.22 to ~$146.75 based on Alpaca equity changes.
+
+Actually, the reported operating equity is capped at $3,000 throughout. The real unrealized P&L change: positions went from $819.47 to $954.00 — but the "Week return" shown is $0.00 because the operating equity is capped.
+
+**Trades**: 0 trades executed this week. 0 closed trades. 2 open positions carried over.
+
+**Open positions at week end**:
+- AAPL: Entry $298.70, Current $311.20, Unrealized +$12.50 (+4.2%), Trailing stop 10%
+- NOW: Entry $101.71, Current $128.33, Unrealized +$133.12 (+26.2%), Trailing stop tightened to 5% (hit +20% target)
+
+No closed trades means win rate, profit factor, best/worst trade (closed) are N/A.
+
+## Week ending 2026-05-29
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $3,000.00 |
+| Ending portfolio (Fri) | $3,000.00 |
+| Week return | $0.00 (+0.00%) [capped; actual unrealized Δ +$134.53] |
+| S&P 500 week | +1.4% (est. ~7,473 → 7,580) |
+| Bot vs S&P | -1.4% (on capped basis); unrealized gains ≈ +4.5% of operating equity if uncapped |
+| Trades total | 0 (W:0 / L:0 / open:2) |
+| Win rate | N/A (no closed trades) |
+| Best trade | NOW +26.2% (unrealized) |
+| Worst trade | AAPL +4.2% (unrealized) |
+| Profit factor | N/A (no closed trades) |
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| — | — | — | — | — | — | No trades closed this week |
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $311.20 | +$12.50 (+4.2%) | 10% trailing | Technology |
+| NOW | $101.71 | $128.33 | +$133.12 (+26.2%) | 5% trailing (tightened 5/29) | Technology |
+
+### What Worked (3-5 bullets)
+- NOW had an exceptional week, surging from $101.71 entry to $128.33 (+26.2% unrealized), with an 18.2% single-day move on Friday driven by the broader AI software rally (Microsoft +3%, Oracle +6%, Dell +30% on AI momentum)
+- Trailing stop system executed correctly: NOW's stop was automatically tightened from 10% to 5% when the position crossed the +20% profit target — exactly per strategy rules
+- Holding through volatility paid off: NOW dipped to -1.8% unrealized mid-week (Tuesday) before ripping higher, validating the 10% trailing stop as wide enough to absorb normal noise
+- AAPL remained a steady contributor, holding +4.2% unrealized gain with minimal drawdown throughout the week
+- Both positions benefited from the tech/AI rally that lifted the S&P 500 and Nasdaq to new record highs
+
+### What Didn't Work (3-5 bullets)
+- Zero trades executed this week (0 of 3 allowed) — for the second consecutive week, the bot failed to deploy additional capital despite a strong market environment and available capacity (~68% cash)
+- Operating equity cap at $3,000 masks true performance: Alpaca equity moved from ~$100,012 to ~$100,146 (+$134), but the bot's operating framework shows 0% return — this is a tracking/reporting issue
+- Portfolio remains heavily concentrated in Technology (100% of positions) with no sector diversification — a risk flagged last week and still unaddressed
+- Capital deployment remains extremely low at ~32% invested, missing broad market gains on the ~68% uninvested cash
+- No new entry signals were acted upon despite the market making new all-time highs and multiple sectors showing momentum
+
+### Sector Performance
+- **Technology (100% of portfolio):** Strong week. AAPL +4.2% unrealized, NOW +26.2% unrealized. AI/software names led the market broadly, with the Nasdaq gaining ~1% on the week. The bot's tech concentration was fortunate this week but remains a diversification risk.
+- **Not represented:** Healthcare, Financials, Industrials, Energy, Consumer — all absent from portfolio despite strategy guidance to seek diversification.
+
+### Key Lessons
+- The trailing stop tightening system works as designed — NOW crossing +20% triggered the automatic tightening to 5%, which protects a substantial gain while allowing room for continued upside. This is the strategy functioning correctly.
+- NOW's massive Friday move (+18.2%) is likely driven by a specific catalyst (possibly AI software sector rotation, Anthropic investment round, or earnings-related momentum). Moves of this magnitude are unusual and should not be extrapolated — tightening the stop was the right response.
+- Two consecutive weeks of 0 new trades (0/3 used in Week 2, 0/3 in Week 3) suggests the bot's entry criteria may be too restrictive, or the execution pipeline for identifying and acting on setups needs improvement. This is now a pattern worth monitoring.
+- The capped operating equity framework obscures real performance. The bot's actual positions gained ~$134 this week on ~$808 of deployed capital — a ~16.6% return on invested capital, dramatically outperforming the S&P 500's ~1.4%.
+
+### Adjustments for Next Week
+- No rule changes — insufficient data. This is only Week 3 of operation and Week 2 of actual trading. Per policy: a rule must FAIL for 2+ consecutive weeks before relaxing, and must PROVE OUT for 2+ consecutive weeks before tightening. No rules have been tested long enough with closed-trade data to warrant adjustment.
+- **Operational observations (not rule changes):**
+  - Trade frequency (0/3 for two consecutive weeks) is becoming a pattern — actively investigate whether the bot's entry signal pipeline is functioning and generating candidates during pre-market analysis
+  - NOW is now at +26.2% with a 5% trailing stop — monitor closely; the stop should protect at least ~+20% of gains if triggered
+  - Seek sector diversification urgently — 100% Technology exposure is an unaddressed risk for the third consecutive week
+  - Consider whether the operating equity cap methodology needs revision to accurately reflect realized and unrealized P&L for performance tracking purposes
+  - Shortened trading week (4 days due to Memorial Day) partially explains low activity, but 0 trades is still below expectations
+
+### Overall Grade: B-
+Reasoning: Week 3 produced the bot's best unrealized returns to date, with NOW delivering an outstanding +26.2% gain and AAPL maintaining a steady +4.2% — combined unrealized P&L of ~$145 on ~$808 deployed capital is exceptional. The trailing stop tightening on NOW at +20% executed perfectly per strategy rules, demonstrating operational maturity. However, the grade is held back by the second consecutive week of zero new trades (0/3 capacity used), continued 100% Technology concentration despite repeated flags to diversify, and low capital deployment (~32%). The bot is riding two good picks but is not actively managing the portfolio or seeking new opportunities in a strong, broad market that made new all-time highs. A B- acknowledges the strong position-level performance and correct stop management while penalizing the persistent inactivity and concentration risk. The bot needs to start executing new trades and diversifying to earn higher marks.
