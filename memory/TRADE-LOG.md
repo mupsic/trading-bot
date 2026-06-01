@@ -384,3 +384,16 @@ Every end of day:
 |--------|--------|-------|---------|-----------------|---------|
 | AAPL | 1 | 298.7$ | 311.2022$ | 12.5022$ (4.2%) | -0.4% |
 | NOW | 5 | 101.71$ | 128.56$ | 134.25$ (26.4%) | 18.2% |
+
+### 2026-06-01 — Trade Entry: MSFT
+- **Ticker**: MSFT
+- **Side**: BUY
+- **Shares**: 1
+- **Entry price**: $461.0 (intended)
+- **Position cost**: $461.0
+- **Stop**: trailing 10% GTC (order_id: 1daa217a-7378-4231-9fa8-581876b112c0)
+- **Target**: $525.54
+- **Catalyst**: Nvidia RTX Spark Superchip partnership announced at Computex Taipei — MSFT Windows on Arm architecture; stock breaking above $450 resistance for first time since January; 42/48 analysts rate Buy or better
+- **Sector**: Technology
+- **Buy order_id**: 4aaa17a7-d4c5-4601-bb6c-289fb3481bfe
+- **Capital used after**: $768.71 / $3000
