@@ -397,3 +397,23 @@ Every end of day:
 - **Sector**: Technology
 - **Buy order_id**: 4aaa17a7-d4c5-4601-bb6c-289fb3481bfe
 - **Capital used after**: $768.71 / $3000
+
+### 2026-06-01 — EOD Snapshot
+- **Alpaca equity (reported)**: $100150
+- **Operating equity (capped)**: $3000
+- **Cash**: $99392.06
+- **Positions value**: $757.94 (25.3% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Phase P&L**: $0 (0.0%)
+- **Peak equity**: $3000
+- **Drawdown from peak**: 0.0%
+- **Trades today**: 1
+- **Trades this week**: 1 / 3
+- **Daytrade count**: 1 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 305.66$ | 6.96$ (2.3%) | -2.1% |
+| MSFT | 1 | 461.59$ | 452.28$ | -9.31$ (-2%) | 0.5% |
