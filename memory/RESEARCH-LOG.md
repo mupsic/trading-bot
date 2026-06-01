@@ -1162,3 +1162,105 @@ TRADE [NTAP] — Strong earnings beat with record results and AI-driven growth. 
   ]
 }
 ```
+
+Now I have enough data to compile the research log. Let me synthesize all findings:
+
+**Key Data Points:**
+- SPY current: $757.11 (from Finnhub). SPY 200-day MA: ~$722 (Investing.com says $722.35, sources vary between $672-$722 depending on age; most current from Investing.com is $722.35)
+- VIX: 15.32 at close May 29, currently ~16.17 intraday (Yahoo Finance shows VIX at 16.17 today)
+- SPY > MA200 ✓ AND VIX < 25 ✓ → REGIME = ON
+- Top catalysts: Nvidia RTX Spark Superchip at Computex, Dell blowout earnings, Berkshire/TMHC deal, US-Iran tensions/oil surge, Jobs report Friday
+- Sector: XLK (Tech) +1.67% today leading, XLE (Energy) +2.5% today, XLF +0.60%
+- Pre-market movers: NVDA +4.7%, MSFT +2.4%, DELL +7.2%, HPE +5.67%, ARM +17%, TMHC +22.3%, HUM +7.7%
+
+**Candidate analysis:**
+- DELL at ~$430 — too expensive for $600 cap (can only buy 1 share = $430)
+- NVDA at ~$221 — can buy 2 shares = $442, has catalyst (RTX Spark)
+- MSFT at ~$461 — can buy 1 share = $461, has catalyst (Nvidia partnership)
+- HUM at ~$329 — can buy 1 share = $329, catalyst (guidance reaffirmation + Deutsche Bank upgrade), next earnings Jul 29
+- HPE — earnings today (CRDO, HPE report today per Schwab), must avoid
+
+Let me check positions: AAPL $306.08 already held. Available capital = $2,693.92.
+
+## 2026-06-01 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100159.74
+- Operating cap: $3,000
+- Cash: $99853.65
+- Positions value: $306.08
+- Capital available: $2693.92
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $757.11 (MA200: ~$722.35) — ABOVE
+- VIX: 16.17 — LOW
+- Regime: ON
+- Reason: SPY 200-day moving average is $722.35, SPY trading at $757.11 well above MA200; VIX at 15.32 at close, currently ~16.17 — both conditions met.
+
+### Market Context
+- Top catalysts today:
+  - Shares of Microsoft (MSFT) and Dell (DELL) and HP (HPE) rose after Nvidia (NVDA) announced a major push into the personal computer market. Jensen Huang revealed that the RTX Spark Superchip will launch this fall in select laptops and desktops.
+  - Taylor Morrison Home (TMHC) surged 22.3% on news that Berkshire Hathaway (BRK-B) will acquire the homebuilder in an all-cash deal worth about $6.8 billion.
+  - Oil prices pushed higher after Iran suspended talks with the US, adding uncertainty around the ceasefire deal. WTI crude rose 8% to $94 a barrel.
+  - Humana stock surged +7.7% after reaffirming its FY2026 earnings outlook, with Deutsche Bank upgrading to Buy and nearly doubling its price target to $441.
+  - A big focus this week will be Friday's release of monthly employment figures (Nonfarm Payrolls).
+- Sector leaders:
+  - Energy sector +2.5% today on gas price increase; tech +1.67%.
+  - XLF +0.60% (financials positive)
+  - XLV -0.93%, XLY -0.97%, XLP -1.80% (defensive sectors lagging)
+- Economic events:
+  - Monday (June 1): Construction Spending, ISM Manufacturing Index. Wednesday: ADP Employment, ISM Non-Manufacturing. Friday: Nonfarm Payrolls, Unemployment Rate.
+
+### Trade Candidates (Regime ON)
+
+1. **MSFT** — Nvidia RTX Spark partnership catalyst driving +2.4% today; MSFT is up 2.4% at $461.07, back above the $450 mark for the first time since suffering a late-January post-earnings bear gap. 42 of 48 analysts have "buy" or better ratings. Entry ~$461, stop $428.73 (-7%), target $525.54 (+14%), shares=1, cost=$461. R:R 1:2. Next earnings ~late July. No earnings within 7 days ✓.
+
+2. **HUM** — Humana surged +7.7% after reaffirming FY2026 outlook; management scheduled to meet investors June 1-30 reaffirming at least $9.00 adjusted EPS. Deutsche Bank upgraded to Buy with price target nearly doubled to $441 from $235. Entry ~$329, stop $305.97 (-7%), target $375.06 (+14%), shares=1, cost=$329. R:R 1:2. Next earnings report on Jul 29, 2026. No earnings within 7 days ✓. Healthcare sector weak today but company-specific catalyst very strong.
+
+### Risk Factors Today
+- Iran suspended talks with the US, adding uncertainty and spiking oil prices — could trigger broader risk-off if escalation continues
+- 10-year T-note yield climbed to a 16-month high of 4.69% — rising yields pressure equity valuations
+- Friday's jobs report could bolster expectations of removing the easing bias at June's Fed meeting under Chairman Warsh
+- Oil at $94/barrel feeding inflation expectations; market near all-time highs = potential sell-the-news risk
+- Wall Street struggles to start June after a record-setting May — seasonal weakness in June historically
+- HUM is RSI overbought after a 21.5% run in the past month — entry risk on a pullback
+
+### Decision
+TRADE [MSFT, HUM] — Both have specific, named catalysts with favorable R:R. MSFT benefits from Nvidia RTX Spark partnership (tech sector leading). HUM has double catalyst of guidance reaffirmation + major analyst upgrade. Combined new position cost = ~$790, total deployed with AAPL ($306) = ~$1,096, well within $3,000 cap. Monitor oil/Iran situation for broader risk-off before executing.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-01",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "MSFT",
+      "entry_price": 461.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 1,
+      "position_cost": 461.00,
+      "target_price": 525.54,
+      "catalyst": "Nvidia RTX Spark Superchip partnership announced at Computex Taipei — MSFT Windows on Arm architecture; stock breaking above $450 resistance for first time since January; 42/48 analysts rate Buy or better",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "HUM",
+      "entry_price": 329.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 1,
+      "position_cost": 329.00,
+      "target_price": 375.06,
+      "catalyst": "FY2026 guidance reaffirmation ($9.00+ adjusted EPS); Deutsche Bank upgrade to Buy with PT nearly doubled to $441 from $235; Q1 2026 earnings beat with 23.5% revenue growth; next earnings Jul 29",
+      "sector": "Healthcare",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
