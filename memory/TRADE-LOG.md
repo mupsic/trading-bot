@@ -438,3 +438,10 @@ Every end of day:
 |--------|--------|-------|---------|-----------------|---------|
 | AAPL | 1 | 298.7$ | 314.8$ | 16.1$ (5.4%) | 2.8% |
 | MSFT | 1 | 461.59$ | 440.68$ | -20.91$ (-4.5%) | -4.3% |
+
+### 2026-06-03 19:50:23 — POSITION CLOSED (Hard Stop -7%)
+- **Ticker**: MSFT
+- **Reason**: unrealized_plpc reached -7.17%
+- **Exit price**: ~$428.5 (market order)
+- **Realized P&L**: $-33.09
+- **Hold**: from entry @ $461.59
