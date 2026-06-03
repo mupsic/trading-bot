@@ -31,6 +31,54 @@ H_SEC="APCA-API-SECRET-KEY: $ALPACA_API_SECRET"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
 # ============================================
+# PAPER-ONLY SAFETY GUARD
+# ============================================
+# Hard guard que se ejecuta antes de CUALQUIER operación que pueda mover dinero.
+# Bloquea la ejecución si:
+#   (1) ALPACA_BASE_URL no contiene "paper-api"  → apunta a live por error
+#   (2) ALPACA_API_KEY no empieza por "PK"        → es una clave live
+#       (Convención Alpaca: paper keys = "PK...", live keys = "AK...")
+#
+# Para desactivar este guard (NO recomendado), exporta BOT_ALLOW_LIVE=1 antes de
+# ejecutar el comando. Es deliberadamente molesto de desactivar.
+# ============================================
+require_paper_only() {
+  if [[ "${BOT_ALLOW_LIVE:-0}" == "1" ]]; then
+    # Override explícito — el usuario asume el riesgo de operar con dinero real.
+    echo "[alpaca.sh] ⚠️  BOT_ALLOW_LIVE=1 detectado — guard de paper DESACTIVADO." >&2
+    return 0
+  fi
+
+  local url_ok=0 key_ok=0
+  if [[ "${ALPACA_BASE_URL:-}" == *"paper-api.alpaca.markets"* ]]; then
+    url_ok=1
+  fi
+  if [[ "${ALPACA_API_KEY}" == PK* ]]; then
+    key_ok=1
+  fi
+
+  if [[ "$url_ok" -eq 1 && "$key_ok" -eq 1 ]]; then
+    return 0
+  fi
+
+  echo "============================================" >&2
+  echo "[alpaca.sh] 🛑 SAFETY GUARD: operación bloqueada" >&2
+  echo "============================================" >&2
+  echo "Este bot está configurado SOLO para paper trading." >&2
+  echo "Una de las siguientes comprobaciones ha fallado:" >&2
+  echo "  - ALPACA_BASE_URL debe contener 'paper-api.alpaca.markets'" >&2
+  echo "    valor actual: ${ALPACA_BASE_URL:-<no definida>}" >&2
+  if [[ "$url_ok" -eq 1 ]]; then echo "    [OK]" >&2; else echo "    [FAIL]" >&2; fi
+  echo "  - ALPACA_API_KEY debe empezar por 'PK' (clave paper)" >&2
+  echo "    prefijo actual: ${ALPACA_API_KEY:0:2}..." >&2
+  if [[ "$key_ok" -eq 1 ]]; then echo "    [OK]" >&2; else echo "    [FAIL]" >&2; fi
+  echo "" >&2
+  echo "Para forzar live trading (a tu propio riesgo) exporta BOT_ALLOW_LIVE=1." >&2
+  echo "============================================" >&2
+  exit 99
+}
+
+# ============================================
 # DISPATCHER
 # ============================================
 cmd="${1:-}"
@@ -71,6 +119,7 @@ case "$cmd" in
   # ----- WRITE OPERATIONS (raw JSON) -----
 
   order)
+    require_paper_only
     # POST new order with raw JSON
     # Example: order '{"symbol":"AAPL","qty":"4","side":"buy","type":"market","time_in_force":"day"}'
     body="${1:?usage: order '<json>'}"
@@ -81,6 +130,7 @@ case "$cmd" in
   # ----- WRITE OPERATIONS (helpers) -----
 
   buy)
+    require_paper_only
     # Buy market order (helper)
     # Usage: buy SYMBOL QTY [type=market]
     sym="${1:?usage: buy SYMBOL QTY [market|limit] [limit_price]}"
@@ -99,6 +149,7 @@ case "$cmd" in
     ;;
 
   sell)
+    require_paper_only
     # Sell market order (helper)
     sym="${1:?usage: sell SYMBOL QTY [market|limit] [limit_price]}"
     qty="${2:?usage: sell SYMBOL QTY [market|limit] [limit_price]}"
@@ -116,6 +167,7 @@ case "$cmd" in
     ;;
 
   trailing-stop)
+    require_paper_only
     # Trailing stop GTC order (helper)
     # Usage: trailing-stop SYMBOL QTY TRAIL_PCT
     # IMPORTANT: trail_percent must be a string like "10" for 10% (NOT 0.10)
@@ -130,6 +182,7 @@ case "$cmd" in
     ;;
 
   fixed-stop)
+    require_paper_only
     # Fixed stop GTC order (fallback when trailing stops are PDT-blocked)
     # Usage: fixed-stop SYMBOL QTY STOP_PRICE
     sym="${1:?usage: fixed-stop SYMBOL QTY STOP_PRICE}"
@@ -145,23 +198,27 @@ case "$cmd" in
   # ----- DELETE OPERATIONS -----
 
   cancel)
+    require_paper_only
     # Cancel single order by ID
     oid="${1:?usage: cancel ORDER_ID}"
     curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/orders/$oid"
     ;;
 
   cancel-all)
+    require_paper_only
     # Cancel all open orders
     curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/orders"
     ;;
 
   close)
+    require_paper_only
     # Close single position (market sell)
     sym="${1:?usage: close SYMBOL}"
     curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions/$sym"
     ;;
 
   close-all)
+    require_paper_only
     # Close ALL positions (emergency button)
     curl -fsS -H "$H_KEY" -H "$H_SEC" -X DELETE "$API/positions"
     ;;
@@ -183,9 +240,15 @@ case "$cmd" in
     ;;
 
   operating-capital)
-    # Returns the effective operating capital (overrides Alpaca equity)
-    # Used by routines to enforce the $3k cap instead of using full $100k paper equity
-    echo "${OPERATING_CAPITAL:-3000}"
+    # Returns the effective operating capital:
+    # - Si OPERATING_CAPITAL está definido en .env → usa ese valor (límite manual)
+    # - Si no está definido → devuelve el equity real de la cuenta Alpaca (sin cap artificial)
+    if [[ -n "${OPERATING_CAPITAL:-}" ]]; then
+      echo "${OPERATING_CAPITAL}"
+    else
+      curl -fsS -H "$H_KEY" -H "$H_SEC" "$API/account" | \
+        python3 -c "import json,sys; d=json.load(sys.stdin); print(round(float(d.get('equity',0)), 2))"
+    fi
     ;;
 
   # ----- HELP -----
@@ -218,7 +281,7 @@ DELETE:
 
 SAFETY:
   daytrade-check                   Verify PDT room (exits 1 if at limit)
-  operating-capital                Returns OPERATING_CAPITAL from .env (\$3000)
+  operating-capital                Returns capital operativo (env OPERATING_CAPITAL o equity real)
 
 NOTAS:
   - trail_percent va como string: "10" = 10% (NO 0.10)

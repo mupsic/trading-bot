@@ -128,7 +128,6 @@ for i in $(seq 0 $((COUNT - 1))); do
       msg+=$'\n\n'
       msg+="Alpaca equity: \$${equity}"$'\n'
       msg+="Cash: \$${cash}"$'\n'
-      msg+="Operating cap: \$3,000 (HARD)"$'\n'
       msg+="Daytrades: ${daytrade}/3"$'\n'
       msg+="Open positions: ${pos_count}/5"
 

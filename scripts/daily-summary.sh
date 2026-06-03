@@ -3,7 +3,7 @@
 # ============================================
 # DAILY SUMMARY EOD (bash puro, sin Claude)
 # ============================================
-# Calcula P&L del día sobre operating equity (capped a $3000)
+# Calcula P&L del día sobre el equity real de la cuenta Alpaca
 # Append EOD snapshot a TRADE-LOG
 # Mantiene .equity-history.jsonl con peak/equity por día
 # Telegram resumen siempre
@@ -26,7 +26,7 @@ fi
 : "${ALPACA_API_SECRET:?ALPACA_API_SECRET missing}"
 : "${TELEGRAM_BOT_TOKEN:?TELEGRAM_BOT_TOKEN missing}"
 : "${TELEGRAM_CHAT_ID:?TELEGRAM_CHAT_ID missing}"
-: "${OPERATING_CAPITAL:=3000}"
+# OPERATING_CAPITAL se fija dinámicamente tras leer el equity real
 
 SCRIPTS="$ROOT/scripts"
 MEMORY="$ROOT/memory"
@@ -54,38 +54,54 @@ POS_VALUE=$(echo "$POSITIONS" | jq '[.[].market_value | tonumber] | add // 0')
 # ============================================
 # Compute operating-equity metrics
 # ============================================
+# Usar equity real como capital operativo si no hay límite manual en .env
+if [[ -z "${OPERATING_CAPITAL:-}" ]]; then
+  OPERATING_CAPITAL=$(python3 -c "print(round($EQUITY, 2))")
+fi
+
 OPERATING_EQUITY=$(python3 -c "print(round(min($OPERATING_CAPITAL, $EQUITY), 2))")
 DEPLOYED_PCT=$(python3 -c "print(round($POS_VALUE / $OPERATING_CAPITAL * 100, 1))")
 
-# Yesterday's equity from history
-YESTERDAY_EQUITY=$OPERATING_CAPITAL
+# Yesterday's equity y primer registro (para Total P&L desde inicio)
+YESTERDAY_EQUITY=$OPERATING_EQUITY
 PEAK_EQUITY=$OPERATING_EQUITY
+FIRST_EQUITY=$OPERATING_EQUITY
 
 if [[ -f "$EQUITY_HISTORY" ]]; then
-  read -r YESTERDAY_EQUITY PEAK_EQUITY < <(python3 <<PYEOF
+  read -r YESTERDAY_EQUITY PEAK_EQUITY FIRST_EQUITY < <(python3 <<PYEOF
 import json
-last_eq = $OPERATING_CAPITAL
-peak = $OPERATING_EQUITY
+entries = []
 try:
     with open("$EQUITY_HISTORY") as f:
         for line in f:
             try:
                 d = json.loads(line.strip())
-                last_eq = d.get("operating_equity", last_eq)
-                peak = max(peak, d.get("operating_equity", 0), d.get("peak_equity", 0))
+                if d:
+                    entries.append(d)
             except:
                 pass
 except FileNotFoundError:
     pass
-print(last_eq, peak)
+
+if entries:
+    last_eq = entries[-1].get("operating_equity", $OPERATING_EQUITY)
+    peak = max($OPERATING_EQUITY, *(d.get("operating_equity", 0) for d in entries),
+                                  *(d.get("peak_equity", 0) for d in entries))
+    first_eq = entries[0].get("operating_equity", $OPERATING_EQUITY)
+else:
+    last_eq = $OPERATING_EQUITY
+    peak = $OPERATING_EQUITY
+    first_eq = $OPERATING_EQUITY
+print(last_eq, peak, first_eq)
 PYEOF
 )
 fi
 
 DAY_PNL=$(python3 -c "print(round($OPERATING_EQUITY - $YESTERDAY_EQUITY, 2))")
 DAY_PNL_PCT=$(python3 -c "print(round(($OPERATING_EQUITY - $YESTERDAY_EQUITY) / $YESTERDAY_EQUITY * 100, 2)) if $YESTERDAY_EQUITY > 0 else print(0)")
-PHASE_PNL=$(python3 -c "print(round($OPERATING_EQUITY - $OPERATING_CAPITAL, 2))")
-PHASE_PNL_PCT=$(python3 -c "print(round(($OPERATING_EQUITY - $OPERATING_CAPITAL) / $OPERATING_CAPITAL * 100, 2))")
+# Total P&L desde el primer día registrado (en lugar de vs. cap fijo $3000)
+PHASE_PNL=$(python3 -c "print(round($OPERATING_EQUITY - $FIRST_EQUITY, 2))")
+PHASE_PNL_PCT=$(python3 -c "print(round(($OPERATING_EQUITY - $FIRST_EQUITY) / $FIRST_EQUITY * 100, 2)) if $FIRST_EQUITY > 0 else print(0)")
 
 # Update peak
 NEW_PEAK=$(python3 -c "print(round(max($PEAK_EQUITY, $OPERATING_EQUITY), 2))")
@@ -120,11 +136,11 @@ PYEOF
   echo ""
   echo "### $DATE — EOD Snapshot"
   echo "- **Alpaca equity (reported)**: \$$EQUITY"
-  echo "- **Operating equity (capped)**: \$$OPERATING_EQUITY"
+  echo "- **Operating equity**: \$$OPERATING_EQUITY"
   echo "- **Cash**: \$$CASH"
   echo "- **Positions value**: \$$POS_VALUE ($DEPLOYED_PCT% deployed)"
   echo "- **Day P&L**: \$$DAY_PNL ($DAY_PNL_PCT%)"
-  echo "- **Phase P&L**: \$$PHASE_PNL ($PHASE_PNL_PCT%)"
+  echo "- **Total P&L (desde inicio)**: \$$PHASE_PNL ($PHASE_PNL_PCT%)"
   echo "- **Peak equity**: \$$NEW_PEAK"
   echo "- **Drawdown from peak**: ${DRAWDOWN_PCT}%"
   echo "- **Trades today**: $TRADES_TODAY"
@@ -163,7 +179,7 @@ if [[ "$POS_DAY" == "1" ]]; then PNL_EMOJI="📈"; fi
 
 MSG+="
 ${PNL_EMOJI} Day: \$$DAY_PNL ($DAY_PNL_PCT%)
-${PNL_EMOJI} Phase: \$$PHASE_PNL ($PHASE_PNL_PCT%)
+${PNL_EMOJI} Total (inicio): \$$PHASE_PNL ($PHASE_PNL_PCT%)
 Cash: \$$CASH | Deployed: $DEPLOYED_PCT%
 Peak: \$$NEW_PEAK | Drawdown: ${DRAWDOWN_PCT}%
 Trades today: $TRADES_TODAY | Semana: $TRADES_THIS_WEEK/3"

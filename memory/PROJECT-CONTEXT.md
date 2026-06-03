@@ -2,17 +2,18 @@
 
 ## Overview
 - **What**: Autonomous trading bot challenge (paper trading)
-- **Operating capital**: $3,000 (HARD CAP — el bot NUNCA usa más, aunque Alpaca muestre más)
+- **Operating capital**: Equity real de la cuenta Alpaca (sin cap artificial)
 - **Platform**: Alpaca paper trading
 - **Mode**: Automatic execution
 - **Strategy**: Swing trading stocks ONLY (no options, no crypto, no futures)
 - **Timezone**: Europe/Madrid (CEST/CET)
 
-## Capital Cap — CRITICAL
-- **OPERATING_CAPITAL** está fijo en $3,000 (leído de `.env`)
-- Alpaca paper account puede mostrar $100k+, pero el bot **ignora ese exceso**
-- Todas las decisiones de sizing y deployment se calculan sobre $3,000
-- Si el portfolio total (positions value + cash usado) intentara exceder $3,000, **STOP**
+## Capital Operativo
+- **OPERATING_CAPITAL = $20,000** (definido en `.env`)
+- La cuenta Alpaca tiene ~$99k pero el bot opera SOLO sobre $20k
+- Los ~$79k restantes quedan intocados — el bot los ignora completamente
+- Máximo por posición: $4,000 (20% de $20k)
+- GATE 5 (comprobación de cash) impide endeudarse: nunca compra más de lo que hay en caja
 
 ## Inmutable Safety Rules
 1. **NO OPTIONS, EVER**. Stocks únicamente.

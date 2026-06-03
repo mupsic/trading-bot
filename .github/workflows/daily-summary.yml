@@ -32,7 +32,7 @@ jobs:
           ALPACA_BASE_URL: https://paper-api.alpaca.markets
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          OPERATING_CAPITAL: "3000"
+          # OPERATING_CAPITAL no definido → el bot usa el equity real de la cuenta Alpaca
         run: bash scripts/daily-summary.sh
 
       - name: Commit memory updates

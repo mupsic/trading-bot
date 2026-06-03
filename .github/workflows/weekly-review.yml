@@ -36,7 +36,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          OPERATING_CAPITAL: "3000"
+          # OPERATING_CAPITAL no definido → el bot usa el equity real de la cuenta Alpaca
         run: python scripts/run-weekly-review-ai.py
 
       - name: Commit memory updates

@@ -17,7 +17,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATE = datetime.date.today().isoformat()
-OPERATING_CAPITAL = int(os.environ.get("OPERATING_CAPITAL", "3000"))
+# OPERATING_CAPITAL_ENV: límite manual si está definido en .env (0 = usar equity real de Alpaca)
+OPERATING_CAPITAL_ENV = int(os.environ.get("OPERATING_CAPITAL", "0"))
 
 # ============================================================
 # Helpers
@@ -96,6 +97,10 @@ equity = float(account.get("equity", 0))
 cash = float(account.get("cash", 0))
 daytrade_count = int(float(account.get("daytrade_count", 0)))
 positions_value = sum(float(p.get("market_value", 0)) for p in positions)
+
+# Resolver capital operativo: límite manual (si existe) o equity real de Alpaca
+OPERATING_CAPITAL = OPERATING_CAPITAL_ENV if OPERATING_CAPITAL_ENV > 0 else int(equity) if equity > 0 else 100000
+MAX_POSITION_SIZE = round(OPERATING_CAPITAL * 0.20, 2)  # 20% del equity por posición
 capital_available = max(0.0, OPERATING_CAPITAL - positions_value)
 
 # Trim news to last 10 to keep prompt size sane
@@ -104,19 +109,20 @@ market_news_trim = market_news[:10] if isinstance(market_news, list) else []
 # Memory context (trim long files)
 context = read_memory("PROJECT-CONTEXT.md")
 strategy = read_memory("TRADING-STRATEGY.md")
-recent_trades = read_memory("TRADE-LOG.md")[-3000:]
-recent_research = read_memory("RESEARCH-LOG.md")[-2000:]
+recent_trades = read_memory("TRADE-LOG.md")[-1500:]
+recent_research = read_memory("RESEARCH-LOG.md")[-800:]
 
 # ============================================================
 # Build the prompt
 # ============================================================
 
-system_msg = """You are an autonomous paper trading bot for the NY market.
-You operate on Alpaca paper trading with a HARD CAP of $3,000 operating capital.
+# Static system content — eligible for prompt caching (no per-day variables here)
+system_static = f"""You are an autonomous paper trading bot for the NY market.
+You operate on Alpaca paper trading using the full account equity as operating capital (no artificial cap).
+Operating capital today: ${OPERATING_CAPITAL:,} | Max per position: ${MAX_POSITION_SIZE:,.2f} (20% of equity).
 NEVER touch options, crypto, futures, leverage, or margin. Stocks only.
-Be concise, no fluff. Output exactly the requested format."""
-
-user_prompt = f"""DATE: {DATE}
+NEVER buy more than the available cash — no debt, ever.
+Be concise, no fluff. Output exactly the requested format.
 
 CONTEXT (read-only, immutable rules):
 ```
@@ -128,13 +134,22 @@ STRATEGY (read-only):
 {strategy[:1500]}
 ```
 
+OUTPUT CONTRACT:
+You will receive today's date and live data in the user message. Respond ONLY with the
+markdown block in the exact template the user requests — no preamble, no postscript.
+Use the web_search tool for the specific lookups requested (SPY MA200, VIX, catalysts,
+sector momentum). Apply the regime gate strictly. If PAUSED or Regime OFF, candidates must be []."""
+
+user_prompt = f"""DATE: {DATE}
+
 BOT STATE:
 - Paused: {"YES — decision MUST be HOLD regardless of candidates" if PAUSED else "no (active)"}
-- Operating cap: $3,000
+- Operating capital (equity real): ${OPERATING_CAPITAL:,}
+- Max per position (20%): ${MAX_POSITION_SIZE:,.2f}
 - Alpaca equity: ${equity:.2f}
-- Cash: ${cash:.2f}
+- Cash disponible: ${cash:.2f}
 - Positions value: ${positions_value:.2f}
-- Capital available within cap: ${capital_available:.2f}
+- Capital disponible para nuevas posiciones: ${capital_available:.2f}
 - Daytrade count: {daytrade_count}/3
 - Open positions: {len(positions)}/5
 
@@ -169,8 +184,8 @@ If REGIME = ON, identify 2-3 stock candidates that pass ALL these filters:
 - Has a specific named catalyst (earnings beat, FDA, M&A, breakout, etc.)
 - Sector showing positive momentum
 - No earnings reporting within next 7 days (avoid event risk)
-- shares × entry_price ≤ $600 (20% of cap)
-- (positions_value + new_buy_cost) ≤ $3,000
+- shares × entry_price ≤ ${MAX_POSITION_SIZE:,.2f} (20% del equity operativo)
+- (positions_value + new_buy_cost) ≤ cash disponible (NUNCA superar el cash real)
 
 Output the complete RESEARCH-LOG entry in this EXACT format (no extra text before or after):
 
@@ -178,10 +193,11 @@ Output the complete RESEARCH-LOG entry in this EXACT format (no extra text befor
 
 ### Account Snapshot
 - Alpaca equity: ${equity:.2f}
-- Operating cap: $3,000
-- Cash: ${cash:.2f}
+- Operating capital (equity real): ${OPERATING_CAPITAL:,}
+- Max por posición (20%): ${MAX_POSITION_SIZE:,.2f}
+- Cash disponible: ${cash:.2f}
 - Positions value: ${positions_value:.2f}
-- Capital available: ${capital_available:.2f}
+- Capital disponible: ${capital_available:.2f}
 - Daytrade count: {daytrade_count}/3
 - Bot state: {"PAUSED" if PAUSED else "ACTIVE"}
 
@@ -230,7 +246,8 @@ TRADE [list candidates] OR HOLD (default if Regime OFF, bot paused, or no edge)
 ```
 
 CRITICAL RULES:
-- shares × entry_price MUST be ≤ 600
+- shares × entry_price MUST be ≤ {int(MAX_POSITION_SIZE)} (20% del equity real)
+- (positions_value + new_buy_cost) MUST be ≤ {int(cash)} (cash disponible real — NO deuda)
 - If bot is PAUSED or regime OFF → candidates: []
 - Each candidate MUST have a real, specific catalyst (not generic "looks bullish")
 - Output ONLY the markdown above, nothing else
@@ -244,17 +261,23 @@ import anthropic
 
 client = anthropic.Anthropic()
 
-print("Calling Anthropic API (claude-opus-4-6 with web_search)...")
+print("Calling Anthropic API (claude-sonnet-4-6 with web_search, prompt caching enabled)...")
 
 try:
     response = client.messages.create(
-        model="claude-opus-4-6",
-        max_tokens=4096,
-        system=system_msg,
+        model="claude-sonnet-4-6",
+        max_tokens=2500,
+        system=[
+            {
+                "type": "text",
+                "text": system_static,
+                "cache_control": {"type": "ephemeral"}
+            }
+        ],
         tools=[{
             "type": "web_search_20250305",
             "name": "web_search",
-            "max_uses": 8
+            "max_uses": 4
         }],
         messages=[{"role": "user", "content": user_prompt}]
     )

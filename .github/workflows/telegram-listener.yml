@@ -1,12 +1,24 @@
 name: Telegram Listener
 
-# Polling Telegram para comandos del usuario (/status, /pause, /closeall, etc).
-# 100% bash, NO Claude/Opus.
-# Schedule: cada 5 minutos (mínimo permitido por GitHub Actions cron).
+# Listener de comandos Telegram (/status, /pause, /closeall, etc).
+# NO usa polling continuo — se dispara exactamente después de cada rutina del bot.
+# Esto cubre el 99% de los casos: el usuario reacciona a las notificaciones del bot.
+#
+# Para comandos de emergencia en cualquier momento:
+#   → GitHub Actions UI → "Telegram Listener" → "Run workflow" (botón manual)
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  # Disparado automáticamente tras cada rutina principal del bot
+  workflow_run:
+    workflows:
+      - "Pre-Market Research"
+      - "Market-Open Execution"
+      - "Midday Monitor"
+      - "Daily Summary EOD"
+      - "Weekly Review"
+    types:
+      - completed
+  # Disponible manualmente para emergencias (pause, closeall, etc)
   workflow_dispatch:
 
 permissions:
@@ -30,7 +42,7 @@ jobs:
           ALPACA_BASE_URL: https://paper-api.alpaca.markets
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          OPERATING_CAPITAL: "3000"
+          # OPERATING_CAPITAL no definido → el bot usa el equity real de la cuenta Alpaca
         run: bash scripts/telegram-listener.sh
 
       - name: Commit state updates (telegram-state, bot-state)

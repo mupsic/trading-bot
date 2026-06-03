@@ -6,7 +6,9 @@
 # Lee bloque JSON de candidatos de memory/RESEARCH-LOG.md (escrito por pre-market)
 # Aplica buy-side gate completo. Ejecuta market buys.
 # Coloca trailing stops 10% GTC inmediatamente tras cada fill.
-# Respeta cap operativo $3000 y BOT-STATE.md PAUSED.
+# Usa equity real de Alpaca como capital operativo (sin cap artificial).
+# GATE 5 (cash) impide endeudarse: nunca compra más de lo que hay en caja.
+# Respeta BOT-STATE.md PAUSED.
 # ============================================
 
 set -euo pipefail
@@ -27,7 +29,7 @@ fi
 : "${ALPACA_API_SECRET:?ALPACA_API_SECRET missing}"
 : "${TELEGRAM_BOT_TOKEN:?TELEGRAM_BOT_TOKEN missing}"
 : "${TELEGRAM_CHAT_ID:?TELEGRAM_CHAT_ID missing}"
-: "${OPERATING_CAPITAL:=3000}"
+# OPERATING_CAPITAL se fija dinámicamente tras leer el equity real (ver STEP 3)
 
 SCRIPTS="$ROOT/scripts"
 MEMORY="$ROOT/memory"
@@ -114,12 +116,20 @@ POSITIONS=$(bash "$SCRIPTS/alpaca.sh" positions 2>/dev/null)
 POS_COUNT=$(echo "$POSITIONS" | jq 'length')
 POS_VALUE=$(echo "$POSITIONS" | jq '[.[].market_value | tonumber] | add // 0')
 
-# Capital tracking against operating cap
+# Usar equity real como capital operativo si no hay límite manual en .env
+if [[ -z "${OPERATING_CAPITAL:-}" ]]; then
+  OPERATING_CAPITAL=$(python3 -c "print(round($EQUITY, 2))")
+fi
+
+# Capital tracking: cuánto capital queda disponible dentro del límite operativo
 CAPITAL_USED=$POS_VALUE
 CAPITAL_AVAILABLE=$(python3 -c "print(round($OPERATING_CAPITAL - $CAPITAL_USED, 2))")
 
+# Límite por posición: 20% del capital operativo (dinámico)
+MAX_POS_SIZE=$(python3 -c "print(round($OPERATING_CAPITAL * 0.20, 2))")
+
 log "Alpaca equity=\$$EQUITY | Cash=\$$CASH | Positions=$POS_COUNT (\$$POS_VALUE)"
-log "Operating cap=\$$OPERATING_CAPITAL | Used=\$$CAPITAL_USED | Available=\$$CAPITAL_AVAILABLE"
+log "Operating cap=\$$OPERATING_CAPITAL | Used=\$$CAPITAL_USED | Available=\$$CAPITAL_AVAILABLE | Max/pos=\$$MAX_POS_SIZE"
 
 # Count trades this week (Mon-today)
 TRADES_THIS_WEEK=$(python3 <<PYEOF
@@ -185,12 +195,12 @@ for i in $(seq 0 $((NUM - 1))); do
     continue
   fi
 
-  # GATE 3: position cost <= $600 (20% of $3000)
-  EXCEEDS_POSITION=$(python3 -c "print(1 if $POSITION_COST > 600.01 else 0)")
+  # GATE 3: position cost <= 20% del capital operativo (dinámico sobre equity real)
+  EXCEEDS_POSITION=$(python3 -c "print(1 if $POSITION_COST > $MAX_POS_SIZE else 0)")
   if [[ "$EXCEEDS_POSITION" == "1" ]]; then
-    SKIPPED_LIST+="${SYMBOL}: pos_cost_>600; "
+    SKIPPED_LIST+="${SYMBOL}: pos_cost_>20pct; "
     TRADES_SKIPPED=$((TRADES_SKIPPED + 1))
-    log "SKIP: position cost \$$POSITION_COST > \$600"
+    log "SKIP: position cost \$$POSITION_COST > 20% del equity (\$$MAX_POS_SIZE)"
     continue
   fi
 

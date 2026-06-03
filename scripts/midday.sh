@@ -25,7 +25,7 @@ fi
 : "${ALPACA_API_SECRET:?ALPACA_API_SECRET missing}"
 : "${TELEGRAM_BOT_TOKEN:?TELEGRAM_BOT_TOKEN missing}"
 : "${TELEGRAM_CHAT_ID:?TELEGRAM_CHAT_ID missing}"
-: "${OPERATING_CAPITAL:=3000}"
+# OPERATING_CAPITAL se fija dinámicamente tras leer el equity real (ver STEP 1)
 
 SCRIPTS="$ROOT/scripts"
 MEMORY="$ROOT/memory"
@@ -47,12 +47,17 @@ critical() { bash "$SCRIPTS/telegram.sh" alert "CRITICAL" "$1" > /dev/null 2>&1 
 ACCOUNT=$(bash "$SCRIPTS/alpaca.sh" account 2>/dev/null)
 EQUITY=$(echo "$ACCOUNT" | jq -r '.equity | tonumber')
 
+# Usar equity real como capital operativo si no hay límite manual en .env
+if [[ -z "${OPERATING_CAPITAL:-}" ]]; then
+  OPERATING_CAPITAL=$(python3 -c "print(round($EQUITY, 2))")
+fi
+
 POSITIONS=$(bash "$SCRIPTS/alpaca.sh" positions 2>/dev/null)
 POS_COUNT=$(echo "$POSITIONS" | jq 'length')
 
 ORDERS=$(bash "$SCRIPTS/alpaca.sh" orders 2>/dev/null)
 
-# Operating equity (capped)
+# Operating equity: min entre límite operativo y equity real (si hay límite manual, lo respeta)
 OPERATING_EQUITY=$(python3 -c "print(min($OPERATING_CAPITAL, $EQUITY))")
 
 # Peak equity (from history)

@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATE = datetime.date.today().isoformat()
 TODAY = datetime.date.today()
 MONDAY = TODAY - datetime.timedelta(days=TODAY.weekday())
-OPERATING_CAPITAL = int(os.environ.get("OPERATING_CAPITAL", "3000"))
+# OPERATING_CAPITAL_ENV: límite manual si está en .env (0 = usar equity real de Alpaca)
+OPERATING_CAPITAL_ENV = int(os.environ.get("OPERATING_CAPITAL", "0"))
 
 # ------------------------------------------------------------
 
@@ -67,6 +68,9 @@ positions = jsonable(bash("bash scripts/alpaca.sh positions"), [])
 spy_quote = jsonable(bash("bash scripts/finnhub.sh quote SPY"), {})
 
 equity = float(account.get("equity", 0))
+
+# Resolver capital operativo: límite manual (si existe) o equity real de Alpaca
+OPERATING_CAPITAL = OPERATING_CAPITAL_ENV if OPERATING_CAPITAL_ENV > 0 else int(equity) if equity > 0 else 100000
 operating_equity = min(OPERATING_CAPITAL, equity)
 
 # Read memory
@@ -86,12 +90,12 @@ for line in equity_history_raw.strip().split("\n"):
     except:
         pass
 
-monday_equity = OPERATING_CAPITAL  # default
+monday_equity = operating_equity  # default: si no hay historia, usar equity actual
 for entry in equity_history:
     try:
         d = datetime.date.fromisoformat(entry["date"])
         if d == MONDAY or (d < MONDAY and (MONDAY - d).days <= 3):  # Friday before
-            monday_equity = entry.get("operating_equity", OPERATING_CAPITAL)
+            monday_equity = entry.get("operating_equity", operating_equity)
             break
     except:
         pass
@@ -212,14 +216,14 @@ Output ONLY the markdown above, nothing else.
 import anthropic
 client = anthropic.Anthropic()
 
-print("Calling Anthropic API (weekly-review)...")
+print("Calling Anthropic API (weekly-review, claude-sonnet-4-6)...")
 
 try:
     response = client.messages.create(
-        model="claude-opus-4-6",
-        max_tokens=6000,
+        model="claude-sonnet-4-6",
+        max_tokens=3500,
         system=system_msg,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
         messages=[{"role": "user", "content": user_prompt}]
     )
 except Exception as e:
