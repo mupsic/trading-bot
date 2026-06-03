@@ -1264,3 +1264,101 @@ TRADE [MSFT, HUM] — Both have specific, named catalysts with favorable R:R. MS
   ]
 }
 ```
+
+I'll gather all the required data points now.Now let me get specific data on HPE and MRVL earnings results and Broadcom (AVGO) which reports today, plus check on candidate stocks:Now I have all the data I need. Let me compile the research log:
+
+**Key data points gathered:**
+- SPY current: ~$755.52 (from live Finnhub data)
+- SPY 200-day MA: ~$732 (SPY ETF from Investing.com) / S&P 500 index 200-day MA: ~$6,836 (from StreetStats)
+- VIX: 15.77 at close June 2; pre-market showing ~16.05
+- Market regime: SPY well above MA200, VIX well below 25 → REGIME ON
+- Top catalysts: AI/semiconductor boom, HPE earnings beat (+23%), MRVL blowout Q1, Alphabet $80B equity raise, Iran geopolitical tensions, Broadcom earnings today AMC
+- XLK is strongest sector ETF (+1.60% on June 2, 33.4% YTD)
+- Pre-market movers: MRVL +10.2%, INTC +5.6%, HPE continued strength
+- MSFT position: down -7.49% — dangerously close to -7% hard stop
+
+**MSFT concern:** The MSFT position is at -7.485% unrealized loss. The hard stop rule says -7% triggers immediate sell. This position has breached the -7% hard stop.
+
+## 2026-06-03 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100130.19
+- Operating cap: $3,000
+- Cash: $99392.05
+- Positions value: $738.13
+- Capital available: $2261.86
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $755.52 (MA200: ~$732.02) — ABOVE
+- VIX: 15.77 — LOW
+- Regime: ON
+- Reason: SPY 200-day moving average is 732.02; SPY trading at $755.52, well above MA200. VIX S&P 500 Volatility Index was at 16.05 at close June 1, closing at 15.77 on June 2. Both conditions met (SPY > MA200 AND VIX < 25).
+
+### Market Context
+- Top catalysts today:
+  - **AI/Semiconductor boom continues**: The Dow Jones Industrial Average, the S&P 500, and the Nasdaq all finished at all-time highs, driven by gains in AI and semiconductor stocks.
+  - **HPE blowout earnings**: HPE delivered an exceptional quarter with record-breaking revenue, higher-than-anticipated profitability, and increased free cash flow. Revenue: $10.7 billion, up 40% from the prior-year period. Stock surged ~23%.
+  - **MRVL record Q1 FY27**: Q1 Net Revenue: $2.418 billion, a new record, grew by 28% year-on-year, $18.0 million above the mid-point of guidance. Marvell Technology, Inc. (MRVL) is gapping up 10.2% on heavy $3.3B dollar volume, leading a broad semiconductor rally alongside Intel Corp (INTC) +5.6%.
+  - **Alphabet $80B equity raise**: Alphabet stunned investors late Monday, announcing it will raise $80 billion in equity financing, with $10 billion coming from Berkshire Hathaway.
+  - **Iran-Kuwait missile strikes / geopolitical risk**: Iran launched missiles at Kuwait and Bahrain, killing one person in Kuwait. The attacks came as the U.S. conducted new strikes on Qeshm Island.
+  - **Broadcom (AVGO) reports earnings today AMC** — major event risk for semis
+- Sector leaders:
+  - XLK (Technology): +1.60% on June 2, +33.4% YTD — S&P 500 gaining roughly 20% since March 30, while the technology-heavy Nasdaq has advanced nearly 30%. Strong technology earnings and a de-escalation in the war with Iran have been the primary catalysts.
+  - XLE (Energy): Rising on oil spike (WTI ~$92/bbl)
+  - XLF (Financials): -0.29% on June 2
+  - XLV (Healthcare): -1.09% on June 2
+  - XLY (Consumer Disc): -2.22% on June 2
+  - XLP (Staples): -1.06% on June 2
+- Economic events today (Wed June 3): ADP Employment Change, Business Inventories, EIA Crude Oil Inventories, Factory Orders, ISM Non-Manufacturing Index, MBA Mortgage Applications Index.
+
+### ⚠️ CRITICAL ALERT: MSFT Hard Stop Breach
+- MSFT position: entry $461.59, current $427.04, unrealized P&L = -$34.55 (-7.49%)
+- **HARD STOP RULE: -7% absolute maximum loss triggers IMMEDIATE SELL**
+- MSFT has breached -7% → **MUST EXIT IMMEDIATELY at market open**
+- Note: qty_available = 0 suggests trailing stop order already in place; verify if stop triggered or manually exit
+
+### Trade Candidates (Regime ON)
+
+Given heavy economic data day (ADP, ISM Non-Manufacturing) and AVGO earnings AMC creating event risk for semis, caution is warranted. RSI overbought at 74+ on S&P 500. However, AI/semi momentum is strong.
+
+1. **HPE** — Record Q2 earnings beat (revenue $10.7B, +40% YoY), raised FY2026 guidance, AI networking momentum. Entry ~$55.00 (post-gap pullback from $57.92 close), stop $51.15 (-7%), target $62.70 (+14%), shares=10, cost=$550, R:R 1:2
+   - Catalyst: We are raising our fiscal 2026 guidance and introducing a fiscal 2027 financial growth framework.
+   - Sector: Technology (XLK leading)
+   - Earnings: Just reported — no upcoming earnings risk within 7 days
+   - Risk: Post-earnings gap already priced in; may need consolidation
+
+2. **INTC** — Riding semiconductor AI wave, +5.6% pre-market. Benefiting from AI-on-PC shift with Nvidia partnership. Entry ~$27.50, stop $25.58 (-7%), target $31.35 (+14%), shares=21, cost=$577.50, R:R 1:2
+   - Catalyst: The latest AI catalyst is a shift from data centers toward individual computers with Nvidia PC chips for Windows laptops
+   - Sector: Technology (XLK leading)
+   - Earnings: Not within 7 days
+   - Risk: INTC has underperformed peers; rebound may be short-lived
+
+### Risk Factors Today
+- **MSFT at -7.49% → hard stop breach, must be exited immediately**
+- RSI overbought: The Relative Strength Index (RSI) stands at 74.5, reflecting strong upside momentum and exceeding commonly cited overbought thresholds around 70.
+- Narrow breadth: Constituents trading above their 50-day average account for 52.4% of the index, with an index percentile value of 36, indicating below-average participation in the short-term uptrend.
+- Geopolitical: Iran-Kuwait missile strikes could escalate; oil spiking to $97+
+- Heavy economic data day: ADP Employment, ISM Non-Mfg, Factory Orders — any miss could cause volatility
+- AVGO earnings AMC: sector-wide risk event for all semiconductor names
+- Post-gap-up day for HPE — chasing gap-ups is risky
+
+### Decision
+HOLD — No new trades today. Rationale:
+1. **MSFT must be exited first** (hard stop breached at -7.49%) — priority #1
+2. Heavy economic data day creates unpredictable volatility
+3. AVGO earnings AMC creates major sector risk for any semi/tech entry today
+4. Market overbought (RSI 74+) with narrow breadth (only 52% above 50-day MA)
+5. Post-earnings gap plays (HPE) too risky same-day; wait for pullback/consolidation
+6. Better to reassess Thursday after ADP/ISM data and AVGO earnings are digested
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-03",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
