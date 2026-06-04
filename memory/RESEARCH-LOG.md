@@ -1362,3 +1362,118 @@ HOLD — No new trades today. Rationale:
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me compile the research log.
+
+**Key data points gathered:**
+- SPY 200-day MA: **$732.02** (most recent from Investing.com, June 1 2026). SPY current: $752.81 → ABOVE MA200 ✅
+- VIX today: opened at **$15.81**, ranging 15.22–15.88 → LOW ✅ → REGIME ON
+- Broadcom (AVGO) and CrowdStrike (CRWD) post-earnings plunges driving tech weakness today
+- Consumer-oriented stocks rose as oil and yields slipped after Israel and Lebanon agreed to a ceasefire
+- XLK YTD: +~32–33%; XLE YTD: +~26–27% strong on geopolitical tensions
+- Friday: May nonfarm payrolls, unemployment, and wages
+- Citi reiterated Buy on Oracle (ORCL), raising price target to $330 from $320, citing AI contract ramp acceleration
+- TSMC CEO confirmed global chip supply will fall short of AI demand for years, reiterating 30%+ sales growth forecast
+
+---
+
+## 2026-06-04 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,132.44
+- Operating capital (equity real): $100,132
+- Max por posición (20%): $20,026.40
+- Cash disponible: $99,820.41
+- Positions value: $312.04
+- Capital disponible: $99,819.96
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $752.81 (MA200: $732.02) — ABOVE
+- VIX: 15.81 — LOW
+- Regime: **ON**
+- Reason: SPY +2.8% above 200-day MA; VIX at ~15.8, well below 25 threshold; market pullback driven by AVGO/CRWD earnings disappointment, not systemic breakdown.
+
+### Market Context
+- Top catalysts today:
+  - **AVGO (Broadcom) earnings miss on guidance**: Tumbled ~14% in extended trading after outlook disappointed; dragging semiconductor/AI names lower and injecting chip-sector risk-off tone
+  - **CRWD (CrowdStrike) post-earnings plunge**: Adding bearish cybersecurity/tech sentiment after results missed expectations
+  - **Israel-Lebanon ceasefire agreement**: Treasury yields and oil prices fell on geopolitical de-escalation; lifted consumer/rate-sensitive stocks (homebuilders, cruise lines, restaurants)
+  - **ORCL (Oracle) price target raised by Citi to $330 from $320**: Reiterated Buy; firm cited AI contract ramp as one of strongest revenue/EPS accelerations in tech
+  - **TSMC CEO reiterates 30%+ sales growth outlook**: Confirmed AI chip supply will fall short of demand for years, underscoring AI infrastructure theme
+  - **May Nonfarm Payrolls due Friday (June 5)**: Analysts expect ~85,000 jobs (historically light); could move markets; some of today's selling is pre-NFP consolidation
+
+- Sector leaders (YTD as of early June 2026):
+  - XLK (Technology): +~32–33% — YTD leader; under pressure today on AVGO/CRWD
+  - XLE (Energy): +~26–27% — Strong; geopolitical tailwinds
+  - XLV (Health Care): +0.87% (today's session, defensive bid)
+  - XLP (Consumer Staples): +0.89% (today, benefiting from ceasefire/yield drop)
+  - XLI (Industrials): +0.59% (today, rate-sensitive bid)
+  - XLF (Financials): -1.60% (today, lagging)
+
+- Economic events:
+  - **Today (Jun 4)**: Initial Jobless Claims, Continuing Claims, Q1 Productivity (revised), Unit Labor Costs (revised), EIA Natural Gas Inventories
+  - **Tomorrow (Jun 5)**: May Nonfarm Payrolls, Unemployment Rate, Average Hourly Earnings — HIGH IMPACT
+  - **Jun 10**: May CPI / Core CPI (next major inflation print)
+  - **Jun 11**: ECB interest rate decision; May PPI
+
+### Trade Candidates (Regime ON)
+
+> ⚠️ **Tech sector headwinds today**: AVGO/CRWD drag on XLK makes new chip/software entries risky intraday. Targeting non-tech sectors benefiting from ceasefire + yield drop catalyst, plus ORCL which has a fresh analyst upgrade and is not reporting earnings for 7+ days (next expected ~June 10).
+
+1. **ORCL** — Citi Buy reiteration + price target raise to $330 (from $320), AI cloud contract ramp cited as strongest revenue/EPS acceleration in tech; no earnings within 7 days (reports ~Jun 10 after close — **EXCLUDE**: earnings risk within 7 days). ❌ EXCLUDED per earnings rule.
+
+2. **DHI (D.R. Horton)** — Homebuilder sector bid triggered by Israel-Lebanon ceasefire → Treasury yields falling → rate-sensitive sectors rallying; DHI is the largest US homebuilder by volume (mega cap ~$45B), no earnings within 7 days, direct beneficiary of yield compression. Entry near $155, stop at $144.15 (-7%), target $176.70 (+14%).
+
+3. **XLP proxy: COST (Costco)** — Consumer staples rallying on ceasefire/yield drop; Costco (market cap ~$400B) benefits from resilient consumer spending and lower oil/energy cost tailwind; no earnings within 7 days. Entry near $1,008, shares=19 would exceed cap → shares=19 × $1,008 = $19,152 ≤ $20,026 ✅. Stop at $937.44 (-7%), target $1,149.12 (+14%).
+
+> ⚠️ COST at ~$1,008/share: 19 shares = $19,152 — within 20% cap. 20 shares = $20,160 — exceeds cap. Use 19 shares.
+
+**Selected final candidates after earnings/sizing checks:**
+
+1. **DHI** — ceasefire-driven yield drop → homebuilder rally catalyst; entry $155, stop $144.15 (-7%), target $176.70 (+14%), shares=129, cost=$19,995. R:R 1:2
+2. **COST** — consumer staples defensive bid + oil/yield drop catalyst post-ceasefire; entry $1,008, stop $937.44 (-7%), target $1,149.12 (+14%), shares=19, cost=$19,152. R:R 1:2
+
+> Both positions combined: $19,995 + $19,152 = $39,147. Plus existing AAPL $312 = $39,459 total deployed. Well within $99,820 cash. ✅
+
+### Risk Factors Today
+- **Pre-NFP jitteriness**: May payrolls print tomorrow at 8:30 AM ET; surprise in either direction will move markets sharply — new positions will face overnight gap risk
+- **Tech contagion risk**: AVGO -14% / CRWD post-earnings plunge could broaden into wider risk-off selling beyond chip names
+- **AAPL existing position**: Currently +4.5% unrealized — hold, trailing stop active; today's tech weakness warrants monitoring
+- **Geopolitical wildcard**: U.S.-Iran conflict remains fluid; any re-escalation reverses ceasefire tailwind for consumer/rate-sensitive trades
+- **Elevated valuations**: Case-Shiller P/E at 42.53, second highest since 1999; market structurally stretched; new positions sized conservatively
+- **QQQ -1.24% today**: Nasdaq pressure broad; confirms tech sector is the weak link — avoid tech entries today
+
+### Decision
+TRADE [DHI, COST]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-04",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "DHI",
+      "entry_price": 155.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 129,
+      "position_cost": 19995.00,
+      "target_price": 176.70,
+      "catalyst": "Israel-Lebanon ceasefire triggered Treasury yield drop; DHI as largest US homebuilder directly benefits from rate-sensitive sector rally; confirmed intraday bid in homebuilders (KBH, DHI, LEN all up pre-market on yield compression)",
+      "sector": "Consumer Discretionary / Homebuilding",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "COST",
+      "entry_price": 1008.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 19,
+      "position_cost": 19152.00,
+      "target_price": 1149.12,
+      "catalyst": "Consumer staples defensive rotation amid tech sell-off (AVGO/CRWD drag); lower oil prices post-ceasefire reduce Costco input/logistics costs; XLP +0.89% intraday sector leadership; no earnings within 7 days",
+      "sector": "Consumer Staples",
