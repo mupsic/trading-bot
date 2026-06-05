@@ -465,3 +465,16 @@ Every end of day:
 | Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
 |--------|--------|-------|---------|-----------------|---------|
 | AAPL | 1 | 298.7$ | 313.46$ | 14.76$ (4.9%) | -0.6% |
+
+### 2026-06-05 — Trade Entry: JPM
+- **Ticker**: JPM
+- **Side**: BUY
+- **Shares**: 72
+- **Entry price**: $275.0 (intended)
+- **Position cost**: $19800.0
+- **Stop**: trailing 10% GTC (order_id: 8b795aa0-b7f5-477e-b27b-2fe2dbed2c43)
+- **Target**: $313.5
+- **Catalyst**: JPM +3% Thursday in XLF financials rotation; JPMorgan CEO Dimon set to present SpaceX largest-ever IPO to investors — deal flow catalyst; hot jobs print supports bank earnings
+- **Sector**: Financials (XLF)
+- **Buy order_id**: 6fa30e49-425b-4681-9209-b4a2970384fc
+- **Capital used after**: $20113.19 / $100133.61
