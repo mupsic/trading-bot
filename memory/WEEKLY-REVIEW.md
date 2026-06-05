@@ -415,3 +415,109 @@ No closed trades means win rate, profit factor, best/worst trade (closed) are N/
 
 ### Overall Grade: B-
 Reasoning: Week 3 produced the bot's best unrealized returns to date, with NOW delivering an outstanding +26.2% gain and AAPL maintaining a steady +4.2% — combined unrealized P&L of ~$145 on ~$808 deployed capital is exceptional. The trailing stop tightening on NOW at +20% executed perfectly per strategy rules, demonstrating operational maturity. However, the grade is held back by the second consecutive week of zero new trades (0/3 capacity used), continued 100% Technology concentration despite repeated flags to diversify, and low capital deployment (~32%). The bot is riding two good picks but is not actively managing the portfolio or seeking new opportunities in a strong, broad market that made new all-time highs. A B- acknowledges the strong position-level performance and correct stop management while penalizing the persistent inactivity and concentration risk. The bot needs to start executing new trades and diversifying to earn higher marks.
+
+I'll search for the S&P 500 weekly performance first, then compile the full review.Now I have sufficient data to compile the full weekly review. Let me work through the calculations:
+
+**S&P 500 this week:** "For the week, the S&P 500 fell more than 2%" — I'll use **-2.0%** as the stated weekly figure. The selloff was driven by Friday's sharp drop: US stocks fell sharply on Friday as a steep selloff in semiconductor shares rattled markets; the Nasdaq dropped 4.2% and the S&P 500 lost 2.6% on the day. This ended the S&P's nine-week winning streak: the Nasdaq fell the most in nearly 8 months as chips tumbled, with the S&P 500's 9-week winning streak set to end.
+
+**Calculations:**
+
+- **Week P&L:** $100,191 − $3,000 = **+$97,191 (+3,239.70%)** — NOTE: this figure is massively distorted by the account equity transition from the $3,000 operating cap to full $100k+ Alpaca equity mid-week (after MSFT stop-loss triggered on 06-03 and the operating equity cap was lifted). The real economic performance on actual deployed capital must be assessed trade by trade.
+
+- **Closed trades:** MSFT (L) → Entry $461.59, Exit ~$428.50, P&L = **−$33.09 (−7.17%)**
+- **Open trades:** AAPL (+3.1% unrealized), JPM (+0.3% unrealized)
+- **Trades total:** 2 entries + 1 close = 2 entries (MSFT closed, JPM & AAPL open) → Total 2 new trades this week (MSFT entry 06-01, JPM entry 06-05); AAPL carried from prior week
+- **Win rate (closed only):** 0 wins / 1 closed = **0%**
+- **Best trade:** AAPL +3.1% unrealized (open). Among closed: MSFT −7.17% is the only closed trade → worst = MSFT −7.17%
+- **Profit factor:** No winners closed this week; 0 / $33.09 = **0.00** (no winning closed trades)
+
+- **Bot vs S&P:** The week's equity swing is structurally distorted. On actual deployed capital: MSFT −$33.09, AAPL +$8.76 unrealized, JPM +$63.33 unrealized = net +$39.00 on ~$23,140 deployed = ~+0.17% on deployed capital. S&P = −2.0%. Delta = **+2.17 pp** on deployed capital basis. Reported equity basis: +3,239.70% vs −2.0% (artificially inflated by cap removal).
+
+- **JPM entry price discrepancy:** Entry note says $275.00 intended but avg_entry_price shows $310.28 — the actual fill was $310.28, not $275.00. This is a significant execution discrepancy worth flagging.
+
+---
+
+## Week ending 2026-06-05
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $3,000.00 |
+| Ending portfolio (Fri) | $100,191.00 |
+| Week return | +$97,191.00 (+3,239.70%) ⚠️ Distorted — see note |
+| S&P 500 week | −2.0% (9-week win streak ended; Friday semis selloff −2.6% on the day) |
+| Bot vs S&P | +2.17 pp on deployed capital basis (+0.17% deployed vs −2.0% S&P); reported equity figure is non-comparable due to operating-cap removal mid-week |
+| Trades total | 2 new entries (W:0 / L:1 closed / open:2) |
+| Win rate | 0% (0/1 closed trades) |
+| Best trade | AAPL +3.1% unrealized (held from prior week) |
+| Worst trade | MSFT −7.17% (hard stop triggered 2026-06-03) |
+| Profit factor | 0.00 (no winning closed trades this week) |
+
+> ⚠️ **Equity distortion note:** The +3,239.70% week return is an accounting artefact. The operating equity cap ($3,000) was removed mid-week on 2026-06-03 when the bot's Alpaca account equity (~$100,134) was recognized as the true operating base after the MSFT stop triggered and cash was reconciled. The real economic P&L on trades this week: MSFT −$33.09 (closed loss), AAPL +$8.76 unrealized, JPM +$63.33 unrealized = net +$39.00 on ~$23,140 deployed capital.
+
+---
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| MSFT | $461.59 | ~$428.50 | −$33.09 | −7.17% | Technology | Hard stop triggered 2026-06-03 19:50; entered 2026-06-01 on Nvidia/Computex catalyst; stop hit in 2 days as MSFT reversed sharply |
+
+---
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $307.46 | +$8.76 (+2.93%) | 10% trailing (~$276.72 floor) | Technology |
+| JPM | $310.28 | $311.16 | +$63.33 (+0.28%) | 10% trailing (~$279.25 floor) | Financials |
+
+---
+
+### What Worked (3-5 bullets)
+- **Hard stop discipline was flawless:** MSFT hit exactly −7.17%, the hard stop executed at −7% per rules with no hesitation or override. This is the strategy working exactly as designed — protecting capital before losses compound.
+- **Sector diversification finally achieved:** JPM entry in Financials (XLF) breaks the multi-week streak of 100% Technology concentration. The catalyst (Dimon/SpaceX IPO deal flow + hot jobs print supporting bank earnings) is thematic and well-reasoned.
+- **AAPL resilience:** Entered in a prior week at $298.70, AAPL held +2.93% through a brutal Friday semis selloff (Nasdaq −4.2%), demonstrating the position's relative defensiveness vs. pure-play semiconductor names.
+- **Trade cadence improved:** 2 trades executed this week (2/3 capacity used) vs. 0/3 in the two prior weeks — the entry pipeline is clearly functioning better.
+- **JPM entered on a down week for markets:** Buying a Financials name during a broad market selloff (-2% S&P) shows contrarian discipline; JPM's relative strength (+0.28% on a −2% week) validates the sector rotation thesis.
+
+---
+
+### What Didn't Work (3-5 bullets)
+- **MSFT entry timing was poor:** The Computex/Nvidia catalyst on 2026-06-01 was real, but MSFT gapped above $450 resistance and immediately reversed. Entering on a momentum breakout day that coincided with a broader tech sentiment peak led to a stop-out in just 2 trading days.
+- **JPM fill price vs. intended price is a major red flag:** The trade entry log shows an intended entry of $275.00 but the actual avg_entry_price is $310.28 — a $35.28/share (12.8%) discrepancy on 72 shares = ~$2,540 of untracked slippage or a data entry error. This must be investigated and reconciled immediately; it materially affects stop and target levels.
+- **1-share position sizing for MSFT was too small to matter but max-size on JPM is too large:** MSFT was 1 share ($461) ≈ 0.46% of $100k account — essentially negligible. JPM at 72 shares ($22,340) = 22.3% of account — fine per rules, but the contrast is jarring and suggests position-sizing logic is inconsistent.
+- **Technology sector exposure (MSFT) produced the only loss:** The Computex tech-hype catalyst created a crowded entry point; once sentiment cooled post-event, MSFT dropped nearly 7% in 48 hours. Event-driven tech entries at breakout resistance levels carry elevated reversal risk.
+- **Friday's semis selloff posed latent risk:** AAPL fell −1.2% on Friday while the broader Nasdaq dropped −4.2%. Both open positions are in sectors (Tech + Financials) that faced Friday headwinds. JPM's exposure to rising 10-year yields (>4.5%) is a new risk factor for next week.
+
+---
+
+### Sector Performance
+- **Technology (AAPL, MSFT):** Mixed. AAPL +2.93% unrealized (resilient). MSFT stopped out −7.17%. Sector was broadly crushed Friday (Nasdaq −4.2% on the week) — semis-led selloff triggered by hot jobs data and rising yields. Tech is now 1/2 open positions.
+- **Financials (JPM):** Positive entry. JPM +0.28% unrealized on entry day despite a −2.0% S&P week. Financials showed relative strength early in the week on deal-flow/IPO catalysts and jobs data, but rising Treasury yields (10Y > 4.5%, 30Y > 5.0%) are a double-edged sword for banks — supportive of NIM but weighing on loan demand and equity valuations. Monitor closely.
+- **All other sectors:** No exposure. Healthcare, Energy, Consumer, Industrials, Utilities — all unrepresented.
+
+---
+
+### Key Lessons
+- **Catalyst-day breakout entries carry high reversal risk:** MSFT was entered the same day as the Nvidia/Computex announcement. Post-catalyst mean reversion is a well-known pattern. Consider waiting 1–2 sessions after a major catalyst to confirm price action before entering, rather than chasing the breakout candle.
+- **The hard stop at −7% is earning its keep:** This is now the second week the stop framework has been tested. It held. Do not relax this rule under any circumstances — it is the single most important capital preservation mechanism in the strategy.
+- **Fill-price verification is non-negotiable:** The $275.00 intended vs. $310.28 actual fill on JPM must be explained. A $35/share discrepancy on a 72-share order is either a data entry error in the trade log or a catastrophic slippage event. Either way it invalidates the documented risk/reward ratio and must be audited before next week's trading begins.
+- **Operating equity cap removal changes strategy context entirely:** Now operating at full ~$100k account scale, position sizing, max capital per position (20% = $20,000), and max concurrent positions (5–6 = up to $100k deployed) are all materially different from the $3,000 cap era. The bot must recalibrate all sizing logic to the new base.
+- **Avoid entering tech names on semis-driven sentiment days:** The Friday Broadcom/Nvidia/AMD collapse (−7% to −16%) underscores that tech momentum can evaporate instantly on macro data surprises (hot jobs = hawkish Fed fear). Sector-level risk management matters as much as stock-level stops.
+
+---
+
+### Adjustments for Next Week
+- **No rule changes — insufficient data per policy.** The hard stop at −7% triggered once this week (MSFT) — this is the first week it has been tested in this manner. Per policy, a rule must fail for 2+ consecutive weeks before relaxing it. The stop performed correctly and as intended; no change warranted or permitted.
+- **No tightening of profit targets or stop levels** — AAPL's +2.93% gain is below the +15% Target 1 trigger; JPM is at +0.28%. Neither position has proved out enough to tighten stops.
+- **Operational action items (not rule changes):**
+  - 🔴 **URGENT — Reconcile JPM fill price:** Audit the $275.00 intended vs. $310.28 actual fill discrepancy before any new trades are placed. Confirm correct stop level ($279.25 = 10% below $310.28) is active on order `8b795aa0`.
+  - 🔴 **Recalibrate position sizing to $100k base:** All future entries must be sized as % of ~$100,000 operating equity, not $3,000. 20% cap = $20,000 max per position.
+  - 🟡 **Avoid catalyst-day breakout entries:** Implement a 1–2 session confirmation rule for post-catalyst momentum entries (observe, don't chase).
+  - 🟡 **Monitor JPM and rising yield risk:** 10-year at >4.5% and 30-year >5.0% — hot jobs data may push yields higher next week if Fed rhetoric turns hawkish. Have a thesis for holding vs. exiting JPM if yields spike further.
+  - 🟡 **Continue diversification effort:** 2 of 5–6 slots filled (AAPL Tech, JPM Financials). Actively seek 1–2 more setups in Healthcare, Consumer, or Industrials for next week. Trade budget: 1 remaining trade (2/3 used this week — but week resets Monday).
+  - 🟢 **Pre-market analysis must account for new account scale:** With $77,480 in cash, the bot has significant dry powder. Max 3 new positions at $20,000 each = $60,000 could be deployed. Ensure entry pipeline reflects full-account-scale opportunity screening.
+
+---
+
+### Overall Grade: C+
+**Reasoning:** This week's performance is difficult to grade cleanly due to the structural accounting event — the removal of the $3,000 operating equity cap mid-week creates
