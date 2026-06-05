@@ -1477,3 +1477,112 @@ TRADE [DHI, COST]
       "target_price": 1149.12,
       "catalyst": "Consumer staples defensive rotation amid tech sell-off (AVGO/CRWD drag); lower oil prices post-ceasefire reduce Costco input/logistics costs; XLP +0.89% intraday sector leadership; no earnings within 7 days",
       "sector": "Consumer Staples",
+
+I'll gather the required market data simultaneously.## 2026-06-05 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,134.58
+- Operating capital (equity real): $100,134
+- Max por posición (20%): $20,026.80
+- Cash disponible: $99,820.41
+- Positions value: $314.17
+- Capital disponible: $99,819.84
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $749.55 (MA200: $732.02) — ABOVE
+- VIX: 15.34 — LOW
+- Regime: **ON**
+- Reason: SPY's 200-day MA is $732.02, SPY is trading at $749.55 (+2.4% above MA200); VIX is at 15.34, down -4.48%, well below the 25 threshold — both gates pass.
+
+---
+
+### Market Context
+- **Top catalysts today:**
+  - U.S. May nonfarm payrolls surged to 172,000, roughly doubling the 85,000 consensus expectation, while unemployment remained steady at 4.3% and the government upwardly revised March and April job gains.
+  - "Good news is bad news" dynamic: stocks reacted poorly as the 10-year Treasury yield jumped to 4.54%, fueling fears the Fed may have to tame a hot economy.
+  - Chip stocks remain under pressure, extending the 2% loss suffered Thursday by the PHLX Semiconductor Index as investors continued taking profits and reacted to disappointing Broadcom earnings.
+  - Lululemon Athletica (LULU) fell roughly 13% following Q1 2026 results — despite in-line revenue, the company issued weak guidance that disappointed investors.
+  - Dow Jones set a fresh all-time high on Thursday (+1.73%), while investors rotated out of chip names in favor of non-tech stocks.
+
+- **Sector leaders (as of early June 2026):**
+  - XLK (Technology): +~32–33% YTD — still the heavyweight.
+  - XLE (Energy): +~26–27% YTD — strong on geopolitical tensions and oil prices.
+  - XLV (Healthcare): +2.96% day; XLF (Financials): +2.57% day — both leading intraday rotation.
+  - XLY (Consumer Discretionary): +0.42% day
+  - XLP (Consumer Staples): -0.29% day — lagging
+  - **Today's intraday leader: XLV (+2.96%) and XLF (+2.57%)** driven by Dow rotation away from semiconductors
+
+- **Economic events today:**
+  - May Nonfarm Payrolls: +172,000 (exp. +85,000) — massive beat
+  - Unemployment Rate: 4.3% (unchanged)
+  - The Fed still projects one rate cut this year while futures see none; the Fed updates projections at the June meeting.
+  - Upcoming: June 10 — May CPI & Core CPI + Oracle (ORCL) earnings.
+  - Upcoming: June 11 — ECB interest rate decision, May PPI, and Adobe (ADBE) earnings.
+
+---
+
+### Trade Candidates (Regime ON)
+
+**Rotation context:** Today's market is seeing a clear rotation OUT of semiconductors/tech and INTO Financials (XLF +2.57%) and Healthcare (XLV +2.96%). Chip sector headwinds (AVGO miss, MU -4%, ARM -5%) make XLK names risky. Candidates target the rotation beneficiaries with specific named catalysts, no earnings within 7 days, and cap within rules.
+
+1. **UNH (UnitedHealth Group)** — UnitedHealth led the Dow higher Thursday, rising more than 5%, continuing XLV momentum. Stock in confirmed breakout above resistance. No earnings until mid-July. Entry ~$315, stop $293.05 (-7%), target $359.10 (+14%), shares=63, cost=$19,845. R:R 1:2.
+
+2. **JPM (JPMorgan Chase)** — JPMorgan Chase added 3% Thursday as part of XLF rotation; JPMorgan Chase CEO Jamie Dimon is set to present the SpaceX IPO offering to investors, signaling deal flow momentum and strengthening the investment banking catalyst. No earnings until mid-July. Entry ~$275, stop $255.75 (-7%), target $313.50 (+14%), shares=72, cost=$19,800. R:R 1:2.
+
+3. **WMT (Walmart)** — Walmart climbed nearly 1% Thursday as a Dow defensive name benefiting from rotation; consumer staples/discretionary hybrid with resilient consumer spending (strong jobs report supports spending), no near-term earnings. Entry ~$103, stop $95.79 (-7%), target $117.42 (+14%), shares=194, cost=$19,982. R:R 1:2.
+
+> ⚠️ **Position sizing note:** All three candidates respect the $20,026.80 max-per-position cap and the cash constraint. Current open AAPL position ($314.17) + new buy ($19,982 max) = $20,296 << $99,820 cash. No debt risk.
+
+---
+
+### Risk Factors Today
+- **Hot jobs print = rate-hike fear:** The 172,000 payroll print doubled consensus; yields rose sharply and stocks slid as rate hike odds climbed. Higher-for-longer rates pressure valuations broadly.
+- **Tech contagion risk:** Micron fell more than 4% and Arm Holdings slid more than 5% early Friday — chip weakness could spill into broader market if sentiment turns.
+- **Geopolitical oil risk:** Tensions around the Strait of Hormuz kept oil prices elevated, with Brent crude trading around $95 a barrel.
+- **Iran escalation headline risk:** Market news includes Iran firing warning missiles at US warships in the Gulf of Oman — any escalation could spike VIX rapidly above 25.
+- **End-of-week liquidity:** Friday afternoon tends to see position squaring; fills may be less favorable.
+- **AAPL position already open (+5.2%):** Existing position is healthy; no action needed but monitor for tech sector drag.
+
+---
+
+### Decision
+TRADE [UNH, JPM] — WMT as backup if UNH/JPM entries not available at price. Prioritize XLV and XLF rotation plays given clear institutional flow evidence today. Set 10% trailing stops immediately upon fill.
+
+---
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-05",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "UNH",
+      "entry_price": 315.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 63,
+      "position_cost": 19845.00,
+      "target_price": 359.10,
+      "catalyst": "UNH led Dow +5% Thursday in XLV healthcare rotation breakout; Dow hitting ATH with rotation away from semis; no earnings until mid-July",
+      "sector": "Healthcare (XLV)",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "JPM",
+      "entry_price": 275.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 72,
+      "position_cost": 19800.00,
+      "target_price": 313.50,
+      "catalyst": "JPM +3% Thursday in XLF financials rotation; JPMorgan CEO Dimon set to present SpaceX largest-ever IPO to investors — deal flow catalyst; hot jobs print supports bank earnings",
+      "sector": "Financials (XLF)",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
