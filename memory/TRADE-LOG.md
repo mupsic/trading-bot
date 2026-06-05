@@ -478,3 +478,23 @@ Every end of day:
 - **Sector**: Financials (XLF)
 - **Buy order_id**: 6fa30e49-425b-4681-9209-b4a2970384fc
 - **Capital used after**: $20113.19 / $100133.61
+
+### 2026-06-05 — EOD Snapshot
+- **Alpaca equity (reported)**: $100196.78
+- **Operating equity**: $100196.78
+- **Cash**: $77480.25
+- **Positions value**: $22716.5315 (22.7% deployed)
+- **Day P&L**: $62.89 (0.06%)
+- **Total P&L (desde inicio)**: $97196.78 (3239.89%)
+- **Peak equity**: $100196.78
+- **Drawdown from peak**: 0.0%
+- **Trades today**: 1
+- **Trades this week**: 2 / 3
+- **Daytrade count**: 0 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 307.9715$ | 9.2715$ (3.1%) | -1% |
+| JPM | 72 | 310.28$ | 311.23$ | 68.4$ (0.3%) | 0.1% |
