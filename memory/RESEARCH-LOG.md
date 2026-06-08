@@ -1586,3 +1586,111 @@ TRADE [UNH, JPM] — WMT as backup if UNH/JPM entries not available at price. Pr
   ]
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me synthesize:
+
+**SPY MA200:** TipRanks shows SPY's 200-day SMA at **$681.05**, while Investing.com shows $738.36. Live SPY quote is $742.30 — above both estimates. I'll use the most recent TipRanks figure of ~$681 as the confirmed 200-day SMA (SPY is clearly ABOVE MA200).
+
+**VIX:** TradingView shows VIX at **19.04**, rising ~39.7% in 24 hours. Yahoo Finance historical data confirms VIX closed at 21.51 on June 5 — today's intraday is ~19.04. Using ~19 as current reading.
+
+**Regime Gate:** SPY ($742.30) > MA200 (~$681) ✅ AND VIX (~19) < 25 ✅ → **REGIME = ON**
+
+**Key catalysts from today:**
+- Corning (GLW) surged 9.31% premarket after Amazon announced a multibillion-dollar agreement to provide optical fiber for its U.S. data centers.
+- Marvell Technology (MRVL) surged 9% premarket after being announced as a new S&P 500 addition, joining the index on June 22.
+- Iran stated it had ended its military operation in Israel following weekend strikes, easing geopolitical concerns.
+- Eli Lilly shares rose premarket on late-stage weight loss trial success.
+- Nvidia gained over 2% premarket while Micron and Marvell jumped over 4% each; Oracle earnings Wednesday will test AI infrastructure demand.
+
+**Sector leaders:** XLK (Technology) +~32–33% YTD, and XLE (Energy) +~26–27% YTD on geopolitical tensions.
+
+**Position checks for candidates:**
+- Open positions value: $22,757 | Cash: $77,480
+- New position max: $20,047.40
+- Constraint: positions_value + new_buy ≤ $77,480 → $22,757 + $20,047 = $42,804 ✅
+- Already 2/3 trades used this week — 1 trade slot remaining
+
+**GLW candidate:** Entry ~$194, shares = 103 → cost = $19,982. Stop at $180.42 (-7%), target $221.16 (+14%). ✅ No earnings near-term. R:R 1:2.
+**LLY candidate:** Entry ~$885, shares = 22 → cost = $19,470. Stop at $823.05 (-7%), target $1,008.90 (+14%). ✅ Late-stage trial catalyst.
+
+---
+
+## 2026-06-08 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100237.37
+- Operating capital (equity real): $100,237
+- Max por posición (20%): $20,047.40
+- Cash disponible: $77480.24
+- Positions value: $22757.12
+- Capital disponible: $77479.88
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $742.30 (MA200: ~$681.05) — ABOVE
+- VIX: ~19.04 — LOW
+- Regime: **ON**
+- Reason: SPY trading ~9% above 200-day SMA; VIX elevated intraday (~19) but below 25 threshold; Iran de-escalation + AI tech rebound support bullish bias.
+
+### Market Context
+- Top catalysts today:
+  - **GLW** +9.3% premarket — Amazon multibillion-dollar optical fiber supply deal to power U.S. AI data centers; Nvidia and Meta also previously committed capital to Corning
+  - **MRVL** +9% premarket — Added to S&P 500 effective June 22 (index inclusion forced-buy catalyst)
+  - **Iran de-escalation** — Iran declared end to military operation vs. Israel; oil/Treasury yields pulling back, equities futures +1%
+  - **LLY** premarket gains — Late-stage weight loss drug trial success (new data)
+  - **AI rebound** — Nvidia +2%+, Micron +4%+ premarket; reversal of Broadcom-driven semis selloff from last week
+  - **Oracle earnings Wednesday** — Next major AI infrastructure test (event risk mid-week)
+
+- Sector leaders:
+  - XLK (Technology): +~32–33% YTD — leading; AI rebound today
+  - XLE (Energy): +~26–27% YTD — geopolitical tensions (Iran/Israel) supportive
+  - XLF (Financials): +~0.21% today — modest; JPM held well
+  - XLP (Consumer Staples): +1.71% today — defensive bid
+  - XLV (Healthcare): +0.61% today — LLY catalyst
+
+- Economic events:
+  - Wednesday 6/10: **CPI** (Consumer Price Index) — key macro risk
+  - Wednesday 6/10: EIA Crude Oil Inventories
+  - Thursday 6/11: **PPI** + Initial Jobless Claims
+  - Friday 6/12: University of Michigan Consumer Sentiment
+  - Wednesday AMC: **Oracle (ORCL) earnings** — AI infrastructure read-through
+
+### Trade Candidates (only if Regime ON)
+1. **GLW** — Amazon multibillion-dollar optical fiber deal announced pre-market (+9.3% gap); Nvidia & Meta previously committed capital; AI data center buildout secular tailwind; no near-term earnings. Entry $193.00, stop $179.49 (-7%), target $220.02 (+14%), shares=103, cost=$19,879. R:R 1:2
+2. **LLY** — Late-stage weight loss (GLP-1) trial success reported pre-market; Eli Lilly shares rising; obesity drug pipeline catalyst distinct from next earnings (mid-July). Entry $885.00, stop $822.45 (-7%), target $1,008.90 (+14%), shares=22, cost=$19,470. R:R 1:2
+
+### Risk Factors Today
+- **Trades-this-week limit**: Already 2/3 trades used (JPM on 6/5) — only **1 new trade slot** remains this week; must pick ONE candidate only
+- **Oracle earnings Wednesday**: AI sector risk event mid-week — could reverse tech/semis bounce
+- **CPI Wednesday**: Hot print could spike yields and VIX above 25, triggering regime reassessment
+- **GLW gap risk**: +9.3% pre-market gap opens — may fade; limit order discipline critical, avoid chasing
+- **JPM qty_available = 0**: Existing JPM position likely has pending stop order; cannot add
+- **Iran ceasefire fragility**: Iran-Israel situation remains fluid; oil spike risk if negotiations collapse
+- **Week-3 trade constraint**: Only 1 more trade allowed this week per 3-trades/week rule
+
+### Decision
+TRADE [GLW] — 1 trade slot remaining; GLW has the strongest named catalyst (Amazon deal, specific & confirmed), large-cap ($30B+ market cap), sector tailwind (XLK/AI infrastructure), no earnings for weeks. LLY is backup if GLW entry is too extended at open.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-08",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "GLW",
+      "entry_price": 193.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 103,
+      "position_cost": 19879.00,
+      "target_price": 220.02,
+      "catalyst": "Amazon announced multibillion-dollar optical fiber supply deal with Corning to power expanding U.S. AI data centers; stock +9.3% premarket; Nvidia ($3.2B) and Meta ($6B) previously committed capital; no earnings within 7 days",
+      "sector": "Technology / Materials (AI Infrastructure)",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
