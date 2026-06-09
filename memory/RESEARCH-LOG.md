@@ -1694,3 +1694,108 @@ TRADE [GLW] — 1 trade slot remaining; GLW has the strongest named catalyst (Am
   ]
 }
 ```
+
+I'll gather the required market data simultaneously.Data gathered. Now compiling the full research log.
+
+**Key data points extracted:**
+- SPY 200-day SMA: **$681.05** (TipRanks, as of Jun 5) — SPY live at $744.45 → ABOVE MA200
+- VIX previous close: **18.92** (Yahoo Finance, June 8 close); TradingView shows VIX at 17.98, down ~15.30% in 24 hours → LOW
+- Stocks rose in early trading with chip stocks rebounding; S&P 500 +0.63%, Nasdaq +0.69%
+- Key last-week catalysts: Alphabet launched an $85B equity raise for AI infrastructure; Broadcom issued lackluster guidance sinking 20%; Treasury yields spiked on blowout jobs report
+- Chip stocks rebounded Monday led by Marvell Technology (MRVL) and Micron (MU), which rose ~9% and 7% respectively
+- SpaceX is preparing to go public on Nasdaq as soon as June 12, eyeing an IPO price of $135 per share
+- CPI data due Wednesday June 10; PPI Thursday June 11; UMich Consumer Sentiment Friday June 12
+- YTD sector leaders: XLK (Technology) +~32-33%; XLE (Energy) +~26-27%
+- NVDA upgrade cycle is the loudest of June; multiple banks lifted price targets after expanded Blackwell shipments guidance
+- MSFT models catching up to Azure run rate; upgrade thesis centers on AI workload margins improving
+- Treasury yields spiked on fears the economy might be overheating, raising odds of the Fed hiking rates; chances of at least one hike this year at 72%
+
+---
+
+## 2026-06-09 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,497.69
+- Operating capital (equity real): $100,497
+- Max por posición (20%): $20,099.40
+- Cash disponible: $77,480.24
+- Positions value: $23,017.45
+- Capital disponible: $77,479.55
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $744.45 (MA200: $681.05) — ABOVE
+- VIX: 17.98 — LOW
+- Regime: **ON**
+- Reason: SPY +9.3% above 200-day MA ($681.05); VIX ~17.98, well below 25 threshold. Market rebounding from last week's chip-led selloff with broad buying today.
+
+### Market Context
+- Top catalysts today:
+  - **Chip sector rebound**: MRVL +9%, MU +7% leading Nasdaq recovery after last Friday's semiconductor rout wiped ~$1T in market cap (Broadcom -20% on lackluster guidance)
+  - **SpaceX IPO imminent**: SPCX set to begin trading on Nasdaq as soon as Friday June 12 at ~$135/share; largest IPO in history creating market-wide enthusiasm and potential repositioning
+  - **AI infrastructure mega-deal**: Alphabet launched historic $85B equity raise to fund aggressive AI buildout, signaling sustained sector capex
+  - **Fed rate hike risk elevated**: May jobs report doubled consensus; 72% chance of at least one rate hike in 2026 per CME FedWatch — bond yields at 16-month highs weigh on risk appetite
+  - **Iran geopolitical de-escalation**: Trump says deal could come "in 2-3 days"; oil prices falling, easing inflation fears temporarily
+- Sector leaders (YTD as of early June 2026):
+  - **XLK (Technology)**: +~32-33% — strongest YTD, chip rebound in focus
+  - **XLE (Energy)**: +~26-27% — geopolitical premium + tight supply
+  - **XLY (Consumer Discretionary)**: +0.46% today
+  - **XLF (Financials)**: -0.63% today (rate hike fears weighing)
+  - **XLV (Healthcare)**: -0.24% today
+  - **XLP (Consumer Staples)**: -0.44% today
+- Economic events:
+  - **Wednesday 6/10**: CPI inflation data (HIGH IMPACT — potential market mover)
+  - **Thursday 6/11**: PPI, Initial/Continuing Claims, Natural Gas Inventories
+  - **Friday 6/12**: University of Michigan Consumer Sentiment; SpaceX IPO expected
+
+### Trade Candidates (Regime ON)
+
+> ⚠️ **CONSTRAINT CHECK**: 2 open positions (AAPL 1 share ~$298.57; JPM 72 shares ~$22,718.88). Positions value = $23,017.45. Cash = $77,480.24. Max slots remaining = 3. Weekly trades used = 0/3. Position constraint: shares × price ≤ $20,099.40; (23,017.45 + new_cost) ≤ $77,480.24 → max new_cost = $54,462.79 (cash gate still at $20,099.40 per single position).
+
+> ⚠️ **CPI RISK NOTE**: CPI prints Wednesday 6/10. Any new position opened today carries overnight macro risk from a hotter-than-expected inflation print that could spike bond yields further and trigger tech/growth sell-off. Position sizing reduced to ~$15,000 range to keep total deployed ≤ 60% ahead of CPI.
+
+1. **NVDA** — Multiple Wall Street banks raised price targets in June after NVDA guided to expanded Blackwell GPU shipments in H2 2026; supply-side catalyst unlocking capped revenue. AI chip rebound trade on chip sector recovery day. Entry ~$131.00, Stop $121.83 (-7%), Target $149.34 (+14%), Shares = 114, Position cost = $14,934. R:R 1:2
+
+2. **MRVL** — Marvell Technology surged ~9% Monday (June 8) on chip sector rebound post-Broadcom rout; custom ASIC design wins for hyperscalers confirmed for 2026-2027 revenue. Continuation momentum play on sector rotation into AI infrastructure. Entry ~$105.00, Stop $97.65 (-7%), Target $119.70 (+14%), Shares = 143, Position cost = $15,015. R:R 1:2
+
+### Risk Factors Today
+- **CPI Wednesday (6/10)**: Hotter-than-expected print could re-spike 10yr yields (already at 16-month highs at 4.69%) → tech/growth sector sell-off risk; new positions would face immediate headwinds
+- **Fed rate hike probability at 72%**: Sustained hawkish repricing could compress multiples across growth stocks
+- **SpaceX IPO repositioning**: Investors may continue selling recent winners to fund SPCX allocation through Friday
+- **JPM position (72 shares, $22,718.88)**: Already over the 20% single-position cap at current market value ($22,718.88 > $20,099.40); monitor for stop tightening — unrealized P&L +$378.72 (+1.7%) still positive
+- **AAPL position thin**: Only 1 share, negligible position; no action needed
+- **Semiconductor volatility**: Sector just experienced a 10% single-day drop (Friday 6/5); rebound could fade on CPI surprise
+- **VIX at 17.98**: Low but up from recent lows — market not pricing extreme complacency, some protective buying returning
+
+### Decision
+TRADE [NVDA, MRVL] — Regime ON, 3 trade slots available, 2 specific catalyst-driven candidates identified. However, **strongly recommend waiting for CPI print (Wed 6/10) before executing** if operator prefers lower macro risk. If trading today, execute with reduced size and hard stops in place.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-09",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "NVDA",
+      "entry_price": 131.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 114,
+      "position_cost": 14934.00,
+      "target_price": 149.34,
+      "catalyst": "Multiple Wall Street banks raised price targets in June 2026 after NVDA guided to expanded Blackwell GPU shipments in H2 2026; supply unlocking drives steeper revenue ramp into fiscal Q4. Chip sector rebound day adds momentum.",
+      "sector": "Technology (XLK)",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "MRVL",
+      "entry_price": 105.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 143,
+      "position_cost": 15015.00,
+      "target_price": 119.70,
+      "catalyst": "Marvell rebounded ~9% on June 8 post-chip rout; confirmed custom
