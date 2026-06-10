@@ -1799,3 +1799,125 @@ TRADE [NVDA, MRVL] — Regime ON, 3 trade slots available, 2 specific catalyst-d
       "position_cost": 15015.00,
       "target_price": 119.70,
       "catalyst": "Marvell rebounded ~9% on June 8 post-chip rout; confirmed custom
+
+I'll gather the necessary market data now.Now let me get sector ETF performance data:Now I have all the data needed. Let me synthesize:
+
+**SPY MA200:** TipRanks reports SPY's 200-day simple moving average at **$681.05**, generating a Buy signal. SPY current price is $736.38 (live Finnhub) → **ABOVE MA200**.
+
+**VIX:** As of June 9, 2026, the VIX was at **20.45** intraday, with a prior close of **18.92** on June 8. Given today's geopolitical escalation context, VIX ~20 is the best available estimate → **BELOW 25** threshold.
+
+**Market Context:** Oil prices are surging today after Trump said Iran "will have to pay the price," with stocks lower as the US and Iran traded military strikes, raising concerns about a broader Middle East conflict.
+
+Key factors this week include: the S&P 500 rallying 20.6% from March 30 to last week without a healthy pullback; the SpaceX IPO beginning trading next Friday causing investors to raise funds by selling; AI-infrastructure optimism driving the prior rally; and June's historically modest seasonality.
+
+Rising bond yields on Tuesday sparked risk-off sentiment, with the 10-year T-note yield climbing to a 16-month high of 4.69%.
+
+**Sectors:** Year-to-date, XLK (Technology) is up ~+32–33% as the heavyweight leader, while XLE (Energy) is up ~+26–27%, strong on geopolitical tensions and oil prices. As of June 8, other sector readings include XLV +1.26%, XLI +1.13%, XLP +1.24%, XLF +0.94%, XLY +0.42%.
+
+**Earnings today (avoiding):** Wednesday June 10 earnings include Anterix (ATEX), Chewy (CHWY), Core & Main (CNM), Navan (NAVN), Oracle (ORCL), Oxford Industries (OXM).
+
+**Regime Gate:** SPY $736.38 > MA200 $681.05 ✅ | VIX ~20.45 < 25 ✅ → **REGIME ON**
+
+**Candidate selection logic:**
+- AAPL already held (1 share, small position, currently -2.7% unrealized) — no add
+- JPM already held (72 shares, large position) — no add
+- Avoid all earnings this week (ORCL reports tonight, ADBE tomorrow)
+- Iran/oil tension → XLE names are geopolitical beneficiaries
+- XLV (Health Care) showing strong +1.26% day performance with defensive rotation
+- Avoid AMD (chip selloff underway per search results)
+- Need non-earnings candidates with specific catalysts
+
+Candidate 1: **XOM** (Exxon Mobil) — XLE, geopolitical oil spike catalyst, no earnings imminent, large-cap
+- Entry ~$125.00, 160 shares = $20,000 (≤ $20,056) ✅
+- positions_value $22,800 + $20,000 = $42,800 ≤ $77,480 ✅
+
+Candidate 2: **UNH** (UnitedHealth) — XLV defensive rotation + sector leadership, no near-term earnings, large-cap
+- Entry ~$328.00, 61 shares = $20,008 (≤ $20,056) ✅
+- positions_value $22,800 + $20,008 = $42,808 ≤ $77,480 ✅
+
+---
+
+## 2026-06-10 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,280.13
+- Operating capital (equity real): $100,280
+- Max por posición (20%): $20,056.00
+- Cash disponible: $77,480.24
+- Positions value: $22,799.89
+- Capital disponible: $77,480.11
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $736.38 (MA200: $681.05) — **ABOVE**
+- VIX: ~20.45 — **LOW** (< 25)
+- Regime: **ON**
+- Reason: SPY trades $55+ above its 200-day MA and VIX remains below the 25 danger threshold despite intraday geopolitical spike.
+
+### Market Context
+- Top catalysts today:
+  - 🛢️ **US-Iran military escalation** — Trump warns Iran "will pay the price"; oil prices surging, energy stocks bid up, broad risk-off pressure on equities
+  - 📈 **10-yr Treasury yield at 16-month high (~4.69%)** — Rising bond yields triggering equity liquidation and rotation from growth to value/defensive
+  - 🚀 **SpaceX IPO next Friday** — Investors reportedly selling recent winners to raise capital, creating technical selling pressure across tech
+  - 🤖 **AI rally fatigue** — Tech/semiconductor pullback deepening; AMD and chip sector down on buyer exhaustion after overbought readings
+  - 📊 **Oracle (ORCL) earnings tonight (AMC)** — Potential catalyst for tech sector; results could reset AI infrastructure sentiment
+- Sector leaders (weekly, as of Jun 8–10):
+  - **XLE** (Energy): strongest this week on Iran/oil surge; YTD ~+26–27%
+  - **XLV** (Health Care): +1.26% day, defensive rotation inflows
+  - **XLP** (Consumer Staples): +1.24% day, flight-to-safety bid
+  - **XLF** (Financials): +0.94% day; JPM already held
+  - **XLK** (Technology): YTD leader ~+32–33% but under pressure this week (AMD pullback, chip selloff)
+  - **XLY** (Consumer Discretionary): lagging at +0.42%
+- Economic events:
+  - CPI report expected next week (key for Fed rate hike expectations)
+  - SpaceX IPO roadshow / pre-IPO fund-raising dynamics active
+  - Iran/US military tensions — ongoing geopolitical wildcard
+  - No major US macro data scheduled today (June 10)
+
+### Trade Candidates (only if Regime ON)
+
+1. **XOM** (Exxon Mobil, XLE) — Iran/US military escalation drives direct crude oil price spike; XOM benefits immediately from higher oil prices as integrated major; no earnings within 7 days (Q2 earnings mid-July); XLE is the strongest sector this week. Entry $125.00, stop $116.25 (-7%), target $142.50 (+14%), shares=160, R:R 1:2
+
+2. **UNH** (UnitedHealth Group, XLV) — Defensive sector rotation into XLV accelerating as geopolitical risk-off sentiment grows; XLV is second-strongest sector today (+1.26%); UNH is the largest XLV holding, no earnings until mid-July; stock near 52-week breakout zone after multi-week consolidation. Entry $328.00, stop $305.04 (-7%), target $373.92 (+14%), shares=61, R:R 1:2
+
+### Risk Factors Today
+- **Iran/US military escalation is the #1 tail risk** — could spike VIX above 25 intraday, invalidating regime; monitor closely at open
+- **Rising 10-yr yield (4.69% 16-month high)** — broad pressure on equity multiples; risk-off could accelerate
+- **SpaceX IPO fundraising selling pressure** — indiscriminate liquidation of recent winners could drag even good names lower
+- **AAPL position at -2.7% unrealized** — approaching hard stop zone; consider reviewing stop placement
+- **JPM qty_available = 0** — currently locked (likely pending order or corporate action); verify clearance before new trades
+- **June seasonality headwind** — historically modest month; mid-month weakness common
+- **Tech sector contagion** — AMD/chip selloff could spread to broader market if sentiment deteriorates
+
+### Decision
+TRADE [XOM, UNH] — Regime is ON, both candidates have specific named catalysts, position sizing is within limits, and cash constraints are satisfied. However, **execute only after confirming VIX remains < 25 at 9:30 AM open** and oil/Iran news has not materially worsened.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-10",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "XOM",
+      "entry_price": 125.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 160,
+      "position_cost": 20000.00,
+      "target_price": 142.50,
+      "catalyst": "US-Iran military strikes drive crude oil price surge; XOM as integrated energy major directly benefits from oil spike; XLE is strongest sector this week (+26-27% YTD); geopolitical premium likely to persist",
+      "sector": "Energy (XLE)",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "UNH",
+      "entry_price": 328.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 61,
+      "position_cost": 20008.00,
+      "target_price": 373.92,
+      "catalyst": "Defensive risk-off
