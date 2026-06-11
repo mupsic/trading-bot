@@ -1921,3 +1921,96 @@ TRADE [XOM, UNH] — Regime is ON, both candidates have specific named catalysts
       "position_cost": 20008.00,
       "target_price": 373.92,
       "catalyst": "Defensive risk-off
+
+I'll search for the required market data simultaneously.**Key data gathered:**
+- SPY 200-day SMA: **$682.63** (TipRanks, Jun 10, 2026) — SPY at $728.12 is well ABOVE MA200.
+- VIX closed at **22.22** on June 10, 2026 — below 25, so gate passes.
+- CPI inflation hit a three-year high of 4.2%; Trump stated the US will resume strikes against Iran tonight and capture the Iranian energy hub of Kharg Island "at some point."
+- Sector ETF day changes (Jun 10): XLP +1.65%, XLF -0.44%, XLV -1.11%, XLY -2.05%, XLI -3.38%
+- YTD sector leaders: XLK (Technology) +~32–33%; XLE (Energy) +~26–27% — strong on geopolitical tensions and oil prices.
+- Financial stocks were lower as yields rose, with Goldman Sachs and Visa down premarket; AI infrastructure companies carried strong momentum as the SpaceX IPO underscores hyperscaler compute spending.
+- SpaceX set its IPO price at $135/share; based on ~555.6 million Class A shares, the offering would raise ~$75 billion — the largest U.S. public offering on record.
+- Oracle tumbled more than 10% in extended trading after revealing plans to raise an additional $20 billion through equity and debt offerings to fund AI expansion.
+
+**Regime check:**
+- SPY $728.12 > MA200 $682.63 ✅
+- VIX 22.22 < 25 ✅ → **REGIME = ON**
+
+**However**, the macro backdrop is highly risk-elevated: hot CPI, active US-Iran military strikes, VIX +11.83% on the day, tech sector under pressure, JPM (open position) faces yield headwinds. With 2 positions already open (40% deployed in positions), and both AAPL and JPM showing stress, adding new risk into an active geopolitical/inflation event is inadvisable. The strategy's risk filters call for caution. No candidate passes the full filter set cleanly given sector momentum is **negative** today across most sectors (XLP defensive being the only green sector day), and earnings event risk (ADBE reports today after close per Schwab). Energy (XLE) is the strongest momentum sector but oil stocks are too volatile under active US-Iran escalation. **Decision: HOLD.**
+
+---
+
+## 2026-06-11 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,169.52
+- Operating capital (equity real): $100,169
+- Max por posición (20%): $20,033.80
+- Cash disponible: $77,480.24
+- Positions value: $22,689.28
+- Capital disponible: $77,479.72
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $728.12 (MA200: $682.63) — ABOVE
+- VIX: 22.22 — LOW (< 25, gate passes)
+- Regime: ON
+- Reason: SPY is +6.7% above its 200-day MA and VIX closed at 22.22 on Jun 10, both gates pass; however, VIX surged +11.83% on the day amid hot CPI (4.2% YoY, 3-yr high) and active US-Iran military strikes — elevated intraday risk argues for HOLD
+
+### Market Context
+- Top catalysts today:
+  - 🔴 **US-Iran military escalation**: Trump threatened fresh strikes and seizure of Kharg Island energy hub; Kuwait closed airspace; oil prices surging — direct headwind to equities and risk appetite
+  - 🔴 **CPI May 2026 = 4.2% YoY** (3-year high, energy +23.5% driven by Iran conflict); core CPI 2.9% YoY — hawkish pressure on Fed policy
+  - 🔴 **PPI data today (Jun 11)**: Expected to show over 3-year high in producer prices; Fed rate-hike bets increasing
+  - 🟡 **SpaceX IPO tonight/Friday**: Priced at $135/share, ~$75B raise (largest US IPO on record) — sucking capital out of risk assets ahead of open; AI infrastructure narrative still intact
+  - 🔴 **Oracle (ORCL) -10%+ pre/after hours**: Plans to raise $20B in equity + debt to fund AI data centers despite flat sales — dilution shock dragging cloud/tech peers
+  - 🟢 **ECB interest rate decision today**: Potential first ECB rate hike since 2023 (energy-driven inflation) — Europe contagion risk
+
+- Sector leaders (Jun 10 close / YTD):
+  - XLP (Consumer Staples): +1.65% day — defensive rotation winner today
+  - XLE (Energy): best YTD ~+26–27%, oil boosted by Iran tensions
+  - XLK (Technology): best YTD ~+32–33% but -2%+ day today; under pressure
+  - XLF (Financials): -0.44% day; yield headwinds, Goldman/Visa down pre-market
+  - XLY (Consumer Disc.): -2.05% day — laggard
+  - XLI (Industrials): -3.38% day — worst sector today
+
+- Economic events:
+  - May PPI & Core PPI (today, June 11) — expected 3-yr high
+  - ECB interest rate decision (today, June 11) — potential hike
+  - FOMC meeting next Wednesday (first chaired by Kevin Warsh)
+  - ADBE (Adobe) earnings after close today — avoid
+
+### Trade Candidates (only if Regime ON)
+
+> ⚠️ **No candidates qualify today.** Despite Regime = ON, all potential setups are blocked:
+> - Tech sector (AAPL already held, sector -2%+ today): No clean breakout with Iran/CPI overhang
+> - Energy (XLE/XOM): Momentum strong but active military escalation = event risk; oil volatility too high for swing entry
+> - Financials (JPM already held): Yield surge + Goldman/Visa down = adverse sector wind
+> - XLP defensive: Names (KO, PG, WMT) trade above $20,033 per position or lack specific catalyst
+> - ADBE: Reports earnings **tonight** — explicitly excluded by rule (no earnings within 7 days)
+> - ORCL: -10% dilution shock, falling knife
+> - No candidate passes: specific catalyst + no earnings within 7 days + positive sector momentum + size ≤ $20,033 simultaneously
+
+### Risk Factors Today
+- Active US-Iran military conflict: Kharg Island threat = potential oil supply shock → macro volatility spike
+- VIX +11.83% on Jun 10 close (22.22); options market pricing ~1.5% SPX move by Friday
+- CPI at 4.2% YoY (3-yr high) + PPI print today → Fed rate-hike bets rising; 10-yr yield at 4.54%
+- SpaceX IPO absorbing market liquidity and investor attention today/Friday
+- Oracle -10%+ drags AI/cloud/data center complex; tech sector under rotation pressure
+- AAPL position at -2.9% unrealized (-$8.62), approaching but not at hard stop (-7% = entry $277.79)
+- JPM position at +0.26% unrealized (+$59.04); qty_available = 0 (likely a pending order or restriction)
+- ECB potential rate hike today adds cross-market volatility
+
+### Decision
+HOLD — No new trades. Regime is technically ON but sector momentum is broadly negative today (7 of 8 sectors red), macro shock events active (Iran + CPI + PPI + SpaceX IPO + ECB), and no candidate clears all entry filters simultaneously. Preserving cash and monitoring existing positions.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-11",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
