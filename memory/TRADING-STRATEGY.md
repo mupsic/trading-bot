@@ -114,3 +114,7 @@ TOTAL:      $10,000 (100%)
 ---
 
 **⚠️ IMPORTANT:** These rules are NON-NEGOTIABLE. Bot will enforce them automatically.
+
+## Active Constraints (auto-added 2026-06-12)
+- DRAWDOWN_CIRCUIT_BREAKER_TRIPPED: drawdown 80.07% from peak $100349.23
+- NO_NEW_TRADES_UNTIL: 2026-06-19
