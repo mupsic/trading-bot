@@ -26,8 +26,8 @@
 
 ## Position & Sizing Rules
 - Max 5 posiciones abiertas simultáneas
-- Max 20% del OPERATING_CAPITAL por posición = $600
-- Target deployed: 75-85% del OPERATING_CAPITAL = $2,250-$2,550
+- Max 20% del OPERATING_CAPITAL por posición = $4,000 (sobre $20k)
+- Target deployed: 75-85% del OPERATING_CAPITAL = $15,000-$17,000
 - Max 3 trades nuevos por semana
 
 ## Stop & Take-Profit Rules
@@ -88,6 +88,6 @@
 - Every trade must be documented BEFORE execution
 
 ## Escalation Path (cuando funcione bien)
-- Mes 1-3: $3,000 paper, modo ejecución
-- Mes 4-6: si métricas son sólidas (Sharpe > 0.8, PF > 1.4), escalar a $5,000 paper
-- Mes 6+: evaluación humana antes de pasar a dinero real (mínimo)
+- Fase actual: $20,000 paper, modo ejecución y aprendizaje
+- Si métricas sólidas (Sharpe > 0.8, PF > 1.4) durante 2+ meses: escalar capital paper
+- Evaluación humana obligatoria antes de pasar a dinero real
