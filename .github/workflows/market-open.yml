@@ -38,7 +38,7 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          # OPERATING_CAPITAL no definido → el bot usa el equity real de la cuenta Alpaca
+          OPERATING_CAPITAL: "20000"
         run: bash scripts/market-open.sh
 
       - name: Commit memory updates
