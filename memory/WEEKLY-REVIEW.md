@@ -521,3 +521,85 @@ I'll search for the S&P 500 weekly performance first, then compile the full revi
 
 ### Overall Grade: C+
 **Reasoning:** This week's performance is difficult to grade cleanly due to the structural accounting event — the removal of the $3,000 operating equity cap mid-week creates
+
+Based on the search results, the S&P 500's 9-week winning streak came to an end last week, with the late-week strength ultimately pushing the index to a +0.6% gain for the week ending June 12, 2026.
+
+Now I have all the data I need. Let me compute the metrics:
+
+**S&P 500 week:** +0.60%
+
+**Trade analysis:**
+- No trades were opened or closed this week (0 entries, 0 exits)
+- The massive "Week P&L" of −$80,196.78 (−80.04%) is entirely an **accounting/structural event**: on 06/12, operating equity was reset from ~$100,349 down to $20,000, with Alpaca equity at $100,606 — this mirrors the reverse of last week's cap removal. This is NOT a market loss; it's a capital withdrawal/reallocation event.
+- Only open position at week end: AAPL (1 share, entry $298.70, current $291.28, unrealized −$7.42 / −2.48%)
+- JPM was closed (present Mon–Thu, absent Fri) — but no trade data shows an exit, and the disappearance coincides with the operating equity reset/withdrawal. The position value on 06/12 dropped from $22,868 to $291 (only AAPL remains), consistent with JPM being part of the capital pulled out, not a discrete trade closure.
+- Win rate: N/A (0 closed trades this week)
+- Best/Worst trade: N/A for closed; AAPL unrealized worst at −2.5%
+- Profit factor: N/A
+
+---
+
+## Week ending 2026-06-12
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $100,196.78 |
+| Ending portfolio (Fri) | $20,000.00 |
+| Week return | −$80,196.78 (−80.04%) |
+| S&P 500 week | +0.60% |
+| Bot vs S&P | −80.64 pp (structural capital withdrawal event, not market loss) |
+| Trades total | 0 (W:0 / L:0 / open:1) |
+| Win rate | N/A — no closed trades |
+| Best trade | N/A |
+| Worst trade | AAPL −2.5% (unrealized, open) |
+| Profit factor | N/A |
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| — | — | — | — | — | — | No trades executed or closed this week |
+
+> ⚠️ **JPM Note:** JPM (72 shares @ $310.28) was present Mon–Thu with unrealized P&L of +$233.28 (+1.0%) on Thursday. It disappeared from positions on Friday coincident with the operating equity reset from ~$100,349 to $20,000. This is treated as a **capital reallocation/withdrawal event**, not a discrete market trade. No confirmed exit price or P&L is recorded. If JPM was liquidated as part of the drawdown, the estimated exit near Thu close (~$313.52) would imply ~+$233 realized gain; this must be audited and recorded properly.
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $291.28 | −$7.42 (−2.48%) | $268.83 (10% trailing) | Technology |
+
+### What Worked (3-5 bullets)
+- **JPM held its gains through Thursday:** From entry at $310.28 to a Thursday close of ~$313.52, JPM delivered +$233.28 unrealized (+1.0%) over the week before the account restructuring event — the financial sector thesis held.
+- **Drawdown control Mon–Thu was excellent:** Portfolio equity stayed above $100,000 for 4 of 5 sessions with max drawdown of only −0.22% on Wednesday, demonstrating the stop-loss framework is functioning.
+- **No rule violations:** Zero trades executed against a 3-trade weekly budget; no PDT violations; no hard-stop breach occurred on any position during normal market hours this week.
+- **S&P context was favorable:** The late-week strength pushed the S&P 500 to a +0.6% gain, meaning the broader market was constructive — the bot's inaction (0 trades) left opportunity on the table but avoided risk in a week with mid-week volatility.
+
+### What Didn't Work (3-5 bullets)
+- **AAPL continues to underperform:** Entry at $298.70 now sitting at $291.28 (−2.48% unrealized), approaching but not yet triggering the −7% hard stop ($277.79). The position has been underwater since 06/09 and is consuming 1 of 5–6 position slots with negative return.
+- **Zero trades executed for a second consecutive week:** With $77K+ in cash deployed at <25% of capital all week, the bot failed to find or execute any new entries, leaving enormous dry powder idle while the S&P gained +0.6%.
+- **Capital restructuring created an accounting crisis:** The operating equity reset to $20,000 on 06/12 — with Alpaca equity at $100,606 — creates a severe discrepancy that makes performance tracking unreliable. It is unclear whether JPM was liquidated intentionally or as part of the restructuring.
+- **Tech sector drag on AAPL:** Major indexes remain down for the month amid rate hike worries, and tech shares slid approaching the week — AAPL's persistent weakness reflects sector-level pressure, not just single-stock noise.
+- **No new diversification achieved:** The previous week's review called for adding 1–2 positions in Healthcare, Consumer, or Industrials. This did not occur, leaving the portfolio concentrated (1 open position in Tech only by week end).
+
+### Sector Performance
+- **Technology (AAPL):** Underperformed. AAPL −1.5% on Friday, −2.48% from entry. The tech sector's recent swoon puts the spotlight on market concentration risk, and AAPL is participating in that weakness.
+- **Financials (JPM):** Outperformed during the week. JPM gained ~+1.0% unrealized by Thursday close before the account event. Financial sector benefited from resilient economic data.
+- **Broader market:** The equal-weight index showcased strong breadth, rising almost 2%, with nine of eleven sectors finishing higher — the bot missed broad-based strength by remaining nearly fully in cash.
+
+### Key Lessons
+- **The operating equity / Alpaca equity discrepancy is now a critical operational risk.** With operating equity at $20,000 and Alpaca equity at $100,606, all position sizing, stop levels, and P&L tracking are potentially inconsistent. This MUST be reconciled before any new trades are placed. The "Week P&L: −80.04%" is a bookkeeping artifact, not a real market loss — but until the system is reconciled, the bot cannot safely size new positions.
+- **Idle cash is a persistent problem.** For two consecutive weeks the bot has held 75%+ of capital in cash. While capital preservation is valid, the 0-trade week while the S&P gained +0.6% and breadth was strong represents an opportunity cost failure mode.
+- **AAPL is approaching hard-stop territory.** At −2.48% unrealized, AAPL is not yet at the −7% hard stop ($277.79), but it has been consistently negative since entry. The thesis (momentum/tech) has not materialized. A plan to exit or hold must be articulated before Monday open.
+- **JPM exit (if it occurred) was unrecorded.** Any liquidation tied to the equity reset must be logged as a realized trade with proper entry/exit prices to maintain accurate P&L history.
+
+### Adjustments for Next Week
+- **No rule changes — insufficient data per policy.** No trading rules have been tested this week (0 trades executed). The 0-trade pattern has now occurred for 2 consecutive weeks, but this reflects opportunity identification failure / account reconciliation paralysis, not a rule failure per se. No rule permits or requires a change.
+- **Operational action items (not rule changes):**
+  - 🔴 **URGENT — Reconcile operating equity vs. Alpaca equity:** Operating equity ($20,000) vs. Alpaca equity ($100,606) is a ~$80,606 discrepancy. Determine: Was JPM liquidated? Was cash withdrawn? What is the true tradeable capital base? ALL position sizing must use the correct base before any new trades.
+  - 🔴 **URGENT — Audit JPM disposition:** Confirm whether the JPM position was closed, at what price, and record the realized P&L. If closed at ~$313.52 (Thursday close), that is approximately +$233 realized gain — log it.
+  - 🔴 **AAPL hard-stop level:** Current price $291.28, hard stop at $277.79 (−7% from $298.70). Trailing stop at $262.17 (10% below $291.28). Define which stop is active and confirm it is set on the platform.
+  - 🟡 **Establish true operating capital base:** If operating equity is truly $20,000, max position size is $4,000 (20%). If it is $100,606, max is $20,121. Cannot size correctly without resolving this.
+  - 🟡 **Address chronic cash drag:** Two consecutive weeks of near-zero deployment while markets rallied. Commit to pre-market scanning protocol (7:00 AM) and at minimum evaluate 3–5 setups Monday morning. Trade budget resets to 3/3.
+  - 🟡 **Develop AAPL exit thesis:** Tech weakness and rate-hike fears are persistent headwinds. If AAPL cannot reclaim $298.70 entry by mid-next-week, consider a discretionary exit above the hard stop to redeploy capital into a stronger setup.
+
+### Overall Grade: I (Incomplete)
+**Reasoning:** This week cannot be graded on trading performance because zero trades were executed and the dominant portfolio event — an −$80,196.78 "loss" — is entirely an accounting/structural artifact of the operating equity being reset from ~$100,349 to $20,000 rather than any market activity. The actual market performance of the two held positions (AAPL −2.48% unrealized, JPM +1.0% through Thursday) was modestly negative but within normal parameters. The S&P gained +0.6% on broad breadth, meaning the bot's idle cash missed a constructive week for the second time in a row. The grade is Incomplete pending resolution of the critical operating equity reconciliation; no meaningful performance assessment is possible until the true capital base is confirmed and the JPM disposition is audited and recorded.
