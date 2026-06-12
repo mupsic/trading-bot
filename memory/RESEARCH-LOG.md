@@ -2014,3 +2014,119 @@ HOLD — No new trades. Regime is technically ON but sector momentum is broadly 
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.**Key data gathered:**
+- SPY 200-day MA: **$682.63** (TipRanks, most recent) — SPY current: $737.15 → ABOVE MA200 ✅
+- VIX closed at **19.44** on June 11; current TradingView reading: **~21.38** — BELOW 25 ✅ → **REGIME ON**
+- US-Iran peace deal potentially near: Iranian state media said a draft includes a U.S. commitment to lift oil sanctions and Iran's pledge to reopen the Strait of Hormuz within 30 days.
+- SpaceX IPO debuting today under ticker SPCX at $135/share, implying a valuation of ~$1.77 trillion — the largest IPO in history.
+- JPMorgan and Goldman Sachs higher, supporting the financial sector.
+- XLF: +0.61% today; XLP: +0.07%; XLV: -0.40%; XLY: -0.90%; XLI: -0.20%
+- YTD sector leaders: XLK (Technology) +~32-33%, XLE (Energy) +~26-27%
+- Citi initiated AMD with Buy, $575 PT, calling it a second GPU source behind Nvidia, with earnings likely to surpass $20/share by 2028.
+- Rocket Lab (RKLB) rose 4.5% pre-market after announced addition to Nasdaq-100 effective June 22.
+- University of Michigan Consumer Sentiment due today at 10 AM ET; consensus for rebound to 46 from 44.8.
+- Next week features rate-setting meetings from both the Federal Reserve and the Bank of Japan.
+
+---
+
+## 2026-06-12 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,562.92
+- Operating capital (equity real): $100,562
+- Max por posición (20%): $20,112.40
+- Cash disponible: $77,480.24
+- Positions value: $23,082.68
+- Capital disponible: $77,479.32
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $737.15 (MA200: $682.63) — **ABOVE**
+- VIX: ~21.38 — **LOW** (< 25)
+- Regime: **ON**
+- Reason: SPY trades ~8% above its 200-day MA and VIX remains well below the 25 threshold despite recent Iran-war volatility spike; regime gate passes.
+
+### Market Context
+- Top catalysts today:
+  - 🕊️ **US-Iran peace deal imminent**: Trump canceled planned strikes overnight; draft agreement includes lifting oil sanctions + Iran reopening Strait of Hormuz within 30 days — crude oil -2% to ~$85/bbl
+  - 🚀 **SpaceX (SPCX) IPO debut**: Largest IPO in history at $135/share, ~$1.77T valuation, 4x oversubscribed; huge AI infrastructure/data-center spending catalyst
+  - 🤖 **AMD Citi Buy upgrade ($575 PT)**: Named second GPU source behind Nvidia; Meta seen as significantly larger AMD customer than market expects
+  - 🪐 **Rocket Lab (RKLB) Nasdaq-100 inclusion**: Index addition effective June 22 triggers forced passive buying
+  - 📊 **UMich Consumer Sentiment (10 AM ET)**: Consensus rebound to 46 from 44.8; key inflation expectations subcomponent watched closely
+- Sector leaders (today / intraday):
+  - XLF (Financials): **+0.61%** ← strongest today (JPM, GS higher on Iran deal)
+  - XLP (Consumer Staples): +0.07%
+  - XLI (Industrials): -0.20%
+  - XLV (Health Care): -0.40%
+  - XLY (Consumer Discretionary): -0.90%
+  - XLK (Technology): mixed/negative intraday; YTD leader +~32%
+- Economic events:
+  - U. Michigan Consumer Sentiment (Prelim June) — 10:00 AM ET
+  - FOMC meeting next week (June 17-18)
+  - Bank of Japan rate meeting next week
+
+### Trade Candidates (Regime ON)
+
+**Existing positions check:**
+- AAPL (1 share @ $298.70, currently $291.08, -2.6%): Approaching -7% hard stop ($277.79). NO add — averaging down prohibited.
+- JPM (72 shares @ $310.28, currently $316.55, +2.0%): Performing well; Financials sector leading today on Iran deal optimism.
+
+**New candidates:**
+
+1. **AMD** — Citi Buy upgrade to $575 PT, named #2 GPU supplier behind Nvidia with Meta as key upcoming customer; AI infrastructure tailwind from SpaceX IPO spending; no earnings within 7 days. Entry $170.00, stop $158.10 (-7%), target $193.80 (+14%), shares=118, cost=$20,060. ✅ Cost check: $23,082.68 + $20,060 = $43,142 ≤ $77,480 ✅
+
+2. **RKLB** — Rocket Lab confirmed Nasdaq-100 index addition effective June 22, forcing passive ETF buying across QQQ/index funds; aerospace sector beneficiary of Iran peace deal and reduced geopolitical risk. Entry $28.50, stop $26.51 (-7%), target $32.49 (+14%), shares=706, cost=$20,121. ⚠️ Cost exceeds $20,112 cap → reduce to 705 shares = $20,092.50. ✅
+
+> **Position cost check for both simultaneous adds:**
+> Positions value: $23,082.68 + AMD $20,060 + RKLB $20,092.50 = $63,235 ≤ $77,480 cash ✅
+> Each position individually ≤ $20,112.40 ✅
+> Open positions after adds: 4/5 ✅
+
+### Risk Factors Today
+- **AAPL near hard stop**: 1 share at $291.08 vs hard stop $277.79 (-7% from entry); any further tech slide could trigger exit
+- **VIX elevated at ~21**: Still below 25 threshold but above "calm" zone; Iran deal collapse would spike VIX
+- **Rate hike risk**: Market pricing ~70% odds of 1 Fed hike by Dec 2026; 10-yr yield recently hit 16-month high of 4.69% — headwind for tech/growth
+- **SpaceX IPO capital drain**: Investors may sell existing winners to fund SPCX purchases → near-term tech selling pressure
+- **JPM (qty_available=0)**: Position not available for trading today (likely pending settlement/restriction) — cannot add or reduce
+- **Geopolitical uncertainty**: Peace deal not yet signed; conflicting reports on timeline; any breakdown reverses oil/market rally
+- **UMich sentiment 10 AM**: If inflation expectations component surprises higher, could reprice Fed rate hike odds and hit equities
+
+### Decision
+TRADE [AMD, RKLB]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-12",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "AMD",
+      "entry_price": 170.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 118,
+      "position_cost": 20060.00,
+      "target_price": 193.80,
+      "catalyst": "Citi Buy upgrade with $575 price target, named second GPU source behind Nvidia; Meta seen as significantly larger AMD AI GPU customer than consensus; AI infra tailwind from SpaceX IPO data-center spending",
+      "sector": "Technology / Semiconductors",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "RKLB",
+      "entry_price": 28.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 705,
+      "position_cost": 20092.50,
+      "target_price": 32.49,
+      "catalyst": "Confirmed Nasdaq-100 index inclusion effective June 22 — forces mandatory passive buying from QQQ and index-tracking funds; additional tailwind from US-Iran peace deal reducing aerospace/space sector geopolitical risk premium",
+      "sector": "Aerospace / Space",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
