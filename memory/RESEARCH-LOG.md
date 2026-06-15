@@ -2130,3 +2130,112 @@ TRADE [AMD, RKLB]
   ]
 }
 ```
+
+I'll gather all the required market data simultaneously.Using all gathered data, here is the complete research log:
+
+---
+
+## 2026-06-15 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,612.27
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $100,315.01
+- Positions value: $297.25
+- Capital disponible: $19,702.74
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $756.33 (MA200: $683.44) — ABOVE
+- VIX: 17.68 — LOW
+- Regime: **ON**
+- Reason: SPY at $757.09 is well above its 200-day SMA of $683.44, and as of 8:33 AM 6/15/2026, VIX prev. close was 17.68 — both gates pass cleanly (SPY > MA200 ✅, VIX < 25 ✅).
+
+### Market Context
+- **Top catalysts today:**
+  - Stocks climbed around the world as the US and Iran agreed to reopen the Strait of Hormuz, fueling hopes for an end to the conflict that has roiled markets.
+  - Stronger risk appetite extended a surge in equities from war-driven lows, with the S&P 500 rising about 1.5%; beaten-down technology companies led gains; US crude declined to around $80, easing inflation concerns.
+  - Treasury yields fell as bets on Federal Reserve interest-rate hikes receded.
+  - Tripadvisor (TRIP) was climbing 12% in premarket trading after American Express said it will buy restaurant booking platform TheFork in an all-cash deal worth $700 million.
+  - Rocket Lab (RKLB) shares rose 6.13% in premarket after KeyBanc upgraded it to Overweight with a $135 target, and the company confirmed its June 22 addition to the Nasdaq-100.
+  - Western Digital (WDC) surged 13% to $637; its fiscal Q3 revenue reached $3.34 billion, a 45% increase year-over-year, with a 50.2% gross margin.
+  - Fox (FOX) shares tumbled 11% after the company announced it was acquiring streaming platform Roku (ROKU) for about $22 billion.
+
+- **Sector leaders:**
+  - XLK (Technology): +~32–33% YTD — still the heavyweight.
+  - XLE (Energy): +~26–27% YTD — strong on geopolitical tensions and oil prices.
+  - The S&P 500 (+1.74%) is second to only the Nasdaq Composite (+2.07%) today, owing to advances in technology, discretionary, and industrial stocks.
+  - XLF: +1.37% today (per Yahoo Finance data)
+  - XLP: +0.65% today | XLI: +0.59% today | XLY: +0.26% today | XLV: -0.18% today
+
+- **Economic events:**
+  - US-Iran peace deal / Strait of Hormuz reopening — dominant macro theme
+  - Fed rate cut odds at 77% for 2026 — accommodative backdrop
+  - The stock market is closed on Juneteenth (Friday, June 19); both NYSE and Nasdaq observe it as an official market holiday. ⚠️ Short week — only Mon–Thu trading
+
+### Trade Candidates (Regime ON)
+
+**Candidate screening notes:**
+- AAPL already held (1 share, -0.48% unrealized) — no add allowed (no averaging up into marginal position)
+- RKLB at ~$108 has strong momentum but earnings risk TBD and trades near 100× sales — high valuation risk
+- WDC at ~$637 exceeds $4,000 max position at even 6 shares ($3,822) — just fits; strong catalyst
+- TRIP at ~$30–35 range with confirmed M&A deal (AXP buying TheFork) — clear named catalyst, fits sizing
+
+**1. WDC — Western Digital**
+- WDC fiscal Q3 revenue reached $3.34 billion (+45% YoY) with 50.2% gross margin and $978M FCF; supply contracts extend through 2028–2029; investors now view Western Digital as a key AI supply-chain player.
+- Morgan Stanley lifted Western Digital's price target to $650 on AI demand.
+- Entry ~$637, Stop -7% = $592.41, Target +14% = $726.18, Shares = 6 → cost = $3,822 ✅
+- R:R 1:2
+
+**2. TRIP — Tripadvisor**
+- Tripadvisor was climbing 12% in premarket after American Express said it will buy restaurant booking platform TheFork from Tripadvisor in an all-cash $700M deal — confirmed M&A/divestiture catalyst unlocking shareholder value.
+- Entry ~$26.50 (post-gap settle), Stop -7% = $24.65, Target +14% = $30.21, Shares = 150 → cost = $3,975 ✅
+- R:R 1:2
+
+### Risk Factors Today
+- **Short trading week**: Market closed Friday June 19 (Juneteenth) — only 4 trading days; swing positions carry weekend gap risk by Thursday close.
+- **Iran deal fragility**: Peace agreement is preliminary; any breakdown re-escalates oil prices and reverses today's risk-on move instantly.
+- **AAPL existing position**: Currently -0.48% unrealized, down from entry $298.70; monitor for -7% hard stop at ~$277.79.
+- **Rapid gap-up entries**: Both WDC (+13%) and TRIP (+12%) are pre-market gap-ups; entry after open price discovery reduces gap-fill risk but may reduce R:R.
+- **VIX at 17.68**: Elevated vs. recent lows (15.18 in past month) — some residual volatility premium remains.
+- **WDC valuation**: Trades near short-term resistance; Morgan Stanley target $650 is close to current price, limiting upside if target is already priced in.
+
+### Decision
+TRADE [WDC, TRIP]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-15",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "WDC",
+      "entry_price": 637.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 6,
+      "position_cost": 3822.00,
+      "target_price": 726.18,
+      "catalyst": "Fiscal Q3 revenue +45% YoY to $3.34B, 50.2% gross margin, Morgan Stanley PT raise to $650, AI supply-chain re-rating by investors",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "TRIP",
+      "entry_price": 26.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 150,
+      "position_cost": 3975.00,
+      "target_price": 30.21,
+      "catalyst": "American Express announced all-cash $700M acquisition of TheFork from Tripadvisor — confirmed M&A divestiture unlocking shareholder value",
+      "sector": "Consumer Discretionary",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
