@@ -602,3 +602,29 @@ Every end of day:
 | Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
 |--------|--------|-------|---------|-----------------|---------|
 | AAPL | 1 | 298.7$ | 291.17$ | -7.53$ (-2.5%) | -1.5% |
+
+### 2026-06-15 — Trade Entry: WDC
+- **Ticker**: WDC
+- **Side**: BUY
+- **Shares**: 6
+- **Entry price**: $637.0 (intended)
+- **Position cost**: $3822.0
+- **Stop**: trailing 10% GTC (order_id: 2db0f953-5f53-4722-8d01-b3a3a544d541)
+- **Target**: $726.18
+- **Catalyst**: Fiscal Q3 revenue +45% YoY to $3.34B, 50.2% gross margin, Morgan Stanley PT raise to $650, AI supply-chain re-rating by investors
+- **Sector**: Technology
+- **Buy order_id**: 79eceaa6-3018-4ded-90de-c1fdb5595100
+- **Capital used after**: $4117.34 / $20000
+
+### 2026-06-15 — Trade Entry: TRIP
+- **Ticker**: TRIP
+- **Side**: BUY
+- **Shares**: 150
+- **Entry price**: $26.5 (intended)
+- **Position cost**: $3975.0
+- **Stop**: trailing 10% GTC (order_id: 95893e95-31d2-44b8-8ca3-6f4b8422495e)
+- **Target**: $30.21
+- **Catalyst**: American Express announced all-cash $700M acquisition of TheFork from Tripadvisor — confirmed M&A divestiture unlocking shareholder value
+- **Sector**: Consumer Discretionary
+- **Buy order_id**: 8a698e96-b81a-4829-b8ab-b5e883fe5bb5
+- **Capital used after**: $8092.34 / $20000
