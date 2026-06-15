@@ -628,3 +628,24 @@ Every end of day:
 - **Sector**: Consumer Discretionary
 - **Buy order_id**: 8a698e96-b81a-4829-b8ab-b5e883fe5bb5
 - **Capital used after**: $8092.34 / $20000
+
+### 2026-06-15 — EOD Snapshot
+- **Alpaca equity (reported)**: $100580.19
+- **Operating equity**: $20000
+- **Cash**: $94471.67
+- **Positions value**: $6108.52 (30.5% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Total P&L (desde inicio)**: $17000 (566.67%)
+- **Peak equity**: $100349.23
+- **Drawdown from peak**: 80.07%
+- **Trades today**: 2
+- **Trades this week**: 2 / 3
+- **Daytrade count**: 0 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 295.18$ | -3.52$ (-1.2%) | 1.4% |
+| TRIP | 150 | 13.13$ | 12.66$ | -70.5$ (-3.6%) | 2% |
+| WDC | 6 | 645.64$ | 652.39$ | 40.5$ (1%) | 15.9% |
