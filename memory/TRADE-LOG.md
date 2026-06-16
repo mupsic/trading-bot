@@ -649,3 +649,16 @@ Every end of day:
 | AAPL | 1 | 298.7$ | 295.18$ | -3.52$ (-1.2%) | 1.4% |
 | TRIP | 150 | 13.13$ | 12.66$ | -70.5$ (-3.6%) | 2% |
 | WDC | 6 | 645.64$ | 652.39$ | 40.5$ (1%) | 15.9% |
+
+### 2026-06-16 — Trade Entry: NFLX
+- **Ticker**: NFLX
+- **Side**: BUY
+- **Shares**: 2
+- **Entry price**: $1370.0 (intended)
+- **Position cost**: $2740.0
+- **Stop**: trailing 10% GTC (order_id: 6aad6f9d-f3e8-47f4-bd73-34d90dcf44ec)
+- **Target**: $1561.8
+- **Catalyst**: Named active market mover June 16 2026; AI content infrastructure re-rating driving communication services/tech; XLK +32% YTD sector leadership; no earnings within 7 days
+- **Sector**: Communication Services
+- **Buy order_id**: fc4265b4-5484-4fdb-95d5-e88b917baa3e
+- **Capital used after**: $9094.82 / $20000
