@@ -2239,3 +2239,100 @@ TRADE [WDC, TRIP]
   ]
 }
 ```
+
+I'll gather the required market data simultaneously.Using all the gathered data, here is the complete research log:
+
+## 2026-06-16 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,674.25
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $94,471.66
+- Positions value: $6,202.61
+- Capital disponible: $13,797.39
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $751.98 (MA200: ~$682.63) — ABOVE — SPY's 200-day simple moving average is $682.63
+- VIX: ~16.20 — LOW — VIX prev. close 16.20 as of 8:34 AM 6/16/2026 per CBOE
+- Regime: **ON**
+- Reason: SPY ($751.98) is +10.2% above MA200 ($682.63) AND VIX (16.20) is well below 25 threshold — bull regime confirmed.
+
+### Market Context
+- Top catalysts today:
+  - 🕊️ **US-Iran Peace Agreement**: The United States and Iran reached a peace agreement to be signed in Switzerland on June 19, calling for a total halt to military action — confirmed by President Trump and Pakistani PM.
+  - 📈 **AI/Tech Rally**: The recent surge in technology stocks fueled by AI infrastructure buildout powered the S&P 500 and Nasdaq 100 to record highs last week.
+  - 📊 **Economic Data June 16**: Building Permits, Export Prices, Housing Starts, and Import Prices all due today.
+  - ⚠️ **Triple Witching Week**: Triple Witching falls on Thursday June 18 this week (moved up due to Juneteenth holiday on Friday June 19) — elevated volume/volatility expected mid-week.
+  - 📉 **Bond Yield Pressure**: Rising bond yields sparked risk-off Tuesday; 10-year T-note yield climbed to a 16-month high of 4.69% — monitor for continuation.
+
+- Sector leaders:
+  - XLK (Technology): +~32–33% YTD — still the heavyweight
+  - XLE (Energy): +~26–27% YTD — strong on geopolitical tensions and oil prices
+  - XLY (Consumer Discretionary): +1.69% today; XLI (Industrials): +1.42% today; XLF (Financials): +0.41% today; XLV (Healthcare): -0.60% today; XLP (Consumer Staples): -0.40% today
+  - Sector rotation underway: capital flowing into "real economy" areas (Energy, Industrials, Materials) while some traditional growth and defensive sectors lag
+
+- Economic events:
+  - Building Permits (June 16 AM)
+  - Housing Starts (June 16 AM)
+  - Export/Import Prices (June 16 AM)
+  - NY Empire State Manufacturing Index for June fell to 5.7, missing the consensus estimate of 13.9 (prior: 19.6)
+  - Industrial production increased 0.1% in May; April revised up to +0.9%
+  - Earnings after close today: GMS, LZB (low-impact)
+
+### Trade Candidates (Regime ON)
+
+> **Note:** Only 1 trade slot remains this week (2/3 used). 3 positions open (of 5 max). Capital disponible for new positions: $13,797.39. Max per position: $4,000. TRIP has `qty_available: 0` (existing stop order holds shares). WDC has `qty_available: 0`. No new capital can be added to losing positions. One new trade is permissible.
+
+1. **XLY / Consumer Discretionary proxy → CRVANA (CVNA)** — Carvana expanding into new vehicles (per top market headline today: *"Carvana is expanding into new vehicles. The implications could reshape the U.S. automotive retail market"*), strong XLY sector momentum (+1.69% today), market-cap >$1B, no earnings next 7 days. Entry ~$280, stop $260.40 (-7%), target $319.20 (+14%), shares=14, cost=$3,920. R:R 1:2.
+
+2. **NFLX (Netflix)** — Mentioned as active mover today; AI-driven content/tech re-rating ongoing, XLK/communication services momentum, market cap >$400B, no earnings within 7 days. Entry ~$1,370, stop $1,274.10 (-7%), target $1,561.80 (+14%), shares=2, cost=$2,740. R:R 1:2.
+
+### Risk Factors Today
+- Triple Witching on Thursday June 18 — elevated intraday volatility and abnormal volume across indices and individual names through end of week
+- 10-year Treasury yield at 16-month high of 4.69% — continued yield pressure could compress tech/growth multiples mid-session
+- FOMC meeting upcoming — limited additional catalysts beyond Iran deal and Fed guidance
+- TRIP position is down ~-4.4% (approaching -7% hard stop); monitor closely
+- WDC `qty_available: 0` — existing trailing stop active, no action needed
+- SPY showing intraday weakness (-0.38% pre-market per futures); QQQ down -1.51% — confirm direction at open before executing any new trade
+- Only **1 trade slot remaining** this week — use it selectively
+
+### Decision
+TRADE [CVNA] — subject to open-price confirmation above entry level at market open. If SPY opens below 748 or QQQ continues -1.5%+, HOLD and defer to Wednesday.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-16",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "CVNA",
+      "entry_price": 280.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 14,
+      "position_cost": 3920.00,
+      "target_price": 319.20,
+      "catalyst": "Carvana expanding into new vehicles sales per June 16 2026 market headline — potential reshape of US automotive retail; XLY sector leading today +1.69%; no earnings within 7 days",
+      "sector": "Consumer Discretionary",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "NFLX",
+      "entry_price": 1370.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 2,
+      "position_cost": 2740.00,
+      "target_price": 1561.80,
+      "catalyst": "Named active market mover June 16 2026; AI content infrastructure re-rating driving communication services/tech; XLK +32% YTD sector leadership; no earnings within 7 days",
+      "sector": "Communication Services",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
