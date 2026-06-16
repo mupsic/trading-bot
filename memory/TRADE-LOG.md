@@ -662,3 +662,25 @@ Every end of day:
 - **Sector**: Communication Services
 - **Buy order_id**: fc4265b4-5484-4fdb-95d5-e88b917baa3e
 - **Capital used after**: $9094.82 / $20000
+
+### 2026-06-16 — EOD Snapshot
+- **Alpaca equity (reported)**: $100784.6
+- **Operating equity**: $20000
+- **Cash**: $94315.78
+- **Positions value**: $6468.82 (32.3% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Total P&L (desde inicio)**: $17000 (566.67%)
+- **Peak equity**: $100349.23
+- **Drawdown from peak**: 80.07%
+- **Trades today**: 1
+- **Trades this week**: 3 / 3
+- **Daytrade count**: 0 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 299.24$ | 0.54$ (0.2%) | 1% |
+| NFLX | 2 | 77.94$ | 78.79$ | 1.7$ (1.1%) | -3.5% |
+| TRIP | 150 | 13.13$ | 12.6$ | -79.5$ (-4%) | 0.3% |
+| WDC | 6 | 645.64$ | 687$ | 248.16$ (6.4%) | 5.1% |
