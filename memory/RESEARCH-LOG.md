@@ -2336,3 +2336,90 @@ TRADE [CVNA] — subject to open-price confirmation above entry level at market 
   ]
 }
 ```
+
+I'll gather all the required market data simultaneously.Now I have all the data needed. Let me compile the full research log.
+
+**Key data gathered:**
+- SPY 200-day MA: **$744.07** (from Investing.com technical analysis) — SPY current price $751.40 → **ABOVE MA200** ✅
+- VIX current value: **16.42**, fallen by −0.56% in the past 24 hours → **LOW** ✅ (< 25)
+- FOMC catalyst: Fed Chair Kevin Warsh's June 16-17 debut is a key catalyst as futures shift toward pricing 2026 rate hikes
+- Retail sales surged in May, up 0.9% from April versus expectations of 0.5%
+- Sector leaders YTD: XLK (Technology) +~32–33% and XLE (Energy) +~26–27%
+- Top performing sectors in June 2026: Basic Materials, Energy, Communication Services
+- S&P 500 gained 0.10%, Nasdaq rose 0.34%, Russell 2000 lost 0.87% today
+- Triple Witching Day falls on June 18, 2026 (Thursday) this year
+
+**Note on trades this week:** The bot already used **3/3 trades this week** (per the EOD Snapshot from 2026-06-16: "Trades this week: 3/3"). Also, we have **4/5 positions open** with 1 slot available. However, the weekly trade cap has been reached — the bot is TRADE-BLOCKED for new entries this week regardless of regime.
+
+---
+
+## 2026-06-17 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $101,065.75
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $94,315.77
+- Positions value: $6,749.98
+- Capital disponible: $13,250.02
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $751.40 (MA200: $744.07) — ABOVE
+- VIX: 16.42 — LOW
+- Regime: ON
+- Reason: SPY +1.0% above 200-DMA; VIX at 16.42 well below the 25 threshold; broad market technically healthy but FOMC event risk caps new entries today AND weekly trade limit (3/3) already exhausted
+
+### Market Context
+- Top catalysts today:
+  - 🏦 **FOMC Decision @ 2:00 PM ET** — New Fed Chair Kevin Warsh's first press conference at 2:30 PM ET; no rate change expected but tone/dot-plot could shift hawkish (55% of BofA survey respondents expect hawkish tone); market in holding pattern pre-announcement
+  - 📊 **Retail Sales beat** — May retail sales +0.9% vs. +0.5% expected, reinforcing solid consumer/economy narrative; chips recovering from Tuesday's pullback
+  - 🕊️ **US-Iran Deal** — Iranian oil tankers passing US blockade; deal progress has pushed out rate-hike probability timelines and contributed to lower oil/yields
+  - 📉 **Bond yields elevated** — 10-year near 4.69% 16-month high from Tuesday; yield pressure remains a headwind for growth/tech
+  - ⚠️ **BofA Pre-Peak Warning** — 70% of BofA's historical market-top checklist flashing, matching average at prior 7 major tops; not a timing signal but elevated caution
+- Sector leaders (YTD as of mid-June 2026):
+  - XLK (Technology): ~+32–33% YTD — AI infrastructure, semiconductors, cloud
+  - XLE (Energy): ~+26–27% YTD — Geopolitical tensions, oil supply dynamics
+  - XLC (Communication Services): strong momentum in June
+  - XLF (Financials): positive, benefiting from higher-for-longer rate outlook
+  - XLV (Health Care): lagging; defensive, trailing SPY
+  - XLP (Consumer Staples): lagging; below SPY YTD
+- Economic events:
+  - **FOMC Rate Decision** @ 2:00 PM ET (no change expected; focus on dot plot & Warsh tone)
+  - **Kevin Warsh press conference** @ 2:30 PM ET (first as Fed Chair)
+  - **Business Inventories** (Jun 17)
+  - **EIA Oil Inventory data** (Jun 17)
+  - **Triple Witching Eve** — Triple Witching falls June 18 (Thursday); elevated vol/volume in derivatives expected tomorrow; position risk elevated
+
+### Trade Candidates (only if Regime ON)
+> ⛔ **WEEKLY TRADE LIMIT REACHED: 3/3 trades executed this week (as of 2026-06-16 EOD)**
+> Per strategy rules: Max 3 trades per week. No new entries permitted regardless of regime.
+> Additionally, FOMC decision + press conference this afternoon (2:00–2:30 PM ET) creates major binary event risk — entering any new position ahead of a Fed announcement violates the "no event risk" rule.
+> Triple Witching Eve tomorrow adds further volatility risk.
+
+*No candidates generated — weekly cap exhausted + FOMC event risk.*
+
+### Risk Factors Today
+- 🚫 **3/3 weekly trade cap hit** — No new trades permitted by strategy rules until next week
+- 📣 **FOMC event risk** — Binary outcome from Warsh's first press conference; hawkish surprise could send markets -1% to -2% rapidly
+- 📈 **Elevated yields** — 10-year at multi-month highs; pressure on growth/tech multiples
+- ⚠️ **BofA 70% market-top checklist** — Not a timing tool, but signals elevated cycle risk
+- 🔀 **Triple Witching tomorrow (Jun 18)** — Elevated intraday volatility expected in derivatives/underlying stocks
+- 📉 **NFLX anomaly** — Current price $77.84 vs. intended entry $1,370 suggests a likely stock split in NFLX; position needs manual review/reconciliation
+- 📉 **TRIP at -3.9% unrealized** — Approaching stop territory; monitor for trailing stop trigger
+- 🇮🇷 **Iran deal uncertainty** — Trump's "if I don't like it, we'll go back to shooting" comment adds geopolitical tail risk to oil/energy
+
+### Decision
+HOLD — Weekly trade limit 3/3 exhausted; FOMC binary event risk this afternoon; no new entries
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-17",
+  "regime": "ON",
+  "decision": "HOLD",
+  "reason": "Weekly trade cap 3/3 exhausted. FOMC decision + Warsh press conference at 2:00-2:30PM ET creates binary event risk. Triple Witching tomorrow adds volatility. No new entries permitted.",
+  "candidates": []
+}
+```
