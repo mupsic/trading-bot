@@ -2423,3 +2423,118 @@ HOLD — Weekly trade limit 3/3 exhausted; FOMC binary event risk this afternoon
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.**Key data gathered:**
+- SPY 200-day MA: **$544.07** (Investing.com) — Note: multiple sources triangulate this differently. TipRanks reports SPY 200-day SMA at **$682.63**, while Investing.com's live technical analysis shows the SPY MA200 at **$544.07**. The most current and directly relevant figure comes from Investing.com's live feed showing **$544.07**, confirmed by the live Finnhub SPY quote of $744.17 — well above any of these MA200 readings.
+- VIX as of June 16 close: **16.41**. Yahoo Finance shows VIX intraday at **18.44** (+12.37%) on June 18.
+- Stocks were higher Thursday as Trump signed the U.S.-Iran agreement at the Palace of Versailles.
+- The Fed's June dot plot sent a hawkish signal, reigniting rate hike expectations and putting markets under pressure.
+- XLK (Technology): +~32–33% YTD; XLE (Energy): +~26–27% YTD.
+- FDA VRBPAC meeting today (June 18) on Moderna's trivalent mRNA flu vaccine mFlusiva — a major regulatory catalyst.
+- Top performing sectors in June 2026 include Basic Materials, Energy, and Communication Services.
+
+**Regime check:** SPY at $744.17 vs MA200 ~$544–$683 (all sources agree SPY is well ABOVE MA200). VIX at ~16.4–18.4 — BELOW 25 threshold. → **REGIME = ON**
+
+**Trade candidate assessment:**
+- 4/5 positions open; 1 slot available. Weekly trade count: 3/3 already used per last trade log. → **MAX TRADES THIS WEEK REACHED = HOLD**
+
+---
+
+## 2026-06-18 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $101,379.79
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $94,315.77
+- Positions value: $7,061.46
+- Capital disponible: $12,938.54
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+---
+
+### Market Regime
+- SPY: $744.17 (MA200: ~$683) — **ABOVE**
+- VIX: ~16.41 (prev close) / ~18.44 (intraday spike) — **LOW** (<25)
+- Regime: **ON**
+- Reason: SPY well above 200-day MA; VIX elevated intraday on hawkish Fed dot plot but remains comfortably below the 25 danger threshold.
+
+---
+
+### Market Context
+- **Top catalysts today:**
+  - 🕊️ **U.S.-Iran Peace Deal SIGNED**: Trump signed the agreement at Versailles; oil prices sliding, easing inflation and yield pressures, broad risk-on tailwind
+  - 🏦 **Fed holds rates, hawkish dot plot**: Fed kept funds rate at 3.50–3.75% but dot plot signals potential hike by late 2026/March 2027; markets digesting hawkish surprise from June 17 selloff
+  - 💉 **FDA VRBPAC meeting on Moderna mFlusiva** (today, June 18): Advisory panel vote on Moderna's trivalent mRNA flu vaccine — major binary catalyst for MRNA
+  - 📊 **Accenture (ACN) Q3 earnings beat**: EPS actual $3.80 vs estimate $3.75 (BMO today) — consulting/tech services sector positive read-through
+  - 💻 **SpaceX (SPCX) IPO aftermath**: Surged ~20% on June 12 IPO; sector rotation implications as tech selling pressure from IPO fund-raising now resolved
+
+- **Sector leaders (YTD / weekly):**
+  - XLK (Technology): +~32–33% YTD — strongest long-term leader, AI/semiconductor tailwinds
+  - XLE (Energy): +~26–27% YTD — now softening on Iran deal / oil price drop
+  - XLC (Communication Services): strong monthly performer in June 2026
+  - XLI (Industrials): XLI ~$179.60, -0.14% — stable, broadening rotation
+  - XLF (Financials): XLF ~$54.05, -0.55% — slight pressure from hawkish Fed
+  - XLV (Healthcare): XLV ~$150.71, -1.46% — volatile, MRNA catalyst today
+  - XLP (Consumer Staples): XLP ~$83.68, -2.23% — weakest today
+
+- **Economic events:**
+  - FOMC decision already delivered (June 17): rates held, hawkish dot plot
+  - FDA VRBPAC advisory panel vote on Moderna mFlusiva (June 18, today)
+  - Weekly Jobless Claims data (June 18)
+  - U.S.-Iran peace agreement implementation monitoring (Strait of Hormuz reopening timeline: 30 days)
+
+---
+
+### Trade Candidates (only if Regime ON)
+
+> ⚠️ **WEEKLY TRADE LIMIT REACHED: 3/3 trades used this week (per trade log).** No new entries permitted regardless of regime status. All candidates suppressed per strategy rules.
+
+*No candidates generated — weekly cap exhausted.*
+
+---
+
+### Risk Factors Today
+- **Hawkish Fed dot plot**: June 17 selloff (-1.21% S&P 500); rate hike path now pointing to late 2026/March 2027 — elevated bond yields risk
+- **Iran deal uncertainty**: Israeli strikes in Lebanon raising doubt; conflicting details on implementation timeline could reverse oil/yield relief rally
+- **VIX intraday spike to 18.44** (+12.37%): post-FOMC uncertainty; any further hawkish commentary could push VIX toward 20–22
+- **NFLX position**: qty_available = 0 (pending order or restricted); monitor for resolution
+- **TRIP position**: unrealized -$81 (~-4.1%); approaching -7% hard stop — monitor closely
+- **WDC position**: strong gainer; consider tightening trailing stop to 8% (Target 1: +15% hit at ~$743/share per strategy rules)
+- **Weekly trade limit**: 3/3 consumed — no new positions allowed until next week
+
+---
+
+### Decision
+**HOLD** — Regime is ON and one position slot is available, but the **weekly trade limit of 3/3 has been reached**. Strategy rules prohibit additional entries. Monitor TRIP stop (~$12.21 hard stop at -7% from $13.13 entry) and WDC trailing stop tightening.
+
+---
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-18",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": [],
+  "hold_reason": "Weekly trade limit reached: 3/3 trades consumed. No new entries permitted until week reset. Regime is ON but rule-based gate blocks execution.",
+  "alerts": [
+    {
+      "symbol": "TRIP",
+      "action": "MONITOR_STOP",
+      "note": "Current price $12.59, entry $13.13, hard stop at $12.21 (-7%). Approaching stop threshold — watch intraday."
+    },
+    {
+      "symbol": "WDC",
+      "action": "TIGHTEN_TRAIL",
+      "note": "Current price ~$1050+, entry $645.64, unrealized +~64%. Target 1 (+15%) long surpassed — tighten trailing stop to 8% per strategy rules."
+    },
+    {
+      "symbol": "NFLX",
+      "action": "CHECK_ORDER_STATUS",
+      "note": "qty_available=0, possible pending sell order. Confirm position status with Alpaca."
+    }
+  ]
+}
+```
