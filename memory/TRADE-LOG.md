@@ -707,3 +707,26 @@ Every end of day:
 | NFLX | 2 | 77.94$ | 77.07$ | -1.74$ (-1.1%) | -2.1% |
 | TRIP | 150 | 13.13$ | 12.6694$ | -69.09$ (-3.5%) | -1.1% |
 | WDC | 6 | 645.64$ | 727.588$ | 491.688$ (12.7%) | 6.8% |
+
+### 2026-06-18 — EOD Snapshot
+- **Alpaca equity (reported)**: $101259.9
+- **Operating equity**: $20000
+- **Cash**: $94315.77
+- **Positions value**: $6944.1311000000005 (34.7% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Total P&L (desde inicio)**: $17000 (566.67%)
+- **Peak equity**: $100349.23
+- **Drawdown from peak**: 80.07%
+- **Trades today**: 0
+0
+- **Trades this week**: 3 / 3
+- **Daytrade count**: 0 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 297.4161$ | -1.2839$ (-0.4%) | 0.5% |
+| NFLX | 2 | 77.94$ | 77.08$ | -1.72$ (-1.1%) | 0.2% |
+| TRIP | 150 | 13.13$ | 13.0161$ | -17.085$ (-0.9%) | 3.2% |
+| WDC | 6 | 645.64$ | 756.69$ | 666.3$ (17.2%) | 6.3% |
