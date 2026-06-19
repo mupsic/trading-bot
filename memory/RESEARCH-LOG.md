@@ -2538,3 +2538,101 @@ I'll gather the required market data simultaneously.**Key data gathered:**
   ]
 }
 ```
+
+I'll search for the required market data simultaneously.Now I have all the data needed. Let me compile the research log.
+
+**Key data gathered:**
+- SPY 200-day MA: **$745.02** (from Investing.com, updated Jun 18) — SPY current: $746.78 → ABOVE MA200
+- VIX at close June 18: **16.40**, down -11.06%
+- Today (June 19) is Juneteenth — a federal holiday. Triple witching was moved to Thursday June 18 this year due to Juneteenth falling on a Friday.
+- Sector leaders YTD: XLK (Technology) +~32–33% and XLE (Energy) +~26–27%
+- Top performing sectors in June 2026 included Basic Materials, Communication Services, and Energy.
+- **Trades this week: 3/3 — weekly trade limit EXHAUSTED.**
+
+---
+
+## 2026-06-19 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $101,190.67
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $94,315.77
+- Positions value: $6,874.90
+- Capital disponible: $13,125.10
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $746.78 (MA200: $745.02) — ABOVE
+- VIX: 16.40 — LOW
+- Regime: ON
+- Reason: SPY trades $1.76 above MA200 (very thin margin); VIX at 16.40 comfortably below 25 threshold — regime technically ON, but Juneteenth federal holiday creates session uncertainty and weekly trade cap (3/3) is already exhausted.
+
+### Market Context
+- Top catalysts today:
+  - 🇺🇸 **Juneteenth Federal Holiday (June 19)** — US markets are CLOSED today; NYSE/NASDAQ observe the federal holiday. No trading session.
+  - 🇮🇱🇮🇷 **Lebanon/Iran geopolitical escalation** — Israeli leaders defiant amid US-Iran deal uncertainty; Middle East tensions elevated per Reuters headlines.
+  - 📉 **Triple Witching passed yesterday (June 18)** — June quad-witching was moved to Thursday June 18 due to Juneteenth; post-witching volatility hangover possible for Monday June 22.
+  - 🤖 **AI/Semiconductor momentum** — XLK up ~32–33% YTD, memory stocks (WDC held in portfolio) continuing AI tailwind rally.
+  - 📊 **QQQ surging +2.51% yesterday** — Nasdaq-heavy names outperforming; tech sector leads short-term momentum.
+- Sector leaders (week/YTD):
+  - XLK (Technology): +~32–33% YTD — strongest sector
+  - XLE (Energy): +~26–27% YTD — geopolitical tailwind
+  - XLC (Communication Services): top June 2026 gainer
+  - XLF (Financials): flat/mild positive this week
+  - XLP (Consumer Staples): lagging, -2.23% recent session
+- Economic events:
+  - 🔴 **US MARKET CLOSED — Juneteenth National Independence Day**
+  - US-Iran nuclear talks uncertainty (Switzerland meeting scrapped)
+  - No Fed speakers scheduled (holiday)
+  - No major earnings today (ADN reports AMC; micro-cap only)
+
+### Trade Candidates (only if Regime ON)
+**⛔ NO TRADES — DUAL BLOCK:**
+1. **US Markets are CLOSED today (Juneteenth federal holiday)** — no trading session exists.
+2. **Weekly trade counter is at 3/3** — maximum 3 trades per week already reached per strategy rules. No new trades permitted until week of June 22.
+
+### Risk Factors Today
+- 🔴 Market closed — Juneteenth holiday; no execution possible
+- 🔴 Weekly trade limit (3/3) exhausted — no new entries permitted this week regardless
+- ⚠️ SPY only $1.76 above MA200 ($746.78 vs $745.02) — regime is ON but razor-thin; any gap-down Monday could flip regime OFF
+- ⚠️ Post-triple-witching (Jun 18) volatility risk into Monday June 22 open
+- ⚠️ Geopolitical: Lebanon/Iran escalation could spike VIX at Monday open
+- ⚠️ WDC position (open, +12.7% unrealized) nearing +15% target — consider tightening trailing stop to 8% on Monday
+- ⚠️ TRIP position down -1.3% unrealized, qty_available = 0 (likely pending order) — monitor Monday
+
+### Decision
+HOLD — Market CLOSED (Juneteenth) + weekly trade limit 3/3 exhausted. No new positions this week. Review WDC stop-loss tightening for Monday June 22 open.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-19",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": [],
+  "hold_reasons": [
+    "US markets closed — Juneteenth federal holiday (June 19, 2026)",
+    "Weekly trade counter exhausted: 3/3 trades used this week",
+    "No new entries permitted until week of 2026-06-22"
+  ],
+  "watchlist_for_monday": [
+    {
+      "symbol": "WDC",
+      "action": "TIGHTEN_STOP",
+      "note": "Position up ~12.7% unrealized. At +15% trigger, tighten trailing stop from 10% to 8% per strategy rules.",
+      "current_price": 727.59,
+      "entry_price": 645.64
+    },
+    {
+      "symbol": "TRIP",
+      "action": "MONITOR",
+      "note": "Down -1.3%, qty_available=0 (pending). Confirm fill status Monday. Hard stop at -7% from entry = ~$12.21.",
+      "current_price": 12.965,
+      "entry_price": 13.13,
+      "hard_stop": 12.21
+    }
+  ]
+}
+```
