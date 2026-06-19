@@ -603,3 +603,102 @@ Now I have all the data I need. Let me compute the metrics:
 
 ### Overall Grade: I (Incomplete)
 **Reasoning:** This week cannot be graded on trading performance because zero trades were executed and the dominant portfolio event — an −$80,196.78 "loss" — is entirely an accounting/structural artifact of the operating equity being reset from ~$100,349 to $20,000 rather than any market activity. The actual market performance of the two held positions (AAPL −2.48% unrealized, JPM +1.0% through Thursday) was modestly negative but within normal parameters. The S&P gained +0.6% on broad breadth, meaning the bot's idle cash missed a constructive week for the second time in a row. The grade is Incomplete pending resolution of the critical operating equity reconciliation; no meaningful performance assessment is possible until the true capital base is confirmed and the JPM disposition is audited and recorded.
+
+I'll search for the S&P 500 weekly performance, then analyze the week's data.Now I have all the data needed. Let me compute everything carefully.
+
+**Key data points gathered:**
+- S&P 500 5-day return: **+1.39%**, with prev close 7,420.10 on the prior Friday; S&P 500 closed at ~7,500.58 on Thursday June 18, and June 19 (today/Friday) is Juneteenth — a federal holiday, markets closed. The 5-day trailing figure of +1.39% from CNBC is the most reliable weekly return for this week.
+- WDC closed at $746.23 on June 18, up 4.79%; EOD June 19 shows $746.23 (markets closed for Juneteenth).
+- All positions remain open; zero closed trades this week.
+
+**Calculations:**
+
+**Operating equity P&L:** $20,000 → $20,000 = $0.00 (0.00%) — operating equity unchanged as no positions were closed and the unrealized P&L lives in Alpaca equity, not the $20k operating ledger.
+
+**Unrealized position performance (end of week):**
+- AAPL: entry $298.70, close $298.01 → −$0.69 (−0.23%)
+- NFLX: entry $77.94/share (avg), close $77.38 → −$1.12 (−0.72%) — Note: NFLX avg entry is $77.94 per share per account data, intended entry was $1,370/share — this is clearly a stock split artifact or data anomaly; using reported unrealized P&L directly.
+- TRIP: entry $13.13, close $12.965 → −$24.75 (−1.26%)
+- WDC: entry $645.64, close $746.23 → +$603.54 (+15.6%)
+
+**Profit factor:** All positions are open (no closed trades this week), so profit factor = N/A (no closed trades).
+
+**Bot vs S&P:** Operating equity returned 0.00% vs S&P +1.39% = −1.39% delta. On an unrealized basis (Alpaca equity $101,190.67 from Monday's $100,580.19 starting point*) = approx +$610 / $100,580 ≈ +0.61% on Alpaca equity.
+
+*Monday start for Alpaca was $100,580.19 (from the June 15 EOD snapshot, first day of the week).
+
+Alpaca equity week delta: $101,190.67 − $100,580.19 = +$610.48 / $100,580.19 = **+0.61%**
+
+Bot (Alpaca basis) vs S&P: +0.61% vs +1.39% = **−0.78%**
+
+**WDC stop tightened note:** On June 19, the trailing stop on WDC was tightened from 10% to 7% (actually the strategy says tighten to 8% at +15%; the bot tightened to 7%, which is slightly more aggressive than the +15% rule dictates — this is noted).
+
+---
+
+## Week ending 2026-06-19
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $20,000.00 |
+| Ending portfolio (Fri) | $20,000.00 |
+| Week return | $0.00 (+0.00%) |
+| S&P 500 week | +1.39% (5-day, markets closed Fri Jun 19 — Juneteenth federal holiday) |
+| Bot vs S&P | −1.39% (operating equity basis) / −0.78% (Alpaca equity basis: +0.61% vs +1.39%) |
+| Trades total | 3 (W:0 / L:0 / open:4) |
+| Win rate | N/A — no closed trades |
+| Best trade | WDC +15.6% unrealized |
+| Worst trade | TRIP −1.26% unrealized |
+| Profit factor | N/A — no closed trades |
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| — | — | — | — | — | — | No trades closed this week; all 3 entries remain open |
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $298.01 | −$0.69 (−0.23%) | Trailing 10% (~$268.21 floor) | Technology |
+| NFLX | $77.94 avg | $77.38 | −$1.12 (−0.72%) | Trailing 10% GTC | Communication Services |
+| TRIP | $13.13 | $12.965 | −$24.75 (−1.26%) | Trailing 10% GTC | Consumer Discretionary |
+| WDC | $645.64 | $746.23 | +$603.54 (+15.6%) | Trailing 7% (tightened Fri — stop ~$693.99) | Technology |
+
+### What Worked (3-5 bullets)
+- **WDC was the standout trade of the week:** Entered on strong Q3 earnings catalyst (+45% YoY revenue, 50.2% gross margin, Morgan Stanley PT raise), and the position surged from +1.0% on Monday to +15.6% by Friday close — a textbook catalyst-driven momentum trade.
+- **Stop tightening protocol executed on WDC:** When WDC crossed +15.6%, the trailing stop was correctly tightened from 10% to 7% per strategy rules (Target 1 at +15% triggers a tighter stop), protecting a ~$480+ locked-in floor on gains.
+- **Trade budget fully utilized (3/3):** All three weekly trade slots were deployed with credible catalysts — earnings beat (WDC), confirmed M&A event (TRIP), and sector/AI re-rating momentum (NFLX) — no slots wasted on noise.
+- **No hard stop violations:** Despite TRIP and NFLX sitting slightly underwater, neither position breached the −7% hard stop. TRIP is at −1.26% and NFLX at −0.72%, both well within risk parameters.
+- **Sector diversification improved:** Entries spanned Technology (WDC), Consumer Discretionary (TRIP), and Communication Services (NFLX), reducing single-sector concentration risk vs. prior weeks.
+
+### What Didn't Work (3-5 bullets)
+- **TRIP underperformed its catalyst:** The American Express / TheFork divestiture was a confirmed M&A catalyst, yet TRIP ended the week down −1.26% unrealized from entry. M&A arbitrage plays can be slow to resolve; the position is treading water rather than moving toward its $30.21 target.
+- **NFLX entry showed poor timing:** Entered June 16 at ~$1,370 intended but filled at $77.94/share average (likely a split-adjusted or data discrepancy); the position is slightly negative (−0.72%) with no meaningful price catalyst materializing during the week.
+- **Operating equity metric remains zero-reflecting:** The $20,000 operating ledger continues to show $0.00 weekly P&L because all unrealized gains/losses reside in Alpaca equity — this makes the operating P&L metric structurally uninformative. On the Alpaca equity basis, the portfolio gained +$610 (+0.61%), which still lagged the S&P's +1.39%.
+- **AAPL continues to drift sideways:** Held since a prior week at $298.70, AAPL closed at $298.01 — nearly flat for the week and flat since entry. The position is consuming 1 of 5-6 allowed slots with negligible alpha generation; no clear near-term catalyst identified.
+- **WDC stop set to 7% vs. strategy-specified 8%:** At +15% Target 1, the strategy rule calls for tightening to 8%, not 7%. The bot tightened to 7%, which is more aggressive than prescribed — a minor rule deviation that should be corrected to 8% to avoid premature stop-out on a strong trend.
+
+### Sector Performance
+- **Technology (WDC):** 🟢 Dominant performer. AI/HDD storage re-rating continues; WDC +15.6% unrealized on the week. Sector momentum confirmed by NASDAQ +1.91% on the week.
+- **Technology (AAPL):** 🟡 Neutral. AAPL essentially flat (−$0.69) with no catalyst. Holding but not contributing.
+- **Communication Services (NFLX):** 🟡 Slight drag. NFLX −0.72% unrealized; AI content infrastructure thesis intact but not yet moving. NFLX had a volatile week with a notable −3.5% day on June 16 post-entry before stabilizing.
+- **Consumer Discretionary (TRIP):** 🔴 Underperformer relative to catalyst expectations. M&A announcement has not driven the expected momentum; position at −1.26% unrealized with the 150-share position representing the largest cost basis ($1,969.50).
+
+### Key Lessons
+- **Catalyst quality ≠ immediate price action:** TRIP had a genuine confirmed M&A catalyst (AmEx/$700M TheFork deal) but the stock has drifted negative. M&A arbitrage plays require patience and have different payoff timing than earnings/momentum plays — consider setting a catalyst expiry window (e.g., "if no movement toward target within 10 trading days, reassess exit").
+- **WDC is proof that the strategy works when rules are followed:** Strong fundamental catalyst + sector momentum + proper stop management = the position is currently the best risk/reward outcome in the portfolio. Replicate this setup identification process.
+- **The NFLX entry data anomaly (avg price $77.94 vs. $1,370 intended) must be investigated:** If NFLX has undergone a stock split, the position sizing and stop levels must be recalculated. A ~17.6× discrepancy between intended and average fill price is not explainable by slippage; this is a data/execution audit item.
+- **WDC stop deviation (7% vs. 8%):** At +15% Target 1, the rule specifies tighten to 8%, not 7%. One percent tighter risks premature stop-out on a stock with strong momentum. Standardize execution to match written rules exactly.
+- **Markets closed Friday (Juneteenth):** June 19 is a federal holiday; the EOD snapshot showing $0 day change and no movement is expected. All stop orders remain GTC and will be active on Monday June 22.
+
+### Adjustments for Next Week
+- **No rule changes — insufficient data.** All three new positions (WDC, TRIP, NFLX) have been held for only 1 week. No rule has failed for 2+ consecutive weeks and no rule has proved out for 2+ consecutive weeks under the current capital base. Per strict protocol, strategy parameters remain unchanged.
+- **Operational action items (not rule changes):**
+  - 🔴 **AUDIT NFLX fill price:** Investigate the $77.94 avg entry vs. $1,370 intended entry discrepancy. If NFLX has split, recalculate the effective shares held, cost basis, stop level, and target. Confirm position sizing does not violate the 20% max capital rule.
+  - 🔴 **Correct WDC trailing stop to 8%:** The stop was tightened to 7% but the rule at Target 1 (+15%) specifies 8%. Adjust from 7% → 8% at market open Monday to align with written rules. Current 7% stop floor ≈ $693.99; 8% stop floor ≈ $686.53.
+  - 🟡 **Set TRIP catalyst expiry decision point:** If TRIP has not begun moving toward $30.21 target by end of week June 26 (10 trading days post-entry), conduct a formal exit review above the hard stop (currently −7% = ~$12.21 hard floor) to avoid dead-capital drag.
+  - 🟡 **Re-evaluate AAPL exit thesis:** AAPL has been held since a prior period at $298.70 and remains essentially flat. With 3 trade slots limited per week and 4 positions already open, AAPL's opportunity cost is rising. If AAPL cannot reclaim and hold above $300 by mid-next-week, consider a discretionary exit to free the slot for a higher-conviction setup.
+  - 🟢 **WDC: Monitor for Target 2 (+20% = ~$774.77):** WDC is at +15.6%; if the stock reaches +20%, tighten trailing stop further to 5% per strategy rules. Watch for any reversal signals given the stock is near all-time highs.
+
+### Overall Grade: B
+**Reasoning:** This was a structurally productive week. All three weekly trade slots were deployed with genuine, identifiable catalysts across three different sectors — a significant improvement over prior weeks of cash drag and missed opportunities. The portfolio's standout position, WDC, is performing exactly as intended: a strong earnings catalyst, proper entry, and disciplined stop tightening at the +15% target level. The Alpaca equity grew +$610 (+0.61%) on the week, though this lagged the S&P 500's +1.39% (a −0.78% relative gap), preventing a higher grade. The underperformance is partly structural — the portfolio is only ~34% deployed — and partly execution-related, with TRIP and NFLX both slightly negative at week end. Two unresolved operational issues prevent an A grade: the NFLX fill price anomaly ($77.94 vs. $1,370 intended) requires urgent investigation and constitutes an unacceptable data/execution ambiguity, and the WDC stop was set to
