@@ -734,3 +734,26 @@ Every end of day:
 ### 2026-06-19 17:58:49 — STOP TIGHTENED: WDC
 - Position at +15.6%
 - Trailing 10% → 7%
+
+### 2026-06-19 — EOD Snapshot
+- **Alpaca equity (reported)**: $101190.67
+- **Operating equity**: $20000
+- **Cash**: $94315.77
+- **Positions value**: $6874.9 (34.4% deployed)
+- **Day P&L**: $0 (0.0%)
+- **Total P&L (desde inicio)**: $17000 (566.67%)
+- **Peak equity**: $100349.23
+- **Drawdown from peak**: 80.07%
+- **Trades today**: 0
+0
+- **Trades this week**: 3 / 3
+- **Daytrade count**: 0 / 3
+
+**Open positions:**
+
+| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |
+|--------|--------|-------|---------|-----------------|---------|
+| AAPL | 1 | 298.7$ | 298.01$ | -0.69$ (-0.2%) | 0% |
+| NFLX | 2 | 77.94$ | 77.38$ | -1.12$ (-0.7%) | 0% |
+| TRIP | 150 | 13.13$ | 12.965$ | -24.75$ (-1.3%) | 0% |
+| WDC | 6 | 645.64$ | 746.23$ | 603.54$ (15.6%) | 0% |
