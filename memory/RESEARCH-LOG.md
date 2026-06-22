@@ -2636,3 +2636,84 @@ HOLD — Market CLOSED (Juneteenth) + weekly trade limit 3/3 exhausted. No new p
   ]
 }
 ```
+
+I'll search for the required market data simultaneously.Now I have all the data needed. Let me synthesize:
+
+**Key findings:**
+- SPY 200-day MA: **$745.02** (most recent, from Investing.com). SPY current price: **$745.89** → ABOVE MA200 ✅
+- VIX as of June 16: **16.41**; CBOE prev close June 19: **16.78**. Today's estimate ~**17.0** (up ~+2.32% today per Yahoo). → BELOW 25 ✅ → **REGIME = ON**
+- **Trades this week: 3/3 already used** (from trade log). Max 3 trades/week = HARD LIMIT HIT → No new trades eligible. Decision: **HOLD**
+- **Open positions: 4/5** — slot available but weekly trade quota exhausted.
+- FOMC held rates steady at 3.50–3.75%, but dot plots leaned toward potential hikes, with 9 officials projecting hikes in 2026.
+- Nasdaq-100 and S&P 500 fell today after quarterly S&P 500 index rebalance took effect; oil prices fell as U.S.-Iran diplomacy continued.
+- Market leadership is broadening in June 2026, with the Russell 2000 posting a 5.39% monthly gain as capital flows into small caps and cyclical value plays.
+- YTD sector leaders: XLK (Technology) +~32-33%, XLE (Energy) +~26-27%.
+- As of June 19: XLY +1.45%, XLI +0.73%, XLK flat, XLF -0.89%, XLV -0.87%, XLP -0.45%.
+- Top performing sectors in June 2026: Basic Materials, Communication Services, and Energy.
+- NFLX position: current at $73.76, entry $77.94 → **-5.36% unrealized loss**, approaching -7% hard stop zone. Monitor closely.
+
+---
+
+## 2026-06-22 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $101177.09
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $94315.77
+- Positions value: $6861.32
+- Capital disponible: $13138.68
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $745.89 (MA200: $745.02) — ABOVE
+- VIX: ~17.00 — LOW
+- Regime: **ON**
+- Reason: SPY marginally above 200-DMA and VIX well below 25 threshold; however weekly trade quota of 3/3 is fully exhausted — no new entries permitted today.
+
+### Market Context
+- Top catalysts today:
+  - **S&P 500 / Nasdaq-100 quarterly rebalance took effect** — index membership changes causing rotational flows and intraday volatility
+  - **US–Iran diplomatic talks ongoing** — oil prices falling on partial progress; airlines and energy names sensitive to developments
+  - **Fed rate-hike risk elevated** — FOMC June meeting (Warsh) held rates at 3.50-3.75% but dot plots lean hawkish with 9 of 18 officials projecting hikes in 2026; market re-pricing risk premium
+  - **SpaceX bond sale / $100B+ cash pile disclosure** — aerospace/space sector attention; pre-IPO news flow
+  - **Micron Technology (MU) earnings next Wednesday** — AI memory sector on watch; elevated expectations after stock at record highs
+- Sector leaders (weekly/intraday June 19):
+  - XLY (Consumer Discretionary): +1.45%
+  - XLI (Industrials): +0.73%
+  - XLK (Technology, YTD): ~+33% — still long-term leader but under short-term pressure
+  - XLE (Energy, YTD): ~+27% — geopolitical tailwind
+  - XLF: -0.89% | XLV: -0.87% | XLP: -0.45% (lagging today)
+- Economic events:
+  - No major macro data scheduled for June 22
+  - CCL (Carnival Corp) reports earnings BMO today — watch consumer/travel sentiment
+  - Iran peace deal negotiations — potential oil price catalyst
+  - 10-year Treasury yields elevated (~4.5%+), 2-year at 4.18-4.21%; rate pressure on growth stocks
+
+### Trade Candidates (only if Regime ON)
+> ⛔ **WEEKLY TRADE LIMIT REACHED: 3/3 trades used this week.** No new entries permitted regardless of regime status. Candidates suppressed per strategy rules.
+
+### Risk Factors Today
+- **NFLX position alert**: at -5.36% unrealized loss ($73.76 vs. entry $77.94); approaching the -7% hard stop level (~$72.48). Monitor intraday for hard stop trigger.
+- **TRIP position**: -2.6% unrealized loss; qty_available = 0 (possible open order or restriction — verify status).
+- **NFLX qty_available = 0**: shares not available for sale — confirm no pending orders blocking exit management.
+- Weekly trade cap (3/3) blocks any new positions even with open slot (4/5).
+- SPY only $0.87 above MA200 — extremely thin margin; any negative catalyst could flip regime to OFF.
+- Hawkish FOMC dot plots (potential 2026 rate hikes) compress growth/tech multiples; QQQ underperforming SPY (-0.36% vs -0.11%).
+- US-Iran talks "bearing little fruit" per Reuters — oil risk premium uncertain direction.
+- S&P 500 index rebalance flows may create unusual intraday volatility in individual names.
+
+### Decision
+**HOLD** — Regime is ON but weekly trade quota of 3/3 is fully exhausted. Zero new trades permitted. Monitor NFLX hard stop at $72.48 and TRIP position availability.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-22",
+  "regime": "ON",
+  "decision": "HOLD",
+  "reason": "Weekly trade quota exhausted (3/3 trades used). No new entries permitted regardless of regime or opportunity quality. Monitor NFLX hard stop at $72.48.",
+  "candidates": []
+}
+```
