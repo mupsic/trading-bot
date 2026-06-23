@@ -2717,3 +2717,98 @@ I'll search for the required market data simultaneously.Now I have all the data 
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.**Key data gathered:**
+
+- SPY 200-day SMA: **$682.63** (most recent, TipRanks June 2026). SPY live quote: **$733.87** → ABOVE MA200 ✅
+- VIX current value: **17.29** → BELOW 25 ✅ → **REGIME = ON**
+- FOMC held rates at 3.50–3.75%, but dot plots lean toward potential hikes; 9 officials projected hikes.
+- Accenture (ACN) plunged ~18% after Q3 earnings; RSI at 20.86, forward P/E below 10.
+- Micron reports Q3 FY2026 earnings on June 24; analysts expect EPS near $20 and revenue of $34.7B.
+- Iran nuclear deal disruption and yield creep (2-year at 4.21% 52-week high) are potential market-moving catalysts.
+- YTD sector leaders: XLK (Technology) +~32–33%; XLE (Energy) +~26–27%.
+- Market leadership is broadening in June 2026, with Russell 2000 posting an impressive 5.39% monthly gain.
+- Recent S&P 500 biggest gainers: SMCI +15.66%, COHR +9.22%.
+
+**Candidate analysis:**
+- SPY is down -1.41% today (live quote $733.87 vs prev $744.39) — broad market is under selling pressure from FOMC hawkishness + Iran geopolitics + Micron pre-event risk.
+- NFLX already in portfolio at -5.8% unrealized → avoid adding.
+- ACN: oversold post-earnings (RSI 20.86, fwd P/E <10) — potential mean-reversion bounce candidate. Entry ~$215, shares=18 → $3,870 ≤ $4,000 ✅. BUT: already sold off sharply, uncertain bottom; no upcoming catalyst to lock gains within swing timeframe.
+- SMCI: +15.66% already moved; chasing risk.
+- Broader market is -1.41% on SPY, -2.91% on QQQ today — significant red day. Max 3 trades/week constraint: 0 used this week but adding into a broad sell-off on a day with geopolitical + Fed hawkishness risk + Micron earnings tomorrow warrants caution.
+- Decision: **HOLD** — regime is ON but today's macro headwinds (FOMC hawkish lean, Iran tensions, QQQ -2.9%, SPY breaking below recent levels, Micron event risk tomorrow) mean no clean, low-risk entry. The 3 open positions already underwater. Preserve capital.
+
+---
+
+## 2026-06-23 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,560.01
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $98,287.53
+- Positions value: $2,272.45
+- Capital disponible: $17,727.55
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $733.87 (MA200: $682.63) — ABOVE
+- VIX: 17.29 — LOW
+- Regime: **ON**
+- Reason: SPY is +7.5% above its 200-day MA ($682.63) and VIX at 17.29 is well below the 25 threshold; however, SPY is down -1.41% and QQQ down -2.91% intraday — broad market under acute selling pressure.
+
+### Market Context
+- Top catalysts today:
+  - **FOMC hawkish lean**: Fed Chair Warsh held rates at 3.50–3.75% but dot plots signal potential hikes in 2026; 9 officials projected hikes, with 6 projecting two or more 25bp hikes — risk-off pressure on growth stocks.
+  - **Iran nuclear deal uncertainty**: Trump insists Iran agreed to inspections; disruption risk to U.S./Iran MOU is a live market-moving overhang causing geopolitical premium in yields and oil.
+  - **ACN post-earnings crash**: Accenture plunged ~18% after Q3 earnings despite an EPS beat; signals consulting/IT services sector stress and broad tech sentiment drag.
+  - **Micron (MU) earnings tomorrow (June 24)**: Analysts expect EPS ~$20 and revenue ~$34.7B — pre-event risk keeping tech/semiconductor sector on edge today; elevated volatility risk in chip complex.
+  - **FDX & GIS earnings after close today**: FedEx (EPS est. $6.02) and General Mills (EPS est. $0.81) reporting AMC — logistics and staples sector event risk.
+- Sector leaders (YTD as of mid-June 2026):
+  - XLK (Technology): +~32–33% — YTD leader, but under pressure today (-2.9% via QQQ proxy)
+  - XLE (Energy): +~26–27% — strong on geopolitical tensions/oil
+  - XLF (Financials): +0.59% today — relative outperformer in rotation
+  - XLV (Healthcare): +0.88% today — defensive bid
+  - XLI (Industrials): +0.74% today — CAT-driven, Dow outperforming
+  - XLY (Consumer Discretionary): -1.70% today — weak
+  - XLP (Consumer Staples): -0.66% today — flat/weak
+- Economic events:
+  - FOMC minutes/Warsh commentary digest ongoing
+  - Monthly PCE Prices report due next week
+  - 2-year Treasury yield at 52-week high (~4.21%)
+  - Micron Q3 FY2026 earnings: June 24 (tomorrow)
+  - FDX earnings AMC today; GIS earnings AMC today
+
+### Trade Candidates (only if Regime ON)
+> ⚠️ **No candidates recommended today.** Regime is ON technically, but multiple headwinds block clean entries:
+> 1. SPY -1.41% / QQQ -2.91% — broad market in acute sell-off; buying into weakness violates swing edge criteria.
+> 2. Micron earnings tomorrow create sector-wide volatility risk for any tech/semis position opened today.
+> 3. Iran geopolitical uncertainty elevates macro tail risk intraday.
+> 4. Three existing positions (AAPL, NFLX, TRIP) are all underwater — capital preservation is priority.
+> 5. No clean breakout candidates with confirmed specific catalyst trade-able today without excess event risk within 7 days.
+
+_→ HOLD: No new trades today. Monitor ACN mean-reversion setup (RSI 20.86, fwd P/E <10) for potential entry on confirmed stabilization post-bounce, and watch for post-Micron sector reaction tomorrow._
+
+### Risk Factors Today
+- **FOMC hawkish pivot**: Rate-hike dot plot lean compresses tech multiples; QQQ already -2.91%
+- **Micron earnings tomorrow**: Semiconductor complex at risk of whipsaw in both directions — do NOT open tech positions today
+- **Iran deal disruption risk**: Any breakdown in U.S./Iran MOU could spike oil/yields suddenly
+- **2-yr Treasury 52-week high (4.21%)**: Yield spike negative for growth/tech valuations
+- **Broad market sell-off day**: SPY -1.41%, QQQ -2.91% — momentum is downward intraday
+- **Existing positions all underwater**: NFLX -5.8%, TRIP -7.2% (approaching hard stop territory), AAPL -0.02% — stop management is today's priority, not new entries
+- **TRIP approaching hard stop (-7%)**: Currently at -7.25% unrealized — monitor for stop trigger
+
+### Decision
+**HOLD** — Regime is ON but no edge for new entries today. Broad market in sell-off, Micron event risk tomorrow, FOMC hawkish overhang, Iran geopolitics. Preserve capital. Monitor TRIP stop (-7% hard rule already breached at -7.25% — flag for immediate review/exit).
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-23",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": [],
+  "notes": "Regime ON (SPY $733.87 > MA200 $682.63; VIX 17.29 < 25) but no trades today. Broad market sell-off (SPY -1.41%, QQQ -2.91%), FOMC hawkish lean, Micron earnings tomorrow (event risk in tech), Iran geopolitical uncertainty. TRIP position at -7.25% unrealized — hard stop rule triggered, flagged for immediate exit review. No clean catalyst+momentum setup available without excess event risk within 7-day window."
+}
+```
