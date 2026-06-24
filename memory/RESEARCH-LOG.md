@@ -2812,3 +2812,74 @@ _→ HOLD: No new trades today. Monitor ACN mean-reversion setup (RSI 20.86, fwd
   "notes": "Regime ON (SPY $733.87 > MA200 $682.63; VIX 17.29 < 25) but no trades today. Broad market sell-off (SPY -1.41%, QQQ -2.91%), FOMC hawkish lean, Micron earnings tomorrow (event risk in tech), Iran geopolitical uncertainty. TRIP position at -7.25% unrealized — hard stop rule triggered, flagged for immediate exit review. No clean catalyst+momentum setup available without excess event risk within 7-day window."
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me synthesize:
+
+**Key findings:**
+- SPY 200-day MA: **$745.24** (most recent, from Investing.com as of June 23). SPY current price is **$733.58** → BELOW MA200
+- VIX current value: **17.29** (risen ~5.36% in past 24 hours); CBOE data as of 10:08 AM 6/24/2026 shows prev. close 19.49
+- **Regime Gate**: SPY ($733.58) < MA200 ($745.24) → **REGIME = OFF**
+
+---
+
+## 2026-06-24 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,581.10
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $98,287.51
+- Positions value: $2,293.59
+- Capital disponible: $17,706.41
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $733.58 (MA200: $745.24) — **BELOW**
+- VIX: 17.29 — **LOW** (< 25 threshold, but irrelevant — SPY gate fails)
+- Regime: **OFF**
+- Reason: SPY ($733.58) is trading -$11.66 (-1.57%) below its 200-day MA of $745.24; regime gate requires SPY > MA200 for new trades.
+
+### Market Context
+- **Top catalysts today:**
+  - Micron Technology (MU) reports Q3 FY26 earnings on June 24 after the bell, with investors watching for fresh clues on AI-driven memory demand. Analysts expect ~$35B in sales and adj. EPS of ~$20.57, vs. $1.91 in Q3 2025.
+  - May new home sales, Fed bank stress test results are also on the calendar for June 24.
+  - Treasury Secretary Bessent stated Wednesday he is confident the U.S. economy can return to 3% growth as the Iran war nears an end, noting "the underlying economy has been strong."
+  - South Korea's KOSPI plummeted 9.99% the prior session, its steepest drop in more than three months, as overseas investors dumped chip stocks after regulatory signals suggested the sector's rally had become overheated.
+  - BofA Global Research and Deutsche Bank expect the U.S. Federal Reserve to raise interest rates in 2026 under new Chair Kevin Warsh, departing from prior forecasts of steady rates.
+
+- **Sector leaders (as of June 23, intraday):**
+  - XLV (Health Care): +1.41% | XLP (Consumer Staples): +1.87% | XLF (Financials): +0.34% | XLY (Consumer Discretionary): -1.03% | XLI (Industrials): -2.01%
+  - YTD sector leaders: XLK (Technology) +~32–33% and XLE (Energy) +~26–27% (strong on geopolitical tensions and oil prices).
+  - **Defensive rotation active today**: XLP and XLV leading; tech/semis under pressure.
+
+- **Economic events:**
+  - May New Home Sales (today)
+  - Fed Bank Stress Test Results (today)
+  - June 25: May PCE prices, Q1 GDP final estimate, May durable orders, Darden Restaurants (DRI) earnings.
+  - June 26: University of Michigan final June consumer sentiment.
+
+### Trade Candidates (only if Regime ON)
+> ⛔ REGIME IS OFF — No new trade candidates generated.
+
+### Risk Factors Today
+- SPY is attempting to recover from a tech-led pullback, with Micron's after-bell earnings as the next major AI sentiment test.
+- The AI-driven rally hit a speed bump amid concerns that tech companies are committing unprecedented capital to AI infrastructure without clear visibility into timing and magnitude of returns.
+- **NFLX position at -6.7%** (approaching hard stop at -7%): monitor closely intraday for stop trigger.
+- **TRIP position at -5.6%** unrealized: elevated drawdown risk in risk-off tape.
+- The 2Y Treasury yield hit its highest point since Feb. 2025 on rate hike reports, adding headwinds to growth/tech names.
+- SPY RSI at 32.3 (oversold territory per Investing.com) — bounce possible but regime gate remains OFF until SPY reclaims MA200.
+- MU earnings tonight: binary event; could spike or crash tech sentiment broadly, affecting AAPL and existing positions.
+
+### Decision
+**HOLD** — Regime is OFF (SPY below MA200). No new positions opened. Monitor NFLX for hard stop (-7% = $72.49 on avg entry $77.94).
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-24",
+  "regime": "OFF",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
