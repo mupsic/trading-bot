@@ -802,3 +802,10 @@ Every end of day:
 | AAPL | 1 | 298.7$ | 294.8088$ | -3.8912$ (-1.3%) | -0.7% |
 | NFLX | 2 | 77.94$ | 72.89$ | -10.1$ (-6.5%) | 0% |
 | TRIP | 150 | 13.13$ | 12.39$ | -111$ (-5.6%) | 0.2% |
+
+### 2026-06-24 17:54:35 — POSITION CLOSED (Hard Stop -7%)
+- **Ticker**: NFLX
+- **Reason**: unrealized_plpc reached -7.53%
+- **Exit price**: ~$72.07 (market order)
+- **Realized P&L**: $-11.74
+- **Hold**: from entry @ $77.94
