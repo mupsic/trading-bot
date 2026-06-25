@@ -2883,3 +2883,115 @@ I'll gather the required market data simultaneously.Now I have all the data need
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me compile the research log.
+
+**Key findings:**
+- SPY 200-day SMA: **$682.63** (TipRanks, creating a Buy signal). SPY current price per Finnhub: $733.24 → **ABOVE** MA200.
+- VIX current: **~18.24** (down -6.41% on the day). → **LOW** (< 25).
+- Micron crushed Wall Street expectations in its fiscal Q3 results, driven by strong demand for memory chips used in AI.
+- Home Depot surged on the bipartisan passage of the landmark 21st Century ROAD to Housing Act, containing provisions aimed at cutting construction red tape and expanding housing supply.
+- Qualcomm at its Investor Day projected data center chip sales exceeding $15B by 2029; Meta will adopt its Dragonfly C1000 CPU and Microsoft will deploy its HBC chips — shares surged over 12% in after-hours.
+- FOMC held rates steady at 3.50–3.75% but dot plots leaned toward potential hikes in 2026.
+- PCE price index showed inflation at its highest rate since April 2023.
+- XLK is the only sector in the leading quadrant on the weekly RRG; XLE remains in the weakening quadrant.
+- On the daily RRG, XLK is showing renewed strength, curling back up toward leading.
+- The S&P 500 tech sector was up 27% over the last three months — the only sector to surpass overall S&P 500 growth.
+- Today's economic events: Continuing Claims, Durable Goods, EIA Natural Gas, Q2 GDP Third Estimate, Initial Claims, PCE Prices, Personal Income, Personal Spending.
+
+**Candidate analysis:**
+- **MU**: Micron Q3 data center revenue grew over sevenfold YoY; shares jumped over 14% post-market. MU ~$155 premarket → 25 shares × $155 = $3,875 ≤ $4,000 ✅. Earnings already reported (no upcoming event risk). Catalyst: confirmed blowout Q3 earnings beat.
+- **QCOM**: At its Investor Day, Qualcomm projected data center chip sales to exceed $15B by 2029 and announced key partnerships with Meta and Microsoft; shares surged over 12% after hours. QCOM ~$200 premarket → 19 shares × $200 = $3,800 ≤ $4,000 ✅. No earnings within 7 days.
+
+---
+
+## 2026-06-25 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100671.93
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $98431.63
+- Positions value: $2240.30
+- Capital disponible: $17759.70
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $733.24 (MA200: $682.63) — ABOVE
+- VIX: 18.24 — LOW
+- Regime: ON
+- Reason: SPY $733.24 is +7.4% above its 200-day MA of $682.63, and VIX at 18.24 is well below the 25 threshold; both regime gates pass.
+
+### Market Context
+- Top catalysts today:
+  - **Micron (MU) blowout Q3 earnings**: Crushed Wall Street expectations; data center revenue grew over sevenfold YoY; shares +14–16% pre-market on strong AI memory demand
+  - **Qualcomm (QCOM) Investor Day surge**: Projected $15B+ data center chip sales by 2029; Meta and Microsoft partnership announcements drove +12% AH move
+  - **Apple price hikes on MacBook/iPad**: Memory supply crunch forces pricing action; signals ongoing semiconductor tightness
+  - **PCE inflation at highest since April 2023**: May PCE data released this morning; hawkish macro concern
+  - **Home Depot +5.6%**: Bipartisan passage of 21st Century ROAD to Housing Act — major housing reform catalyst
+- Sector leaders (week ending 6/22):
+  - XLK (Technology): +~32–33% YTD — **only sector in leading quadrant (weekly RRG)**; renewed daily strength
+  - XLV (Health Care): +1.41% today
+  - XLP (Consumer Staples): +1.87% today
+  - XLF (Financials): +0.34% today
+  - XLY (Consumer Discretionary): -1.03% today
+  - XLE (Energy): weakening quadrant, near lagging
+- Economic events:
+  - **May PCE Price Index** (this morning — inflation at highest since Apr 2023)
+  - Q2 GDP Third Estimate
+  - May Durable Goods Orders
+  - Initial & Continuing Jobless Claims
+  - EIA Natural Gas Inventories
+  - Personal Income & Personal Spending
+
+### Trade Candidates (only if Regime ON)
+1. **MU** — Micron Q3 blowout earnings beat (EPS and revenue crushed estimates; data center revenue +700% YoY; AI memory supply shortage extending beyond 2027); entry $156.00, stop $145.08 (-7%), target $177.84 (+14%), shares=25, R:R 1:2
+2. **QCOM** — Qualcomm Investor Day catalyst: $15B data center chip sales projection by 2029, Meta Dragonfly C1000 CPU adoption + Microsoft HBC chip deployment announced; entry $200.00, stop $186.00 (-7%), target $228.00 (+14%), shares=19, R:R 1:2
+
+### Risk Factors Today
+- **PCE inflation at highest since April 2023** — hawkish Fed reaction risk; rate-hike dot-plot skew from FOMC already in play
+- **FOMC lean toward hikes** (9 of 19 officials projected hikes in 2026) — compresses multiple on high-growth tech
+- **AAPL open position down -2.8%** — close to -7% hard stop; watch for further pressure from price hike news
+- **TRIP qty_available = 0** — shares are currently locked (likely pending corporate action or settlement); unable to exit if needed
+- **VIX spiked to 19.49 Tuesday** before receding; tech volatility still elevated after Tuesday's chip sell-off
+- **Post-earnings gap risk on MU** — entry into a gapped-up stock carries elevated reversal risk if broader market turns on PCE data
+- **Max 3 trades/week rule** — with 2 candidates today, leaves only 1 slot for rest of week
+
+### Decision
+TRADE [MU, QCOM]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-25",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "MU",
+      "entry_price": 156.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 25,
+      "position_cost": 3900.00,
+      "target_price": 177.84,
+      "catalyst": "Micron Q3 FY2026 blowout earnings beat: data center revenue grew over 7x YoY, AI memory demand drove record results, supply shortage expected to persist beyond 2027; stock +14-16% pre-market",
+      "sector": "Technology (Semiconductors)",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "QCOM",
+      "entry_price": 200.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 19,
+      "position_cost": 3800.00,
+      "target_price": 228.00,
+      "catalyst": "Qualcomm Investor Day: projected $15B+ data center chip sales by 2029, confirmed Meta Dragonfly C1000 CPU adoption and Microsoft HBC chip deployment, marking official entry into AI data center market; shares +12% AH",
+      "sector": "Technology (Semiconductors)",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
