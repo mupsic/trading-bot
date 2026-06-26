@@ -851,3 +851,29 @@ Every end of day:
 |--------|--------|-------|---------|-----------------|---------|
 | AAPL | 1 | 298.7$ | 275.14$ | -23.56$ (-7.9%) | -6.1% |
 | TRIP | 150 | 13.13$ | 12.8$ | -49.5$ (-2.5%) | -1.4% |
+
+### 2026-06-26 — Trade Entry: CCL
+- **Ticker**: CCL
+- **Side**: BUY
+- **Shares**: 145
+- **Entry price**: $27.5 (intended)
+- **Position cost**: $3987.5
+- **Stop**: trailing 10% GTC (order_id: ca305395-be75-45ea-9562-bcf2ad279d3c)
+- **Target**: $31.35
+- **Catalyst**: U.S.-Iran MOU reopens Strait of Hormuz, oil prices falling — direct fuel cost tailwind for Carnival cruise operations; sector breakout
+- **Sector**: Consumer Discretionary
+- **Buy order_id**: e22391ce-50f8-4ce6-80e3-4dbca37cfb7d
+- **Capital used after**: $6288.04 / $20000
+
+### 2026-06-26 — Trade Entry: MU
+- **Ticker**: MU
+- **Side**: BUY
+- **Shares**: 3
+- **Entry price**: $1140.0 (intended)
+- **Position cost**: $3420.0
+- **Stop**: trailing 10% GTC (order_id: 53a065e8-cb1d-4e7b-829d-395d4296a14d)
+- **Target**: $1299.6
+- **Catalyst**: Micron blowout Q3 earnings beat this week — AI/HBM memory demand driving revenue acceleration; semiconductor sector post-earnings momentum
+- **Sector**: Technology
+- **Buy order_id**: 21808cc5-db02-4863-9b01-9a390729083a
+- **Capital used after**: $9708.04 / $20000
