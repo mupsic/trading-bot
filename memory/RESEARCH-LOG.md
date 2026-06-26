@@ -2995,3 +2995,132 @@ TRADE [MU, QCOM]
   ]
 }
 ```
+
+I'll gather all the required market data simultaneously.**Key data gathered:**
+
+- SPY 200-day SMA: **$682.63** (TipRanks, most recent). SPY current price $734.30 → **ABOVE MA200**.
+- VIX: **18.68** as of June 26 intraday — **LOW** (well under 25 threshold).
+- FOMC held rates at 3.50–3.75% but dot plots lean toward potential hikes in 2026.
+- Bio-Techne Corp (+19.47%) surging after Merck announced an $11.3B acquisition deal.
+- Acuity Inc (+21.4%) and BlackBerry Ltd (+20.62%) were major movers on earnings beats.
+- TG Therapeutics rising on upbeat BRIUMVI clinical updates; Carnival shares rising as cruise stocks benefit from falling oil after a U.S.-Iran deal to reopen the Strait of Hormuz.
+- Sector leaders YTD: XLK Technology ~+32-33%, XLE Energy ~+26-27%.
+- Russell 2000 surged 5.39%, highlighting rotation into cyclicals, financials, and small-caps.
+- XLV Health Care +2.18%, XLI Industrials +2.99%, XLF Financials +1.68% on the day.
+- Potential market-moving catalyst: any disruptions in the U.S./Iran MOU and a creep higher in yields.
+
+**AAPL position note:** AAPL entered at $298.70, currently $276.12, unrealized P&L = -7.56% — **hard stop at -7% already breached**. This requires an immediate flag in the decision. AAPL must be exited per rules (hard stop = -7%).
+
+---
+
+## 2026-06-26 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,612.75
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $98,431.63
+- Positions value: $2,181.12
+- Capital disponible: $17,818.88
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $734.30 (MA200: $682.63) — **ABOVE**
+- VIX: 18.68 — **LOW**
+- Regime: **ON**
+- Reason: SPY is +7.6% above its 200-day MA and VIX well below the 25 threshold — risk-on environment confirmed.
+
+### Market Context
+- Top catalysts today:
+  - 🔴 **AAPL HARD STOP TRIGGERED**: AAPL at $276.12 vs entry $298.70 = -7.56% unrealized loss — **exceeds -7% hard stop rule; immediate exit required**
+  - 🟢 **Merck/Bio-Techne M&A**: Merck announced $11.3B acquisition of Bio-Techne (TECH), boosting Healthcare sector broadly
+  - 🟢 **U.S.-Iran MOU / Strait of Hormuz**: Deal to reopen shipping lane sending oil lower; cruise stocks (CCL, RCL) and airlines benefiting
+  - 🟡 **FOMC aftermath**: Fed held at 3.50–3.75% but dot plots lean hawkish — 9 officials see potential 2026 hikes; yields elevated (10-yr ~4.39%)
+  - 🟡 **Micron blowout earnings (MU)**: Reported strong beat; semiconductors/AI names getting a post-earnings bid
+  - 🟡 **PCE inflation**: June 25 PCE release showed inflation at highest since April 2023 — adds hawkish pressure
+
+- Sector leaders (intraday / weekly):
+  - XLI Industrials: +2.99% today
+  - XLV Health Care: +2.18% today (Merck/Bio-Techne M&A catalyst)
+  - XLF Financials: +1.68% today
+  - XLK Technology: ~+32% YTD (strongest annual sector)
+  - XLE Energy: ~+27% YTD (Iran deal/oil dynamic in focus today)
+  - XLP Consumer Staples: +0.18% today (laggard)
+
+- Economic events:
+  - PCE Price Index (released Jun 25) — hot reading, hawkish implications
+  - FOMC minutes/dot plots digest ongoing
+  - U.S.-Iran MOU monitoring (Strait of Hormuz)
+  - No major U.S. data releases scheduled for Jun 26
+
+### ⚠️ OPEN POSITION ALERT — HARD STOP BREACH
+| Ticker | Entry | Current | Unrealized % | Rule | Action |
+|--------|-------|---------|--------------|------|--------|
+| **AAPL** | $298.70 | $276.12 | **-7.56%** | Hard Stop = -7% | **SELL IMMEDIATELY** |
+| TRIP | $13.13 | $12.70 | -3.28% | Trailing stop intact | HOLD |
+
+### Trade Candidates (Regime ON — post AAPL exit)
+
+**After AAPL exit, freed capital ≈ $276.12 (1 share). Capital disponible effectively ~$18,095.**
+
+1. **CCL** — U.S.-Iran Strait of Hormuz deal sending oil prices lower; Carnival Corp (market cap ~$25B) directly benefits from fuel cost reduction; cruise sector in confirmed uptrend; no earnings for ~60 days. Entry $27.50, stop $25.58 (-7%), target $31.35 (+14%), shares=145, position cost=$3,987.50, R:R 1:2
+
+2. **MU** — Micron Technology blowout earnings beat this week ($1,145 price level), AI/HBM memory demand narrative intact; semiconductor sector gaining post-results; no earnings for ~90 days. Entry $1,140.00, stop $1,060.20 (-7%), target $1,299.60 (+14%), shares=3, position cost=$3,420.00, R:R 1:2
+
+> ⚠️ Note: MU at ~$1,140 → 3 shares = $3,420 ≤ $4,000 ✅ | (positions_value $1,905 TRIP + $3,420) = $5,325 << $98,431 cash ✅
+
+### Risk Factors Today
+- **AAPL hard stop breach (-7.56%)**: Must execute market sell at open — no override
+- **Hawkish Fed**: FOMC dot plots show 9 officials leaning toward rate hikes in 2026; compresses tech multiples
+- **TRIP (qty_available=0)**: Position shows 0 shares available — possible pending order or corporate action; verify before any action
+- **PCE inflation hot**: Highest since April 2023 — risk-off potential if yields spike further
+- **Iran MOU fragility**: Any disruption to Strait of Hormuz deal could reverse oil/energy moves rapidly
+- **AAPL price action**: Apple and Microsoft announced price increases on iPhone/Xbox (Jun 25 headline) — structural demand risk
+
+### Decision
+**SELL AAPL** (hard stop -7.56% breached — mandatory exit, no discretion) + **TRADE [CCL, MU]** (Regime ON, specific catalysts, sizing within rules)
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-26",
+  "regime": "ON",
+  "decision": "TRADE",
+  "mandatory_exits": [
+    {
+      "symbol": "AAPL",
+      "action": "SELL_MARKET",
+      "qty": 1,
+      "reason": "Hard stop -7% breached: unrealized_plpc = -7.56%",
+      "priority": "IMMEDIATE"
+    }
+  ],
+  "candidates": [
+    {
+      "symbol": "CCL",
+      "entry_price": 27.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 145,
+      "position_cost": 3987.50,
+      "target_price": 31.35,
+      "catalyst": "U.S.-Iran MOU reopens Strait of Hormuz, oil prices falling — direct fuel cost tailwind for Carnival cruise operations; sector breakout",
+      "sector": "Consumer Discretionary",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "MU",
+      "entry_price": 1140.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 3,
+      "position_cost": 3420.00,
+      "target_price": 1299.60,
+      "catalyst": "Micron blowout Q3 earnings beat this week — AI/HBM memory demand driving revenue acceleration; semiconductor sector post-earnings momentum",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
