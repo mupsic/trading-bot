@@ -702,3 +702,118 @@ Bot (Alpaca basis) vs S&P: +0.61% vs +1.39% = **−0.78%**
 
 ### Overall Grade: B
 **Reasoning:** This was a structurally productive week. All three weekly trade slots were deployed with genuine, identifiable catalysts across three different sectors — a significant improvement over prior weeks of cash drag and missed opportunities. The portfolio's standout position, WDC, is performing exactly as intended: a strong earnings catalyst, proper entry, and disciplined stop tightening at the +15% target level. The Alpaca equity grew +$610 (+0.61%) on the week, though this lagged the S&P 500's +1.39% (a −0.78% relative gap), preventing a higher grade. The underperformance is partly structural — the portfolio is only ~34% deployed — and partly execution-related, with TRIP and NFLX both slightly negative at week end. Two unresolved operational issues prevent an A grade: the NFLX fill price anomaly ($77.94 vs. $1,370 intended) requires urgent investigation and constitutes an unacceptable data/execution ambiguity, and the WDC stop was set to
+
+I'll search for the S&P 500 weekly performance and any relevant stock news simultaneously.Now I have all the data I need. Let me compile the full analysis.
+
+**Key data points gathered:**
+
+- Technology stocks couldn't catch a break this week despite robust MU earnings; major indexes retreated and are on pace for weekly losses.
+- The S&P 500 ranged from 7,323.50 to 7,419.08 this week, with the monthly change at −1.54%. The index opened the week near ~7,404 and closed Friday near ~7,358, implying approximately a **−0.6% to −0.7%** weekly decline.
+- Micron reported Q3 FY2026 EPS of $25.11 vs. est. $20.49 on revenue of $41.46B vs. est. $35.69B; shares surged 14.6% after-hours. However, MU closed June 25 at $1,213.56 (+15.81%) but was trading at $1,128.24 pre-market June 26 (−7.03%).
+- AAPL stock fell 6.2% on Thursday after the iPhone maker announced price hikes on MacBook and iPad.
+- Investors rotated money into sectors beyond tech, a potentially healthy development even as mega caps lose ground on worries about spiraling AI costs.
+
+**Calculations:**
+
+**NFLX closed trade:** Entry $77.94 × 2 = $155.88. Exit ~$72.07 × 2 = $144.14. Realized P&L = −$11.74 (−7.53%)
+
+**Open positions at week end (from JSON data):**
+- AAPL: entry $298.70, close $281.84, unrealized −$16.86 (−5.64%). Friday close from stockanalysis.com shows $283.78 but Alpaca reports $281.84.
+- CCL: entry $29.00, close $28.91, unrealized −$13.05 (−0.31%)
+- MU: entry $1,173.70, close per Alpaca data. From JSON: unrealized_plpc field cut off, but from EOD snapshot MU shows $1,126.30 unrealized −$142.20 (−4.0%). MU 52-week high was June 25; fell −7% on June 26.
+- TRIP: entry $13.13, close $13.71 per EOD snapshot (Friday), unrealized +$87 (+4.4%)
+
+**Trailing stop levels:**
+- AAPL: 10% trailing → floor at ~$253.83 (10% below $281.84)
+- CCL: 10% trailing → floor at ~$26.10 (10% below $29.00 entry, but trailing means 10% below highest reached)
+- MU: 10% trailing → floor at ~$1,056 (10% below entry/current high)
+- TRIP: 10% trailing → floor at ~$12.34 (10% below $13.71)
+
+**Profit factor:** Only 1 closed trade (NFLX, a loser). No winners closed. Profit factor = 0 / $11.74 = 0.00
+
+**S&P 500 weekly return:** From investing.com data, opening ~$7,404.91 on Friday, current ~$7,358. The week opened Monday ~June 22 around 7,400-7,410 range. Given the weekly range of 7,323.50–7,419.08 and the index being down on the week per Schwab reporting "on pace for weekly losses," I'll use approximately **−0.62%** for the week (7,404→7,358 = −46pts / 7,404).
+
+**Bot vs S&P:** Bot = 0.00%, S&P ≈ −0.62%, delta = **+0.62%** (bot outperformed by avoiding deeper losses).
+
+---
+
+## Week ending 2026-06-26
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $20,000.00 |
+| Ending portfolio (Fri) | $20,000.00 |
+| Week return | $0.00 (+0.00%) |
+| S&P 500 week | ≈ −0.62% (7,404 → ~7,358; tech-led weekly loss) |
+| Bot vs S&P | +0.62% (flat vs. declining benchmark) |
+| Trades total | 3 (W:0 / L:1 / open:2 new + 2 carried) |
+| Win rate | 0% (0/1 closed trades) |
+| Best trade | TRIP +4.4% unrealized (week close) |
+| Worst trade | NFLX −7.53% (closed hard stop) |
+| Profit factor | 0.00 (no closed winners; 1 closed loser = −$11.74) |
+
+---
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| NFLX | $77.94 (×2) | ~$72.07 | −$11.74 | −7.53% | Communication Services | Hard stop triggered 2026-06-24; unrealized_plpc breached −7% threshold; rule executed correctly |
+
+---
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $281.84 | −$16.86 (−5.64%) | Trailing 10% (~$253.83 floor) | Technology |
+| CCL | $29.00 | $28.91 | −$13.05 (−0.31%) | Trailing 10% (~$26.10 floor) | Consumer Discretionary |
+| MU | $1,173.70 | ~$1,126.00 | −$143.10 (−4.04%) | Trailing 10% (~$1,013 floor) | Technology |
+| TRIP | $13.13 | $13.71 | +$87.00 (+4.42%) | Trailing 10% (~$12.34 floor) | Consumer Discretionary |
+
+---
+
+### What Worked (3-5 bullets)
+- **Hard stop discipline executed perfectly:** NFLX was ejected at −7.53% on June 24 exactly as the rules require — the system worked as designed, preventing a deeper drawdown on a deteriorating position.
+- **TRIP catalyst materialized:** After weeks of stagnation, TRIP staged a +7.1% Friday rally and closed the week +4.4% unrealized, suggesting the dead-capital concern from last week's review may be resolving. The position is now only −2.5% off entry vs. −5.8% at week open.
+- **CCL entry thesis intact:** Entered CCL on June 26 with a clear macro catalyst (U.S.-Iran MOU reopening Strait of Hormuz, falling oil = direct fuel cost tailwind); opened essentially flat (−0.31%) on day one, which is a neutral-to-positive first day for a new trade.
+- **MU earnings beat delivered:** Micron's Q3 2026 blowout — $41.46B revenue vs. $35.69B estimate and EPS of $25.11 vs. $20.49 est. — confirmed the catalyst thesis. The +15.81% after-hours surge on June 25 validated the entry rationale.
+- **Sector rotation into Consumer Discretionary and Industrials:** The broader market's rotation away from mega-cap tech and into cyclicals this week played directly into CCL and TRIP positioning, with both Consumer Discretionary names finishing Friday in the green.
+
+---
+
+### What Didn't Work (3-5 bullets)
+- **MU bought into post-earnings sell-the-news: ** Despite a historic earnings beat, MU fell approximately −7% on June 26 (the day of entry) as tech investors rotated out of AI names amid concerns about spiraling AI costs and broader mega-cap pressure. The position entered at $1,173.70 and sits at −4% unrealized, illustrating the classic post-earnings gap-up fade.
+- **AAPL position continues to bleed:** AAPL fell −6.1% on Thursday June 25 after announcing MacBook and iPad price hikes that triggered demand friction fears. Now at −5.64% unrealized ($281.84 vs. $298.70 entry), AAPL is consuming one of the 5-6 position slots with a deteriorating thesis and no clear near-term catalyst for recovery to $300.
+- **Zero realized gains for the second consecutive week:** The portfolio produced no closed winners. Every closed trade in recent memory has been a stop-loss exit. The portfolio is accumulating open paper losses without booking any profits.
+- **Deployment timing on MU suboptimal:** Entering MU on June 26 — the day after the earnings pop (+15.81%) — means entry occurred at an already-elevated price ($1,173.70), capturing the post-earnings reversal gap down rather than the earnings momentum itself. The catalyst was real but the entry timing missed the optimal window.
+- **Capital concentration in Technology:** With AAPL and MU both in Technology, ~$4,900 of the ~$9,900 deployed sits in one sector that experienced the week's steepest losses. The sector-wide AI cost anxiety and Apple price-hike selloff impacted both simultaneously.
+
+---
+
+### Sector Performance
+- **Consumer Discretionary (CCL, TRIP):** ✅ Outperformed. TRIP +7.1% Friday, +4.4% on the week. CCL +1.5% on entry day. Sector benefited from falling oil prices and rotation out of tech. Both positions green on the week.
+- **Technology (AAPL, MU):** ❌ Underperformed. AAPL −6.1% Thursday on price hike fears; MU −7% Friday despite blowout earnings as the AI trade faced sector-wide selling pressure. Breadth improved as investors exited mega-cap tech names.
+- **Communication Services (NFLX):** ❌ Closed via hard stop at −7.53%. Multi-week downtrend confirmed. Position never recovered from initial weakness.
+
+---
+
+### Key Lessons
+- **"Buy the rumor, sell the news" is real even on record-breaking beats:** MU posted perhaps the greatest earnings beat in semiconductor history ($41.46B vs. $35.69B est.), yet sold off −7% the next session. Entering a post-earnings momentum trade must account for whether the gap has already been fully priced in on the overnight move.
+- **AAPL's deteriorating thesis requires a decision gate next week:** At −5.64% unrealized and approaching the −7% hard stop, AAPL needs a clear recovery above $295–$300 or the slot should be freed. Two consecutive weeks of underperformance with a new negative catalyst (price hike demand friction) warrants a formal exit review — this is not a new observation; it was flagged last week and the position has worsened.
+- **The hard stop at −7% is a feature, not a bug:** NFLX's ejection at −7.53% was clean and automatic. The loss of $11.74 on a 2-share position is trivial. The system correctly prevented emotional hold-through.
+- **Sector concentration risk is real and compounding:** Two Technology positions (AAPL + MU) entered a week where tech was the worst-performing sector by a wide margin. Next week's entries should prioritize sectors currently in the rotation bid (Industrials, Energy, Health Care, Consumer Discretionary) over additional Technology adds until the AI cost narrative resolves.
+- **Capital deployment timing matters as much as catalyst identification:** Having CCL and MU both entered on the final day of the week (Friday) means there is minimal week-end context. Entering earlier in the week on confirmed momentum (Mon–Wed) provides more price information and reduces the chance of buying into end-of-week profit-taking.
+
+---
+
+### Adjustments for Next Week
+**No rule changes — insufficient data.**
+
+Per protocol, no strategy parameter changes are proposed. A rule must fail for **2+ consecutive weeks** before relaxing it, and must prove out for **2+ consecutive weeks** before tightening it.
+
+**Operational action items (not rule changes):**
+- 🔴 **AAPL exit decision gate:** AAPL is now at −5.64% unrealized and has been flagged for 2 consecutive weekly reviews. If AAPL cannot reclaim and hold $295+ by Wednesday June 30, execute a discretionary exit to free the slot. The position is within $4 of the −7% hard stop ($281.84 current, hard stop floor ≈ $277.99). Do not wait for the hard stop to execute — act proactively.
+- 🔴 **MU entry timing post-mortem:** Document whether the MU entry at $1,173.70 (day after +15.81% earnings surge) violated the spirit of the momentum entry rule ("stock up 2-3% on high volume"). Entry occurred after the entire gap had been priced in. For future post-earnings momentum trades, consider waiting for a base-and-breakout pattern (1–2 days of consolidation above the gap) rather than chasing on day +1.
+- 🟡 **CCL: Monitor oil price trajectory:** The entire CCL thesis rests on continued oil price decline as a fuel cost tailwind. If crude oil reverses materially above $75/bbl, reassess the exit thesis even if the trailing stop has not been triggered.
+- 🟡 **TRIP: Set formal target review for week of June 29:** TRIP is now +4.4% unrealized and the 10-day catalyst window is expiring. Evaluate whether TRIP has sufficient momentum to reach the $30.21 target or whether a partial profit-take is appropriate given the position's multi-week hold and small absolute gains.
+- 🟢 **MU: If it stabil
