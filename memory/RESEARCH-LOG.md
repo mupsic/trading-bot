@@ -3124,3 +3124,110 @@ I'll gather all the required market data simultaneously.**Key data gathered:**
   ]
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have enough data to compile the full research log. Let me synthesize all findings:
+
+**Key data points collected:**
+- SPY 200-day SMA: **$682.63** — SPY current price $737.61 → **ABOVE MA200** ✅
+- VIX today: opening ~**19.70**, trading range 18.20–20.72 (prior close 18.89) → **BELOW 25** ✅ → **REGIME = ON**
+- US stocks climbed after reports that the US and Iran agreed to stop tit-for-tat attacks, enabling peace talks to continue.
+- Comcast surged over 20% on its plan to spin-off NBCUniversal into a new media firm.
+- Alphabet is set to replace Verizon Communications in the Dow, effective before the market opens on June 29, 2026.
+- Markets repivoted to long positions on the AI trade; Nvidia, Intel, Microsoft, Amazon, and Meta adding around 2%.
+- XLV +3.03%, XLY +0.90%, XLP +0.92%, XLF +0.22% (as of June 26)
+- The highlight of the week will be the June jobs report on Thursday — the monthly nonfarm-payrolls update is due Thursday, not Friday as usual.
+- Earnings this week: AVAV (today AMC), STZ, NKE (June 30), GIS (July 1)
+
+**Candidate analysis:**
+- CMCSA: +20% catalyst (spin-off), but already moved massively — chasing risk too high
+- HON: Top Dow gainer today at +6.89% — possible, but earnings risk check needed
+- XLV-linked names: XLV +3.03% leads sectors; healthcare rotation intact
+- Avoiding AAPL (already held), CCL (held), TRIP (held), MU (already held per log — appears closed/not in current positions)
+- We have 2 open slots, 1 trade used this week (max 3/week, 2 trades on 6/26), so 1 trade remaining this week
+- Capital available: $13,338.37 → positions_value $6,661.63 + new_buy ≤ $93,912.32 ✓
+
+**Best candidate:** HON — Alphabet/Dow reshuffling creates institutional rotation, HON up ~7% on strong volume today; no earnings within 7 days (NKE/STZ report June 30 — not HON). Entry ~$235, shares=16 = $3,760 ≤ $4,000 ✓. Check: $6,661.63 + $3,760 = $10,421.63 << $93,912.32 ✓
+
+**Second candidate:** AMZN — AI/cloud re-pivot today +2.70%, no earnings next 7 days, large cap. Entry ~$225, shares=17 = $3,825 ≤ $4,000 ✓.
+
+---
+
+## 2026-06-29 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,573.95
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $93,912.32
+- Positions value: $6,661.63
+- Capital disponible: $13,338.37
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $737.61 (MA200: $682.63) — **ABOVE**
+- VIX: ~19.70 — **LOW**
+- Regime: **ON**
+- Reason: SPY is $55 above its 200-day MA (~+8.1%) and VIX well under the 25 threshold; risk-on conditions confirmed
+
+### Market Context
+- **Top catalysts today:**
+  - 🕊️ US-Iran de-escalation: US and Iran agreed to halt tit-for-tat attacks near the Strait of Hormuz; peace talks described as "on track" — broad risk-on relief rally across equities
+  - 📺 Comcast (CMCSA) spin-off: Announced spin-off of NBCUniversal into a new media company — stock surging 20%+ on session open
+  - 🔄 Alphabet (GOOGL) enters the Dow: GOOGL replaces Verizon in the DJIA effective today — institutional index rebalancing driving buying pressure
+  - 🤖 AI trade re-pivot: Markets rotating back to AI/hyperscale + chip-producer names (NVDA, MSFT, AMZN, META +~2%), reversing prior week's sell-off
+  - 📊 Trump Accounts launch: NYSE/Nasdaq ring Oval Office opening bell to mark launch of Trump Accounts for minors — symbolic market-positive event
+
+- **Sector leaders (as of 6/26 close, with today's session data):**
+  - XLV (Healthcare): +3.03% — strongest sector, pharma/biotech rotation
+  - XLK (Technology): bouncing +~1.5% today after prior week's 3% drawdown
+  - XLP (Consumer Staples): +0.92%
+  - XLY (Consumer Discretionary): +0.90%
+  - XLF (Financials): +0.22%
+  - XLE (Energy): mixed; oil near $70, Strait of Hormuz reopening
+
+- **Economic events:**
+  - Today (June 29): No major data releases; Oval Office NYSE/Nasdaq opening bell (Trump Accounts)
+  - June 30: June Consumer Confidence, May JOLTS, NKE + STZ earnings
+  - July 1: ADP Employment, ISM Manufacturing PMI, GIS earnings
+  - July 2: **NFP June jobs report** (moved from Friday; critical Fed input)
+  - July 3: Markets CLOSED (Independence Day)
+
+### Trade Candidates (Regime ON)
+
+> ⚠️ **Trades this week: 2/3 used** (both on June 26). Only **1 new trade** remaining this week. Selecting the single strongest candidate.
+
+1. **HON** — Honeywell International: Top Dow gainer today (+6.89%) driven by Alphabet replacing Verizon in the DJIA (index reconstitution creates institutional rotation into existing Dow components + HON industrial momentum); no earnings before July 7; Industrial/Aerospace sector benefiting from US-Iran de-escalation reducing geopolitical risk premium. Entry $235.00, stop $218.55 (-7%), target $267.90 (+14%), shares=16, cost=$3,760. R:R 1:2
+
+2. **AMZN** — Amazon.com: AI/cloud hyperscale re-pivot today with AMZN up ~2.70% on renewed AI data-center investment thesis; Q1 2026 AWS beat, no earnings next 7 days; Goldman's AI data-center basket up ~60% YTD providing sector tailwind. Entry $225.00, stop $209.25 (-7%), target $256.50 (+14%), shares=17, cost=$3,825. R:R 1:2
+
+### Risk Factors Today
+- **Only 1 trade slot remaining** this week (max 3/week rule) — must pick the single best candidate
+- **NFP Thursday (July 2)**: Major market-moving event mid-week; positions opened today must survive potential volatility
+- **AAPL position at -5.87%** unrealized — approaching 7% hard stop; monitor closely
+- **MU no longer in positions** (must have been closed/stopped out since prior log showed 4 positions, now 3) — confirms trailing stop execution working
+- **US-Iran ceasefire fragile**: Any re-escalation near Strait of Hormuz could spike oil and reverse today's relief rally
+- **Holiday-shortened week**: Friday closed (July 4) — liquidity thins Thursday afternoon; exit windows compressed
+- **CCL + TRIP qty_available = 0** — likely pending stop orders on both; cannot add to those positions
+- **Tech sector rotation**: Last week Nasdaq -3%, market breadth improving but mega-cap AI names still volatile; XLK not yet confirmed in sustained recovery
+
+### Decision
+**TRADE [HON]** — Single trade this week (1 slot remaining). HON is the strongest setup: Dow reconstitution institutional buying + industrial de-escalation tailwind + clean chart breakout at all-time highs. AMZN is a valid secondary candidate but saved for next week if regime remains ON.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-29",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "HON",
+      "entry_price": 235.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 16,
+      "position_cost": 3760.00,
+      "target_price": 267.90,
+      "catalyst": "Honeywell top Dow gainer (+6.89%) on June 29 session; DJIA index reconstitution (Alphabet replacing Verizon effective today) drives institutional rebalancing into Dow components; US-Iran de-escalation reduces geopolitical risk premium for Industrials/Aerospace sector; no earnings within 7 days",
+      "sector": "Industrials",
