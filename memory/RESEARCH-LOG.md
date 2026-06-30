@@ -3231,3 +3231,112 @@ I'll gather the required market data simultaneously.Now I have enough data to co
       "target_price": 267.90,
       "catalyst": "Honeywell top Dow gainer (+6.89%) on June 29 session; DJIA index reconstitution (Alphabet replacing Verizon effective today) drives institutional rebalancing into Dow components; US-Iran de-escalation reduces geopolitical risk premium for Industrials/Aerospace sector; no earnings within 7 days",
       "sector": "Industrials",
+
+I'll gather the required market data simultaneously.Using the data gathered, here is the complete research log:
+
+---
+
+## 2026-06-30 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100524.01
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $93912.30
+- Positions value: $6611.71
+- Capital disponible: $13388.29
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $741.00 (MA200: $686.84) — ABOVE
+- VIX: 17.65 (prev close) / ~17.53 pre-market — LOW
+- Regime: **ON**
+- Reason: SPY 200-day SMA is $686.84, SPY current $741.00 = +7.9% above MA200; VIX at 17.53 pre-market, well below the 25 threshold — both gates pass.
+
+### Market Context
+- **Top catalysts today:**
+  - Tech rally and hopes for lasting peace in the Middle East lifted sentiment heading into June 30.
+  - Space stocks surged Monday — Rocket Lab (+15.9%) announced it would acquire Iridium (+25.4%) in an $8 billion deal.
+  - Comcast shares surged 25% in premarket on Monday after the company said it plans to split into two publicly traded companies through a tax-free spin-off of its NBCUniversal and Sky businesses; the transaction is expected to be completed within about a year.
+  - Concentrix (CNXC) tumbled 22% after missing second-quarter earnings and revenue estimates and issuing a weak outlook for Q3 and full year 2026.
+  - Today (June 30) key economic releases: Chicago PMI, Consumer Confidence, FHFA Housing Price Index, and S&P Case-Shiller Home Price Index.
+  - **Nike (NKE) reports Q4 earnings tonight** — potential catalyst/risk for consumer discretionary.
+
+- **Sector leaders (this week):**
+  - European Stoxx 600 Technology index recovered +1.2% following a roughly 4% drop last week.
+  - The Roundhill Magnificent Seven ETF (MAGS) gained +0.25% in pre-market, following its biggest one-day percentage gain in months as megacap tech rebounded broadly.
+  - XLV (Health Care) +3.03%, XLY (Consumer Discretionary) +0.90%, XLP (Consumer Staples) +0.92%, XLF (Financials) +0.22% (as of 6/26/2026).
+  - Schwab's sector outlook rates industrials, materials, health care, and communication services as "most favored"; consumer discretionary and real estate are least favored.
+  - **Sector leader this week: XLV (Health Care) +3.03%** — rotating into defensive growth.
+
+- **Economic events:**
+  - June 30: Chicago PMI, Consumer Confidence, FHFA Housing Price Index, S&P Case-Shiller
+  - The highlight of the week will be the June jobs report on Thursday (not Friday as usual), seen as crucial to the Federal Reserve's policy thinking.
+  - Markets will close Friday for the Fourth of July holiday.
+
+### Trade Candidates (Regime ON)
+
+**⚠️ Constraints check:**
+- Open positions: 3/5 → 2 slots available
+- Trades this week: 0/3 → 2-3 new trades allowed
+- Avoid: NKE (earnings tonight), STZ (earnings today), BNED (earnings today)
+- AAPL already held (existing position at loss, no averaging down)
+- CCL already held (qty_available = 0, blocked)
+- TRIP already held (qty_available = 0, blocked)
+
+**Candidate 1 — CMCSA:**
+Comcast announced a tax-free spin-off of its NBCUniversal and Sky businesses, splitting into two publicly traded companies, a major M&A/restructuring catalyst. Stock surged 25% Monday pre-market; post-announcement it settled ~+4.4% on the day. Now in consolidation breakout phase. Market cap ~$140B. No earnings within 7 days.
+- Entry: $44.50, Stop: $41.39 (-7%), Target: $50.73 (+14%), Shares = 89 → cost = $3,960.50 ✅
+- R:R 1:2
+
+**Candidate 2 — SMH (VanEck Semiconductor ETF — NOTE: ETF, stocks only rule applies; substituting AMAT):**
+The VanEck Semiconductor ETF gained more than 3% on Monday reversing an earlier decline; Astera Labs, KLA, and Applied Materials rose ~16%, ~12%, and ~11% respectively. Applied Materials (AMAT) is breaking out on semiconductor sector rotation leadership; no earnings for 7+ days. Market cap ~$160B.
+- Entry: $210.00, Stop: $195.30 (-7%), Target: $239.40 (+14%), Shares = 19 → cost = $3,990.00 ✅
+- R:R 1:2
+
+### Risk Factors Today
+- The S&P 500 mounted a robust rally to an early June high above 7609.77 then retreated; this week the index dipped below its 50-day moving average, testing that level as markets digest a more hawkish Federal Reserve outlook.
+- Uncertainty over Qatar diplomacy clouds prospects for a US-Iran deal — any breakdown could spike oil prices and VIX rapidly.
+- Tech sector saw a 10% overnight drop in the KOSPI (SK Hynix / Samsung) this week — semiconductor names remain vulnerable to Asian market spillover.
+- Nike (NKE) earnings tonight — consumer sentiment read-through for discretionary sector.
+- Markets close Friday for Fourth of July — holiday-shortened week means lower liquidity Thursday afternoon.
+- AAPL position at -5.5% (near hard stop of -7%); monitor closely.
+
+### Decision
+TRADE [CMCSA, AMAT]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-06-30",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "CMCSA",
+      "entry_price": 44.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 89,
+      "position_cost": 3960.50,
+      "target_price": 50.73,
+      "catalyst": "Announced tax-free spin-off of NBCUniversal and Sky into two separate publicly traded companies — major corporate restructuring / sum-of-parts value unlock catalyst; stock surged 25% pre-market on 6/29",
+      "sector": "Communication Services",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "AMAT",
+      "entry_price": 210.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 19,
+      "position_cost": 3990.00,
+      "target_price": 239.40,
+      "catalyst": "Semiconductor sector breakout leadership — AMAT +11% on 6/29 as SMH reversed sharply; AI data center capex cycle driving equipment demand, sector rotation from mega-cap tech into semis equipment names",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
