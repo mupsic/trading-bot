@@ -3340,3 +3340,100 @@ TRADE [CMCSA, AMAT]
   ]
 }
 ```
+
+I'll gather the required market data simultaneously before making trading decisions.Now I have all the data needed. Let me synthesize everything and produce the research log.
+
+**Key data points gathered:**
+- SPY 200-day MA: **$744.35** — SPY current price per live Finnhub data: **$744.29** → SPY is fractionally BELOW MA200
+- VIX live price: **16.45** (previous close 17.65)
+- Kroger fell 2.8% premarket on a $1.65B Giant Eagle acquisition announcement
+- US-Iran indirect talks resumed in Doha with Qatar and Pakistan mediating
+- Q2 wrapped up as a strong quarter, with the S&P 500 returning more than 14%
+- Market is in rotation with cap-weighted S&P 500 and Nasdaq down on the week while equal-weight and small caps hold up
+- XLK Technology leads all sectors YTD at +11.2%, driven by semiconductor demand
+- XLI Industrials +1.18% today; XLF Financials -0.15%; XLV -0.94%; XLP -1.33%
+- June payrolls report (Thursday July 2) is this week's key market event; Wednesday July 1 events: ADP Employment Change, ISM Manufacturing, Construction Spending
+
+**Regime Gate:** SPY $744.29 vs MA200 $744.35 → SPY is marginally **BELOW** MA200 by $0.06 → **REGIME = OFF**. No new trades.
+
+---
+
+## 2026-07-01 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,456.37
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $93,910.50
+- Positions value: $6,545.99
+- Capital disponible: $13,454.01
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+---
+
+### Market Regime
+- SPY: $744.29 (MA200: $744.35) — **BELOW** (by $0.06 — razor thin)
+- VIX: 16.45 — **LOW** (< 25 ✅)
+- Regime: **OFF**
+- Reason: SPY closed fractionally below its 200-day MA ($744.29 vs $744.35); single gate failure is sufficient to block all new entries per hard rules — no new trades today.
+
+---
+
+### Market Context
+- **Top catalysts today:**
+  - 🔴 **US–Iran tensions / peace talks**: US-Iran officials in indirect technical talks in Doha (Qatar + Pakistan mediating); geopolitical uncertainty weighing on futures, QQQ -1.02% pre-open
+  - 🟡 **Kroger (KR) M&A**: Kroger announced $1.65B acquisition of Giant Eagle — KR -2.8% premarket; deal seen as dilutive near-term
+  - 🟢 **Best Q2 since 2020**: S&P 500 wrapped its strongest quarter since 2020 (+14% including dividends) — quarter-end window-dressing tailwind fading into new quarter
+  - 🟡 **Magnificent Seven rotation out**: Mag7 lost ~$2.3T in June market value amid AI profitability questions; Wall St rotating toward AI suppliers (MU, INTC, MRVL, AMD)
+  - 🔴 **Microsoft layoffs**: MSFT cutting <2.5% of workforce — adds to tech headwinds
+  - 🟡 **Semiconductor ETF surge**: PSI +5.53%, XSD +5.24%, SOXX +4.30% on trailing period — AI supplier stocks outperforming hyperscalers
+
+- **Sector leaders (recent performance):**
+  - XLI (Industrials): +1.18% today — strongest sector
+  - XLK (Technology): YTD leader +11.2% but -1.02% intraday via QQQ drag
+  - XLF (Financials): -0.15% today / +6.2% YTD
+  - XLV (Health Care): -0.94% today
+  - XLP (Consumer Staples): -1.33% today — weakest
+  - XLE (Energy): -0.34% today (Iran risk / oil volatility)
+
+- **Economic events today (July 1):**
+  - 📊 ADP Employment Change (consensus ~130K)
+  - 📊 ISM Manufacturing PMI
+  - 📊 Construction Spending
+  - 📊 MBA Mortgage Applications Index
+  - 📊 EIA Crude Oil Inventories
+  - ⚠️ June Non-Farm Payrolls due **Thursday July 2** (shortened pre-July 4 holiday week — high-impact)
+
+---
+
+### Trade Candidates (only if Regime ON)
+*Regime is OFF — no candidates evaluated.*
+
+---
+
+### Risk Factors Today
+- **SPY at MA200 inflection**: $744.29 vs $744.35 — one up-tick restores regime, one down-tick deepens bearish signal; extreme sensitivity to today's ADP/ISM prints
+- **US–Iran tensions**: Military escalation risk could spike VIX rapidly; oil supply disruption concerns (WTI 1M IV still at 51%)
+- **AAPL position at -2.5% (-$7.56 unrealized)**: Approaching -7% hard stop ($277.79); AAPL currently $291.14 — monitor closely; MSFT price hike news + tech rotation pressures consumer sentiment
+- **TRIP (150 shares, +$105 unrealized, +5.3%)**: Nearing +15% Target 1 threshold — tighten trailing stop to 8% if price hits $15.10
+- **CCL (145 shares, -$24.65)**: Cruise sector benefiting from travel demand but Iran/oil risk = negative headwind for fuel costs
+- **Shortened trading week** (July 4 holiday Thursday/Friday) — liquidity thin, gap risk elevated
+- **Mag7 de-rating**: Continued institutional rotation from large-cap tech could pressure AAPL further
+
+---
+
+### Decision
+**HOLD** — Regime OFF (SPY $744.29 < MA200 $744.35 by $0.06). No new positions opened. Monitor existing stops on AAPL (hard stop $277.79), tighten TRIP trailing stop toward 8% given +5.3% gain proximity to Target 1.
+
+---
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-01",
+  "regime": "OFF",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
