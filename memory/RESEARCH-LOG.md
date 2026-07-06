@@ -3437,3 +3437,107 @@ I'll gather the required market data simultaneously before making trading decisi
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me compile the research log.
+
+**Key data gathered:**
+- SPY 200-day SMA (TipRanks, Jul 1): **$687.80** — SPY live at $749.24 → ABOVE MA200 ✅
+- VIX opened at **15.78**, ranging 15.75–16.01 today → BELOW 25 ✅ → **REGIME ON**
+- SMH (semiconductors) up 2.7% at open; SpaceX (SPCX) officially joins the Nasdaq-100 today
+- Astera Labs (ALAB) surged 10.5% in early trading after BofA raised its price target to $450 from $240
+- Oracle shares climbed 2.6% before the bell, with remaining performance obligations at $638 billion (~1.6× market cap) as AI infrastructure deals stack up
+- Top sector SPDRs YTD: XLK +33%, XLE +21%, XLI +20%
+- Today's sector ETF moves: XLV +2.63%, XLP +2.03%, XLF +1.53%, XLI +0.30%, XLY -0.82%
+- Jobs report (Jul 2): only 57,000 jobs created, about half expectations → Rate hike probability at July FOMC down to 20% from 30%
+- Trump Accounts launched via the One Big Beautiful Bill Act — $1,000 federal seed money for kids born 2025–2028
+- Comcast announced acquisition of a British broadcaster, signaling continued international media investment even as it prepares to spin off NBCUniversal
+
+**Candidate analysis:**
+- ALAB: BofA raised price target to $450 from $240, maintaining neutral — 10.5% surge in early trading. At ~$260 current price, 15 shares = $3,900 ✅ No earnings in next 7 days.
+- ORCL: Oracle reversed losses from a 24% slide, up 2.6% pre-bell; RPO at $638B vs $408.5B market cap. At ~$163, 24 shares = $3,912 ✅ No earnings in next 7 days.
+
+CCL position note: Comcast acquiring British broadcaster — Suez Canal reopening (from news headlines: Maersk/Hapag-Lloyd returning) is a positive catalyst for CCL (cruise sector). Existing CCL is at -5% unrealized, approaching hard stop zone — monitor closely.
+
+---
+
+## 2026-07-06 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,301.38
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $93,910.50
+- Positions value: $6,390.90
+- Capital disponible: $13,609.10
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $749.24 (MA200: $687.80) — ABOVE
+- VIX: 15.78 — LOW
+- Regime: **ON**
+- Reason: SPY is +8.9% above its 200-day MA and VIX at 15.78 is well below the 25 danger threshold; all regime conditions satisfied.
+
+### Market Context
+- Top catalysts today:
+  - 🚀 **SpaceX (SPCX) joins Nasdaq-100** effective today — index funds mandated to add exposure, driving broad tech momentum and SMH +2.7% at open
+  - 📉 **Weak June jobs report** (57K vs 113K est.) reduces Fed rate-hike probability at July FOMC to 20% (from 30%), supporting risk-on equities
+  - 🤖 **BofA upgrades Astera Labs (ALAB)** price target to $450 from $240; stock +10.5% pre-market on AI infrastructure demand thesis
+  - 💻 **Oracle (ORCL) bounces** +2.6% pre-bell after 24% 9-day decline; RPO backlog at $638B (~1.6× market cap), AI cloud deals accelerating
+  - 🛳️ **Maersk & Hapag-Lloyd return to Suez Canal** — positive for cruise/shipping sectors; reduces geopolitical freight risk premium
+  - 🏦 **Trump Accounts launch** (One Big Beautiful Bill Act) — $1,000 federal seed for children 2025-28; $800M expected to flow into markets this week
+
+- Sector leaders (as of market open / trailing data):
+  - XLV (Healthcare): +2.63% today — **strongest intraday**
+  - XLP (Consumer Staples): +2.03% today
+  - XLF (Financials): +1.53% today
+  - SMH (Semiconductors): +2.7% at open
+  - XLK (Technology): YTD leader +33%; +2.7% open on SpaceX/Nasdaq-100 rebalance
+  - XLI (Industrials): +0.30% today; +20% YTD
+  - XLY (Consumer Discretionary): -0.82% today
+
+- Economic events:
+  - No major scheduled macro releases today (July 6)
+  - Next key events: Consumer Credit (Jul 8), CPI (mid-July), FOMC meeting (July)
+  - Fed rate-hike probability for July FOMC: ~20% (down from 30%)
+
+### Trade Candidates (Regime ON)
+
+> **Position check:** 3/5 slots open. 2 slots available. Capital available = $13,609.10. Max per position = $4,000. Positions value ($6,390.90) + any new buy cost ≪ $93,910.50 cash. ✅
+
+1. **ALAB** — BofA price target raise to $450 from $240 (87.5% upside cited), AI semiconductor infrastructure demand; sector (XLK/SMH) surging on SpaceX Nasdaq-100 inclusion day. Entry $260.00, stop $241.80 (-7%), target $296.40 (+14%), shares=15, cost=$3,900. R:R 1:2. *(No earnings in next 7 days — next est. Q2 late July/Aug)*
+
+2. **ORCL** — Oversold bounce: down 24% over 9 sessions, reversing today +2.6% pre-bell; RPO backlog of $638B vs $408.5B market cap signals massive AI cloud deal momentum. Entry $163.50, stop $152.06 (-7%), target $186.39 (+14%), shares=24, cost=$3,924. R:R 1:2. *(No earnings in next 7 days — next report est. mid-Sept)*
+
+### Risk Factors Today
+- **CCL position at -5% unrealized** ($27.55 vs $29 entry): approaching the -7% hard stop at $26.97. Monitor closely — if CCL drops to $26.97 → immediate exit per hard-stop rule. No averaging down.
+- **TRIP qty_available = 0**: trailing stop likely already placed by Alpaca; cannot sell until restriction lifts.
+- **AI semiconductor volatility**: chipmakers saw 6-10% drops last week on profit-taking; ALAB entry is high-conviction but high-beta — size confirmed at max $4,000.
+- **SpaceX (SPCX) Nasdaq-100 rebalance**: forced buying could cause intraday volatility as index trackers rebalance; front-running already priced in for many names.
+- **Yen carry-trade risk**: USD/JPY at 40-year highs; any BoJ intervention could trigger sudden risk-off globally (flash-crash scenario like July 2024).
+- **Iran/oil geopolitics**: Suez Canal re-opening is bullish for shipping/travel, but US-Iran negotiations remain fragile; any escalation reprices oil and volatility instantly.
+- **Inflation**: CPI at 4.2% (May) is highest in 3 years; mid-July CPI print could shock markets if hot.
+
+### Decision
+TRADE [ALAB, ORCL]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-06",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "ALAB",
+      "entry_price": 260.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 15,
+      "position_cost": 3900.00,
+      "target_price": 296.40,
+      "catalyst": "Bank of America raised price target to $450 from $240 (+87.5%); stock surged 10.5% pre-market on AI semiconductor infrastructure thesis; SpaceX Nasdaq-100 inclusion driving XLK/SMH sector momentum",
+      "sector": "Technology (Semiconductors)",
+      "rr_ratio": "1:2"
+    },
+    {
