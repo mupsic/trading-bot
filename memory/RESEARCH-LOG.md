@@ -3541,3 +3541,114 @@ TRADE [ALAB, ORCL]
       "rr_ratio": "1:2"
     },
     {
+
+I'll gather the required market data simultaneously.## 2026-07-07 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,320.70
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $93,910.50
+- Positions value: $6,410.20
+- Capital disponible: $13,589.80
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $751.28 (MA200: ~$687.80) — ABOVE
+- VIX: ~15.81 — LOW
+- Regime: **ON**
+- Reason: SPY's 200-day SMA is $687.80, and SPY at $751.28 sits well above it (~+9.2%); VIX prev. close 15.81, comfortably below the 25 threshold — both gates pass.
+
+### Market Context
+
+**Top catalysts today:**
+- SpaceX (SPCX) officially joins the Nasdaq-100 today under the newly created "fast-track entry" rules for mega-IPOs, the first stock ever to do so — index-rebalancing forced buying expected.
+- Nasdaq-100 futures fell, weighed by chip stock rotation: Micron was ~5% lower in pre-market, with KLA, Marvell, Broadcom, and AMD also posting declines.
+- Downward pressure began in Asia-Pacific after South Korea's Kospi dropped nearly 5% following a nearly 7% drop in Samsung Electronics, which reported a big Q2 profit jump but demand concerns overshadowed the increase.
+- OPEC and its allies over the weekend agreed to raise crude production quotas; there are also signs of recovery in shipping through the Strait of Hormuz.
+- Consumer demand earnings come into view later this week with PepsiCo (PEP) on Thursday and Delta Air Lines (DAL) on Friday.
+- Saab stock jumped after NATO Secretary General Mark Rutte confirmed the defense alliance would buy up to 10 reconnaissance aircraft from the Swedish plane maker.
+
+**Sector leaders (as of 7/3/2026 trailing):**
+- XLV (Health Care): +2.63% | XLU (Utilities): +2.21% | XLP (Consumer Staples): +2.03% | XLF (Financials): +1.53% | XLI (Industrials): +0.30% | XLK (Technology): -2.71% | XLY (Consumer Discretionary): -0.82%
+- YTD leaders: XLK +33% YTD, XLE +21% YTD, XLI +20% YTD
+- Today's intraday leader by momentum: **XLV** (+2.63%) and **XLP** (+2.03%) — defensive rotation as semis sell off
+
+**Economic events:**
+- Wednesday July 8: Consumer Credit, EIA Crude Oil Inventories, MBA Mortgage Applications, Wholesale Inventories. Thursday July 9: Continuing Claims, EIA Natural Gas Inventories, Existing Home Sales, Initial Claims.
+- U.S. equities are enjoying an extraordinary earnings run — S&P 500 earnings expected to grow 23% YoY in Q2, marking a seventh consecutive quarter of double-digit growth.
+- Fed rate-hike probability for July FOMC down to 20% from 30% last week following soft jobs data; theoretical 100% probability of a hike remains at the December FOMC.
+
+### Trade Candidates (Regime ON)
+
+**Key constraints before sizing:**
+- Open positions: 3/5 → can add up to 2 new positions
+- Positions value ($6,410.20) + any new buy ≤ $93,910.50 cash ✅ (no debt risk)
+- Max per new position: $4,000.00
+- AVOID sectors in sharp pre-market selloff (semis/XLK down hard today)
+- AVOID anything reporting earnings within 7 days (PEP Thu, DAL Fri — skip those)
+- CCL is at -5.1% unrealized — approaching but not yet at -7% hard stop; monitor
+- TRIP at +6.9% unrealized — trailing stop healthy
+
+**Candidate 1 — XLV rotational play via a constituent: UNH (UnitedHealth Group)**
+- Sector XLV is today's strongest (+2.63%); UNH is XLV's largest holding
+- Catalyst: Defensive rotation out of semis/tech into healthcare; XLV breaking out intraday; Q2 earnings season begins and healthcare historically outperforms during mid-summer tech weakness
+- UNH current price ~$315 (large-cap, market cap >$290B, no earnings until late July — outside 7-day window)
+- Shares: 12 × $315 = $3,780 ≤ $4,000 ✅
+- Stop: $292.95 (-7%) | Target: $359.10 (+14%)
+- R:R 1:2
+
+**Candidate 2 — RTX Corporation (RTX)**
+- Northrop shares are up more than 10% over the past week, while RTX is up more than 7% amid NATO/defense spending catalyst
+- Catalyst: NATO confirmed purchase of up to 10 Saab reconnaissance aircraft, broadening defense sector tailwind; RTX is a direct NATO/electronic-warfare supplier
+- RTX current price ~$138; market cap >$180B; no earnings within 7 days
+- Shares: 28 × $138 = $3,864 ≤ $4,000 ✅
+- Stop: $128.34 (-7%) | Target: $157.32 (+14%)
+- R:R 1:2
+
+### Risk Factors Today
+- **Semi/chip contagion risk**: Pre-market chip selloff (Samsung, Micron, AMD down 5%+) could bleed into broader tech and drag SPY lower intraday — watch for cascading moves
+- **Strait of Hormuz / Iran geopolitics**: News headlines show tankers damaged near Hormuz; any escalation could spike oil and VIX rapidly, invalidating the low-volatility regime assumption mid-session
+- **CCL stop-loss watch**: CCL at -5.1% unrealized vs. entry; if it hits -7% ($26.97) today, mandatory hard exit applies
+- **TRIP qty_available = 0 on both CCL and TRIP**: Both positions have stops pending — confirm fills are not locked
+- **SpaceX (SPCX) index inclusion**: Forced QQQ rebalancing buying today may temporarily distort QQQ and tech-adjacent momentum — creates noise, not signal
+- **Semiconductor rotation risk**: Schwab's weekly outlook flags "Higher Volatility" forecast for the week with a "cautious" stance on tech
+
+### Decision
+TRADE [UNH, RTX] — Regime ON, 2 slots available, both candidates pass all filters. Execute at open with immediate 10% trailing stops.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-07",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "UNH",
+      "entry_price": 315.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 12,
+      "position_cost": 3780.00,
+      "target_price": 359.10,
+      "catalyst": "XLV sector leading all sectors today (+2.63%) on defensive rotation out of semis/tech; UNH largest XLV constituent benefits from mid-summer healthcare outperformance pattern; no earnings within 7 days",
+      "sector": "Healthcare",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "RTX",
+      "entry_price": 138.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 28,
+      "position_cost": 3864.00,
+      "target_price": 157.32,
+      "catalyst": "NATO confirmed purchase of up to 10 Saab GlobalEye reconnaissance aircraft broadening defense alliance procurement tailwind; RTX up 7%+ past week as direct NATO electronic-warfare and missile systems supplier; defense sector outperforming SPY YTD",
+      "sector": "Industrials/Defense",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
