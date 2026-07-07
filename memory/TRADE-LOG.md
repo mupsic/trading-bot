@@ -1009,3 +1009,10 @@ Every end of day:
 | AAPL | 1 | 298.7$ | 308.63$ | 9.93$ (3.3%) | 0% |
 | CCL | 145 | 29$ | 27.91$ | -158.05$ (-3.8%) | 0% |
 | TRIP | 150 | 13.13$ | 14.29$ | 174$ (8.8%) | 0% |
+
+### 2026-07-07 17:59:28 — POSITION CLOSED (Hard Stop -7%)
+- **Ticker**: CCL
+- **Reason**: unrealized_plpc reached -7.29%
+- **Exit price**: ~$26.885 (market order)
+- **Realized P&L**: $-306.675
+- **Hold**: from entry @ $29
