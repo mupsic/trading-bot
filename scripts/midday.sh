@@ -44,18 +44,22 @@ critical() { bash "$SCRIPTS/telegram.sh" alert "CRITICAL" "$1" > /dev/null 2>&1 
 # ============================================
 # STEP 1 — Pull state
 # ============================================
-ACCOUNT=$(bash "$SCRIPTS/alpaca.sh" account 2>/dev/null)
-EQUITY=$(echo "$ACCOUNT" | jq -r '.equity | tonumber')
+# NOTA: quitado 2>/dev/null para que fallos de Alpaca aparezcan en los logs.
+ACCOUNT=$(bash "$SCRIPTS/alpaca.sh" account)
+echo "[debug] ACCOUNT response: $ACCOUNT" >&2
+EQUITY=$(echo "$ACCOUNT" | jq -r 'try (.equity | tonumber) catch 0')
 
 # Usar equity real como capital operativo si no hay límite manual en .env
 if [[ -z "${OPERATING_CAPITAL:-}" ]]; then
   OPERATING_CAPITAL=$(python3 -c "print(round($EQUITY, 2))")
 fi
 
-POSITIONS=$(bash "$SCRIPTS/alpaca.sh" positions 2>/dev/null)
+POSITIONS=$(bash "$SCRIPTS/alpaca.sh" positions)
+echo "[debug] POSITIONS response: $POSITIONS" >&2
 POS_COUNT=$(echo "$POSITIONS" | jq 'length')
 
-ORDERS=$(bash "$SCRIPTS/alpaca.sh" orders 2>/dev/null)
+ORDERS=$(bash "$SCRIPTS/alpaca.sh" orders)
+echo "[debug] ORDERS response: $ORDERS" >&2
 
 # Operating equity: min entre límite operativo y equity real (si hay límite manual, lo respeta)
 OPERATING_EQUITY=$(python3 -c "print(min($OPERATING_CAPITAL, $EQUITY))")
@@ -111,11 +115,11 @@ ACTION_LOG=""
 for i in $(seq 0 $((POS_COUNT - 1))); do
   pos=$(echo "$POSITIONS" | jq -c ".[$i]")
   SYMBOL=$(echo "$pos" | jq -r '.symbol')
-  QTY=$(echo "$pos" | jq -r '.qty | tonumber')
-  AVG_ENTRY=$(echo "$pos" | jq -r '.avg_entry_price | tonumber')
-  CURRENT=$(echo "$pos" | jq -r '.current_price | tonumber')
-  UNREALIZED_PL=$(echo "$pos" | jq -r '.unrealized_pl | tonumber')
-  UNREALIZED_PCT=$(echo "$pos" | jq -r '.unrealized_plpc | tonumber')
+  QTY=$(echo "$pos" | jq -r 'try (.qty | tonumber) catch 0')
+  AVG_ENTRY=$(echo "$pos" | jq -r 'try (.avg_entry_price | tonumber) catch 0')
+  CURRENT=$(echo "$pos" | jq -r 'try (.current_price | tonumber) catch 0')
+  UNREALIZED_PL=$(echo "$pos" | jq -r 'try (.unrealized_pl | tonumber) catch 0')
+  UNREALIZED_PCT=$(echo "$pos" | jq -r 'try (.unrealized_plpc | tonumber) catch 0')
 
   log ""
   log "── $SYMBOL: $QTY sh @ \$$AVG_ENTRY → \$$CURRENT | P&L: \$$UNREALIZED_PL ($(python3 -c "print(round($UNREALIZED_PCT*100,2))")%) ──"

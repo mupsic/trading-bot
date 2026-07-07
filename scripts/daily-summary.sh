@@ -42,14 +42,21 @@ notify() { bash "$SCRIPTS/telegram.sh" send "$1" > /dev/null 2>&1 || true; }
 # ============================================
 # Pull state
 # ============================================
-ACCOUNT=$(bash "$SCRIPTS/alpaca.sh" account 2>/dev/null)
-EQUITY=$(echo "$ACCOUNT" | jq -r '.equity | tonumber')
-CASH=$(echo "$ACCOUNT" | jq -r '.cash | tonumber')
-DAYTRADE_COUNT=$(echo "$ACCOUNT" | jq -r '.daytrade_count | tonumber')
+# NOTA: se ha quitado 2>/dev/null para que si Alpaca responde con error o
+# datos raros, la respuesta aparezca en los logs de GitHub Actions.
+# Además, se imprime la respuesta cruda antes de parsear para debug.
+ACCOUNT=$(bash "$SCRIPTS/alpaca.sh" account)
+echo "[debug] ACCOUNT response: $ACCOUNT" >&2
+# Defensive: try/catch para que un null en cualquier campo devuelva 0
+# en lugar de matar el script con exit 5.
+EQUITY=$(echo "$ACCOUNT" | jq -r 'try (.equity | tonumber) catch 0')
+CASH=$(echo "$ACCOUNT" | jq -r 'try (.cash | tonumber) catch 0')
+DAYTRADE_COUNT=$(echo "$ACCOUNT" | jq -r 'try (.daytrade_count | tonumber) catch 0')
 
-POSITIONS=$(bash "$SCRIPTS/alpaca.sh" positions 2>/dev/null)
+POSITIONS=$(bash "$SCRIPTS/alpaca.sh" positions)
+echo "[debug] POSITIONS response: $POSITIONS" >&2
 POS_COUNT=$(echo "$POSITIONS" | jq 'length')
-POS_VALUE=$(echo "$POSITIONS" | jq '[.[].market_value | tonumber] | add // 0')
+POS_VALUE=$(echo "$POSITIONS" | jq '[.[] | try (.market_value | tonumber) catch 0] | add // 0')
 
 # ============================================
 # Compute operating-equity metrics
@@ -153,7 +160,7 @@ PYEOF
     echo ""
     echo "| Ticker | Shares | Entry | Current | Unrealized P&L | Day Chg |"
     echo "|--------|--------|-------|---------|-----------------|---------|"
-    echo "$POSITIONS" | jq -r '.[] | "| \(.symbol) | \(.qty) | \(.avg_entry_price)$ | \(.current_price)$ | \(.unrealized_pl)$ (\(.unrealized_plpc | tonumber * 100 | (. * 10 | round) / 10)%) | \(.change_today | tonumber * 100 | (. * 10 | round) / 10)% |"'
+    echo "$POSITIONS" | jq -r '.[] | "| \(.symbol) | \(.qty) | \(.avg_entry_price)$ | \(.current_price)$ | \(.unrealized_pl)$ (\((try (.unrealized_plpc | tonumber) catch 0) * 100 | (. * 10 | round) / 10)%) | \((try (.change_today | tonumber) catch 0) * 100 | (. * 10 | round) / 10)% |"'
   fi
 } >> "$TRADE_LOG"
 
@@ -188,7 +195,7 @@ if [[ "$POS_COUNT" -gt 0 ]]; then
   MSG+="
 
 Posiciones:"
-  POSITIONS_TXT=$(echo "$POSITIONS" | jq -r '.[] | "  \(.symbol): \(.qty) sh, P&L \(.unrealized_plpc | tonumber * 100 | (. * 10 | round) / 10)%"')
+  POSITIONS_TXT=$(echo "$POSITIONS" | jq -r '.[] | "  \(.symbol): \(.qty) sh, P&L \((try (.unrealized_plpc | tonumber) catch 0) * 100 | (. * 10 | round) / 10)%"')
   MSG+="
 $POSITIONS_TXT"
 fi
