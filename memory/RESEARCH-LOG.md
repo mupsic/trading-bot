@@ -3652,3 +3652,90 @@ TRADE [UNH, RTX] — Regime ON, 2 slots available, both candidates pass all filt
   ]
 }
 ```
+
+I'll search for the required market data simultaneously.**Data synthesis complete.** Key findings:
+
+- **SPY MA200**: TipRanks (Jul 1) = $687.80 | Investing.com (Jul 2) = $745.25. Using the more recent Investing.com figure: **$745.25**. SPY current = $747.71 → ABOVE MA200 by a razor-thin margin (~$2.46).
+- **VIX**: Yahoo Finance live = **16.36** (+5.07% today); Investing.com shows ~16.13. Today's Iran geopolitical shock pushed it up ~13% intraday per reports, but still well below 25.
+- **Sector leaders**: XLE +2.96% today (oil surge on Iran), XLV +1.71%, XLP +1.90%; XLK -2.71%, XLI -2.15% today.
+- **Catalysts**: Trump/Iran deal collapse → oil +5-6%, chip rotation out, Samsung doubts, Fed minutes today, IBM upgrade, DELL presidential boost, SPX CAPE at 39.7.
+- **Economic events today**: Fed minutes, EIA Crude Oil Inventories, MBA Mortgage Applications, Wholesale Inventories. Earnings AMC: AZZ, CAG, LEVI.
+
+**Regime gate**: SPY ($747.71) > MA200 ($745.25) ✅ | VIX (16.36) < 25 ✅ → **REGIME = ON** — but barely above MA200, and today's geopolitical shock (Iran, oil spike, chip selloff, VIX +5%) warrants high caution. Given market-wide selling pressure (-0.47% SPY, -1.85% QQQ), rotation into defensives/energy, and Fed minutes risk this afternoon, the prudent decision is HOLD — no new entries into a falling-knife session with macro binary risk.
+
+---
+
+## 2026-07-08 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,141.58
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,333.52
+- Capital disponible: $17,666.49
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $747.71 (MA200: $745.25) — ABOVE (margin: +$2.46 / +0.33%)
+- VIX: 16.36 (+5.07% intraday) — LOW (< 25 threshold)
+- Regime: **ON** ⚠️ (razor-thin margin above MA200; elevated intraday VIX spike)
+- Reason: SPY technically above MA200 and VIX below 25, but geopolitical shock (Iran deal collapse), oil +5%, chip selloff, and Fed minutes this afternoon create binary intraday risk — no edge for new swing entries today.
+
+### Market Context
+- Top catalysts today:
+  - Oil surged more than 5% after President Trump said the Iran memorandum of understanding is "over," sending geopolitical tensions higher in the Gulf and pushing Brent up to $78 a barrel.
+  - The 10-year Treasury yield climbed to 4.56%, its highest in a month; the VIX volatility index jumped almost 13% on geopolitical nerves.
+  - IBM added more than 3% Monday after Bank of America raised its price target for shares to $330 from $315, anticipating IBM will raise fiscal 2026 guidance "modestly."
+  - Dell rose 4% Monday after President Trump touted the company and told consumers to "go out and buy a Dell computer."
+  - Chip stocks are under pressure — the PHLX Semiconductor Index (SOX) has dropped nearly 7% today and over 12% over the past two days amid AI infrastructure momentum concerns.
+
+- Sector leaders (today's session):
+  - XLE (Energy): +2.96% — surging on Iran/oil shock
+  - XLP (Consumer Staples): +1.90%
+  - XLV (Healthcare): +1.71%
+  - XLU (Utilities): +1.26%
+  - XLF (Financials): +0.62%
+  - XLI (Industrials): -2.15% (selling off)
+  - XLK (Technology): -2.71% (chip rotation out)
+
+- YTD sector leaders (context): XLK leads YTD with +33%, followed by XLE (+21%) and XLI (+20%) for H1 2026.
+
+- Economic events today:
+  - Wednesday July 8: Consumer Credit, EIA Crude Oil Inventories, MBA Mortgage Applications Index, Wholesale Inventories.
+  - Fed minutes release today (July 8).
+  - Earnings AMC: AZZ Inc. (AZZ), Levi Strauss & Co. (LEVI), PriceSmart Inc. (PSMT) + CAG (per earnings calendar).
+
+### Trade Candidates (only if Regime ON)
+> ⛔ **NO CANDIDATES** — Regime technically ON but no actionable edge today.
+>
+> **Rationale:**
+> - SPY only $2.46 above MA200 — any further selling breaks regime gate intraday.
+> - Oil shock (+5%) and Iran geopolitical escalation = macro binary risk → unquantifiable tail risk.
+> - QQQ -1.85% signals broad tech liquidation; chip names (primary momentum leaders) in freefall.
+> - Fed minutes this afternoon = second binary event risk today.
+> - Stocks outside the chip arena are mostly steady to higher, reinforcing rotation ideas — but rotation targets (XLE, XLP, XLV) already gapped up and would be chasing.
+> - Open positions (AAPL, TRIP) both near breakeven today — no need to add risk exposure.
+> - Max 3 trades/week rule: preserving quota for higher-conviction setups later this week.
+
+### Risk Factors Today
+- **Iran/Geopolitical**: Oil jumped almost 6% after Trump declared the interim ceasefire with Iran "over," triggering supply disruption fears.
+- **Semiconductor contagion**: Investors cut exposure to chip stocks, with Samsung's profit spike fueling new doubts about semiconductor demand later this year.
+- **Valuation warning**: The S&P 500's CAPE ratio is at 39.7, the highest since the dot-com crash in 2000.
+- **Fed Minutes binary risk**: Hawkish tone could reprice rate-cut expectations sharply.
+- **SPY near MA200**: Any -0.34% additional SPY decline flips regime gate to OFF.
+- **TRIP position** (`qty_available: 0`) — appears locked (likely pending order or corporate action; monitor for resolution).
+
+### Decision
+**HOLD** — Regime technically ON but no edge. Geopolitical shock + Fed minutes = binary risk day. Preserving trade quota (0/3 used this week) for cleaner setups. Monitor existing AAPL (+3.78%) and TRIP (+2.74%) trailing stops.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-08",
+  "regime": "ON",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
