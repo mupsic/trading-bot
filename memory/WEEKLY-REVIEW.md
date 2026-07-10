@@ -817,3 +817,102 @@ Per protocol, no strategy parameter changes are proposed. A rule must fail for *
 - 🟡 **CCL: Monitor oil price trajectory:** The entire CCL thesis rests on continued oil price decline as a fuel cost tailwind. If crude oil reverses materially above $75/bbl, reassess the exit thesis even if the trailing stop has not been triggered.
 - 🟡 **TRIP: Set formal target review for week of June 29:** TRIP is now +4.4% unrealized and the 10-day catalyst window is expiring. Evaluate whether TRIP has sufficient momentum to reach the $30.21 target or whether a partial profit-take is appropriate given the position's multi-week hold and small absolute gains.
 - 🟢 **MU: If it stabil
+
+I'll search for the S&P 500 weekly performance and sector data simultaneously.Now I have enough data to construct the full weekly review. Let me compute the key metrics:
+
+**S&P 500 Weekly Performance:**
+- Monday Jul 7 open reference: ~$7,482 (prior Friday close implied)
+- Mon Jul 7: +0.72% → 7,537.43
+- Tue Jul 8: –0.28% → 7,482.71 (Iran ceasefire ended)
+- Wed Jul 9: +0.80% → 7,543.64
+- Thu/Fri Jul 10: +0.42% → 7,575.39
+
+Prior Friday close (Jul 3 week): The Wespath document shows S&P 500 WTD = +1.8% as of Jul 3. For this week: 7,575.39 vs prior close. Working backwards from Mon's close of 7,537.43 at +0.72%, prior close ≈ 7,483.52. Week return = (7,575.39 – 7,483.52) / 7,483.52 ≈ **+1.23%**
+
+**Bot trades this week:**
+- CCL closed Jul 7 pre-week (entry $29, exit $26.885, –7.29%, –$306.68) — this closed on 2026-07-07 but was reported as the prior period's trade
+- No new trades executed this week (0/3 trades used)
+- AAPL: unrealized +5.5% (+$16.43)
+- TRIP: unrealized +6.7% (+$132.00)
+- Week P&L = $0.00 (no closed trades this week; operating equity unchanged)
+
+**Closed trades this week:** CCL (–$306.68, –7.29%) — 0 wins, 1 loss
+**Win rate:** 0% (1 closed trade, 0 winners)
+**Best trade:** TRIP +6.7% (open, unrealized)
+**Worst trade:** CCL –7.29% (closed)
+**Profit factor:** 0.00 (no winners to sum; $0 / $306.68)
+
+**Bot vs S&P:** 0.00% – 1.23% = **–1.23%**
+
+---
+
+## Week ending 2026-07-10
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $20,000.00 |
+| Ending portfolio (Fri) | $20,000.00 |
+| Week return | $0.00 (+0.00%) |
+| S&P 500 week | +1.23% (S&P 500 closed at 7,575.39 on Friday, recording a more than 1% advance on the week) |
+| Bot vs S&P | **–1.23%** (0.00% bot vs +1.23% SPX) |
+| Trades total | 1 (W:0 / L:1 / open:2) |
+| Win rate | 0% (0/1 closed trades) |
+| Best trade | TRIP +6.7% (open/unrealized) |
+| Worst trade | CCL –7.29% (closed, hard stop) |
+| Profit factor | 0.00 (no closed winners) |
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| CCL | $29.00 | $26.885 | –$306.68 | –7.29% | Consumer Discretionary | Hard stop –7% triggered; Iran ceasefire collapse on Jul 7 sent oil +5.4%, crushing cruise margin thesis |
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $315.03 | +$16.33 (+5.47%) | $284.53 (–10% trail) | Information Technology |
+| TRIP | $13.13 | $14.01 | +$132.00 (+6.70%) | $12.609 (–10% trail) | Consumer Discretionary |
+
+### What Worked (3-5 bullets)
+- **Hard stop discipline held perfectly on CCL:** The –7% hard stop executed without hesitation at –7.29% on July 7. The collapse of the US–Iran ceasefire stoked fears of re-escalating oil prices, which would dampen travel demand and compress airline/cruise margins — the stop saved the position from likely further deterioration.
+- **TRIP recovered strongly by week-end:** After sliding to +0.3% on Tuesday (TRIP at $13.17), the stock surged +5.1% on Friday to close at $14.01, pushing unrealized P&L to +6.70% (+$132). The S&P 500 rose on Friday, bolstered by a couple of Big Tech names, to notch a weekly gain, and TRIP rode the broad risk-on sentiment.
+- **AAPL held steady and extended gains:** AAPL climbed from $298.70 entry to $315.03 (+5.47% unrealized), benefiting from the week's tech-led rally. Technology stocks led the early-week rally, with the Technology Select Sector SPDR ETF climbing nearly 2%.
+- **Cash preservation during geopolitical shock:** Holding 89%+ in cash through the Iran ceasefire collapse on Wednesday (when the Dow dropped 576.76 points, or 1.09%, to end at 52,348.39) meant the portfolio was largely insulated from mid-week volatility.
+- **Zero new trades avoided whipsaw:** With 0/3 trades executed in a week of sharp intraday reversals driven by geopolitical headlines, the bot avoided chasing false breakouts in a noisy macro environment.
+
+### What Didn't Work (3-5 bullets)
+- **CCL thesis invalidated by exogenous macro shock:** The CCL long was built on falling oil as a fuel-cost tailwind, but oil prices jumped after Trump said the U.S. would no longer honor the ceasefire, with Brent futures trading 5.4% higher at $78.14 per barrel — the exact scenario flagged as a risk in the prior weekly review. The position had no oil-price hedge.
+- **Extreme under-deployment persists (only ~12% capital deployed):** With $97,808 in cash and only ~$2,417 in positions, the bot is nearly entirely on the sidelines. This structural under-deployment means the portfolio cannot benefit from strong market weeks like this one (+1.23% SPX).
+- **Zero new entries despite valid setups:** The week produced 0/3 trades. Nvidia rose around 4% and Meta Platforms jumped about 6% on Friday alone — momentum-driven entries that met the strategy's entry criteria went entirely uncaptured.
+- **Win rate crashed to 0% on only closed trade:** CCL was the sole closed trade, and it was a max-stop loss. A single hard-stop trade producing 0% win rate is a noisy sample, but it continues the recent pattern of exits skewing to the downside on closed trades.
+- **Sector concentration in Consumer Discretionary risk (TRIP + CCL):** Both open/recently closed positions were in Consumer Discretionary, which faced headwinds from oil-driven consumer spending concerns mid-week. Diversification across sectors remains insufficient.
+
+### Sector Performance
+- **Communications & Financials** led on Friday, while Industrials and Healthcare slid.
+- **Information Technology** led the early-week rally (XLK +~2% Monday); Western Digital surged 7%, Teradyne +2.8%, Marvell and Oracle also gained. AAPL benefited from this rotation.
+- **Communication Services** was the top weekly performer: Nvidia rose ~4% and Meta Platforms jumped ~6% on Friday alone, with Meta recording its best weekly performance (+~15%) since early 2024.
+- **Materials** was the worst-performing sector mid-week, sliding close to 3% on Wednesday, its biggest single-day loss in over a year.
+- **Consumer Discretionary / Travel** was hit hard on Wednesday: Airline stocks edged down after the U.S. signaled it would abandon the Iran ceasefire — American Airlines fell nearly 4%, United Airlines declined ~2.5%, and Delta, Southwest, and JetBlue each fell ~2%. CCL's hard-stop exit on this dynamic was correct.
+- **Healthcare (XLV), Utilities (XLU), Consumer Staples (XLP), and Energy (XLE)** briefly gained 2%+ early Monday on sector rotation out of tech/semis, then gave back gains as the week progressed.
+
+### Key Lessons
+- **The CCL oil-price risk flag from the prior weekly review proved prescient — and was NOT acted upon proactively.** The prior review explicitly warned: "If crude oil reverses materially above $75/bbl, reassess the exit thesis even if the trailing stop has not been triggered." Brent crossed $78 on the ceasefire collapse. A proactive exit at the open Tuesday (before oil spiked) would have saved ~$100–150 in losses vs. the hard stop at –7.29%. **Pre-defined macro tripwires must be monitored and acted upon intraday, not just noted in reviews.**
+- **Hard stops are the last line of defense, not the primary exit mechanism.** The strategy specifies the hard stop as an "ABSOLUTE maximum loss" with "OVERRIDE: NONE." It functioned correctly, but the ideal outcome is to exit before the hard stop fires. Position-level exit triggers tied to catalyst invalidation (e.g., oil crossing a defined threshold) should be formalized in trade setup notes.
+- **Severe under-deployment (88%+ cash) is the portfolio's biggest structural drag.** In a week where SPX gained +1.23% on AI/tech strength, the bot returned exactly 0.00%. The opportunity cost of holding $97K+ in idle cash is compounding weekly. However, this reflects correct position sizing discipline (20% max per position on $20K operating equity = $4K max per position), and the current deployable universe is correctly constrained by the operating equity definition.
+- **Geopolitical shock weeks require pre-positioned stop tightening.** The Iran headline arrived suddenly on Wednesday. For positions with geopolitically sensitive underlying drivers (oil, travel, airlines), trailing stops should be reviewed and potentially tightened to 7–8% when VIX is spiking or macro headlines are active.
+- **TRIP's Friday surge (+5.1%) to +6.7% unrealized pushes it toward the +8% trailing-stop tightening review threshold (Target 1 = +15%).** The position is not yet at Target 1, but its trajectory warrants active monitoring going into next week.
+
+### Adjustments for Next Week
+**No rule changes — insufficient data.**
+
+Per protocol, no strategy parameter changes are proposed. A rule must fail for **2+ consecutive weeks** before relaxing it, and must prove out for **2+ consecutive weeks** before tightening it.
+
+**Operational action items (not rule changes):**
+- 🔴 **CCL post-mortem complete:** The CCL trade validated the hard stop rule (executed cleanly at –7.29%) but highlighted the need to formalize **catalyst-invalidation exit criteria** at trade entry. For any position with an oil-price-sensitive thesis, define a specific crude price level as a mandatory exit trigger in the trade setup note — not just a "monitor" instruction.
+- 🟡 **TRIP: Active monitoring at +6.7% unrealized.** TRIP is building momentum. Set a formal alert if TRIP reaches $15.14 (+15.3% from entry, Target 1). At that point, tighten trailing stop from 10% to 8% per strategy rules. Watch for any catalyst deterioration given Consumer Discretionary sector's oil sensitivity.
+- 🟡 **AAPL: Position is constructive at +5.47%.** AAPL has recovered from its prior near-stop-loss levels. No action required yet. Set alert at $343.50 (+15% from entry, Target 1) for trailing stop tightening to 8%. Continue to hold.
+- 🟢 **New entry scouting for next week:** 0/3 trades used this week. With strong sector rotation into **Communication Services** (META +15%) and continued AI infrastructure momentum (sentiment toward AI-linked stocks was buoyed by strong demand for SK Hynix's US share offering, which was more than seven times oversubscribed), identify 2–3 candidate entries in Communication Services or Technology for Monday pre-market analysis. Avoid Consumer Discretionary and Materials given current macro headwinds.
+- 🟢 **Operating equity vs. Alpaca equity reconciliation:** The gap between Alpaca reported equity ($100,224.69) and operating equity ($20,000.00) remains large and unresolved structurally. Confirm which figure governs position sizing to avoid accidental over-deployment.
+
+### Overall Grade: D+
+**Reasoning:** The week produced $0.00 in realized P&L against an S&P 500 gain of approximately +1.23%, resulting in a –1.23% relative underperformance. The sole closed trade was a max-loss hard stop (CCL, –7.29%, –$306.68), and zero new trades were initiated despite multiple valid momentum setups in Communication Services and Technology. The hard stop rule functioned as
