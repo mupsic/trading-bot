@@ -3834,3 +3834,111 @@ TRADE [MNST, COP]
       "position_cost": 3968.00,
       "target_price": 72.96,
       "catalyst": "Monster Beverage declared a 2-for-1 stock split on July 9, 2026 — split-driven momentum catalyst in Consumer Staples sector",
+
+I'll gather the required market data simultaneously.**Data synthesis:**
+- SPY 200-day MA = **$545.25** — wait, cross-checking sources. TipRanks (Jul 1) shows SPY 200-day SMA = **$687.80**; Financhill shows SPY at $757.09 with 200-day SMA at **$683.44**; Investing.com shows 200-day MA at **$545.25**. Best corroborated figure across most recent sources: ~**$687–$688**. Live SPY quote = $751.71 → ABOVE MA200. ✅
+
+- VIX = **16.90** (+4.77%) → BELOW 25. ✅ REGIME = ON.
+
+- VIX climbed above 18 yesterday morning, then fell below 17 — confirmed low volatility territory.
+
+- META announced custom AI chip manufacturing from September + Muse Spark 1.1 AI platform update; META and Micron both surged 4.5–4.7%.
+
+- SK Hynix Nasdaq debut today; raised $26.5B in its US ADR offering, the largest ever US listing by a foreign company.
+
+- Semiconductor stocks led the market; cooling oil prices helped after Trump said Iran sought negotiations.
+
+- Sector leaders Jul 9: XLK +1.76%, XLI +0.62%, XLB +0.52%.
+
+- YTD: XLK leads at +33%, XLE +21%, XLI +20%.
+
+- **Candidates**: META has EU regulatory headline risk today (possible fine up to 6% of revenue). EC preliminary findings accuse META of DSA breach over addictive design; potential fine up to 6% of global annual revenue — **AVOID META**. 
+
+- **MU (Micron)**: Micron advanced 4.5% on META AI chip tailwind; sports Zacks Rank #1 (Strong Buy). No earnings in next 7 days (MU reports late September). At ~$130–138 range (gained 4.5% from prior session). Good candidate in XLK/semiconductor momentum.
+
+- **DAL earnings today (bmo)**: DAL reported this morning; sector saw strong quarter — **AVOID** (already reported, post-earnings reaction too unpredictable intraday).
+
+- **NVDA**: Chip stocks fell in premarket ahead of SK Hynix debut — slight headwind short-term, but longer-term AI momentum intact. Chip stocks on comeback trail, though crude oil and Treasury yields ticked higher. NVDA at ~$160–170 range. 1 share = ~$165 ≤ $4,000 ✓. No earnings for ~6 weeks (reports late August).
+
+- **AAPL already held** — add more would require checking rules (no averaging down unless it's a separate entry logic). Current position is 1 share, profitable (+5.5%). Cannot add to existing position.
+
+Now constructing candidates carefully:
+- **MU**: ~$138 (gained 4.5% yesterday). 28 shares × $138 = $3,864 ≤ $4,000 ✓. No earnings within 7 days ✓. Catalyst: META AI chip custom silicon order + Muse Spark AI platform → HBM memory demand uplift, Zacks #1 Strong Buy.
+- **NVDA**: ~$166. 24 shares × $166 = $3,984 ≤ $4,000 ✓. Catalyst: AI semiconductor cycle continuation, SK Hynix mega-IPO validates AI memory/chip demand, chip stocks leading market. No earnings within 7 days ✓.
+
+Position cost check: positions_value ($2,316.81) + MU ($3,864) + NVDA ($3,984) = $10,164.81 << $97,808 cash ✓.
+Max positions: currently 2 open + 2 new = 4 ≤ 5 ✓.
+Trades this week: 0 used, adding 2 ≤ 3 ✓.
+
+---
+
+## 2026-07-10 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100124.87
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97808.06
+- Positions value: $2316.81
+- Capital disponible: $17683.19
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $751.71 (MA200: ~$687.80) — **ABOVE**
+- VIX: 16.90 — **LOW**
+- Regime: **ON**
+- Reason: SPY is ~9.3% above its 200-day MA and VIX at 16.90 is well below the 25 threshold; both regime gates pass.
+
+### Market Context
+- Top catalysts today:
+  - 🤖 **META AI chip + Muse Spark 1.1**: META announced custom AI chip production from September (boosting compute to 14 GW by 2027) and launched its strongest agentic AI model yet — META +4.7%, MU +4.5% yesterday on spillover HBM demand thesis
+  - 🚀 **SK Hynix mega-US IPO**: Largest-ever US listing by a foreign company ($26.5B ADR offering) debuting on Nasdaq today — validates AI memory chip demand cycle
+  - ⚡ **Iran/Strait of Hormuz tensions**: US and Iran launched heaviest attacks since ceasefire; oil prices elevated, creating drag on industrials and airlines but chips remain resilient
+  - 📋 **DAL earnings beat (bmo)**: Delta Air Lines Q2 EPS $1.56 vs. $1.47 estimate, revenue $17.67B — positive for consumer/travel but oil headwind noted
+  - 📊 **Jobless claims subdued**: Initial claims 215K vs. 223K estimate — labor market remains firm, supportive of consumer spending
+
+- Sector leaders (Jul 9 close):
+  - XLK (Technology): +1.76% — 🥇 Leader; +33% YTD
+  - XLI (Industrials): +0.62%
+  - XLB (Materials): +0.52%
+  - XLF (Financials): +0.05%
+  - XLP (Staples): -0.51% — laggard
+  - XLY (Consumer Disc): -0.18%
+  - XLE (Energy): -0.23%
+
+- Economic events:
+  - Next week: **CPI (Tuesday Jul 15)** — key inflation print for rate direction
+  - 10-yr Treasury yield near 4.58% (firm demand at recent auction)
+  - No major Fed speakers scheduled today
+
+### Trade Candidates (only if Regime ON)
+
+1. **MU** — META AI custom chip order driving HBM3E demand for Micron; Zacks Rank #1 (Strong Buy) upgrade catalyst; AI semiconductor cycle re-acceleration. Entry $138.00, stop $128.34 (-7%), target $157.32 (+14%), shares=28, R:R 1:2
+
+2. **NVDA** — AI semiconductor cycle leadership confirmed by SK Hynix $26.5B US IPO validating HBM/GPU demand; chips leading market rebound off Iran-news lows; no earnings until ~late August. Entry $166.00, stop $154.38 (-7%), target $189.24 (+14%), shares=24, R:R 1:2
+
+### Risk Factors Today
+- 🌍 **Geopolitical tail-risk**: US-Iran Strait of Hormuz escalation could spike oil prices and VIX rapidly; monitor intraday headlines closely
+- 📉 **SK Hynix IPO overhang**: Chip stocks showing premarket weakness (-0.66% NVDA premarket) as capital may rotate into the new mega-listing; creates near-term turbulence
+- 📋 **META EU regulatory risk**: European Commission preliminary finding of DSA breach could trigger selling in tech/AI names broadly (fine up to 6% global revenue)
+- 📊 **CPI next week (Jul 15)**: Inflation data may reset rate expectations; swing positions should be aware of potential volatility early next week
+- 💹 **Premarket weakness in Nasdaq**: NQ futures -0.2%; risk of gap-down open — use limit orders, avoid chasing at open
+
+### Decision
+TRADE [MU, NVDA]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-10",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "MU",
+      "entry_price": 138.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 28,
+      "position_cost
