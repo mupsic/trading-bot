@@ -3942,3 +3942,103 @@ TRADE [MU, NVDA]
       "trailing_stop_pct": 10,
       "shares": 28,
       "position_cost
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me compile the research log.
+
+**Key data points gathered:**
+- SPY 200-day SMA (simple): **$690.63** — SPY current: $754.95 → **ABOVE MA200**
+- VIX live: **15.03** (prev close) — at close July 10: 15.03, -5.11% → **LOW (<25)**
+- Key catalysts: US-Iran escalation, Trump ordered new strikes overnight Saturday; big bank earnings (JPM, GS, C, BAC, WFC) kick off Tuesday; CPI data Wednesday; new Fed Chair Kevin Warsh congressional testimony Tuesday.
+- Sector leaders (Jul 9): XLK +1.75%, XLI +0.62%, XLB +0.52%
+- YTD sector leaders: XLK +33%, XLE +21%, XLI +20%
+- Biogen (BIIB) upgraded to Buy from Hold at Truist, target raised to $235 from $190, ahead of Phase 2 BIIB080 data presentation at AAIC next week and Phase 3 pipeline readouts.
+- Humana (HUM) upgraded to Overweight from Equal Weight at Wells Fargo, target raised to $502 from $227, expecting constructive Q2 earnings from managed care.
+- J.B. Hunt Transport (JBHT) +4% after Bernstein raised to outperform, citing better market conditions. — but JBHT reports earnings July 15, within 7-day window → **EXCLUDED**
+- TSM Q2 revenue of $39.63B exceeded expectations, climbing 36% Y/Y. — TSM reports July 16 → **EXCLUDED**
+- Meta Platforms surged ~9% on July 1 on Bloomberg report of new cloud infrastructure business to rival AWS/Azure/Google Cloud.
+
+**Candidate analysis:**
+- **BIIB**: Truist Buy upgrade, $235 target, AAIC data catalyst next week. No earnings within 7 days. Price ~$185-190 range. $4,000 / ~$190 = ~21 shares. ✅ Passes all filters.
+- **HUM**: Wells Fargo upgrade to Overweight, $502 target — but HUM reports Q2 this week (managed care). **EXCLUDE** (earnings risk within 7 days).
+- **DY (Dycom Industries)**: AI infrastructure buildout catalyst, strong quant ratings. Price ~$190. 21 shares × $190 = $3,990. ✅
+- **META**: Already rallied significantly +9% on July 1, cloud business catalyst, no earnings within 7 days. But at ~$700+ per share, 5 shares = $3,500 ✅. However META already had big move — momentum trade still valid with AI cloud catalyst.
+
+**Final candidates**: BIIB (Truist upgrade + AAIC data catalyst, Healthcare sector showing July strength) and DY (Dycom, AI infrastructure buildout, Technology/Industrial sector leader).
+
+---
+
+## 2026-07-13 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100219.31
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97808.06
+- Positions value: $2411.25
+- Capital disponible: $17588.75
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $754.95 (MA200: $690.63) — ABOVE
+- VIX: 15.03 — LOW
+- Regime: ON
+- Reason: SPY is +9.3% above its 200-day MA and VIX at 15.03 is well below the 25 threshold; broad market technical structure is bullish with all major MAs on buy signals.
+
+### Market Context
+- Top catalysts today:
+  - 🔴 **US-Iran Strait of Hormuz escalation**: Trump ordered new overnight strikes on Iran after IRGC hit a ship near the Strait; Tehran declared the Strait closed — energy prices spiking, geopolitical risk elevated for the open
+  - 📊 **Q2 Earnings Season kicks off**: Major banks (JPM, GS, BAC, WFC, C) report Tuesday July 14; Q2 earnings growth expected above 20% YoY — market in "prove it" mode
+  - 📉 **CPI data Wednesday July 14**: June Consumer Price Index on deck; hawkish FOMC minutes last week flagged inflation running hotter than expected — key macro event mid-week
+  - 🏛️ **Fed Chair Warsh Congressional testimony Tuesday**: First testimony as new Fed Chair; market watching for rate path signals
+  - 💊 **Biogen (BIIB) analyst upgrade**: Truist upgraded to Buy, target $235 from $190 ahead of Phase 2 BIIB080 data at AAIC conference and approaching Phase 3 pipeline readouts
+  - 🚛 **Memory stock washout**: SK Hynix (SKHYV) U.S. debut underwhelmed; dragging MU, SNDK — sector rotation risk in semis
+
+- Sector leaders (recent):
+  - XLK (Technology): **+1.75%** (Jul 9), **+33% YTD** — clear leader 2026
+  - XLI (Industrials): **+0.62%** (Jul 9), **+20% YTD** — AI infrastructure buildout
+  - XLE (Energy): surging on Middle East escalation, **+21% YTD**
+  - XLF (Financials): **+0.05%** (Jul 9) — flat last session, but bank earnings catalyst this week
+  - XLV (Healthcare): Biogen/Humana upgrade momentum; July sector performance improving
+  - XLP (Consumer Staples): **+1.11%** (Jul 9) — defensive bid on geopolitical risk
+
+- Economic events:
+  - July 13: No major data or earnings (light calendar — good for swing entries)
+  - July 14: CPI (June), Fed Chair Warsh testimony, JPM/BAC/GS/WFC/C earnings
+  - July 15: PPI, Fed Beige Book, ASML/JNJ/MS/BLK/UAL/JBHT earnings
+  - July 16: TSM/GE/UNH/ABT/NFLX/ISRG earnings; Retail Sales
+
+### Trade Candidates (only if Regime ON)
+
+1. **BIIB** — Truist analyst upgrade to Buy (from Hold), price target raised to $235 from $190 ahead of Phase 2 BIIB080 data presentation at AAIC conference next week + approaching Phase 3 pipeline readouts (litifilimab Q4). Healthcare sector gaining July momentum. No earnings within 7 days. Entry $191.00, stop $177.63 (-7%), target $217.74 (+14%), shares=20, cost=$3,820. R:R 1:2
+
+2. **DY** — Dycom Industries direct beneficiary of AI network infrastructure buildout (fiber/telecom); identified as top stock-to-watch for week of July 13 with strong quant ratings. XLK/XLI sector tailwind. No earnings within 7 days. Entry $190.00, stop $176.70 (-7%), target $216.60 (+14%), shares=21, cost=$3,990. R:R 1:2
+
+### Risk Factors Today
+- **Strait of Hormuz closure** by Iran — oil spike risk, potential broader equity sell-off on open; Nasdaq futures were down ~1% pre-weekend
+- **Memory stock contagion**: SK Hynix debut dragged MU/SNDK/semis; XLK may face morning headwind
+- **CPI Wednesday creates mid-week binary risk**: Hawkish print could reverse any gains from today's entries — positions opened today face 2-day hold through inflation data
+- **TRIP position (qty_available: 0)**: Shares currently unavailable (likely subject to pending order/settlement) — monitor
+- **Earnings minefield**: JPM/GS/BAC reporting Tuesday AM — XLF/broad market gap risk Tuesday pre-open
+- **Geopolitical premium**: Any ceasefire news could rapidly deflate energy bid; any escalation could spike VIX above 20
+- **Operating capital deployed after 2 new trades**: $2,411 existing + $3,820 (BIIB) + $3,990 (DY) = $10,221 (51% of $20k op capital) — within target range 75-85% ceiling not yet hit; 4/5 positions used
+
+### Decision
+TRADE [BIIB, DY] — Regime ON, light calendar today, specific named catalysts, no earnings within 7 days for either, position sizing within rules. Enter at open if price confirms (no gap >2% against).
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-13",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "BIIB",
+      "entry_price": 191.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 20,
+      "position_cost": 3820.00,
+      "target_price": 217.74,
+      "catalyst":
