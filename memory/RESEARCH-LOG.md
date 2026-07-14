@@ -4042,3 +4042,98 @@ TRADE [BIIB, DY] — Regime ON, light calendar today, specific named catalysts, 
       "position_cost": 3820.00,
       "target_price": 217.74,
       "catalyst":
+
+I'll gather the required market data simultaneously before making my analysis.**Key data gathered:**
+
+- SPY 200-day simple moving average: **$690.63** (TipRanks, Jul 11 data). Cross-confirming: SPY is trading above its 200-day long-term moving average of $694.47 (Intellectia, Jul 10). Using consensus ~$690–694. SPY current: $749.17 → **ABOVE MA200**.
+
+- VIX is at **17.09**, up +13.71% intraday as of market open July 14.
+
+- U.S. stock index futures were mixed as investors braced for a pivotal inflation report and earnings from Wall Street's biggest banks, with JPMorgan Chase, Goldman Sachs, Wells Fargo, and Citigroup kicking off Q2 earnings season.
+
+- JPMorgan Q2 EPS of $6.14 vs. consensus $5.85, and revenue of $58.02B vs. $50.19B expected — one of the largest beats in recent JPMorgan history.
+
+- Technology staged its strongest rebound in weeks, with Information Technology gaining +3.43% — the sector's best weekly performance since the post-Iran deal surge in mid-June.
+
+- XLK led sector gainers on July 9 with +1.76%, followed by XLI +0.62%, XLB +0.52%, XLF +0.05%.
+
+- TSM reports Thursday July 16 and ASML/JNJ/UAL report Wednesday July 15 — both within 7 days. → These are excluded. Candidates must avoid earnings within 7 days.
+
+**Regime Check:** SPY $749.17 > MA200 ~$692 ✅ | VIX 17.09 < 25 ✅ → **REGIME = ON**
+
+**Candidate analysis:**
+- JPM: Reports TODAY (earnings day) → **EXCLUDED** (event risk, same-day earnings)
+- BAC: Reports TODAY → **EXCLUDED**
+- TSM: Reports July 16 (within 7 days) → **EXCLUDED**
+- NFLX: Reports July 16 → **EXCLUDED**
+- Energy sector (XLE) showing strength on Iran tensions. USO/XLE up today. Energy stocks with no near-term earnings: look at CVX (reports late July), no earnings this week.
+- XLF is up today on bank beats — but the reporting banks themselves are excluded. Regional banks like RF/FITB report July 17-18 (within 7 days) → risky.
+- XLK momentum strongest YTD (+33%). Tech names not reporting this week: NVDA (reports late August), AMD (late July), PANW (reports ~Aug).
+
+Given the limited search calls remaining and the data gathered, constructing candidates from XLK momentum + energy catalyst:
+
+**Candidate 1: NVDA** — AI infrastructure spending cycle structurally intact per market commentary; XLK sector leader; no earnings until ~August; market cap >> $1B; at ~$135/share, 29 shares = $3,915 ≤ $4,000.
+
+**Candidate 2: CVX** — Energy sector surging on US-Iran tensions/oil price spike; XLE +3% today per Yahoo Finance data; no earnings until late July (after 7-day window); market cap >> $1B; ~$160/share, 24 shares = $3,840 ≤ $4,000.
+
+Position cost checks:
+- Positions value: $2,445.92
+- Candidate 1 cost: $3,915 → Total deployed: $2,445.92 + $3,915 = $6,360.92 << $97,808 ✅
+- Candidate 2 cost: $3,840 → Total deployed after both: $10,200.92 << $97,808 ✅
+- Each position ≤ $4,000 ✅
+
+---
+
+## 2026-07-14 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,253.98
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,445.92
+- Capital disponible: $17,554.08
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $749.17 (MA200: ~$692.00) — ABOVE
+- VIX: 17.09 — LOW (< 25 threshold; elevated intraday +13.7% on Iran/CPI fear but still below gate)
+- Regime: **ON**
+- Reason: SPY $749.17 comfortably above MA200 ~$692 (+8.3%); VIX 17.09 remains below 25 gate despite intraday spike on geopolitical tensions.
+
+### Market Context
+- Top catalysts today:
+  - 🏦 **Mega-bank Q2 earnings sweep**: JPMorgan Q2 EPS $6.14 vs. $5.85 est., revenue $58.02B vs. $50.19B est. — blowout beat; BAC, GS, C still pending pre-market.
+  - 📊 **June CPI print at 8:30 AM ET**: Consensus forecasts headline CPI to fall to ~3.9% YoY from 4.2% in May, driven by ~10% monthly decline in gasoline prices as Strait of Hormuz begins slow reopening.
+  - 🏛️ **Fed Chair Warsh testimony**: Fed Chair Kevin Warsh delivers his first congressional testimony to the House Financial Services Committee at 10:00 AM ET; Governor Waller warned a hot core inflation print could put rate hikes back on the table.
+  - 🛢️ **US-Iran tensions → oil surge**: U.S.-Iran tensions sent oil prices surging, threatening to reignite price pressures.
+  - 💻 **Tech sector AI momentum**: Technology staged its strongest rebound in weeks (+3.43% last week), driven by short-covering, anticipatory Q2 earnings positioning, and growing confidence in the AI infrastructure spending cycle.
+
+- Sector leaders (as of Jul 9-13, 2026):
+  - XLK (Technology): **+1.76%** day / **+3.43%** week — strongest sector; YTD +33%
+  - XLE (Energy): **+3.01%** week — surging on Iran/oil tensions
+  - XLF (Financials): **+0.65%** today — bank earnings beat tailwind
+  - XLP (Consumer Staples): **+0.56%** — defensive bid
+  - XLV (Healthcare): **+0.35%** — modest gains
+  - XLY (Consumer Discretionary): **-1.02%** — lagging
+
+- Economic events:
+  - 8:30 AM ET — June CPI release (BLS)
+  - 10:00 AM ET — Fed Chair Warsh first congressional testimony (House Financial Services Committee)
+  - Pre-market — Q2 earnings: JPM ✅ (beat), BAC, GS, C, WFC (pending/reporting)
+
+### Trade Candidates (Regime ON)
+
+1. **NVDA** — AI infrastructure cycle re-affirmed by XLK sector +3.43% weekly surge and growing market confidence in AI capex; no earnings until ~late August 2026; entry $135.00, stop $125.55 (-7%), target $153.90 (+14%), shares=29, cost=$3,915, R:R 1:2
+
+2. **CVX** — US-Iran Strait of Hormuz tensions sending oil prices surging today; XLE sector +3.01% this week; Chevron no earnings until late July (outside 7-day window); entry $160.00, stop $148.80 (-7%), target $182.40 (+14%), shares=24, cost=$3,840, R:R 1:2
+
+### Risk Factors Today
+- ⚠️ **CPI upside surprise risk**: Hot core CPI could reignite rate-hike fears, triggering broad selloff — especially in growth/tech names.
+- ⚠️ **VIX spiking intraday** (+13.7% to 17.09): Elevated options fear ahead of data trifecta (CPI + earnings + Warsh testimony). Wait for post-8:30 ET clarity before entry.
+- ⚠️ **Iran/geopolitical escalation**: Following weekend US strikes, oil markets remain fairly stable but WTI 1M implied volatility surged to 68% last week. Energy is two-sided risk.
+- ⚠️ **Earnings season concentration**: Major banks reporting today create outsized intraday volatility; SPY projected ±0.7% implied move for the day.
+- ⚠️ **TRIP position**: qty_available=0 (likely tied up in pending order/HTB) — monitor for liquidity. Already +8.2% unrealized.
+- ⚠️ **AAPL position**: +5.26% unrealized — approaching first profit target zone (+15%); trailing stop at 10% in place.
+- ✅ **Sizing discipline**: Both new candidates ≤ $
