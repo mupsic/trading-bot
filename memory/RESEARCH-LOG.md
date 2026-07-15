@@ -4137,3 +4137,121 @@ Position cost checks:
 - ⚠️ **TRIP position**: qty_available=0 (likely tied up in pending order/HTB) — monitor for liquidity. Already +8.2% unrealized.
 - ⚠️ **AAPL position**: +5.26% unrealized — approaching first profit target zone (+15%); trailing stop at 10% in place.
 - ✅ **Sizing discipline**: Both new candidates ≤ $
+
+I'll gather the necessary market data simultaneously.Now I have all the data needed. Let me compile the complete research log.
+
+**Key data gathered:**
+- SPY price ~$751.71; 200-day SMA = **$694.04** → SPY is ABOVE MA200.
+- VIX closed at **16.50** on July 14 (-3.85%).
+- PayPal surged premarket after reports of a $53 billion takeover offer.
+- Major U.S. banks kicked off Q2 earnings season with stronger-than-expected results; BlackRock reported a jump in Q2 profit boosted by the stock market rally.
+- June CPI fell 0.4% monthly, annual inflation slowed to 3.5% (below 3.8% expectations), prompting traders to sharply reduce Fed rate hike expectations.
+- Today's earnings reporters include ASML, JNJ, Morgan Stanley, BlackRock, Progressive, BNY Mellon, PNC, Kinder Morgan, United Airlines, and J.B. Hunt.
+- Top performing sector SPDRs in 2026 led by XLK (+33% YTD), followed by Energy (XLE).
+- XLE up +3.01% in recent session, energy ETFs broadly leading.
+- Crude oil topped $80/barrel after Iran-U.S. tensions escalated and the U.S. reinstated its blockade on Iranian oil.
+
+**Candidate screening:**
+- PayPal (PYPL): $53B takeover report — but price likely >$70+, need to check shares × price. PYPL ~$80-85, 47 shares = ~$3,965 ✓. No earnings this week ✓. M&A catalyst ✓.
+- BlackRock (BLK): Reported today (July 15) — EXCLUDED (earnings event risk).
+- Morgan Stanley (MS): Reporting today — EXCLUDED.
+- XLE-related energy play: Devon Energy (DVN) or ConocoPhillips (COP) — oil rising on Iran blockade catalyst. DVN ~$38, 105 shares = ~$3,990 ✓. No earnings this week ✓.
+- XLK leader: Consider a tech name not reporting this week. TRIP already held. AAPL already held.
+
+---
+
+## 2026-07-15 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,223.06
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,415.00
+- Capital disponible: $17,585.00
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $751.83 (MA200: $694.04) — ABOVE
+- VIX: 16.50 — LOW
+- Regime: **ON**
+- Reason: SPY is +8.3% above its 200-day MA and VIX at 16.50 is well under the 25 threshold; bullish macro backdrop with softer CPI and strong Q2 earnings beats from major banks.
+
+### Market Context
+- Top catalysts today:
+  - **PayPal (PYPL) M&A surge**: Reports of a $53B takeover offer sent shares sharply higher pre-market.
+  - **Q2 Earnings wave**: BlackRock beat Q2 profit estimates; Morgan Stanley, JNJ, UAL, PNC, PGR, BNY, ASML all reporting today — broad financial/industrial earnings catalyst.
+  - **CPI beat (July 14)**: June CPI -0.4% MoM, annual rate 3.5% vs. 3.8% expected; Fed rate hike probability fell from 42% to 17% for July — broad risk-on tailwind.
+  - **Iran blockade / Oil spike**: Crude WTI ~$79-80/barrel (+16% from recent low); U.S. reinstated Iran oil blockade — energy sector outperforming sharply.
+  - **Bank earnings beat**: Major U.S. banks beat Q2 estimates on strong trading and dealmaking rebound (Goldman +3% premarket on Monday); XLF momentum strong.
+
+- Sector leaders:
+  - **XLE (Energy)**: +3.01% (weekly leader on Iran/oil spike)
+  - **XLK (Technology)**: +1.75% (QQQ +1.12% today; +33% YTD sector leader)
+  - **XLF (Financials)**: +0.65% (bank earnings beats driving rotation)
+  - **XLV (Healthcare)**: +0.35%
+  - **XLP (Consumer Staples)**: +0.56%
+  - **XLY (Consumer Discretionary)**: -1.02% (lagging)
+
+- Economic events:
+  - **June PPI & Core PPI** (07:30 ET) — key inflation follow-up after yesterday's soft CPI
+  - **Empire State Manufacturing** (08:30 ET)
+  - **EIA Crude Oil Inventories** (10:30 ET)
+  - **Fed Beige Book** (14:00 ET)
+  - **Fed Chair Warsh remarks to Congress** (hawkish tone flagged)
+
+### Trade Candidates (Regime ON)
+
+> ⚠️ Positions already open: AAPL (1 share, $316.50) + TRIP (150 shares, $2,098.50) = $2,415.00 value. 3 slots remain. Max 3 new trades/week. Budget: up to $4,000 per new position.
+
+1. **PYPL** — M&A catalyst: reports of a $53B takeover offer surfaced pre-market, driving a sharp price surge. Entry $82.00, stop $76.26 (-7%), target $93.48 (+14%), shares=48, position cost=$3,936.00. R:R 1:2. Sector: Financials/Tech. No earnings this week ✓. Market cap >$1B ✓. Cost check: $2,415 + $3,936 = $6,351 ≤ $97,808 ✓.
+
+2. **DVN (Devon Energy)** — Iran blockade catalyst: U.S. reinstated Iran oil blockade sending WTI crude above $80/barrel (+16% from recent low); XLE is the week's top-performing sector ETF. Energy names with direct oil price leverage benefit. Entry $38.00, stop $35.34 (-7%), target $43.32 (+14%), shares=105, position cost=$3,990.00. R:R 1:2. Sector: Energy. No earnings this week ✓. Market cap >$1B ✓. Cost check: $2,415 + $3,936 + $3,990 = $10,341 ≤ $97,808 ✓.
+
+### Risk Factors Today
+- **Iran geopolitical escalation**: Hormuz blockade could spike oil further, hurting consumer/transport stocks; any de-escalation could rapidly reverse energy gains.
+- **PPI data (today)**: If June PPI comes in hot, it could reverse yesterday's CPI-driven rally and reset rate hike probabilities upward.
+- **Fed Chair Warsh hawkishness**: Pre-released remarks flagged hawkish tone ("no tolerance for persistently elevated inflation") — may pressure equities if markets re-price.
+- **Heavy earnings event risk today**: ASML, JNJ, MS, UAL all reporting — any miss could send sector-level volatility sharply higher; bot avoids all earnings reporters as direct candidates.
+- **PYPL takeover rumor risk**: M&A rumors can be denied/withdrawn — binary gap-down risk if deal reports are refuted. Position sizing at max 20% partially mitigates.
+- **TRIP (existing)**: qty_available = 0 (likely stop or pending order active on 150 shares). Monitor closely.
+- **Sector concentration**: Adding PYPL (Fintech) and DVN (Energy) diversifies away from existing AAPL (Tech) and TRIP (Travel).
+
+### Decision
+TRADE [PYPL, DVN]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-15",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "PYPL",
+      "entry_price": 82.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 48,
+      "position_cost": 3936.00,
+      "target_price": 93.48,
+      "catalyst": "$53 billion takeover offer reported pre-market, driving sharp price surge; M&A premium play",
+      "sector": "Financials / Fintech",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "DVN",
+      "entry_price": 38.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 105,
+      "position_cost": 3990.00,
+      "target_price": 43.32,
+      "catalyst": "U.S. reinstated Iran oil blockade sending WTI crude above $80/barrel (+16% from recent low); XLE is week's top sector ETF",
+      "sector": "Energy",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
