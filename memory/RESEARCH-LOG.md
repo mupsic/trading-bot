@@ -4255,3 +4255,102 @@ TRADE [PYPL, DVN]
   ]
 }
 ```
+
+I'll gather the required market data simultaneously.## 2026-07-16 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,323.47
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,515.50
+- Capital disponible: $17,484.50
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $754.81 (MA200: ~$694–$700) — ABOVE
+- VIX: ~16.5 (prev close 16.50, today open 16.20–17.21 range) — LOW
+- Regime: **ON**
+- Reason: SPY 200-day SMA is $690.63 (multiple sources converge between $690–$700); SPY at $754.81 is well above MA200. VIX previous close was 16.50 with today's intraday range of 15.64–16.57, comfortably below the 25 threshold.
+
+### Market Context
+
+**Top catalysts today:**
+- CPI came in better than expected at -0.4% monthly, while core CPI excluding food and energy was flat — the headline figure reflected falling oil prices last month that have since recharged double digits.
+- Investors brace for Fed Chair Kevin Warsh's remarks to Congress; crude oil topped $80/barrel after Iran and the U.S. traded attacks overnight and the U.S. reinstated its blockade on Iranian oil.
+- Major earnings today (Jul 16): Taiwan Semiconductor (TSM), GE Aerospace (GE), UnitedHealth Group (UNH), Abbott Laboratories (ABT), US Bancorp (USB), Netflix (NFLX), and Intuitive Surgical (ISRG).
+- PayPal is in the M&A spotlight — Stripe and Advent International made a joint offer to buy the payments company for more than $53 billion, or $60.50 per share.
+- Nvidia CEO Jensen Huang pushed back on Vera Rubin delay concerns, saying the next-gen AI platform is in production; he also revealed H200 shipments to China have only recently begun.
+
+**Sector leaders (YTD / weekly):**
+- XLK (Technology): +33% YTD — top-performing sector SPDR in 2026; Big Tech led Wednesday with AAPL +4%, Amazon +3%, Alphabet +3%, MSFT +3%
+- XLE (Energy): +21% YTD — powered by Middle East supply disruptions and geopolitical price premiums
+- XLI (Industrials): +20% YTD — fueled by AI data center buildout and aerospace/defense demand
+- XLF (Financials): Strong Q2 earnings beats from Goldman Sachs, Morgan Stanley, BlackRock this week — BlackRock on track for best day in more than a year after Q2 earnings topped expectations; shares climbed more than 7%
+- XLV (Healthcare): XLV receives outperform rating for 2026, supported by robust economic growth; UNH reporting today (beat noted pre-market per news feed)
+
+**Economic events today (Jul 16):**
+- Business Inventories, Continuing Claims, EIA Natural Gas Inventories, Initial Jobless Claims, NAHB Housing Market Index, Pending Home Sales, Philadelphia Fed Index
+- Fed Chair Warsh congressional testimony (ongoing, Day 2)
+- Fed Governor Waller indicated he might favor a rate hike if core inflation stayed hot, doubling odds of a July hike to 63% per CME FedWatch
+
+### Trade Candidates (Regime ON)
+
+> **Existing positions review:**
+> - AAPL (1 share, +9.97% unrealized) — already open; AAPL earnings July 30 — within 14 days. No add.
+> - TRIP (150 shares, +11.04% unrealized, qty_available=0) — qty_available=0, position locked/pending. No action.
+
+**New candidates — must have no earnings within 7 days, sector momentum, specific catalyst:**
+
+1. **PYPL** — M&A catalyst: Stripe and Advent International joint bid for PayPal at $60.50/share ($53B+ offer). Current price ~$57–60 range implied. No earnings imminently (not in July 16 earnings calendar). XLF/Fintech momentum positive. Entry ~$59.50, stop -7% ~$55.34, target +14% ~$67.83, shares = 67 → cost ≈ $3,987. R:R 1:2.
+
+2. **VRT (Vertiv Holdings)** — Vertiv is a key player in advanced liquid cooling solutions; as AI infrastructure spending continues, these companies are strategically positioned to thrive. No earnings July 16 (not on today's calendar). XLI/AI infrastructure momentum strong. Entry ~$95.00, stop -7% ~$88.35, target +14% ~$108.30, shares = 42 → cost ≈ $3,990. R:R 1:2.
+
+> ⚠️ **NOTE on AAPL add:** AAPL has an earnings date of July 30 — within the 14-day event-risk window. No add per strategy rules.
+
+### Risk Factors Today
+- Crude oil above $80/barrel amid Iran-U.S. conflict and reinstated Hormuz blockade — inflationary pressure risk on consumer and transport stocks
+- Rate hike probability jumped to 63% for July Fed meeting per CME FedWatch — hawkish surprise risk from Warsh congressional testimony
+- A jump in oil prices or jump in yields due to higher oil or a more hawkish Warsh could lead to a down week for stocks
+- Heavy earnings day (TSM, NFLX, UNH, GE) — sector volatility likely intraday; any miss could whipsaw Tech/Healthcare/Industrials
+- Geopolitical tail risk: Trump reinstated Iranian blockade on Hormuz Strait, escalation possible
+- TRIP position qty_available=0 — cannot sell if stop triggered; monitor corporate action status
+
+### Decision
+TRADE [PYPL, VRT]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-16",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "PYPL",
+      "entry_price": 59.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 67,
+      "position_cost": 3986.50,
+      "target_price": 67.83,
+      "catalyst": "Stripe and Advent International joint M&A bid for PayPal at $60.50/share (~$53B+), announced July 15 per Reuters — acquisition premium play with hard floor from deal price",
+      "sector": "Financials/Fintech",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "VRT",
+      "entry_price": 95.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 42,
+      "position_cost": 3990.00,
+      "target_price": 108.30,
+      "catalyst": "AI data center liquid cooling demand surge; Forbes/Persistence Market Research projects liquid cooling market to grow from $5.7B to $29.2B by 2033; XLI sector leading +20% YTD on AI infrastructure buildout",
+      "sector": "Industrials / AI Infrastructure",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
