@@ -916,3 +916,101 @@ Per protocol, no strategy parameter changes are proposed. A rule must fail for *
 
 ### Overall Grade: D+
 **Reasoning:** The week produced $0.00 in realized P&L against an S&P 500 gain of approximately +1.23%, resulting in a –1.23% relative underperformance. The sole closed trade was a max-loss hard stop (CCL, –7.29%, –$306.68), and zero new trades were initiated despite multiple valid momentum setups in Communication Services and Technology. The hard stop rule functioned as
+
+I'll search for the S&P 500 weekly performance and current market data simultaneously.I now have all the data I need. Let me compute the figures:
+
+**S&P 500 weekly return:** The S&P 500 dropped more than 1.5% for the week (using –1.5% as the figure).
+
+**Bot weekly P&L:** $0.00 (0.00%) — no trades executed, operating equity unchanged.
+
+**Bot vs S&P 500 delta:** 0.00% – (–1.5%) = **+1.50% relative outperformance** (by not trading into a down week).
+
+**Position analysis:**
+- AAPL: Entry $298.70, Friday close $333.81 → Unrealized +$35.11 (+11.75%) — still open, not closed
+- TRIP: Entry $13.13, Friday close $14.58 → Unrealized +$217.50 (+11.04%) — still open, not closed
+- No trades executed this week (0 opens, 0 closes)
+
+**Closed trades this week:** None
+**Win rate:** N/A (no closed trades)
+**Best/Worst trade:** N/A (no closed trades)
+**Profit factor:** N/A
+
+**Stop levels:**
+- AAPL: 10% trailing stop from high of ~$332.75 (Thu EOD) → stop ≈ $299.48
+- TRIP: TRIP hit +13.1% on Thu (near Target 1 of +15%), has not formally triggered T1; trailing stop still 10% from high ~$14.85 → stop ≈ $13.37
+
+**Sector context:** A sell-off in chip stocks dampened sentiment on Friday as the PHLX Semiconductor Index entered a bear market. Still, eight of 11 S&P 500 sectors rose, indicating resilience below the surface. AAPL (Technology/Consumer Electronics) bucked the semi selloff — Apple gained 12.4% over the last month. Netflix sank 11% after it forecast another quarter of slowing sales.
+
+---
+
+## Week ending 2026-07-17
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Mon) | $20,000.00 |
+| Ending portfolio (Fri) | $20,000.00 |
+| Week return | $0.00 (+0.00%) |
+| S&P 500 week | –1.50% (S&P 500 dropped >1.5%; Nasdaq –2.9%) |
+| Bot vs S&P | +1.50% (passive outperformance — no trades in down week) |
+| Trades total | 0 (W:0 / L:0 / open:2) |
+| Win rate | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A |
+
+### Closed Trades This Week
+| Ticker | Entry | Exit | P&L $ | P&L % | Sector | Notes |
+|--------|-------|------|-------|-------|--------|-------|
+| — | — | — | — | — | — | No trades closed this week |
+
+### Open Positions at Week End
+| Ticker | Entry | Friday Close | Unrealized | Stop | Sector |
+|--------|-------|--------------|------------|------|--------|
+| AAPL | $298.70 | $333.81 | +$35.11 (+11.75%) | ~$300.43 (10% trail from ~$333.81) | Technology |
+| TRIP | $13.13 | $14.58 | +$217.50 (+11.04%) | ~$13.37 (10% trail from ~$14.85 Thu high) | Consumer Discretionary |
+
+### What Worked (3-5 bullets)
+- **AAPL held strong into a semiconductor rout:** While chip stocks dragged the PHLX Semiconductor Index into bear market territory, AAPL continued to benefit from distinct catalysts — strong Q2 results, an HSBC upgrade to Buy, and progress toward settling its DoJ antitrust case — keeping the position well above entry at +11.75% unrealized.
+- **Passive positioning outperformed a down market:** Zero trades in a week where the S&P 500 fell >1.5% and the Nasdaq dropped 2.9% constituted accidental but real relative outperformance of +1.50%. Inaction was the right action.
+- **TRIP maintained double-digit gains despite Friday pullback:** TRIP absorbed a –2.1% Friday decline yet closed the week at +11.04% unrealized, still comfortably above the 10% trailing stop floor and within striking distance of the Target 1 trigger (~$15.10).
+- **Both positions remain above the Target 1 threshold approach (~+11%):** With AAPL at +11.75% and TRIP at +11.04%, both are nearing the +15% Target 1 level where trailing stops tighten to 8%, meaning unrealized gains are increasingly protected.
+- **Portfolio avoided the Netflix/semi contagion entirely:** No exposure to the Communication Services names that suffered (Netflix –11%) or semiconductor stocks that entered bear market, which were the primary sources of broad-market pain this week.
+
+### What Didn't Work (3-5 bullets)
+- **Zero trades executed for the second consecutive week:** 0/3 weekly trade slots were used again. Previous week's review flagged multiple valid setups in Communication Services and Technology; none were acted upon. This is a recurring pattern, not a one-off.
+- **Capital massively underdeployed:** Only 12.6% of operating equity is deployed ($2,521/$20,000). With 5 allowed positions and only 2 open, there is persistent failure to deploy capital even in a market where 46 S&P 500 stocks hit 52-week highs on Thursday.
+- **TRIP qty_available = 0 is an unresolved operational flag:** The Alpaca position shows `qty_available: 0` for TRIP's 150 shares, suggesting the position may be locked, on loan, or pending a corporate action. This needs immediate clarification before assuming the position can be sold.
+- **No new entries despite clear AAPL-like momentum setups:** The prior review identified AAPL's catalyst (iPhone strength, HSBC upgrade, Services record) as a model for future entries. No similar candidates were scoped or entered despite multiple momentum setups visible in the Technology sector.
+- **TRIP approaching Target 1 with no formal alert set:** TRIP reached +13.1% intraday on Thursday (within 2% of the +15% Target 1 trigger), but no trailing stop tightening action was taken. Without a formal price alert at $15.10, the profit-protection protocol risks being missed.
+
+### Sector Performance
+- **Technology (AAPL +11.75% unrealized):** Outperformed strongly. AAPL decoupled from semiconductor weakness due to distinct drivers (earnings beat, HSBC upgrade, DoJ settlement discussions, Apple overtaking Nvidia in market cap). Technology — ex-semis — was constructive this week.
+- **Semiconductors / AI Hardware (not held):** Severe underperformance. The PHLX Semiconductor Index entered bear market territory (–20% from highs). Nvidia, Micron, and Intel were among the largest losers, driven by fears that AI hyperscalers will reduce infrastructure capex and by improving Chinese AI models (Kimi K3 release).
+- **Consumer Discretionary (TRIP +11.04% unrealized):** Held its ground despite macro headwinds. TRIP's travel/hospitality exposure was resilient; the position is in strong unrealized profit despite sector-level concerns around oil prices and consumer spending.
+- **Communication Services (not held):** Mixed-to-negative. Netflix sank ~11% on a disappointing revenue miss and weak guidance, dragging the sector. The prior week's recommendation to enter Communication Services (META momentum) proved prescient in avoidance terms for the Netflix subset.
+- **Energy / Oil-sensitive:** Headwind — oil rose above $80/barrel on Middle East tensions, pressuring Consumer Discretionary names with travel exposure. TRIP bears monitoring as oil escalation continues.
+- **Financials:** Bright spot — Goldman Sachs posted record Q2 EPS; bank earnings broadly showed 95% of reporting S&P 500 companies beating EPS estimates.
+
+### Key Lessons
+- **Inaction can be a valid strategy in a down week — but it must be intentional, not accidental.** The bot "outperformed" the S&P 500 by +1.50% purely because no trades were executed. That is not skill; it is luck. A systematic pre-market process would help distinguish deliberate non-action from passive drift.
+- **TRIP qty_available = 0 is a critical operational risk.** If 150 shares cannot be sold (e.g., due to a borrow or pending corporate action), the position cannot be exited when the trailing stop triggers. This must be investigated Monday morning before market open.
+- **Target 1 alerts must be set at entry, not retroactively.** TRIP came within ~2% of the +15% Target 1 level this week with no formal alert in place. Per strategy rules, the trailing stop should tighten to 8% at +15%. A price alert at $15.10 for TRIP should have been set weeks ago.
+- **Semiconductor contagion did not spread to AAPL this week, but vigilance is warranted.** AAPL is a large AI/hardware consumer. If hyperscaler capex fears deepen ahead of Alphabet earnings next week, Apple's premium 39x P/E multiple and supply-chain ties to TSMC/Broadcom could attract selling pressure.
+- **Two consecutive weeks of zero new entries points to a systematic gap in the scouting process**, not a market opportunity issue. The pre-market candidate identification checklist (7:00 AM) appears to not be translating into actual entry decisions.
+
+### Adjustments for Next Week
+**No rule changes — insufficient data.**
+
+Per protocol, no strategy parameter changes are proposed. The zero-entry pattern has now occurred for **2 consecutive weeks**, which meets the threshold for future rule review — however, the current rules do not impose a *minimum* trade frequency, only a maximum (3/week). No rule is technically being violated; the issue is behavioral/operational.
+
+**Operational action items (not rule changes):**
+- 🔴 **URGENT — Resolve TRIP `qty_available: 0` before Monday open.** The position shows 150 shares held but 0 available to trade. Investigate whether this is a securities lending lock, a pending corporate action, or a platform glitch. If shares cannot be sold, the trailing stop cannot be executed — this is a hard risk event.
+- 🔴 **Set price alerts immediately for both Target 1 levels:** AAPL Target 1 = $343.50 (+15% from $298.70); TRIP Target 1 = $15.10 (+15% from $13.13). At these levels, tighten trailing stop from 10% → 8% per strategy rules. These alerts should have been set at entry and must be confirmed active before Monday.
+- 🟡 **TRIP trailing stop floor check:** TRIP's intraweek high was ~$14.85 (Thursday). The 10% trailing stop floor is therefore ~$13.37, which is above the entry of $13.13. The position's downside is now protected above breakeven. Confirm the trailing stop is properly ratcheted to ~$13.37 and not sitting at an older, lower level.
+- 🟡 **AAPL: Monitor for semi-contagion risk into Alphabet earnings week.** Alphabet reports next week. If hyperscaler capex commentary disappoints, AI/hardware-adjacent names including AAPL may face multiple compression despite strong fundamentals. Watch $310 as a key support level (≈ 10% trail from current price).
+- 🟢 **New entry scouting — prioritize non-semiconductor Technology and Financials.** With 3 trade slots open and only 2 positions deployed, identify 2–3 candidates from: (a) Financials — strong earnings season with 95% EPS beat rate; (b) Technology ex-semis — Apple ecosystem adjacencies (AAPL suppliers, services); (c) Healthcare — defensive rotation if macro uncertainty deepens. Avoid semiconductors until the SOX bear market stabilizes and avoid Netflix/streaming Communication Services.
+- 🟢 **Two-week zero-entry pattern flagged for behavioral review.** This is now the second consecutive week with 0/3 trades used. While no rule mandates a minimum trade count, the strategy's purpose is capital deployment into identified opportunities. For next week's review, document at Monday pre-market whether 2–3 candidate setups were formally identified and priced — even if not entered — to distinguish deliberate pass from process failure.
+
+### Overall Grade: C
+**Reasoning:** The week produced $0.00 in realized P&L and zero trades, yet the bot achieved +1.50% relative outperformance versus the S&P 500's –1.50% weekly decline — a technically positive outcome that is entirely attributable to passive positioning rather than active skill. Both open positions (AAPL +11.75%, TRIP +11.04%) continued to build unrealized gains and are approaching Target 1 thresholds, which is encouraging. However, the grade is held at C rather than higher because: (1) the zero-trade pattern is now confirmed for two consecutive weeks, indicating a persistent process failure in candidate identification and execution; (2) capital deployment remains critically low at 12.6% against a 100% target; (3) the TRIP `qty_available: 0` flag represents an unaddressed operational risk that could prevent stop-loss execution; and (4) Target 1 price alerts were not pre-set despite both positions being within 4% of trigger levels. The outperformance was luck, not process.
