@@ -4354,3 +4354,116 @@ TRADE [PYPL, VRT]
   ]
 }
 ```
+
+I'll gather the necessary market data simultaneously.Data collected. Now assembling the full RESEARCH-LOG:
+
+**Key data points confirmed:**
+- SPY 200-day SMA: ~$694; SPY current: $750.72 → **ABOVE MA200** ✅
+- VIX previous close: 15.67; today's open 15.82, day's range 15.77–17.23 → ~**17.0** → **BELOW 25** ✅ → **REGIME ON**
+- Sector rotation underway: Healthcare, Financials, and Industrials have been top performers since June, while Technology has lagged
+- Today's economic events: June housing starts, building permits, industrial production, July preliminary UMich consumer sentiment; earnings from TRV, TFC, FITB
+- Netflix fell over 8% in extended trading after forecasting a second straight quarter of slowing sales growth
+- TSM announced a 77% annual earnings gain but shares fell more than 4%, hurting semiconductors and Nasdaq
+- Abbott Labs soared almost 4% as EPS slightly beat and the company raised fiscal 2026 EPS guidance
+- Top performing sectors in July 2026: Healthcare and Technology
+
+**Candidate screening:**
+- TRIP has qty_available=0 (pending order), AAPL at +11.4% unrealized — both held
+- We have 3 open position slots, 2 trades available this week
+- Need stocks with no earnings within 7 days, clear catalyst, sector momentum aligned
+- ABT: earnings ALREADY reported (beat + raised guidance today), no near-term earnings risk → strong candidate in Healthcare (XLV leading)
+- XLV momentum confirmed, ABT ~$135/share → 29 shares = $3,915 ≤ $4,000 ✅
+- VRT (Vertiv): AI liquid cooling pure play, strong sector tailwind, cap>$1B, no earnings this week → candidate in Industrials/Technology crossover
+
+---
+
+## 2026-07-17 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,347.29
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,539.23
+- Capital disponible: $17,460.77
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $750.72 (MA200: ~$694.04) — ABOVE
+- VIX: ~17.0 — LOW
+- Regime: **ON**
+- Reason: SPY is +8.2% above its 200-day MA and VIX at ~17 is well below the 25 panic threshold; bull market regime intact despite tech rotation and geopolitical noise.
+
+### Market Context
+- Top catalysts today:
+  - **Abbott Labs (ABT) earnings beat + guidance raise**: EPS beat estimates, company raised full-year 2026 EPS guidance, shares +~4% pre-market; Healthcare outperforming
+  - **Netflix (NFLX) post-earnings drop**: Shares fell 8%+ in extended trading on second consecutive quarter of decelerating sales growth; sentiment drag on growth/streaming
+  - **TSM earnings paradox**: 77% annual EPS growth reported, but stock fell 4%+ on AI capex ROI concerns; weighing on semiconductors and QQQ (-1.6%)
+  - **US-Iran hostilities / oil prices**: Renewed Gulf tensions with piracy in Gulf of Aden and US strikes on Iran; WTI near $79, supporting XLE
+  - **Q2 earnings season accelerating**: Major banks (JPM, C, GS, BAC) largely beat; second consecutive quarter of 20%+ S&P 500 earnings growth expected; rotation into Financials and Healthcare broadening the rally
+- Sector leaders (weekly):
+  - **XLV (Healthcare)**: +2.22% today, top sector — ABT, earnings beat cycle driving flows
+  - **XLP (Consumer Staples)**: +2.80% today — defensive rotation bid
+  - **XLF (Financials)**: +0.34% — big bank earnings beats supporting
+  - **XLK (Technology)**: Under pressure this week (-1.6% Nasdaq today) — chip AI ROI concerns
+  - **XLE (Energy)**: Volatile but bid on Iran/Red Sea tension
+  - **XLY (Consumer Discretionary)**: +0.29%, lagging
+- Economic events today (July 17):
+  - June Housing Starts & Building Permits (8:30 AM ET)
+  - June Industrial Production / Capacity Utilization (9:15 AM ET)
+  - July Preliminary University of Michigan Consumer Sentiment (10:00 AM ET)
+  - Earnings: TRV, TFC, FITB, ALV (all financial/auto — sector-specific)
+
+### Trade Candidates (Regime ON)
+
+1. **ABT** (Abbott Laboratories) — Q2 EPS beat + raised full-year 2026 EPS guidance; Healthcare (XLV) is the session's leading sector; stock gapping +4% pre-market; no further earnings risk for ~90 days. Entry ~$133.50, stop $124.16 (-7%), target $152.19 (+14%), shares=29, cost=$3,871.50. R:R 1:2.
+
+2. **VRT** (Vertiv Holdings) — AI data center liquid cooling infrastructure; hyperscalers raised 2026 AI capex budget to $750B with liquid cooling becoming the new standard; strong secular tailwind confirmed by multiple Q2 earnings reports; no earnings within 7 days. Entry ~$120.00, stop $111.60 (-7%), target $136.80 (+14%), shares=33, cost=$3,960.00. R:R 1:2.
+
+### Risk Factors Today
+- **Tech sector fragility**: TSM +77% EPS still fell 4%; AI ROI skepticism is spreading — avoid chip-heavy names
+- **Netflix contagion risk**: Streaming/content stocks may see sympathy selling; NFLX -8% drags sentiment on growth stocks broadly
+- **Iran/Red Sea escalation**: Tanker seizures and US strikes could spike oil, pressure margins; monitor energy prices intraday
+- **Rate hike probability rising**: Bloomberg rate probabilities show 31% chance of July hike, 84% for September; hawkish Warsh Fed is a headwind for high-multiple growth stocks
+- **Michigan Sentiment (10 AM)**: Weak print could trigger broad risk-off; hold off execution until after 10:15 AM ET
+- **TRIP position (qty_available=0)**: Existing TRIP position is locked (pending order?); verify before adding new positions
+- **SPY intraday weakness**: -0.54% today with QQQ -1.64%; broad selling could deepen before stabilizing
+
+### Decision
+TRADE [ABT, VRT]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-17",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "ABT",
+      "entry_price": 133.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 29,
+      "position_cost": 3871.50,
+      "target_price": 152.19,
+      "catalyst": "Q2 2026 EPS beat + full-year EPS guidance raised; stock gapping +4% pre-market; Healthcare (XLV) is session's top sector",
+      "sector": "Healthcare",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "VRT",
+      "entry_price": 120.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 33,
+      "position_cost": 3960.00,
+      "target_price": 136.80,
+      "catalyst": "AI data center liquid cooling secular tailwind; hyperscalers raised 2026 AI capex to $750B; liquid cooling confirmed as new standard across Q2 earnings cycle; no earnings within 7 days",
+      "sector": "Industrials/Technology",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
