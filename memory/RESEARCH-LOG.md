@@ -4467,3 +4467,101 @@ TRADE [ABT, VRT]
   ]
 }
 ```
+
+I'll gather the required market data simultaneously.Now I have all the data needed. Let me compile and analyze:
+
+**Key findings:**
+- SPY 200-day MA = **$745.25** (most recent from Investing.com). SPY current = $743.29 → **BELOW MA200** → REGIME OFF
+- VIX = **~16.18** (Yahoo Finance, July 20 close data showing ^VIX 16.18 -0.12%)
+- Fresh U.S. airstrikes on Iran are keeping geopolitical risks in focus; investors look ahead to earnings from Tesla, Alphabet, Intel and others this week.
+- Rotation has turned firmly from chips and back toward sectors like financials, industrials, and energy.
+- On July 17, XLE (Energy) was the only leading sector gainer at +1.42%, while XLK, XLC, XLY all declined.
+- Market volatility remains contained, with the VIX at a measured 16.68 (early July reference)
+- Next week (this week) is exceptionally light on economic calendar but heavy on the earnings front; earnings are expected up 23% year-over-year per FactSet.
+
+**Regime Gate:** SPY ($743.29) < MA200 ($745.25) → **REGIME OFF** → candidates = []
+
+---
+
+## 2026-07-20 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,322.96
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,514.90
+- Capital disponible: $17,485.10
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+---
+
+### Market Regime
+- SPY: $743.29 (MA200: $745.25) — **BELOW**
+- VIX: ~16.18 — **LOW**
+- Regime: **OFF**
+- Reason: SPY is trading $1.96 below its 200-day MA ($743.29 vs $745.25); regime gate requires SPY > MA200 — condition NOT met, no new trades regardless of VIX level.
+
+---
+
+### Market Context
+- **Top catalysts today:**
+  - 🛢️ Fresh U.S. airstrikes on Iran overnight keeping geopolitical risk elevated; oil/energy names reacting
+  - 📈 Mega-cap earnings week begins: Tesla (Wed), Alphabet (Wed), Intel, and others — pre-positioning in both directions
+  - 💸 U.S. pump prices crossing $4/gallon again on renewed Middle East fighting (Reuters)
+  - 🕊️ Mediators proposed 10-day ceasefire to revive Iran-U.S. interim deal (Reuters) — relief rally attempt
+  - 📉 Semiconductor sell-off ongoing (SOX -20% from late-June peak); chip washout creating broad tech drag
+  - 🎉 AMC Entertainment Q2 earnings beat: EPS $0.14 actual vs -$0.0609 estimate; revenue $1.597B vs $1.489B est.
+
+- **Sector leaders (as of July 17 close, most recent data):**
+  - XLE (Energy): **+1.42%** — sole gainer, geopolitical bid
+  - XLP (Consumer Staples): **-0.94%** — mild defensive selling
+  - XLRE (Real Estate): **-0.32%**
+  - XLU (Utilities): **-0.64%**
+  - XLV (Health Care): **-0.34%**
+  - XLK (Technology): **-0.83%** — chip drag
+  - XLC (Communication): **-1.82%**
+  - XLY (Consumer Discretionary): **-1.62%**
+  - ⚠️ Note: YTD 2026, XLK still leads at +33% YTD, but near-term weekly momentum has rotated strongly to XLE/Industrials
+
+- **Economic events this week:**
+  - Mon Jul 20: No major economic data; light earnings (AGNC, CCK, DPZ, STLD, ZION, WRB)
+  - Tue Jul 21: GM, NOC, 3M, Danaher, D.R. Horton, Capital One, Halliburton earnings
+  - Wed Jul 22: **CRITICAL** — Alphabet (GOOGL), Tesla (TSLA), ServiceNow (NOW), GE Vernova (GEV), Texas Instruments (TXN) earnings
+  - Jul 29: FOMC meeting (potential rate hike risk still priced by some)
+  - Fed in pre-meeting blackout period — no Fed speak
+
+---
+
+### Trade Candidates (only if Regime ON)
+*Regime is OFF — no candidates evaluated.*
+
+---
+
+### Risk Factors Today
+- **SPY below MA200**: Bearish technical signal — primary regime gate trigger. Market is in distribution zone
+- **Iran conflict escalation**: Fresh U.S. airstrikes overnight; ceasefire mediator proposal adds binary event risk (oil spike OR relief rally)
+- **Earnings event risk landmines**: Alphabet + Tesla report Wednesday — any miss could cascade across tech/AI names this week; zero tolerance for misses
+- **Semiconductor sector in confirmed bear trend**: SOX -20% from peak; chip contagion risk to broader Nasdaq
+- **Inflation still elevated at 3.5%**: June CPI better than May's 4.2% but well above Fed's 2% target
+- **Fed rate hike tail risk**: July 29 FOMC — some market participants pricing in a possible hike under Chair Warsh
+- **TRIP (existing position)**: qty_available = 0 — likely has a pending stop/sell order on it; monitor closely
+- **Oil at $4+ at the pump**: Consumer spending headwind; stagflation risk if oil stays elevated
+
+---
+
+### Decision
+**HOLD** — Regime OFF (SPY $743.29 < MA200 $745.25). No new entries until SPY reclaims 200-day MA. Existing AAPL (+11.3% unrealized) and TRIP (+10.8% unrealized) positions remain open with trailing stops active.
+
+---
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-20",
+  "regime": "OFF",
+  "decision": "HOLD",
+  "candidates": []
+}
+```
