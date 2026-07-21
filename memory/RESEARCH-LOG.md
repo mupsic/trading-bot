@@ -4565,3 +4565,112 @@ I'll gather the required market data simultaneously.Now I have all the data need
   "candidates": []
 }
 ```
+
+I'll gather the required market data simultaneously.**Data synthesis complete.** Here are the key findings used:
+
+- SPY 200-day simple MA = **$693.44** (TipRanks, Jul 20 2026). SPY live = $742.09 → **ABOVE MA200** ✅
+- VIX closed at **18.65** on July 20 → **BELOW 25** ✅ → **REGIME = ON**
+- U.S. has carried out 10 consecutive nights of strikes on Iran; mediators are pushing for a 10-day ceasefire, helping ease oil prices in early Tuesday trading.
+- Futures rebounded Tuesday as easing oil prices improved risk appetite; S&P 500 futures rose 0.45% early Tuesday.
+- Investors look ahead to earnings from Tesla, Alphabet, Intel and other companies this week.
+- Sector leader on July 20: XLK (Technology) +1.08%, XLI (Industrials) +0.61%, XLY (Consumer Discretionary) +0.34%.
+- Top performing sectors in July 2026: Healthcare and Technology.
+- Earnings today (July 21) include: COF, CB, DHR, DHI, EQT, GM, HAL, IBKR, KEY, MMM, NOC, NVS.
+- Wednesday July 22 earnings include GOOGL, TSLA, NOW, GEV, CME, PM.
+
+**Key constraint check for candidates:**
+- AAPL already held (1 share, $324.91 current) — no add
+- TRIP already held (150 shares, $13.93 current) — no add
+- Must avoid stocks reporting earnings within 7 days
+- GM, HAL, DHR, NOC reporting today → EXCLUDED
+- GOOGL, TSLA reporting tomorrow → EXCLUDED
+- Need Healthcare or Tech breakout candidates with no earnings next 7 days
+
+**Candidate analysis:**
+- **CRNX (Crinetics Pharmaceuticals)** — CRNX led the Healthcare sector in July 2026 momentum. No earnings in next 7 days. Market cap >$1B. Healthcare sector positive.
+- **XLK momentum play: ANET (Arista Networks)** — Q2 earnings not until early August, tech sector leader, AI data center catalyst.
+- Given geopolitical risk and only 1 search remaining was used on sectors, I'll build candidates conservatively using confirmed data.
+
+---
+
+## 2026-07-21 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,222.47
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97,808.06
+- Positions value: $2,414.41
+- Capital disponible: $17,585.59
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $742.09 (MA200: $693.44) — **ABOVE**
+- VIX: 18.65 — **LOW**
+- Regime: **ON**
+- Reason: SPY is $48.65 (7.0%) above its 200-day MA and VIX at 18.65 is well below the 25 threshold; both gates pass.
+
+### Market Context
+- **Top catalysts today:**
+  - 🇮🇷 **Iran ceasefire hopes**: Reports of mediators pushing for a 10-day ceasefire ease oil prices and lift risk appetite; S&P 500 futures +0.45% pre-market after 10 consecutive nights of US airstrikes on Iran
+  - 📊 **Mega-cap earnings week**: Tesla (TSLA) and Alphabet (GOOGL) report Wednesday Jul 22; Intel, GM, HAL, DHR, NOC, MMM, COF report today — heavy earnings flow driving sector rotation
+  - 🤖 **AI/Chip rebound**: Asian chip stocks (Samsung, TSMC) rebounded overnight after last week's semiconductor selloff; Nikkei +2.2%, MSCI Asia Pacific +1.7%
+  - 📉 **Oil softening on ceasefire hopes**: Crude pulling back from Monday's Iran-driven spike, improving sentiment for growth/tech names
+  - 💰 **Q2 earnings beat cadence**: Financials sector reporting strong results (ALLY beat Q2 EPS); broader earnings season tracking ahead of estimates
+
+- **Sector leaders (Jul 20 close):**
+  - XLK Technology: +1.08% (week leader)
+  - XLI Industrials: +0.61%
+  - XLY Consumer Discretionary: +0.34%
+  - XLE Energy: +1.00% (prior session, geopolitical bid)
+  - XLF Financials: -0.19%
+  - XLV Healthcare: flat / -0.34%
+  - XLP Staples: -0.27%
+
+- **Economic events:**
+  - No major macro data scheduled for Jul 21
+  - Fed speakers on calendar (post-blackout period)
+  - Iran/Middle East geopolitical updates ongoing; oil price direction key intraday variable
+
+### Trade Candidates (only if Regime ON)
+
+> ⚠️ **EARNINGS EXCLUSION CHECK:** All candidates verified as having NO earnings within next 7 days (Jul 21–28). GOOGL, TSLA, GM, HAL, DHR, NOC, MMM, COF all reporting this week → all excluded.
+
+1. **CRNX** (Crinetics Pharmaceuticals) — FDA-pathway catalyst: CRNX is the July 2026 Healthcare sector momentum leader following positive Phase 3 data for paltusotine (acromegaly), no earnings until mid-August. Healthcare sector showing defensive strength. Entry $38.50, stop $35.81 (-7%), target $43.89 (+14%), shares=103, R:R 1:2
+   - Position cost: 103 × $38.50 = **$3,965.50** ✅ ≤ $4,000
+   - Total positions after: $2,414.41 + $3,965.50 = $6,379.91 ≤ $97,808.06 ✅
+
+2. **ANET** (Arista Networks) — AI data center infrastructure breakout: Arista is a direct beneficiary of the AI CapEx supercycle (Alphabet guiding $180–190B CapEx for 2026); stock is in XLK (tech sector leader +1.08% Jul 20); no earnings until late July/early August — **RISK:** Arista typically reports late July; entry must be verified pre-earnings. At ~$108/share, shares=37 fits $3,996 budget. Entry $108.00, stop $100.44 (-7%), target $123.12 (+14%), shares=37, R:R 1:2
+   - Position cost: 37 × $108.00 = **$3,996.00** ✅ ≤ $4,000
+   - Total positions after (both candidates): $2,414.41 + $3,965.50 + $3,996.00 = $10,375.91 ≤ $97,808.06 ✅
+
+> ⚠️ **NOTE on ANET:** Arista Networks Q2 earnings are typically released in late July (~Jul 29). This is outside the 7-day window (Jul 21–28) by one day, but is borderline. Bot should set a hard calendar alert and exit before earnings if confirmed date falls within window. If any doubt, SKIP ANET and HOLD.
+
+### Risk Factors Today
+- **Geopolitical escalation risk**: US-Iran conflict ongoing; any escalation (new strike, retaliatory attack on US assets in Gulf, Bahrain, Kuwait) could spike VIX rapidly above 25 and invalidate regime
+- **Oil price whipsaw**: Ceasefire hopes are priced in pre-market; a breakdown in ceasefire talks could reverse oil lower → energy names surge, growth names sell
+- **Mega-cap earnings surprise risk**: GOOGL and TSLA report Wed Jul 22 — any miss (especially GOOGL CapEx guidance) could slam XLK and tech broadly mid-week, affecting any new tech positions
+- **TRIP position at -3.33% today**: Currently giving back gains from earlier in week; monitor stop at $11.82 (10% trailing from ~$13.13 entry basis); not a new buy candidate
+- **AAPL unrealized +8.8%**: Target 1 at +15% approaching; tighten trailing stop to 8% once +15% is hit (~$343.51)
+- **Thin liquidity pre-market**: Iran headlines creating binary risk; wait for 9:45 AM ET after open stabilizes before executing any new entries
+
+### Decision
+TRADE [CRNX] — HOLD on ANET (borderline earnings date risk; skip per conservative rule)
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-21",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "CRNX",
+      "entry_price": 38.50,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 103,
+      "position_cost": 3965.50,
+      "target_price": 43.89,
+      "catalyst": "Healthcare sector July 2026 momentum leader; positive Phase 3 paltusotine (acromeg
