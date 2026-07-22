@@ -4674,3 +4674,101 @@ TRADE [CRNX] — HOLD on ANET (borderline earnings date risk; skip per conservat
       "position_cost": 3965.50,
       "target_price": 43.89,
       "catalyst": "Healthcare sector July 2026 momentum leader; positive Phase 3 paltusotine (acromeg
+
+I'll gather the required market data simultaneously.## 2026-07-22 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100210.18
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $97808.06
+- Positions value: $2402.12
+- Capital disponible: $17597.88
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $748.28 (MA200: $693.44) — ABOVE
+- VIX: 17.05 — LOW
+- Regime: **ON**
+- Reason: SPY is $54.84 (7.9%) above its 200-day MA and VIX at 17.05 is well below the 25 threshold — both gates pass.
+
+### Market Context
+- Top catalysts today:
+  - **Mega-cap earnings day**: GOOGL (Alphabet), TSLA (Tesla), IBM, ServiceNow (NOW), Texas Instruments (TXN), GE Vernova (GEV), Philip Morris (PM), AT&T (T), CME Group all reporting today
+  - **Alphabet AI CapEx focus**: Alphabet's Q2 report is critical for the AI trade — analysts watching CapEx guidance closely after the company raised full-year 2026 CapEx guidance to $180-190B
+  - **Oil/Iran geopolitical risk**: Brent crude climbed above $92 a barrel Wednesday after the U.S. carried out its 11th consecutive night of strikes on Iran
+  - **Strong earnings season**: Nearly 88% of S&P 500 companies that have reported Q2 results have beaten analysts' profit estimates
+  - **Fed meeting upcoming**: Federal Reserve meeting set for July 28-29 is the next major macro risk event
+
+- Sector leaders (Jul 20–21):
+  - **XLK** (Technology): +1.80% on Jul 21 — sector leader for the week
+  - **XLI** (Industrials): +0.61% | **XLY** (Consumer Discretionary): +0.34%
+  - XLK leads 2026 YTD sector SPDR performance with +33% gains
+  - XLF, XLV, XLP, XLE: flat to negative recent sessions
+
+- Economic events:
+  - Fed rate watch: traders see ~24% chance of a July rate hike and ~69% probability of at least 25bps by September (CME FedWatch)
+  - U.S. stock futures pointed to a lower open, pressured by rising oil prices and inflation fears; S&P 500 futures -0.4%, Nasdaq 100 -0.8%
+  - No major economic data releases scheduled today
+
+### Trade Candidates (only if Regime ON)
+
+> ⚠️ **CRITICAL CONSTRAINT**: AAPL and TRIP are already open positions. All GOOGL, TSLA, TSLA, IBM, NOW, TXN, GEV, PM, T, CME report earnings **TODAY** — disqualified under the "no earnings within 7 days" rule. Screening for non-earnings tech/industrial names with specific catalysts and no near-term earnings risk.
+
+**AAPL** — Already held (1 share, +9.7% unrealized). No additional buy (no averaging up / PDT rules).
+**TRIP** — Already held (150 shares, +5.3% unrealized). No additional buy.
+
+After eliminating all earnings-risk names reporting today or within 7 days, and cross-referencing sector momentum (XLK #1, XLI #2), viable candidates with specific catalysts:
+
+1. **SMCI** — Pre-market notable mover on July 22; AI server infrastructure beneficiary amid Alphabet's massive CapEx ramp in AI ($180-190B guided for 2026), breakout attempt off recent consolidation. Entry ~$45.00, stop $41.85 (-7%), target $51.30 (+14%), shares=88 → cost $3,960. No earnings in next 7 days. Sector: Technology (XLK momentum +1.9%).
+
+2. **AXON** (Axon Enterprise) — Industrial/Tech hybrid; government AI body-cam contract momentum + strong Q1 beat already reported; next earnings not until late August. Entry ~$580.00, stop $539.40 (-7%), target $661.20 (+14%), shares=6 → cost $3,480. Sector: Industrials/Technology crossover.
+
+> Note: Only 2 candidates generated — a 3rd would require a slot (currently 2/5 open positions, capacity for 3 more), but insufficient high-conviction non-earnings setups found in current pre-market data with the Iran/oil headwind and Fed risk.
+
+### Risk Factors Today
+- Rising oil prices reviving inflation concerns; Brent crude above $92 on escalating US-Iran conflict
+- Companies face an unusually high earnings bar after the market's strong run — even solid results may disappoint
+- Futures pointing lower pre-open: S&P 500 -0.4%, Nasdaq 100 -0.8% — gap-down risk at open
+- Fed meeting July 28-29 creates macro overhang for the rest of the week
+- TRIP has 0 shares available (qty_available: 0) — likely a pending order or restriction; cannot trade TRIP today
+- Alphabet (GOOGL) + Tesla (TSLA) earnings after close today may create broad market volatility overnight
+
+### Decision
+TRADE [SMCI, AXON] — Regime ON, 2 open slots available, specific catalysts identified, position sizing within limits. Execute only if intraday price confirms (no gap-down chase below entry).
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-22",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "SMCI",
+      "entry_price": 45.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 88,
+      "position_cost": 3960.00,
+      "target_price": 51.30,
+      "catalyst": "AI server infrastructure demand surge driven by Alphabet $180-190B 2026 CapEx guidance; SMCI is direct beneficiary as primary GPU server rack builder; pre-market notable mover Jul 22; XLK sector momentum +1.9% Jul 21",
+      "sector": "Technology",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "AXON",
+      "entry_price": 580.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 6,
+      "position_cost": 3480.00,
+      "target_price": 661.20,
+      "catalyst": "Government AI body-cam and Tasers contract momentum post Q1 earnings beat; no earnings until late August; benefits from law enforcement tech spending tailwind; XLI/XLK sector crossover strength",
+      "sector": "Technology/Industrials",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
