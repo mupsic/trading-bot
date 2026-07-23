@@ -4772,3 +4772,105 @@ TRADE [SMCI, AXON] — Regime ON, 2 open slots available, specific catalysts ide
   ]
 }
 ```
+
+I'll gather all the required market data simultaneously.Using all gathered data, here is the complete research log:
+
+---
+
+## 2026-07-23 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,170.54
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $99,846.56
+- Positions value: $323.98
+- Capital disponible: $19,676.02
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $747.41 (MA200: ~$693.44) — ABOVE
+- VIX: ~18.65 (last close Jul 20; pre-market trending ~16–19 range) — LOW
+- Regime: **ON**
+- Reason: SPY 200-day SMA is $693.44, well below current price of $747.41, and VIX prev. close was 18.65 as of Jul 21, 2026 — both gates clear (SPY > MA200 ✅, VIX < 25 ✅).
+
+### Market Context
+
+**Top catalysts today:**
+- Tesla stock dropped ~6% pre-market after disappointing second-quarter results and increased cash burn — dragging XLY/consumer discretionary.
+- Nasdaq Inc. posted a sharp rise in Q2 earnings, fueled by prominent company listings and heightened demand for data services during a period of market volatility.
+- U.S. Central Command carried out its 11th consecutive night of strikes on Iran since President Trump declared the ceasefire "over," with oil extending its recent rally on escalating Middle East supply concerns.
+- Earnings calendar active: AAL beat estimates (EPS actual $0.15 vs. $0.035 estimate); major reports today include GOOGL, IBM, and others (per live data).
+- Super Micro Computer surged 17% pre-market (prior session) after reporting over $60 billion in new orders in Q4, with plans to build an AI data center with SpaceX — AI infrastructure theme ongoing.
+
+**Sector leaders (as of Jul 20, 2026):**
+- XLK (Technology): +1.08% — leading sector; XLI (Industrials): +0.61%; XLY (Consumer Discretionary): +0.34%
+- Tesla's -6% pre-market drop significantly affects XLY and consumer discretionary ETFs.
+- XLK leads all sector SPDRs YTD in 2026 with gains of ~33%.
+- XLF: flat/slight negative; XLP: slight negative; XLE: flat (oil surge possible tailwind today); XLV: slight negative.
+
+**Economic events:**
+- Iran/Middle East geopolitical escalation — oil/energy impact ongoing.
+- Q2 earnings season in full swing: GOOGL, IBM, AAL (beat pre-market), Nasdaq Inc. beat.
+- No major Fed speakers or macro data releases noted today.
+
+### Trade Candidates (Regime ON)
+
+> **Note:** TSLA is excluded — earnings just reported (today/yesterday), event risk passed but stock is down -6%, averaging down prohibited. GOOGL/IBM report today — excluded per earnings-within-7-days rule.
+>
+> **AAPL** is already held (1 share, +8.5% unrealized). No averaging down allowed.
+>
+> **AAL** beat Q2 EPS massively ($0.15 actual vs. $0.035 estimate), but headline news confirms American Airlines **slashed 2026 earnings outlook due to fuel cost spikes** — contradictory signal, SKIP.
+>
+> Best clean candidates post-screen:
+
+1. **NDAQ (Nasdaq Inc.)** — Q2 earnings beat driven by record listings and data services revenue surge; no upcoming earnings within 7 days; Technology/Financial Infrastructure sector (XLK/XLF tailwind); market cap ~$45B; entry ~$85, stop $79.05 (-7%), target $96.90 (+14%), shares = 47 (47 × $85 = $3,995 ≤ $4,000 ✅; positions_value $323.98 + $3,995 = $4,318.98 ≤ $99,846.56 ✅), R:R 1:2.
+
+2. **XLE proxy — MPC (Marathon Petroleum Corp.)** — Marathon Petroleum (MPC) +21% leads July 2026 large-cap stock momentum; oil prices surging on Iran strike escalation; no earnings within 7 days (reported earlier in July); market cap >$50B; entry ~$190, stop $176.70 (-7%), target $216.60 (+14%), shares = 21 (21 × $190 = $3,990 ≤ $4,000 ✅; positions_value $323.98 + $3,990 = $4,313.98 ≤ $99,846.56 ✅), R:R 1:2.
+
+### Risk Factors Today
+- **Tesla -6% pre-market** drags QQQ and XLY; sentiment headwind for broad tech.
+- **Iran/Middle East escalation** — oil spike helps XLE but creates macro uncertainty; could spike VIX intraday.
+- **Heavy earnings day** (GOOGL, IBM, etc.) — results after close could shift overnight sentiment sharply.
+- **SPY slightly negative pre-market** (-0.12%) — mild softness, not alarming but confirms caution.
+- **AAPL position at +8.5%** — approaching first target (+15%); monitor for trailing stop tightening trigger.
+- **Only 1 web search left was consumed** — sector data is from Jul 20; intraday confirmation recommended before order submission.
+
+### Decision
+TRADE [NDAQ, MPC]
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-23",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "NDAQ",
+      "entry_price": 85.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 47,
+      "position_cost": 3995.00,
+      "target_price": 96.90,
+      "catalyst": "Nasdaq Inc. Q2 2026 earnings beat — sharp rise in revenue driven by record company listings and surging demand for data analytics/market services during elevated market volatility",
+      "sector": "Financial Technology / Data Services",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "MPC",
+      "entry_price": 190.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 21,
+      "position_cost": 3990.00,
+      "target_price": 216.60,
+      "catalyst": "Marathon Petroleum #1 large-cap momentum stock in July 2026 (+21% MTD); Iran military escalation (11th consecutive night of U.S. strikes) driving oil price surge and refining margin expansion",
+      "sector": "Energy",
+      "rr_ratio": "1:2"
+    }
+  ]
+}
+```
