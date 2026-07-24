@@ -4874,3 +4874,108 @@ TRADE [NDAQ, MPC]
   ]
 }
 ```
+
+I'll gather all the required market data simultaneously.Now I have sufficient data to compile the full research log. Let me analyze all findings:
+
+**Key data points extracted:**
+- SPY 200-day SMA: **$693.44** (TipRanks, Jul 20). Cross-checking: another source shows the 200-day long-term moving average of **$694.47**. I'll use the consensus ~$693–694. SPY current = $738.18 → **ABOVE MA200**.
+- VIX closed at **18.70** on July 23, up +12.38% on the day. Today (Jul 24) VIX is spiking further given SPY -1.23% and geopolitical headlines. Using 18.70 as last close / ~20 intraday. **VIX < 25 → passes gate.**
+- Sector leaders as of Jul 20: XLK +1.08%, XLI +0.61%, XLY +0.34%; XLC, XLP, XLE, XLU all flat/negative.
+- XLK leads all sector SPDRs in 2026 with +33% year-to-date gains.
+- As of Jul 23: XLV +1.26%, XLI +1.73%, XLF -0.39%, XLP -1.39%, XLY -4.61%.
+- Today's catalysts: Earnings from Tesla, Alphabet, IBM, AT&T, ServiceNow due/recent; Middle East escalation with US strikes on Iran pushing oil higher.
+- Earnings today per bot data: AXP beat (EPS $4.53 vs $4.45 est), BAH beat (EPS $1.81 vs $1.51 est), CHTR beat (EPS $10.66 vs $10.37 est).
+
+**Regime check:** SPY $738.18 > MA200 ~$693.44 ✅ | VIX ~18.70 < 25 ✅ → **REGIME = ON**
+
+**Note on SPY today:** SPY is down -1.23% on the day ($738.18 vs prev close $747.41), driven by geopolitical oil shock and tech/QQQ selling. Despite the pullback, SPY remains well above MA200. VIX spiked to ~18.70 but still sub-25. Regime stays ON but the red day warrants caution.
+
+**Candidate selection:** Given SPY -1.23%, QQQ -1.90%, and geopolitical risk (oil $91+, Middle East escalation), I'll look for defensive/energy names or earnings beaters away from tech volatility. AXP beat earnings this morning (BMO). BAH beat Q1 FY2027 earnings BMO. XLI was the strongest sector Jul 23 (+1.73%). No earnings within next 7 days required — AXP and BAH reported *today*, so no upcoming event risk. AAPL already held (1 share).
+
+**Position sizing check:**
+- AXP ~$330: 12 shares × $330 = $3,960 ≤ $4,000 ✅
+- BAH ~$140: 28 shares × $140 = $3,920 ≤ $4,000 ✅
+- Positions value $322.76 + max new buy $3,960 = $4,282.76 ≪ $99,846.52 cash ✅
+
+---
+
+## 2026-07-24 — Pre-market Research
+
+### Account Snapshot
+- Alpaca equity: $100,169.28
+- Operating capital (equity real): $20,000
+- Max por posición (20%): $4,000.00
+- Cash disponible: $99,846.52
+- Positions value: $322.76
+- Capital disponible: $19,677.24
+- Daytrade count: 0/3
+- Bot state: ACTIVE
+
+### Market Regime
+- SPY: $738.18 (MA200: $693.44) — ABOVE
+- VIX: 18.70 (last close Jul 23, spiking intraday ~+12%) — LOW (<25)
+- Regime: **ON**
+- Reason: SPY holds +6.4% above 200-day MA and VIX, while rising sharply on geopolitical shock, remains sub-25 threshold; regime gate passes but risk posture elevated.
+
+### Market Context
+- Top catalysts today:
+  - **AXP earnings beat (BMO):** American Express Q2 EPS $4.53 vs $4.45 estimate — beat on bottom line despite revenue slight miss ($19.64B vs $19.90B est)
+  - **BAH earnings beat (BMO):** Booz Allen Hamilton Q1 FY2027 EPS $1.81 vs $1.51 estimate — significant +20% EPS beat; defense/government IT demand robust
+  - **CHTR earnings beat (BMO):** Charter Communications Q2 EPS $10.66 vs $10.37 estimate — cable/broadband resilience
+  - **Middle East escalation / Oil >$91:** US CENTCOM strikes on Iran continuing; crude oil surging, pressuring bonds and equities broadly; Treasury 10-year near Jan 2025 highs
+  - **AI capex burn narrative:** "Oil batters bonds as AI burns cash" — tech under pressure as AI infrastructure costs mount; QQQ -1.90% today
+- Sector leaders (week of Jul 21–24):
+  - **XLI (Industrials):** +1.73% Jul 23 — strongest on defense/infrastructure spending
+  - **XLV (Healthcare):** +1.26% Jul 23 — defensive rotation
+  - **XLK (Technology):** +1.08% Jul 20 (YTD leader +33%) but under pressure today -1.90% via QQQ
+  - **XLF (Financials):** -0.39% Jul 23 — mixed on rates/earnings
+  - **XLP (Staples):** -1.39% Jul 23 — underperforming
+  - **XLY (Consumer Disc.):** -4.61% Jul 23 — weakest sector
+- Economic events:
+  - Treasury yields elevated; 10-year hovering near Jan 2025 highs
+  - US-Iran military escalation driving oil above $91/bbl
+  - Heavy earnings week: Alphabet, Tesla reported this week; AXP, BAH, CHTR reported today BMO
+
+### Trade Candidates (only if Regime ON)
+
+1. **AXP** — Q2 2026 earnings beat (EPS $4.53 vs $4.45 est, +1.8% surprise); XLF sector; consumer spending resilience confirmed; no upcoming earnings for ~90 days; entry $330.00, stop $306.90 (-7%), target $376.20 (+14%), shares=12, R:R 1:2
+
+2. **BAH** — Q1 FY2027 earnings beat (EPS $1.81 vs $1.51 est, +20% surprise); defense/gov-IT demand surge driven by Middle East escalation and increased DoD budgets; XLI sector (strongest this week); no upcoming earnings ~90 days; entry $140.00, stop $130.20 (-7%), target $159.60 (+14%), shares=28, R:R 1:2
+
+### Risk Factors Today
+- **SPY -1.23% today / QQQ -1.90%:** Broad market sell-off on geopolitical oil shock reduces conviction for new longs
+- **VIX spiking +12% intraday to ~18.70+:** Fear gauge rising rapidly; may push higher if oil continues rallying
+- **Oil >$91/bbl:** Inflationary pressure threatens rate-cut timeline; hurts consumer/tech names
+- **Middle East escalation:** US strikes on Iran; unpredictable tail risk for weekend gap-down
+- **AAPL position at +8%:** Near trailing stop tighten threshold (+15%); monitor for stop adjustment opportunity
+- **Max 3 trades/week; 0 used:** Capacity exists but high-risk day warrants selective entry
+- **AXP revenue slight miss:** Top-line miss ($19.64B vs $19.90B est) despite EPS beat — watch for price fade
+- **Friday effect:** End-of-week position risk with geopolitical uncertainty over weekend
+
+### Decision
+TRADE [AXP, BAH] — Both are fresh earnings-beat catalysts in relatively defensive sectors (financials/industrials), away from the AI/tech pressure driving QQQ lower today. However, **execute only if price holds or dips to entry levels during market hours, and only if SPY stabilizes above $735**. If SPY breaches $735 intraday, HOLD and defer to next session.
+
+### CANDIDATES (machine-readable)
+```json
+{
+  "date": "2026-07-24",
+  "regime": "ON",
+  "decision": "TRADE",
+  "candidates": [
+    {
+      "symbol": "AXP",
+      "entry_price": 330.00,
+      "stop_pct": 7,
+      "trailing_stop_pct": 10,
+      "shares": 12,
+      "position_cost": 3960.00,
+      "target_price": 376.20,
+      "catalyst": "Q2 2026 earnings beat BMO: EPS $4.53 vs $4.45 estimate (+1.8% surprise); consumer spending resilience confirmed; no earnings within 90 days",
+      "sector": "Financials (XLF)",
+      "rr_ratio": "1:2"
+    },
+    {
+      "symbol": "BAH",
+      "entry_price": 140.00,
+      "stop_pct": 7,
+      "trailing_stop
